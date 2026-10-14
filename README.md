@@ -1,32 +1,26 @@
-<div align="center">
+# Xnetik TV
 
-  <img src="assets/brand/app_logo_wordmark.png" alt="Nuvio" width="300" />
+Android TV streaming app. Stream content on any Android TV device using the Stremio addon protocol.
 
-  <p>
-    A free, open-source media app for your phone, your desktop, and the TV you already own.
-    <br />
-    Bring your own sources. Nuvio turns them into a library with artwork, ratings, subtitles, and your place saved on every screen.
-  </p>
+## Install
 
-  [Website](https://nuvio.tv) · [GitHub releases](https://github.com/NuvioMedia/NuvioTV/releases/latest) · [Support Nuvio](https://nuvio.tv/support)
+Download the latest APK from the [Releases](https://github.com/AlHuizar/xnetik-tv/releases/latest) page and sideload it onto your Android TV device.
 
-</div>
-
-## Get Nuvio TV
-
-- [Android TV on Google Play](https://play.google.com/store/apps/details?id=com.nuvio.app)
-- [Android TV APK](https://github.com/NuvioMedia/NuvioTV/releases/latest)
-
-## Build from source
-
-```bash
-git clone https://github.com/NuvioMedia/NuvioTV.git
-cd NuvioTV
-./gradlew :app:assembleFullDebug
+Or visit the download page for step-by-step instructions:
+```
+https://telly.xnetik.us/download
 ```
 
-Nuvio TV is built with Kotlin, Jetpack Compose, TV Material 3, and Media3. Development requires Android Studio, a JDK, and the Android SDK.
+## Features
+
+- Stream movies and TV shows via Stremio-compatible addons
+- Remote addon management — addons pushed automatically on launch
+- Device-based access control
+- Supports debrid providers (Real-Debrid, Premiumize, TorBox)
+- External player support
+- Dolby Vision / HDR passthrough
+- Auto frame rate switching
 
 ## License
 
-[GNU General Public License v3.0](./LICENSE)
+GNU General Public License v3.0 — see [LICENSE](LICENSE) for details.
