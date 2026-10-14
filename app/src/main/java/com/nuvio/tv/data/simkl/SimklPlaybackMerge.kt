@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 /**
  * A fetched playback list with the rows the app recorded itself kept when they are newer.

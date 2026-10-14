@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.os.SystemClock
 import android.util.Log
@@ -12,18 +12,18 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache
-import com.nuvio.tv.data.local.ExperienceModeDataStore
-import com.nuvio.tv.data.local.PluginDataStore
-import com.nuvio.tv.data.local.ProfileDataStoreFactory
-import com.nuvio.tv.data.local.StreamBadgeSettingsDataStore
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
-import com.nuvio.tv.data.remote.supabase.SupabaseProfileSetupCopyResult
-import com.nuvio.tv.data.remote.supabase.SupabaseProfileSettingsBlob
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.domain.repository.MetaRepository
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache
+import us.xnetik.tv.data.local.ExperienceModeDataStore
+import us.xnetik.tv.data.local.PluginDataStore
+import us.xnetik.tv.data.local.ProfileDataStoreFactory
+import us.xnetik.tv.data.local.StreamBadgeSettingsDataStore
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.data.remote.supabase.SupabaseProfileSetupCopyResult
+import us.xnetik.tv.data.remote.supabase.SupabaseProfileSettingsBlob
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.repository.MetaRepository
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope

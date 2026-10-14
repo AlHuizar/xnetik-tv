@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.runtime.Composable
@@ -12,7 +12,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.Text
-import com.nuvio.tv.ui.util.contentLayoutDirection
+import us.xnetik.tv.ui.util.contentLayoutDirection
 
 private val MarqueeVelocity = 45.dp
 internal const val MarqueeIterations = 3

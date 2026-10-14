@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.addon
+package us.xnetik.tv.ui.screens.addon
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.graphics.Bitmap
 import androidx.activity.compose.BackHandler
@@ -103,12 +103,12 @@ import androidx.tv.material3.Surface
 import androidx.tv.material3.Switch
 import androidx.tv.material3.SwitchDefaults
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.ExperienceMode
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.ExperienceMode
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.util.contentTextDirection
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -116,7 +116,7 @@ import kotlinx.coroutines.launch
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.TextStyle
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.map
 
@@ -170,12 +170,12 @@ fun AddonManagerScreen(
             addon.enabled && addon.catalogs.any { catalog -> !catalog.isSearchOnlyCatalog() }
         }
     }
-    val manageFromPhoneSubtitle = if (webConfigMode == com.nuvio.tv.core.server.AddonWebConfigMode.COLLECTIONS_ONLY) {
+    val manageFromPhoneSubtitle = if (webConfigMode == us.xnetik.tv.core.server.AddonWebConfigMode.COLLECTIONS_ONLY) {
         stringResource(R.string.addon_manage_collections_from_phone_subtitle)
     } else {
         stringResource(R.string.addon_manage_from_phone_subtitle)
     }
-    val qrInstruction = if (webConfigMode == com.nuvio.tv.core.server.AddonWebConfigMode.COLLECTIONS_ONLY) {
+    val qrInstruction = if (webConfigMode == us.xnetik.tv.core.server.AddonWebConfigMode.COLLECTIONS_ONLY) {
         stringResource(R.string.addon_qr_collections_scan_instruction)
     } else {
         stringResource(R.string.addon_qr_scan_instruction)

@@ -1,11 +1,11 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
 import android.util.Log
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.remote.api.TorboxApi
-import com.nuvio.tv.data.remote.dto.TorboxCreateTorrentDataDto
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.remote.api.TorboxApi
+import us.xnetik.tv.data.remote.dto.TorboxCreateTorrentDataDto
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamClientResolve
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
 import okhttp3.MediaType.Companion.toMediaType
@@ -90,14 +90,14 @@ class TorboxDirectDebridResolver @Inject constructor(
         }
     }
 
-    private fun Response<com.nuvio.tv.data.remote.dto.TorboxEnvelopeDto<TorboxCreateTorrentDataDto>>.extractTorrentId(): Int? {
+    private fun Response<us.xnetik.tv.data.remote.dto.TorboxEnvelopeDto<TorboxCreateTorrentDataDto>>.extractTorrentId(): Int? {
         if (!isSuccessful) return null
         val body = body()
         if (body?.success == false) return null
         return body?.data?.resolvedTorrentId()
     }
 
-    private fun Response<com.nuvio.tv.data.remote.dto.TorboxEnvelopeDto<TorboxCreateTorrentDataDto>>.toFailureForCreate(): DirectDebridResolveResult {
+    private fun Response<us.xnetik.tv.data.remote.dto.TorboxEnvelopeDto<TorboxCreateTorrentDataDto>>.toFailureForCreate(): DirectDebridResolveResult {
         return when (code()) {
             401, 403 -> DirectDebridResolveResult.Error
             409 -> DirectDebridResolveResult.NotCached

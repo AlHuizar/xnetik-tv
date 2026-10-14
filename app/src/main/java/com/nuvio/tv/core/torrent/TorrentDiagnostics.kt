@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.torrent
+package us.xnetik.tv.core.torrent
 
 import com.nuvio.engine.NuvioEngineStats
 import com.nuvio.engine.NuvioStreamStats

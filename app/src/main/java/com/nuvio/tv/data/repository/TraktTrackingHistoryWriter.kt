@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.core.tracking.TrackingHistoryItem
-import com.nuvio.tv.core.tracking.TrackingHistoryWriter
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingMutationResult
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.TrackingHistoryItem
+import us.xnetik.tv.core.tracking.TrackingHistoryWriter
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingMutationResult
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.domain.model.WatchProgress
 import javax.inject.Inject
 import javax.inject.Singleton
 

@@ -1,10 +1,10 @@
 @file:OptIn(androidx.tv.material3.ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioMotion
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
@@ -58,7 +58,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
 import androidx.tv.material3.Border
 import androidx.tv.material3.Card
 import androidx.tv.material3.CardDefaults
@@ -68,8 +68,8 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.request.transformations
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.util.BlurTransformation
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.util.BlurTransformation
 
 @Composable
 fun PostPlayOverlay(

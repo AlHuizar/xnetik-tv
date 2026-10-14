@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.StateFlow

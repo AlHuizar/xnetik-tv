@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.streams
+package us.xnetik.tv.core.streams
 
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.data.trailer.InAppYouTubeExtractor
-import com.nuvio.tv.domain.model.Stream
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.data.trailer.InAppYouTubeExtractor
+import us.xnetik.tv.domain.model.Stream
 import javax.inject.Inject
 import javax.inject.Singleton
 

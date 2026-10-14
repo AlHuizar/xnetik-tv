@@ -1,12 +1,12 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
-import com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache
-import com.nuvio.tv.data.trailer.TrailerService
-import com.nuvio.tv.domain.model.TmdbSettings
-import com.nuvio.tv.domain.repository.MetaRepository
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache
+import us.xnetik.tv.data.trailer.TrailerService
+import us.xnetik.tv.domain.model.TmdbSettings
+import us.xnetik.tv.domain.repository.MetaRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

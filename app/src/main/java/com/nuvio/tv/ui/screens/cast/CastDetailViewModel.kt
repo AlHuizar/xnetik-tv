@@ -1,13 +1,13 @@
-package com.nuvio.tv.ui.screens.cast
+package us.xnetik.tv.ui.screens.cast
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.core.tmdb.TmdbMetadataService
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.R
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.core.tmdb.TmdbMetadataService
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -22,10 +22,10 @@ class CastDetailViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val tmdbMetadataService: TmdbMetadataService,
     private val tmdbSettingsDataStore: TmdbSettingsDataStore,
-    private val watchProgressRepository: com.nuvio.tv.domain.repository.WatchProgressRepository,
-    private val watchedSeriesStateHolder: com.nuvio.tv.data.local.WatchedSeriesStateHolder,
-    private val layoutPreferenceDataStore: com.nuvio.tv.data.local.LayoutPreferenceDataStore,
-    val posterOptions: com.nuvio.tv.ui.components.posteroptions.PosterOptionsController,
+    private val watchProgressRepository: us.xnetik.tv.domain.repository.WatchProgressRepository,
+    private val watchedSeriesStateHolder: us.xnetik.tv.data.local.WatchedSeriesStateHolder,
+    private val layoutPreferenceDataStore: us.xnetik.tv.data.local.LayoutPreferenceDataStore,
+    val posterOptions: us.xnetik.tv.ui.components.posteroptions.PosterOptionsController,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -78,7 +78,7 @@ class CastDetailViewModel @Inject constructor(
                 if (detail != null) {
                     val pattern = layoutPreferenceDataStore.customPosterUrlPattern.first()
                     val enabledScreens = layoutPreferenceDataStore.customPosterEnabledScreens.first()
-                    val effectivePattern = com.nuvio.tv.core.poster.patternForScreen(pattern, com.nuvio.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
+                    val effectivePattern = us.xnetik.tv.core.poster.patternForScreen(pattern, us.xnetik.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
                     val overlaidDetail = if (effectivePattern.isNotBlank()) {
                         detail.copy(
                             movieCredits = detail.movieCredits.withCustomPosterUrls(effectivePattern),

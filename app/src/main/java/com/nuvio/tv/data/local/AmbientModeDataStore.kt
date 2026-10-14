@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.domain.model.AmbientModeSettings
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.domain.model.AmbientModeSettings
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged

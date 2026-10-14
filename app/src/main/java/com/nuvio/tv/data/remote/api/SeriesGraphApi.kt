@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.remote.api
+package us.xnetik.tv.data.remote.api
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

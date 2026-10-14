@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.screens.account
+package us.xnetik.tv.ui.screens.account
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.runtime.AppRestarter
-import com.nuvio.tv.data.local.ServerConfigurationStore
-import com.nuvio.tv.data.remote.ServerDiscoveryException
-import com.nuvio.tv.data.remote.ServerDiscoveryFailure
-import com.nuvio.tv.data.remote.ServerDiscoveryService
-import com.nuvio.tv.domain.model.ServerConfiguration
+import us.xnetik.tv.R
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.runtime.AppRestarter
+import us.xnetik.tv.data.local.ServerConfigurationStore
+import us.xnetik.tv.data.remote.ServerDiscoveryException
+import us.xnetik.tv.data.remote.ServerDiscoveryFailure
+import us.xnetik.tv.data.remote.ServerDiscoveryService
+import us.xnetik.tv.domain.model.ServerConfiguration
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject

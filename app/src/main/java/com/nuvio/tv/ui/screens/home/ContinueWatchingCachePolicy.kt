@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 internal fun shouldRestoreCachedInProgress(
     hasLiveInProgress: Boolean,

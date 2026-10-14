@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
@@ -28,16 +28,16 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.tv.material3.ExperimentalTvMaterial3Api
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.data.local.MoreLikeThisSourcePreference
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.WatchProgressSource
-import com.nuvio.tv.data.simkl.SimklAnimeIdPreference
-import com.nuvio.tv.data.simkl.SimklConnectionMode
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.data.local.MoreLikeThisSourcePreference
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.WatchProgressSource
+import us.xnetik.tv.data.simkl.SimklAnimeIdPreference
+import us.xnetik.tv.data.simkl.SimklConnectionMode
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.theme.NuvioTheme
 import kotlinx.coroutines.delay
 
 @Composable

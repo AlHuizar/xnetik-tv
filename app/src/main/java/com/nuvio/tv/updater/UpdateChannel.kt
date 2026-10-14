@@ -1,4 +1,4 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
 enum class UpdateChannel(val storedValue: String) {
     STABLE("stable"),

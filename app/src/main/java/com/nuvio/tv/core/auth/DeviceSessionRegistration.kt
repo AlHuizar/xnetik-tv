@@ -1,13 +1,13 @@
-package com.nuvio.tv.core.auth
+package us.xnetik.tv.core.auth
 
 import android.content.Context
 import android.os.Build
 import android.os.SystemClock
 import android.provider.Settings
 import android.util.Log
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.core.sync.SyncClientIdentity
-import com.nuvio.tv.domain.model.AuthState
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.core.sync.SyncClientIdentity
+import us.xnetik.tv.domain.model.AuthState
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.coroutines.CancellationException

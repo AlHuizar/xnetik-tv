@@ -1,7 +1,7 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 import androidx.compose.runtime.Immutable
-import com.nuvio.tv.core.util.isEpisodeReleaseAired
+import us.xnetik.tv.core.util.isEpisodeReleaseAired
 
 @Immutable
 data class Meta(

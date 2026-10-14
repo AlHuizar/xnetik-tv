@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioMotion
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.animation.AnimatedVisibility
@@ -60,16 +60,16 @@ import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
 import androidx.compose.ui.res.stringResource
 import android.util.Log
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MDBListRatings
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.NextToWatch
-import com.nuvio.tv.ui.components.ImdbRatingSourceLabel
-import com.nuvio.tv.ui.components.MDBListRatingsRow
-import com.nuvio.tv.ui.components.SynopsisDescription
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.NextToWatch
+import us.xnetik.tv.ui.components.ImdbRatingSourceLabel
+import us.xnetik.tv.ui.components.MDBListRatingsRow
+import us.xnetik.tv.ui.components.SynopsisDescription
+import us.xnetik.tv.ui.theme.NuvioTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Visibility
@@ -78,9 +78,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.graphics.painter.Painter
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.ui.util.localizedGenreLabel
-import com.nuvio.tv.ui.util.rememberLongPressKeyTracker
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.localizedGenreLabel
+import us.xnetik.tv.ui.util.rememberLongPressKeyTracker
+import us.xnetik.tv.ui.util.contentTextDirection
 import java.util.Locale
 
 private const val MAX_VISIBLE_HERO_GENRES = 6
@@ -103,13 +103,13 @@ fun HeroContentSection(
     trailerAvailable: Boolean = false,
     onTrailerClick: () -> Unit = {},
     showRandomEpisodeButton: Boolean = false,
-    episodeShuffle: com.nuvio.tv.domain.model.EpisodeShuffleSettings = com.nuvio.tv.domain.model.EpisodeShuffleSettings(),
+    episodeShuffle: us.xnetik.tv.domain.model.EpisodeShuffleSettings = us.xnetik.tv.domain.model.EpisodeShuffleSettings(),
     shuffleActionPending: Boolean = false,
     onRandomEpisodeClick: () -> Unit = {},
     randomEpisodeFocusRequester: FocusRequester? = null,
     hideLogoDuringTrailer: Boolean = false,
     mdbListRatings: MDBListRatings? = null,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     hideMetaInfoImdb: Boolean = false,
     tmdbRating: Float? = null,
     showFullReleaseDate: Boolean = true,
@@ -140,11 +140,11 @@ fun HeroContentSection(
             !(isTrailerPlaying && hideLogoDuringTrailer)
     val libraryAddPainter = rememberRawSvgPainter(
         context = context,
-        rawRes = com.nuvio.tv.R.raw.library_add_plus
+        rawRes = us.xnetik.tv.R.raw.library_add_plus
     )
     val trailerPainter = rememberRawSvgPainter(
         context = context,
-        rawRes = com.nuvio.tv.R.raw.trailer_play_button
+        rawRes = us.xnetik.tv.R.raw.trailer_play_button
     )
     val strCreator = stringResource(R.string.hero_creator)
     val strDirector = stringResource(R.string.hero_director)
@@ -383,7 +383,7 @@ internal fun PlayButton(
     val context = LocalContext.current
     val playPainter = rememberRawSvgPainter(
         context = context,
-        rawRes = com.nuvio.tv.R.raw.ic_player_play
+        rawRes = us.xnetik.tv.R.raw.ic_player_play
     )
 
     Button(
@@ -651,7 +651,7 @@ private fun MetaInfoRow(
     val shouldShowTmdbRating = tmdbRating != null
     val tmdbModel = remember(context) {
         ImageRequest.Builder(context)
-            .data(com.nuvio.tv.R.raw.mdblist_tmdb)
+            .data(us.xnetik.tv.R.raw.mdblist_tmdb)
             .build()
     }
     val ageRatingBadge = remember(meta.ageRating) {

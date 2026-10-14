@@ -1,13 +1,13 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
 import android.util.Log
-import com.nuvio.tv.core.player.StreamAutoPlaySelector
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.core.player.StreamAutoPlaySelector
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamDebridCacheState
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.sync.Mutex

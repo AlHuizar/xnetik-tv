@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.domain.model.AddonStreams
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.domain.model.AddonStreams
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart

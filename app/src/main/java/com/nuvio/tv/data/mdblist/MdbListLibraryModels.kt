@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.LibraryListTab
 import kotlinx.serialization.Serializable
 
 internal const val MDBLIST_WATCHLIST_KEY = "mdblist:watchlist"

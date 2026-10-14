@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -7,7 +7,7 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.nuvio.tv.domain.model.MemberTier
+import us.xnetik.tv.domain.model.MemberTier
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

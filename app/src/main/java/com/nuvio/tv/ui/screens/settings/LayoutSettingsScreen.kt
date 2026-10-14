@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
@@ -27,8 +27,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.screens.addon.QrCodeOverlay
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.screens.addon.QrCodeOverlay
 
 @Composable
 fun LayoutSettingsScreen(

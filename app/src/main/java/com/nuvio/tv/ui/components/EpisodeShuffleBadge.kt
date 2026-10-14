@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.padding
@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.Icon
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @Composable
 internal fun EpisodeShuffleBadge(modifier: Modifier = Modifier) {

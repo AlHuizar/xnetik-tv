@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow

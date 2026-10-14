@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.util
+package us.xnetik.tv.ui.util
 
 import android.view.KeyEvent
 import android.view.ViewConfiguration

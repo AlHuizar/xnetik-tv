@@ -1,44 +1,44 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import android.content.Context
 import android.os.SystemClock
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.LocaleCache
-import com.nuvio.tv.core.player.StreamAutoPlayPolicy
-import com.nuvio.tv.core.recommendations.TvRecommendationManager
-import com.nuvio.tv.core.tmdb.MetaPreviewEnricher
-import com.nuvio.tv.core.tmdb.TmdbMetadataService
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.AuthSessionNoticeDataStore
-import com.nuvio.tv.data.local.CollectionsDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.data.local.StartupAuthNotice
-import com.nuvio.tv.data.local.MDBListSettingsDataStore
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.data.trailer.TrailerService
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.ContinueWatchingSortMode
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.data.repository.MDBListRepository
-import com.nuvio.tv.domain.model.MDBListSettings
-import com.nuvio.tv.domain.model.TmdbSettings
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.CatalogRepository
-import com.nuvio.tv.domain.repository.LibraryRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.LocaleCache
+import us.xnetik.tv.core.player.StreamAutoPlayPolicy
+import us.xnetik.tv.core.recommendations.TvRecommendationManager
+import us.xnetik.tv.core.tmdb.MetaPreviewEnricher
+import us.xnetik.tv.core.tmdb.TmdbMetadataService
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.AuthSessionNoticeDataStore
+import us.xnetik.tv.data.local.CollectionsDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.data.local.StartupAuthNotice
+import us.xnetik.tv.data.local.MDBListSettingsDataStore
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.data.trailer.TrailerService
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.ContinueWatchingSortMode
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.data.repository.MDBListRepository
+import us.xnetik.tv.domain.model.MDBListSettings
+import us.xnetik.tv.domain.model.TmdbSettings
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.CatalogRepository
+import us.xnetik.tv.domain.repository.LibraryRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
@@ -64,13 +64,13 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(
     @ApplicationContext internal val appContext: Context,
     internal val addonRepository: AddonRepository,
-    internal val startupSyncService: com.nuvio.tv.core.sync.StartupSyncService,
+    internal val startupSyncService: us.xnetik.tv.core.sync.StartupSyncService,
     internal val catalogRepository: CatalogRepository,
     internal val watchProgressRepository: WatchProgressRepository,
     internal val libraryRepository: LibraryRepository,
     internal val metaRepository: MetaRepository,
-    internal val episodeShuffleStore: com.nuvio.tv.data.local.EpisodeShuffleStore,
-    internal val episodeShuffle: com.nuvio.tv.domain.model.EpisodeShuffle,
+    internal val episodeShuffleStore: us.xnetik.tv.data.local.EpisodeShuffleStore,
+    internal val episodeShuffle: us.xnetik.tv.domain.model.EpisodeShuffle,
     internal val collectionsDataStore: CollectionsDataStore,
     internal val layoutPreferenceDataStore: LayoutPreferenceDataStore,
     internal val playerSettingsDataStore: PlayerSettingsDataStore,
@@ -81,11 +81,11 @@ class HomeViewModel @Inject constructor(
     internal val tmdbService: TmdbService,
     internal val tmdbMetadataService: TmdbMetadataService,
     internal val mdbListRepository: MDBListRepository,
-    internal val imdbEpisodeRatingsRepository: com.nuvio.tv.data.repository.ImdbEpisodeRatingsRepository,
+    internal val imdbEpisodeRatingsRepository: us.xnetik.tv.data.repository.ImdbEpisodeRatingsRepository,
     internal val trailerService: TrailerService,
-    internal val watchedSeriesStateHolder: com.nuvio.tv.data.local.WatchedSeriesStateHolder,
+    internal val watchedSeriesStateHolder: us.xnetik.tv.data.local.WatchedSeriesStateHolder,
     internal val cwEnrichmentCache: ContinueWatchingEnrichmentCache,
-    internal val profileManager: com.nuvio.tv.core.profile.ProfileManager,
+    internal val profileManager: us.xnetik.tv.core.profile.ProfileManager,
     internal val tvRecommendationManager: TvRecommendationManager,
     internal val serverCatalog: ServerCatalog,
     internal val metaPreviewEnricher: MetaPreviewEnricher = MetaPreviewEnricher(
@@ -635,7 +635,7 @@ class HomeViewModel @Inject constructor(
      */
     private fun observeProgressSourceChanges() {
         viewModelScope.launch {
-            var previousSource: com.nuvio.tv.data.local.WatchProgressSource? = null
+            var previousSource: us.xnetik.tv.data.local.WatchProgressSource? = null
             var previousProfileId: Int? = null
             traktSettingsDataStore.watchProgressSource
                 .collect { source ->
@@ -716,7 +716,7 @@ class HomeViewModel @Inject constructor(
                 .filter { !watchProgressRepository.isDroppedShow(it.contentId) }
                 .map { cached ->
                     ContinueWatchingItem.InProgress(
-                        progress = com.nuvio.tv.domain.model.WatchProgress(
+                        progress = us.xnetik.tv.domain.model.WatchProgress(
                             contentId = cached.contentId,
                             contentType = cached.contentType,
                             name = cached.name,

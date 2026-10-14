@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.view.KeyEvent
 import androidx.compose.animation.AnimatedVisibility

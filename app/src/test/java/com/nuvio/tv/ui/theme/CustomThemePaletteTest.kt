@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.theme
+package us.xnetik.tv.ui.theme
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
-import com.nuvio.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.CustomThemeColors
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test

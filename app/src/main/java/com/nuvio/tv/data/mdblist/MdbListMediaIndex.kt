@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 internal class MdbListMediaIndex(snapshot: MdbListSyncSnapshot) {
     private val byAlias = mutableMapOf<Pair<Boolean, String>, MdbListMedia>()

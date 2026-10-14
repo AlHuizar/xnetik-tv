@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.deeplink
+package us.xnetik.tv.domain.deeplink
 
 sealed interface AppDeepLink {
     data class Meta(

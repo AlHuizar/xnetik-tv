@@ -1,16 +1,16 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.network.safeApiCall
-import com.nuvio.tv.data.local.AddonPreferences
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.repository.SubtitleRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.network.safeApiCall
+import us.xnetik.tv.data.local.AddonPreferences
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.repository.SubtitleRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
@@ -130,7 +130,7 @@ class SubtitleRepositoryImpl @Inject constructor(
         return if (type.equals("tv", ignoreCase = true)) "series" else type.lowercase()
     }
     
-    private fun supportsType(addon: Addon, resource: com.nuvio.tv.domain.model.AddonResource, type: String, id: String): Boolean {
+    private fun supportsType(addon: Addon, resource: us.xnetik.tv.domain.model.AddonResource, type: String, id: String): Boolean {
         // Check if type is supported (normalizing "tv" and "series" to be equivalent)
         if (resource.types.isNotEmpty()) {
             val reqType = canonicalSubtitleType(type)

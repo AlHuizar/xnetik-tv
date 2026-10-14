@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.navigation
+package us.xnetik.tv.ui.navigation
 
 internal const val SOURCE_SELECTION_RESTORE_STATE_KEY = "restoreSourceSelection"
 

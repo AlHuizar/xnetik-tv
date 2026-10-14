@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import android.util.Log
-import com.nuvio.tv.core.tracking.TRACKING_SCROBBLE_DIAGNOSTIC_TAG
+import us.xnetik.tv.core.tracking.TRACKING_SCROBBLE_DIAGNOSTIC_TAG
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.sync.Mutex

@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.remote.api
+package us.xnetik.tv.data.remote.api
 
-import com.nuvio.tv.data.remote.dto.GitHubContributorDto
-import com.nuvio.tv.data.remote.dto.GitHubReleaseDto
+import us.xnetik.tv.data.remote.dto.GitHubContributorDto
+import us.xnetik.tv.data.remote.dto.GitHubReleaseDto
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

@@ -1,14 +1,14 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 import android.util.Log
 import androidx.media3.common.C
 import androidx.media3.extractor.text.CuesWithTiming
-import com.nuvio.tv.ui.screens.player.PlayerRuntimeController
-import com.nuvio.tv.ui.screens.player.canAttachAddonSubtitleViaSidecar
-import com.nuvio.tv.ui.screens.player.commitPreparedSidecarSubtitle
-import com.nuvio.tv.ui.screens.player.currentSidecarGenerationFor
-import com.nuvio.tv.ui.screens.player.downloadSubtitleBody
-import com.nuvio.tv.ui.screens.player.parseSidecarTimedCuesRobust
+import us.xnetik.tv.ui.screens.player.PlayerRuntimeController
+import us.xnetik.tv.ui.screens.player.canAttachAddonSubtitleViaSidecar
+import us.xnetik.tv.ui.screens.player.commitPreparedSidecarSubtitle
+import us.xnetik.tv.ui.screens.player.currentSidecarGenerationFor
+import us.xnetik.tv.ui.screens.player.downloadSubtitleBody
+import us.xnetik.tv.ui.screens.player.parseSidecarTimedCuesRobust
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

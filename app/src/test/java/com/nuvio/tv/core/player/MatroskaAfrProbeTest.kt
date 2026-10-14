@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals

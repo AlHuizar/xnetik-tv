@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.DebridSettings
 
 data class DebridProvider(
     val id: String,

@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.sync.ProfileSyncService
-import com.nuvio.tv.domain.model.UserProfile
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.sync.ProfileSyncService
+import us.xnetik.tv.domain.model.UserProfile
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted

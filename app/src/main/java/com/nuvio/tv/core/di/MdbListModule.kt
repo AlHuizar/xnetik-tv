@@ -1,19 +1,19 @@
-package com.nuvio.tv.core.di
+package us.xnetik.tv.core.di
 
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.core.network.NoDelaySocketFactory
-import com.nuvio.tv.core.profile.ProfileScopedCredentialStore
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.ProfileDataStore
-import com.nuvio.tv.data.mdblist.AndroidMdbListAuthPersistence
-import com.nuvio.tv.data.mdblist.AndroidMdbListSyncStorage
-import com.nuvio.tv.data.mdblist.MdbListSyncRepository
-import com.nuvio.tv.data.mdblist.MdbListApiClient
-import com.nuvio.tv.data.mdblist.MdbListAuthRepository
-import com.nuvio.tv.data.mdblist.MdbListAuthStore
-import com.nuvio.tv.data.mdblist.MdbListConfiguration
-import com.nuvio.tv.data.mdblist.MdbListHttpClient
-import com.nuvio.tv.data.mdblist.OkHttpMdbListEngine
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.core.network.NoDelaySocketFactory
+import us.xnetik.tv.core.profile.ProfileScopedCredentialStore
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.ProfileDataStore
+import us.xnetik.tv.data.mdblist.AndroidMdbListAuthPersistence
+import us.xnetik.tv.data.mdblist.AndroidMdbListSyncStorage
+import us.xnetik.tv.data.mdblist.MdbListSyncRepository
+import us.xnetik.tv.data.mdblist.MdbListApiClient
+import us.xnetik.tv.data.mdblist.MdbListAuthRepository
+import us.xnetik.tv.data.mdblist.MdbListAuthStore
+import us.xnetik.tv.data.mdblist.MdbListConfiguration
+import us.xnetik.tv.data.mdblist.MdbListHttpClient
+import us.xnetik.tv.data.mdblist.OkHttpMdbListEngine
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -37,7 +37,7 @@ object MdbListModule {
         sync: MdbListSyncRepository,
         auth: MdbListAuthStore,
         profiles: ProfileManager
-    ) = com.nuvio.tv.data.mdblist.MdbListLibraryService(
+    ) = us.xnetik.tv.data.mdblist.MdbListLibraryService(
         api, sync, auth, profiles.activeProfileId, CoroutineScope(SupervisorJob() + Dispatchers.IO)
     )
 

@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.emptyPreferences
-import com.nuvio.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.DiscoverLocation
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

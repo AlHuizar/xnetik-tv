@@ -1,9 +1,9 @@
-package com.nuvio.tv.domain.repository
+package us.xnetik.tv.domain.repository
 
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.Stream
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.Stream
 import kotlinx.coroutines.flow.Flow
 
 interface StreamRepository {

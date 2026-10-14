@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
@@ -14,9 +14,9 @@ import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.test.pressKey
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.nuvio.tv.R
-import com.nuvio.tv.data.mdblist.MdbListDeviceSession
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.data.mdblist.MdbListDeviceSession
+import us.xnetik.tv.ui.theme.NuvioTheme
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync.library
+package us.xnetik.tv.core.sync.library
 
 internal const val LIBRARY_SNAPSHOT_PAGE_SIZE = 500
 internal const val LIBRARY_DELTA_PAGE_SIZE = 500

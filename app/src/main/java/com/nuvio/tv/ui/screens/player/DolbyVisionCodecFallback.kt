@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.media.MediaCodec
 import android.media.MediaCodecList

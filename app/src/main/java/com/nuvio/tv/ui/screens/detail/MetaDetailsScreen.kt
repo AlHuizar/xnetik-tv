@@ -1,12 +1,12 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.ui.components.LocalPlaybackAvailability
-import com.nuvio.tv.ui.navigation.LocalDetailChildClosedEpoch
-import com.nuvio.tv.ui.navigation.LocalDetailChildOverlayVisible
+import us.xnetik.tv.ui.components.LocalPlaybackAvailability
+import us.xnetik.tv.ui.navigation.LocalDetailChildClosedEpoch
+import us.xnetik.tv.ui.navigation.LocalDetailChildOverlayVisible
 import android.widget.Toast
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioMotion
 
 import android.view.KeyEvent
 import android.os.SystemClock
@@ -78,16 +78,16 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.util.dpadVerticalFastScroll
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.util.dpadVerticalFastScroll
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.compose.runtime.DisposableEffect
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.nuvio.tv.ui.util.localizedGenreLabel
-import com.nuvio.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.util.localizedGenreLabel
+import us.xnetik.tv.ui.util.recompositionHighlighter
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListPrefetchStrategy
 import androidx.compose.foundation.lazy.LazyRow
@@ -111,32 +111,32 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.style.TextOverflow
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.DetailImdbRatingsVisibility
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
-import com.nuvio.tv.domain.model.HomeImdbRatingsVisibility
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.localizedMembershipTitle
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaCastMember
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.MetaTrailer
-import com.nuvio.tv.domain.model.resolveContentLanguage
-import com.nuvio.tv.domain.model.MDBListRatings
-import com.nuvio.tv.domain.model.NextToWatch
-import com.nuvio.tv.domain.model.TraktCommentReview
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.ui.components.ErrorState
-import com.nuvio.tv.ui.components.MetaDetailsSkeleton
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.components.PlayManualOverrideDialog
-import com.nuvio.tv.ui.components.SynopsisOverlay
-import com.nuvio.tv.ui.components.TrailerPlayer
-import com.nuvio.tv.ui.components.posteroptions.TrackingRemovalConfirmationDialog
-import com.nuvio.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
-import com.nuvio.tv.core.tracking.supportsMembershipFor
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.DetailImdbRatingsVisibility
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.domain.model.HomeImdbRatingsVisibility
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.localizedMembershipTitle
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaCastMember
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.MetaTrailer
+import us.xnetik.tv.domain.model.resolveContentLanguage
+import us.xnetik.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.NextToWatch
+import us.xnetik.tv.domain.model.TraktCommentReview
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.ui.components.ErrorState
+import us.xnetik.tv.ui.components.MetaDetailsSkeleton
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.components.PlayManualOverrideDialog
+import us.xnetik.tv.ui.components.SynopsisOverlay
+import us.xnetik.tv.ui.components.TrailerPlayer
+import us.xnetik.tv.ui.components.posteroptions.TrackingRemovalConfirmationDialog
+import us.xnetik.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
+import us.xnetik.tv.core.tracking.supportsMembershipFor
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.rememberCoroutineScope
@@ -1169,7 +1169,7 @@ fun MetaDetailsScreen(
     }
 
     val posterOptionsState by viewModel.posterOptions.state.collectAsStateWithLifecycle()
-    com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+    us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
         state = posterOptionsState,
         controller = viewModel.posterOptions,
         onNavigateToDetail = { id, type, addonBaseUrl ->
@@ -1200,9 +1200,9 @@ private fun MetaDetailsContent(
     episodeWatchedPendingKeys: Set<String>,
     blurUnwatchedEpisodes: Boolean,
     randomEpisodeEnabled: Boolean,
-    episodeShuffle: com.nuvio.tv.domain.model.EpisodeShuffleSettings,
+    episodeShuffle: us.xnetik.tv.domain.model.EpisodeShuffleSettings,
     shufflePoolEmpty: Boolean,
-    onEpisodeShuffleChange: suspend (com.nuvio.tv.domain.model.EpisodeShuffleSettings) -> Boolean,
+    onEpisodeShuffleChange: suspend (us.xnetik.tv.domain.model.EpisodeShuffleSettings) -> Boolean,
     episodeOptionsOverlayStyle: EpisodeOptionsOverlayStyle,
     showFullReleaseDate: Boolean,
     overallRatingsVisibility: HomeImdbRatingsVisibility,
@@ -1219,7 +1219,7 @@ private fun MetaDetailsContent(
     isEpisodeRatingsLoading: Boolean,
     episodeRatingsError: String?,
     mdbListRatings: MDBListRatings?,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     isMdbListRatingsActive: Boolean,
     tmdbRating: Float?,
     comments: List<TraktCommentReview>,

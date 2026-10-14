@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.plugin.cloudstream
+package us.xnetik.tv.core.plugin.cloudstream
 
 import android.util.Log
 import com.lagradost.cloudstream3.SubtitleFile

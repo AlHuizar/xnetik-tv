@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
-import com.nuvio.tv.core.player.DolbyVisionBaseLayerPolicy.Decision
+import us.xnetik.tv.core.player.DolbyVisionBaseLayerPolicy.Decision
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

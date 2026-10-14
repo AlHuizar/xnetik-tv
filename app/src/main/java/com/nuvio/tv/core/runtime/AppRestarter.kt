@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.runtime
+package us.xnetik.tv.core.runtime
 
 import android.app.AlarmManager
 import android.app.PendingIntent

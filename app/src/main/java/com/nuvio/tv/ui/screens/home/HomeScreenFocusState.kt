@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import androidx.compose.runtime.Immutable
 

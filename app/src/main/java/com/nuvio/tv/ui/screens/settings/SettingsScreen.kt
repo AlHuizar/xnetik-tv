@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.annotation.RawRes
@@ -89,11 +89,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.tv.material3.ExperimentalTvMaterial3Api
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.domain.model.ExperienceMode
-import com.nuvio.tv.domain.model.SettingsUiStyle
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.domain.model.ExperienceMode
+import us.xnetik.tv.domain.model.SettingsUiStyle
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -976,7 +976,7 @@ private fun AccountSettingsInline(
     onNavigateToAuthQrSignIn: () -> Unit,
     initialFocusRequester: FocusRequester?
 ) {
-    val accountViewModel: com.nuvio.tv.ui.screens.account.AccountViewModel = hiltViewModel()
+    val accountViewModel: us.xnetik.tv.ui.screens.account.AccountViewModel = hiltViewModel()
     val accountUiState by accountViewModel.uiState.collectAsStateWithLifecycle()
 
     Column(
@@ -992,7 +992,7 @@ private fun AccountSettingsInline(
                 .fillMaxWidth()
                 .weight(1f)
         ) {
-            com.nuvio.tv.ui.screens.account.AccountSettingsContent(
+            us.xnetik.tv.ui.screens.account.AccountSettingsContent(
                 uiState = accountUiState,
                 viewModel = accountViewModel,
                 onNavigateToAuthQrSignIn = onNavigateToAuthQrSignIn,

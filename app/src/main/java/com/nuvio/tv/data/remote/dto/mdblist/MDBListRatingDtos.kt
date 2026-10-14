@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.remote.dto.mdblist
+package us.xnetik.tv.data.remote.dto.mdblist
 
-import com.nuvio.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.MDBListRatings
 import com.squareup.moshi.Json
 
 data class MDBListMediaRequestDto(

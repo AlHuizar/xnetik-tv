@@ -1,9 +1,9 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.WatchProgressSource
-import com.nuvio.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.WatchProgressSource
+import us.xnetik.tv.domain.model.LibrarySourceMode
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

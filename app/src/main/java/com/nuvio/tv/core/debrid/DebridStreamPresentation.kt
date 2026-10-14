@@ -1,14 +1,14 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.core.streams.CompiledStreamBadgeFilter
-import com.nuvio.tv.core.streams.StreamBadgeMatcher
-import com.nuvio.tv.core.streams.StreamBadgeRules
-import com.nuvio.tv.data.local.StreamBadgeSettingsDataStore
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.core.streams.CompiledStreamBadgeFilter
+import us.xnetik.tv.core.streams.StreamBadgeMatcher
+import us.xnetik.tv.core.streams.StreamBadgeRules
+import us.xnetik.tv.data.local.StreamBadgeSettingsDataStore
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamDebridCacheState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext

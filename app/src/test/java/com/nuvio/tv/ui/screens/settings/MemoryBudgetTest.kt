@@ -1,6 +1,6 @@
 @file:OptIn(UnstableApi::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.annotation.OptIn
 import androidx.media3.common.util.UnstableApi

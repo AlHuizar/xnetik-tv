@@ -4,10 +4,10 @@
     androidx.compose.foundation.ExperimentalFoundationApi::class
 )
 
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.contentTextDirection
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Arrangement
@@ -68,10 +68,10 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.CollectionFolder
-import com.nuvio.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.CollectionFolder
+import us.xnetik.tv.domain.model.PosterShape
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -68,7 +68,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nuvio.tv.core.util.parseEpisodeReleaseLocalDate
+import us.xnetik.tv.core.util.parseEpisodeReleaseLocalDate
 import androidx.tv.material3.Border
 import androidx.tv.material3.Button
 import androidx.tv.material3.ButtonDefaults
@@ -84,26 +84,26 @@ import coil3.memory.MemoryCache
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.request.transformations
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
-import com.nuvio.tv.ui.components.FocusMarqueeText
-import com.nuvio.tv.ui.components.ImdbRatingSourceLabel
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.components.WatchedMarker
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.ui.components.LocalCardDepthStyle
-import com.nuvio.tv.ui.components.nuvioCardDepth
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.ui.components.FocusMarqueeText
+import us.xnetik.tv.ui.components.ImdbRatingSourceLabel
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.components.WatchedMarker
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.ui.components.LocalCardDepthStyle
+import us.xnetik.tv.ui.components.nuvioCardDepth
 import android.text.format.DateFormat
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.shadow
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
-import com.nuvio.tv.ui.util.rememberLongPressKeyTracker
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.util.rememberLongPressKeyTracker
 
 private const val EPISODE_CARD_CONTENT_TYPE = "episode_card"
 private const val EPISODE_SCROLL_REPEAT_THROTTLE_MS = 80L
@@ -369,7 +369,7 @@ fun SeasonTabs(
 @Composable
 fun EpisodesRow(
     episodes: List<Video>,
-    episodeProgressMap: Map<Pair<Int, Int>, com.nuvio.tv.domain.model.WatchProgress> = emptyMap(),
+    episodeProgressMap: Map<Pair<Int, Int>, us.xnetik.tv.domain.model.WatchProgress> = emptyMap(),
     episodeRatings: Map<Pair<Int, Int>, Double> = emptyMap(),
     watchedEpisodes: Set<Pair<Int, Int>> = emptySet(),
     episodeWatchedPendingKeys: Set<String> = emptySet(),
@@ -630,7 +630,7 @@ fun EpisodesRow(
 @Composable
 private fun EpisodeCard(
     episode: Video,
-    watchProgress: com.nuvio.tv.domain.model.WatchProgress? = null,
+    watchProgress: us.xnetik.tv.domain.model.WatchProgress? = null,
     imdbRating: Double? = null,
     isMarkedWatched: Boolean = false,
     blurUnwatched: Boolean = false,
@@ -744,7 +744,7 @@ private fun EpisodeCard(
             .size(width = thumbnailWidthPx, height = thumbnailHeightPx)
             .apply {
                 if (shouldBlur) {
-                    transformations(com.nuvio.tv.ui.util.BlurTransformation())
+                    transformations(us.xnetik.tv.ui.util.BlurTransformation())
                 }
             }
             .build()

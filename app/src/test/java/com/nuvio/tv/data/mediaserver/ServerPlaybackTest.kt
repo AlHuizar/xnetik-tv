@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
-import com.nuvio.tv.core.player.StreamAutoPlaySelector
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.data.local.StreamAutoPlaySource
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.repository.MetaRepository
+import us.xnetik.tv.core.player.StreamAutoPlaySelector
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.data.local.StreamAutoPlaySource
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.repository.MetaRepository
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.CoroutineScope

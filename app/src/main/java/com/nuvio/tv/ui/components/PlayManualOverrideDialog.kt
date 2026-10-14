@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
@@ -12,8 +12,8 @@ import androidx.tv.material3.Button
 import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable

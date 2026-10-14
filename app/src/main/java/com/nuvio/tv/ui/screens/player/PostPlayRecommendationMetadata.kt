@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.core.tmdb.TmdbEnrichment
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.TmdbSettings
-import com.nuvio.tv.domain.model.countryToLanguageCode
-import com.nuvio.tv.domain.model.normalizeLanguageCode
+import us.xnetik.tv.core.tmdb.TmdbEnrichment
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.TmdbSettings
+import us.xnetik.tv.domain.model.countryToLanguageCode
+import us.xnetik.tv.domain.model.normalizeLanguageCode
 
 internal fun resolvePostPlayRecommendation(
     candidate: MetaPreview,

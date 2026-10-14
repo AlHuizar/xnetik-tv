@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable

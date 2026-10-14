@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.util
+package us.xnetik.tv.ui.util
 
 import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @Composable
 fun localizedGenreLabel(genre: String): String {

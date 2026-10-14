@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import androidx.media3.common.util.ParsableByteArray
 import androidx.media3.common.util.UnstableApi

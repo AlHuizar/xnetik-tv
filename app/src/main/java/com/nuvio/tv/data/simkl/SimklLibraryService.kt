@@ -1,15 +1,15 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.core.tracking.TrackingLibraryProvider
-import com.nuvio.tv.core.tracking.TrackingListStatus
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalImpact
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.ListMembershipSnapshot
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.TrackingLibraryProvider
+import us.xnetik.tv.core.tracking.TrackingListStatus
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalImpact
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.ListMembershipSnapshot
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow

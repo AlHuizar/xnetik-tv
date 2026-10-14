@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -34,7 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.tv.material3.Border
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.tv.material3.Card
 import androidx.tv.material3.CardDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
@@ -42,9 +42,9 @@ import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Switch
 import androidx.tv.material3.SwitchDefaults
 import androidx.tv.material3.Text
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.account.InputField
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.account.InputField
 
 @Composable
 fun DebugSettingsContent(

@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.data.repository.SkipInterval
+import us.xnetik.tv.data.repository.SkipInterval
 
 internal const val SKIP_INTRO_AUTO_HIDE_TIMEOUT_MS = 10_000
 

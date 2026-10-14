@@ -1,11 +1,11 @@
-package com.nuvio.tv.core.tmdb
+package us.xnetik.tv.core.tmdb
 
 import android.util.Log
-import com.nuvio.tv.data.repository.MDBListRepository
-import com.nuvio.tv.domain.model.MDBListSettings
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.TmdbSettings
+import us.xnetik.tv.data.repository.MDBListRepository
+import us.xnetik.tv.domain.model.MDBListSettings
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.TmdbSettings
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

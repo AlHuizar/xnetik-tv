@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -15,11 +15,11 @@ import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.MDBListRatings
-import com.nuvio.tv.domain.model.MDBListSettings
-import com.nuvio.tv.domain.model.RottenTomatoesStatus
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.MDBListSettings
+import us.xnetik.tv.domain.model.RottenTomatoesStatus
+import us.xnetik.tv.ui.theme.NuvioTheme
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.Dp
 

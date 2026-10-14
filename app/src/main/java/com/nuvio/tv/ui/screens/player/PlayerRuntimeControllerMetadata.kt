@@ -1,15 +1,15 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.R
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.local.AutoSkipSegmentType
-import com.nuvio.tv.data.repository.SkipInterval
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.resolveContentLanguage
-import com.nuvio.tv.domain.model.normalizeLanguageCode
-import com.nuvio.tv.data.local.AudioLanguageOption
+import us.xnetik.tv.R
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.local.AutoSkipSegmentType
+import us.xnetik.tv.data.repository.SkipInterval
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.resolveContentLanguage
+import us.xnetik.tv.domain.model.normalizeLanguageCode
+import us.xnetik.tv.data.local.AudioLanguageOption
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
@@ -284,7 +284,7 @@ internal fun PlayerRuntimeController.recomputeNextEpisode(resetVisibility: Boole
         unairedMessage = if (hasAired) {
             null
         } else {
-            context.getString(com.nuvio.tv.R.string.next_episode_not_aired_yet)
+            context.getString(us.xnetik.tv.R.string.next_episode_not_aired_yet)
         }
     )
     applyRecomputedNextEpisode(nextInfo, resetVisibility)

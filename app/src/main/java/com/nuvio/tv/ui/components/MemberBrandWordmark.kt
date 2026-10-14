@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
@@ -35,8 +35,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.sp
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.MemberTier
-import com.nuvio.tv.ui.membership.Membership
+import us.xnetik.tv.domain.model.MemberTier
+import us.xnetik.tv.ui.membership.Membership
 import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.sin

@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.requiredHeight
@@ -15,11 +15,11 @@ import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.PlayerPreference
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.PlayerPreference
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.ui.theme.NuvioTheme
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule

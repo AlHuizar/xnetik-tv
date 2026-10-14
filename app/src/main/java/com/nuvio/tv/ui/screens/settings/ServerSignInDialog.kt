@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,13 +20,13 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.data.mediaserver.ServerConnection
-import com.nuvio.tv.data.mediaserver.ServerFailure
-import com.nuvio.tv.data.mediaserver.ServerProvider
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.account.InputField
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.data.mediaserver.ServerConnection
+import us.xnetik.tv.data.mediaserver.ServerFailure
+import us.xnetik.tv.data.mediaserver.ServerProvider
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.account.InputField
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 internal data class ServerSignInRequest(
     val provider: ServerProvider,

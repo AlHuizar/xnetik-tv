@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

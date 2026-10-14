@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.TrackingLibrarySorter
+import us.xnetik.tv.core.tracking.TrackingLibrarySorter
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine

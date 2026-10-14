@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.data.remote.dto.MetaDto
-import com.nuvio.tv.data.remote.dto.MetaResponseDto
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.data.remote.dto.MetaDto
+import us.xnetik.tv.data.remote.dto.MetaResponseDto
+import us.xnetik.tv.domain.repository.AddonRepository
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every

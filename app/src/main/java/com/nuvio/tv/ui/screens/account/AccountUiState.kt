@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.account
+package us.xnetik.tv.ui.screens.account
 
 import android.graphics.Bitmap
-import com.nuvio.tv.data.remote.supabase.SupabaseLinkedDevice
-import com.nuvio.tv.domain.model.AuthState
+import us.xnetik.tv.data.remote.supabase.SupabaseLinkedDevice
+import us.xnetik.tv.domain.model.AuthState
 
 data class AccountConnectedStats(
     val addons: Int = 0,

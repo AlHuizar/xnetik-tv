@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 /**
  * Live TV and VOD both commonly use HLS (.m3u8). The URL is not a reliable

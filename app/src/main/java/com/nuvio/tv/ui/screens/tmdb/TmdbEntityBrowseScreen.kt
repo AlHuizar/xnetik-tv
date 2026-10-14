@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.tmdb
+package us.xnetik.tv.ui.screens.tmdb
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.Crossfade
@@ -73,20 +73,20 @@ import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.request.crossfade
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tmdb.TmdbEntityBrowseData
-import com.nuvio.tv.core.tmdb.TmdbEntityKind
-import com.nuvio.tv.core.tmdb.TmdbEntityMediaType
-import com.nuvio.tv.core.tmdb.TmdbEntityRail
-import com.nuvio.tv.core.tmdb.TmdbEntityRailType
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.ui.components.EmptyScreenState
-import com.nuvio.tv.ui.components.ErrorState
-import com.nuvio.tv.ui.components.GridContentCard
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.PosterCardStyle
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tmdb.TmdbEntityBrowseData
+import us.xnetik.tv.core.tmdb.TmdbEntityKind
+import us.xnetik.tv.core.tmdb.TmdbEntityMediaType
+import us.xnetik.tv.core.tmdb.TmdbEntityRail
+import us.xnetik.tv.core.tmdb.TmdbEntityRailType
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.ui.components.EmptyScreenState
+import us.xnetik.tv.ui.components.ErrorState
+import us.xnetik.tv.ui.components.GridContentCard
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
 import kotlinx.coroutines.flow.distinctUntilChanged
 
 @Composable
@@ -151,7 +151,7 @@ fun TmdbEntityBrowseScreen(
         }
 
         val posterOptionsState by viewModel.posterOptions.state.collectAsStateWithLifecycle()
-        com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+        us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
             state = posterOptionsState,
             controller = viewModel.posterOptions,
             onNavigateToDetail = { id, type, addonBaseUrl ->

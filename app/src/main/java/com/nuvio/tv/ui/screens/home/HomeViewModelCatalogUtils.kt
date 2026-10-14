@@ -1,12 +1,12 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.domain.model.catalogTypeKey
-import com.nuvio.tv.domain.model.catalogRowLegacyKey
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.stableKey
+import us.xnetik.tv.domain.model.catalogTypeKey
+import us.xnetik.tv.domain.model.catalogRowLegacyKey
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.stableKey
 import kotlinx.coroutines.Job
 
 internal fun HomeViewModel.catalogKey(addonId: String, type: String, catalogId: String): String {

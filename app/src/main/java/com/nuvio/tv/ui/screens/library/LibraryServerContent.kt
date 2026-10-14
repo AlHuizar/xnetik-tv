@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -13,14 +13,14 @@ import androidx.compose.ui.layout.layout
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.nuvio.tv.R
-import com.nuvio.tv.data.mediaserver.messageRes
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.ui.components.CatalogRowSection
-import com.nuvio.tv.ui.components.EmptyScreenState
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.R
+import us.xnetik.tv.data.mediaserver.messageRes
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.ui.components.CatalogRowSection
+import us.xnetik.tv.ui.components.EmptyScreenState
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.PosterCardStyle
 
 internal fun LazyGridScope.libraryServerContent(
     shelves: List<LibraryServerShelf>?,

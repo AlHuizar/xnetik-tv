@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.content.Context
 import android.util.Log
@@ -9,10 +9,10 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
 import androidx.media3.exoplayer.upstream.DefaultAllocator
 import androidx.media3.exoplayer.upstream.DefaultBandwidthMeter
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.data.local.TrailerSettingsDataStore
-import com.nuvio.tv.ui.screens.settings.MemoryBudget
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.data.local.TrailerSettingsDataStore
+import us.xnetik.tv.ui.screens.settings.MemoryBudget
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.concurrent.atomic.AtomicBoolean
 import javax.inject.Inject

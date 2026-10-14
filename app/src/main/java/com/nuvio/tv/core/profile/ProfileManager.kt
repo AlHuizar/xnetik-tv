@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.profile
+package us.xnetik.tv.core.profile
 
 import android.content.Context
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.ProfileDataStore
-import com.nuvio.tv.data.local.ProfileDataStoreFactory
-import com.nuvio.tv.domain.model.UserProfile
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.ProfileDataStore
+import us.xnetik.tv.data.local.ProfileDataStoreFactory
+import us.xnetik.tv.domain.model.UserProfile
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

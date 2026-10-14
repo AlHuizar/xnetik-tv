@@ -1,16 +1,16 @@
-package com.nuvio.tv.core.di
+package us.xnetik.tv.core.di
 
 import android.os.Build
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.core.network.NoDelaySocketFactory
-import com.nuvio.tv.core.profile.ProfileScopedCredentialStore
-import com.nuvio.tv.core.sync.SyncClientIdentity
-import com.nuvio.tv.data.local.ProfileDataStore
-import com.nuvio.tv.data.mediaserver.AndroidServerPersistence
-import com.nuvio.tv.data.mediaserver.ServerRepository
-import com.nuvio.tv.data.mediaserver.emby.EmbyProvider
-import com.nuvio.tv.data.mediaserver.jellyfin.JellyfinProvider
-import com.nuvio.tv.data.mediaserver.mediabrowser.ServerClientIdentity
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.core.network.NoDelaySocketFactory
+import us.xnetik.tv.core.profile.ProfileScopedCredentialStore
+import us.xnetik.tv.core.sync.SyncClientIdentity
+import us.xnetik.tv.data.local.ProfileDataStore
+import us.xnetik.tv.data.mediaserver.AndroidServerPersistence
+import us.xnetik.tv.data.mediaserver.ServerRepository
+import us.xnetik.tv.data.mediaserver.emby.EmbyProvider
+import us.xnetik.tv.data.mediaserver.jellyfin.JellyfinProvider
+import us.xnetik.tv.data.mediaserver.mediabrowser.ServerClientIdentity
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

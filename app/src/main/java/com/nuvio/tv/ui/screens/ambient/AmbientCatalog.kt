@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.ambient
+package us.xnetik.tv.ui.screens.ambient
 
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.catalogRowLegacyKey
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.catalogRowLegacyKey
 
 data class AmbientCatalog(
     val key: String,

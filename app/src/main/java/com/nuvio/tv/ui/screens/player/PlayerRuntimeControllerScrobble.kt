@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.os.SystemClock
 import android.util.Log
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
-import com.nuvio.tv.data.local.toTrackPreference
+import us.xnetik.tv.data.local.toTrackPreference
 
 internal fun PlayerRuntimeController.preparePlaybackBeforeStart(
     url: String,
@@ -46,7 +46,7 @@ internal fun PlayerRuntimeController.preparePlaybackBeforeStart(
     playbackPreparationJob = scope.launch {
         setLoadingStatus(
             phase = "preparing_metadata",
-            message = context.getString(com.nuvio.tv.R.string.player_loading_preparing)
+            message = context.getString(us.xnetik.tv.R.string.player_loading_preparing)
         )
         refreshScrobbleItem()
         if (persistedTrackPreference == null) {
@@ -106,13 +106,13 @@ internal fun PlayerRuntimeController.preparePlaybackBeforeStart(
         if (loadSavedProgress) {
             recordLoadingDiagnosticEvent(
                 phase = "loading_saved_progress",
-                message = context.getString(com.nuvio.tv.R.string.player_loading_preparing)
+                message = context.getString(us.xnetik.tv.R.string.player_loading_preparing)
             )
             loadSavedProgressSuspend(currentSeason, currentEpisode)
         }
         recordLoadingDiagnosticEvent(
             phase = "initializing_player",
-            message = context.getString(com.nuvio.tv.R.string.player_loading_building)
+            message = context.getString(us.xnetik.tv.R.string.player_loading_building)
         )
         initializePlayer(playbackUrl, playbackHeaders)
     }

@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.ListMembershipSnapshot
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.ListMembershipSnapshot
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow

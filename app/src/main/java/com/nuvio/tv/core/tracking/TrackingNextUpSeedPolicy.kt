@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchProgress
 
 internal fun selectPreferredTrackingNextUpSeeds(
     candidates: List<WatchProgress>,

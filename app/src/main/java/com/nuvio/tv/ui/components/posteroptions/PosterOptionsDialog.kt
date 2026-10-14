@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components.posteroptions
+package us.xnetik.tv.ui.components.posteroptions
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -25,15 +25,15 @@ import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalImpact
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
-import com.nuvio.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
-import com.nuvio.tv.core.tracking.supportsMembershipFor
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.localizedMembershipTitle
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.ui.components.NuvioDialog
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalImpact
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
+import us.xnetik.tv.core.tracking.supportsMembershipFor
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.localizedMembershipTitle
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.ui.components.NuvioDialog
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable

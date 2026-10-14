@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync.androidtv
+package us.xnetik.tv.core.sync.androidtv
 
 import android.content.ContentResolver
 import android.content.ContentUris
@@ -8,7 +8,7 @@ import android.database.Cursor
 import android.net.Uri
 import android.media.tv.TvContract
 import androidx.tvprovider.media.tv.TvContractCompat
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchProgress
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -75,7 +75,7 @@ class AndroidTvChannelManagerTest {
 
         every { context.packageManager } returns packageManager
         every { context.contentResolver } returns contentResolver
-        every { context.packageName } returns "com.nuvio.tv"
+        every { context.packageName } returns "us.xnetik.tv"
         every { context.getString(any<Int>()) } returns "Continue Watching"
         manager = AndroidTvChannelManager(context, prefs)
     }

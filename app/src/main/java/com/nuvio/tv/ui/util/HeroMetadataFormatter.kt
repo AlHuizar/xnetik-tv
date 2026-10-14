@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.util
+package us.xnetik.tv.ui.util
 
-import com.nuvio.tv.core.util.parseRuntimeMinutes
+import us.xnetik.tv.core.util.parseRuntimeMinutes
 
 fun formatHeroRuntime(runtime: String?): String? {
     val normalized = runtime?.trim()?.lowercase()?.takeIf { it.isNotBlank() } ?: return null

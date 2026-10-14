@@ -1,15 +1,15 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.util.Log
-import com.nuvio.tv.core.player.OpenSubtitlesHasher
+import us.xnetik.tv.core.player.OpenSubtitlesHasher
 import androidx.media3.common.C
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
-import com.nuvio.tv.data.local.FrameRateMatchingMode
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.enabledAddons
+import us.xnetik.tv.data.local.FrameRateMatchingMode
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.enabledAddons
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest

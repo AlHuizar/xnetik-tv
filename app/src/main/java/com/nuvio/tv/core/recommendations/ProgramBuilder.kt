@@ -1,12 +1,12 @@
-package com.nuvio.tv.core.recommendations
+package us.xnetik.tv.core.recommendations
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.tvprovider.media.tv.TvContractCompat
 import androidx.tvprovider.media.tv.WatchNextProgram
-import com.nuvio.tv.MainActivity
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.MainActivity
+import us.xnetik.tv.domain.model.WatchProgress
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton

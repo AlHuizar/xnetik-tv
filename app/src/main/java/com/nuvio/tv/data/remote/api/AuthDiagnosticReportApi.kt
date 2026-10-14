@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.remote.api
+package us.xnetik.tv.data.remote.api
 
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticReportRequestDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticReportResponseDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticReportRequestDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticReportResponseDto
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST

@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.domain.model.catalogRowLegacyKey
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.catalogRowLegacyKey
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.gestures.BringIntoViewSpec
@@ -52,16 +52,16 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import coil3.imageLoader
 import coil3.memory.MemoryCache
 import coil3.request.ImageRequest
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.isPlaceholder
-import com.nuvio.tv.ui.util.StableList
-import com.nuvio.tv.ui.util.StableMap
-import com.nuvio.tv.ui.util.StableRef
-import com.nuvio.tv.ui.util.dpadVerticalFastScroll
-import com.nuvio.tv.ui.util.recompositionHighlighter
-import com.nuvio.tv.ui.components.rememberPlaceholderShimmerOffsetState
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.isPlaceholder
+import us.xnetik.tv.ui.util.StableList
+import us.xnetik.tv.ui.util.StableMap
+import us.xnetik.tv.ui.util.StableRef
+import us.xnetik.tv.ui.util.dpadVerticalFastScroll
+import us.xnetik.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.components.rememberPlaceholderShimmerOffsetState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.debounce

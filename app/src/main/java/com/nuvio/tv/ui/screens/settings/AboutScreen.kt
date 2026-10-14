@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class, ExperimentalFoundationApi::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.content.Intent
 import android.net.Uri
@@ -42,10 +42,10 @@ import androidx.compose.ui.unit.dp
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.ui.components.MemberBrandWordmark
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.ui.components.MemberBrandWordmark
 
 @Composable
 fun AboutScreen(

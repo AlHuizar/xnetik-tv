@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.core.tracking.TrackingScrobbleEvent
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleEvent
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest

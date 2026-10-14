@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.runtime
+package us.xnetik.tv.core.runtime
 
 import android.app.Activity
 import android.app.Application
@@ -7,7 +7,7 @@ import android.util.Log
 import com.lagradost.cloudstream3.AcraApplication
 import com.lagradost.cloudstream3.app
 import com.lagradost.nicehttp.ignoreAllSSLErrors
-import com.nuvio.tv.NuvioApplication
+import us.xnetik.tv.NuvioApplication
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import org.conscrypt.Conscrypt
@@ -50,7 +50,7 @@ object PluginRuntimeHooks {
 
             try {
                 app.baseClient = OkHttpClient.Builder()
-                    .dns(com.nuvio.tv.core.network.IPv4FirstDns())
+                    .dns(us.xnetik.tv.core.network.IPv4FirstDns())
                     .cookieJar(NuvioApplication.extensionCookieJar)
                     .followRedirects(true)
                     .followSslRedirects(true)

@@ -1,4 +1,4 @@
-package com.nuvio.tv
+package us.xnetik.tv
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences

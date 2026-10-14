@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.streams
+package us.xnetik.tv.core.streams
 
-import com.nuvio.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.Stream
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

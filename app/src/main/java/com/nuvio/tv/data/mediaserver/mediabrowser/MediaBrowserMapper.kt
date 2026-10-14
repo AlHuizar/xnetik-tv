@@ -1,20 +1,20 @@
-package com.nuvio.tv.data.mediaserver.mediabrowser
+package us.xnetik.tv.data.mediaserver.mediabrowser
 
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.core.tracking.parseTrackingExternalIds
-import com.nuvio.tv.data.mediaserver.ServerCandidate
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.data.mediaserver.ServerMediaKind
-import com.nuvio.tv.data.mediaserver.ServerPlaybackTarget
-import com.nuvio.tv.data.mediaserver.ServerTitle
-import com.nuvio.tv.data.mediaserver.ServerUserState
-import com.nuvio.tv.data.mediaserver.domainType
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaCastMember
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.Video
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.parseTrackingExternalIds
+import us.xnetik.tv.data.mediaserver.ServerCandidate
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.mediaserver.ServerMediaKind
+import us.xnetik.tv.data.mediaserver.ServerPlaybackTarget
+import us.xnetik.tv.data.mediaserver.ServerTitle
+import us.xnetik.tv.data.mediaserver.ServerUserState
+import us.xnetik.tv.data.mediaserver.domainType
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaCastMember
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.Video
 import java.time.Instant
 import kotlin.math.roundToInt
 

@@ -1,52 +1,52 @@
-package com.nuvio.tv.ui.screens.addon
+package us.xnetik.tv.ui.screens.addon
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.sync.CollectionSyncService
-import com.nuvio.tv.core.sync.HomeCatalogSettingsSyncService
-import com.nuvio.tv.core.sync.StartupSyncService
-import com.nuvio.tv.core.sync.homeCatalogKey
-import com.nuvio.tv.core.sync.homeLegacyDisabledCatalogKey
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.qr.QrCodeGenerator
-import com.nuvio.tv.core.server.AddonConfigServer
-import com.nuvio.tv.core.server.AddonInfo
-import com.nuvio.tv.core.server.AddonWebConfigMode
-import com.nuvio.tv.core.server.CatalogInfo
-import com.nuvio.tv.core.server.CatalogSourceInfo
-import com.nuvio.tv.core.server.CollectionInfo
-import com.nuvio.tv.core.server.CollectionSourceInfo
-import com.nuvio.tv.core.server.DeviceIpAddress
-import com.nuvio.tv.core.server.FolderInfo
-import com.nuvio.tv.core.server.PageState
-import com.nuvio.tv.core.server.PendingAddonChange
-import com.nuvio.tv.core.server.TmdbFiltersInfo
-import com.nuvio.tv.core.server.TmdbSourceMetadataInfo
-import com.nuvio.tv.core.server.TmdbSourceMetadataRequest
-import com.nuvio.tv.core.server.TmdbSourceSearchRequest
-import com.nuvio.tv.core.server.TmdbSourceSearchResultInfo
-import com.nuvio.tv.core.server.TraktSourceMetadataInfo
-import com.nuvio.tv.core.server.TraktSourceMetadataRequest
-import com.nuvio.tv.core.server.TraktSourceSearchRequest
-import com.nuvio.tv.core.server.TraktSourceSearchResultInfo
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.tmdb.TmdbCollectionSourceResolver
-import com.nuvio.tv.core.trakt.TraktPublicListSourceResolver
-import com.nuvio.tv.data.local.CollectionsDataStore
-import com.nuvio.tv.data.local.ExperienceModeDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.AddonCatalogCollectionSource
-import com.nuvio.tv.domain.model.ExperienceMode
-import com.nuvio.tv.domain.model.TmdbCollectionSource
-import com.nuvio.tv.domain.model.TmdbCollectionSourceType
-import com.nuvio.tv.domain.model.TraktCollectionSource
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.R
+import us.xnetik.tv.core.sync.CollectionSyncService
+import us.xnetik.tv.core.sync.HomeCatalogSettingsSyncService
+import us.xnetik.tv.core.sync.StartupSyncService
+import us.xnetik.tv.core.sync.homeCatalogKey
+import us.xnetik.tv.core.sync.homeLegacyDisabledCatalogKey
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.qr.QrCodeGenerator
+import us.xnetik.tv.core.server.AddonConfigServer
+import us.xnetik.tv.core.server.AddonInfo
+import us.xnetik.tv.core.server.AddonWebConfigMode
+import us.xnetik.tv.core.server.CatalogInfo
+import us.xnetik.tv.core.server.CatalogSourceInfo
+import us.xnetik.tv.core.server.CollectionInfo
+import us.xnetik.tv.core.server.CollectionSourceInfo
+import us.xnetik.tv.core.server.DeviceIpAddress
+import us.xnetik.tv.core.server.FolderInfo
+import us.xnetik.tv.core.server.PageState
+import us.xnetik.tv.core.server.PendingAddonChange
+import us.xnetik.tv.core.server.TmdbFiltersInfo
+import us.xnetik.tv.core.server.TmdbSourceMetadataInfo
+import us.xnetik.tv.core.server.TmdbSourceMetadataRequest
+import us.xnetik.tv.core.server.TmdbSourceSearchRequest
+import us.xnetik.tv.core.server.TmdbSourceSearchResultInfo
+import us.xnetik.tv.core.server.TraktSourceMetadataInfo
+import us.xnetik.tv.core.server.TraktSourceMetadataRequest
+import us.xnetik.tv.core.server.TraktSourceSearchRequest
+import us.xnetik.tv.core.server.TraktSourceSearchResultInfo
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.tmdb.TmdbCollectionSourceResolver
+import us.xnetik.tv.core.trakt.TraktPublicListSourceResolver
+import us.xnetik.tv.data.local.CollectionsDataStore
+import us.xnetik.tv.data.local.ExperienceModeDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.AddonCatalogCollectionSource
+import us.xnetik.tv.domain.model.ExperienceMode
+import us.xnetik.tv.domain.model.TmdbCollectionSource
+import us.xnetik.tv.domain.model.TmdbCollectionSourceType
+import us.xnetik.tv.domain.model.TraktCollectionSource
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.repository.AddonRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -447,7 +447,7 @@ class AddonManagerViewModel @Inject constructor(
                         .map {
                             TmdbSourceSearchResultInfo(
                                 id = it.id,
-                                title = it.name ?: context.getString(com.nuvio.tv.R.string.web_tmdb_company_fallback, it.id),
+                                title = it.name ?: context.getString(us.xnetik.tv.R.string.web_tmdb_company_fallback, it.id),
                                 subtitle = it.originCountry?.takeIf { value -> value.isNotBlank() }
                             )
                         }
@@ -455,7 +455,7 @@ class AddonManagerViewModel @Inject constructor(
                         .map {
                             TmdbSourceSearchResultInfo(
                                 id = it.id,
-                                title = it.name ?: context.getString(com.nuvio.tv.R.string.web_tmdb_collection_fallback, it.id),
+                                title = it.name ?: context.getString(us.xnetik.tv.R.string.web_tmdb_collection_fallback, it.id),
                                 subtitle = it.overview?.takeIf { value -> value.isNotBlank() }
                             )
                         }

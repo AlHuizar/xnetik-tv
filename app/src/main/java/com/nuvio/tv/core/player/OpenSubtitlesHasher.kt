@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
-import com.nuvio.tv.ui.screens.player.PlayerMediaSourceFactory
-import com.nuvio.tv.ui.screens.player.PlayerPlaybackNetworking
+import us.xnetik.tv.ui.screens.player.PlayerMediaSourceFactory
+import us.xnetik.tv.ui.screens.player.PlayerPlaybackNetworking
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient

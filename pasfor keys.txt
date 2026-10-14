@@ -1,0 +1,4 @@
+File	J:\APPS\Telly\xnetiktv.jks
+Alias	xnetiktv
+Password	Xnetik2025!
+Valid until	March 2054

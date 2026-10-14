@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
@@ -24,8 +24,8 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.FilterChip
 import androidx.tv.material3.FilterChipDefaults
 import androidx.tv.material3.Icon
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.theme.NuvioTheme
 import kotlinx.coroutines.delay as coroutineDelay
 
 @OptIn(ExperimentalTvMaterial3Api::class)

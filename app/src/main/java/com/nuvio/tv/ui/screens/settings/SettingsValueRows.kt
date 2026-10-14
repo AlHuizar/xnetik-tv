@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.view.KeyEvent
 import androidx.compose.foundation.background
@@ -49,7 +49,7 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @Composable
 internal fun SliderSettingsItem(

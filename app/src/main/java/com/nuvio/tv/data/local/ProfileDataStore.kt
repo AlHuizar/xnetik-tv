@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -10,8 +10,8 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.core.handlers.ReplaceFileCorruptionHandler
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.preferencesDataStore
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.UserProfile
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.UserProfile
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import dagger.hilt.android.qualifiers.ApplicationContext

@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
@@ -49,9 +49,9 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.allowRgb565
 import coil3.request.crossfade
-import com.nuvio.tv.R
-import com.nuvio.tv.data.remote.supabase.ProfileBackgroundCatalogItem
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.data.remote.supabase.ProfileBackgroundCatalogItem
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 @Composable
 fun ProfileBackgroundPicker(

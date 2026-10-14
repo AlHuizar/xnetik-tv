@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.EnterTransition
@@ -30,17 +30,17 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.exoplayer.source.MergingMediaSource
-import com.nuvio.tv.core.player.LetterboxDetector
-import com.nuvio.tv.core.player.LetterboxSampler
-import com.nuvio.tv.core.player.LetterboxTracker
-import com.nuvio.tv.core.player.LocalTrailerPlayerPool
-import com.nuvio.tv.core.player.TrailerPlayerPool
-import com.nuvio.tv.data.trailer.YoutubeChunkedDataSourceFactory
+import us.xnetik.tv.core.player.LetterboxDetector
+import us.xnetik.tv.core.player.LetterboxSampler
+import us.xnetik.tv.core.player.LetterboxTracker
+import us.xnetik.tv.core.player.LocalTrailerPlayerPool
+import us.xnetik.tv.core.player.TrailerPlayerPool
+import us.xnetik.tv.data.trailer.YoutubeChunkedDataSourceFactory
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
 import android.view.LayoutInflater
 import android.view.TextureView
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import kotlinx.coroutines.delay
 
 @androidx.annotation.OptIn(androidx.media3.common.util.UnstableApi::class)

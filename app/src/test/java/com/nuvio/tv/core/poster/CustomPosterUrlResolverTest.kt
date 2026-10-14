@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.poster
+package us.xnetik.tv.core.poster
 
-import com.nuvio.tv.core.poster.CustomPosterUrlResolver.ContentIds
+import us.xnetik.tv.core.poster.CustomPosterUrlResolver.ContentIds
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

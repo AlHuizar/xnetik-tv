@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.domain.model.CosmeticEntitlement
-import com.nuvio.tv.domain.model.MemberAccess
-import com.nuvio.tv.domain.model.MemberTier
+import us.xnetik.tv.domain.model.CosmeticEntitlement
+import us.xnetik.tv.domain.model.MemberAccess
+import us.xnetik.tv.domain.model.MemberTier
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull

@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.MDBListSettingsDataStore
-import com.nuvio.tv.data.mdblist.MdbListRatingsClient
-import com.nuvio.tv.data.mdblist.MdbListRatingsDiskCache
-import com.nuvio.tv.data.mdblist.MdbListRatingsLoader
-import com.nuvio.tv.domain.model.MDBListRatings
-import com.nuvio.tv.domain.model.MDBListRatingsResult
-import com.nuvio.tv.domain.model.MDBListSettings
-import com.nuvio.tv.domain.model.Meta
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.MDBListSettingsDataStore
+import us.xnetik.tv.data.mdblist.MdbListRatingsClient
+import us.xnetik.tv.data.mdblist.MdbListRatingsDiskCache
+import us.xnetik.tv.data.mdblist.MdbListRatingsLoader
+import us.xnetik.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.MDBListRatingsResult
+import us.xnetik.tv.domain.model.MDBListSettings
+import us.xnetik.tv.domain.model.Meta
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -41,12 +41,12 @@ class MDBListRepository internal constructor(
             meta = Meta(
                 id = itemId,
                 type = when (normalizeMediaType(itemType)) {
-                    "show" -> com.nuvio.tv.domain.model.ContentType.SERIES
-                    else -> com.nuvio.tv.domain.model.ContentType.MOVIE
+                    "show" -> us.xnetik.tv.domain.model.ContentType.SERIES
+                    else -> us.xnetik.tv.domain.model.ContentType.MOVIE
                 },
                 name = itemId,
                 poster = null,
-                posterShape = com.nuvio.tv.domain.model.PosterShape.POSTER,
+                posterShape = us.xnetik.tv.domain.model.PosterShape.POSTER,
                 background = null,
                 logo = null,
                 description = null,

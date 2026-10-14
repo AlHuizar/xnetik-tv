@@ -1,7 +1,7 @@
-package com.nuvio.tv.domain.repository
+package us.xnetik.tv.domain.repository
 
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.domain.model.CatalogRow
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.domain.model.CatalogRow
 import kotlinx.coroutines.flow.Flow
 
 interface CatalogRepository {
@@ -16,6 +16,6 @@ interface CatalogRepository {
         skipStep: Int = 100,
         extraArgs: Map<String, String> = emptyMap(),
         supportsSkip: Boolean = false,
-        posterScreen: com.nuvio.tv.core.poster.CustomPosterScreen = com.nuvio.tv.core.poster.CustomPosterScreen.HOME
+        posterScreen: us.xnetik.tv.core.poster.CustomPosterScreen = us.xnetik.tv.core.poster.CustomPosterScreen.HOME
     ): Flow<NetworkResult<CatalogRow>>
 }

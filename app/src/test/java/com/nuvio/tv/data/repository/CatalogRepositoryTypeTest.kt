@@ -1,12 +1,12 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.data.remote.dto.CatalogResponseDto
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.ContentType
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.data.remote.dto.CatalogResponseDto
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.ContentType
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import io.mockk.coEvery

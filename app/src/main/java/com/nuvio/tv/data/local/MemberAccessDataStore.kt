@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -7,10 +7,10 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.nuvio.tv.domain.model.CosmeticEntitlement
-import com.nuvio.tv.domain.model.CosmeticEntitlements
-import com.nuvio.tv.domain.model.MemberAccess
-import com.nuvio.tv.domain.model.MemberTier
+import us.xnetik.tv.domain.model.CosmeticEntitlement
+import us.xnetik.tv.domain.model.CosmeticEntitlements
+import us.xnetik.tv.domain.model.MemberAccess
+import us.xnetik.tv.domain.model.MemberTier
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

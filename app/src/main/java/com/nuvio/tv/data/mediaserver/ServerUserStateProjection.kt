@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import android.util.Log
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.WatchProgressPreferences
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.WatchProgressPreferences
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CancellationException

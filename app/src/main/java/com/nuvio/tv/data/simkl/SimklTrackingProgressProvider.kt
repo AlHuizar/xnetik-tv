@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingProgressProvider
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.core.tracking.TrackingProgressProvider
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.domain.model.WatchProgress
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CancellationException

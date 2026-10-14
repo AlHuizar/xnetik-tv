@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.plugin
+package us.xnetik.tv.ui.screens.plugin
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.graphics.Bitmap
 import androidx.activity.compose.BackHandler
@@ -93,16 +93,16 @@ import androidx.tv.material3.Surface
 import androidx.tv.material3.Switch
 import androidx.tv.material3.SwitchDefaults
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.LocalScraperResult
-import com.nuvio.tv.domain.model.PluginRepository
-import com.nuvio.tv.domain.model.ScraperInfo
-import com.nuvio.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.domain.model.LocalScraperResult
+import us.xnetik.tv.domain.model.PluginRepository
+import us.xnetik.tv.domain.model.ScraperInfo
+import us.xnetik.tv.ui.components.LoadingIndicator
 import kotlinx.coroutines.delay
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @Composable
 fun PluginScreen(
@@ -170,7 +170,7 @@ fun PluginScreenContent(
                         androidx.tv.material3.Text(
                             text = stringResource(R.string.plugin_readonly_notice),
                             style = androidx.tv.material3.MaterialTheme.typography.bodyMedium,
-                            color = com.nuvio.tv.ui.theme.NuvioTheme.colors.TextSecondary,
+                            color = us.xnetik.tv.ui.theme.NuvioTheme.colors.TextSecondary,
                             modifier = Modifier.padding(NuvioTheme.spacing.lg)
                         )
                     }
@@ -1242,7 +1242,7 @@ private fun ScraperCard(
     onTest: () -> Unit,
     isTesting: Boolean,
     testResults: List<LocalScraperResult>?,
-    testDiagnostics: com.nuvio.tv.core.plugin.TestDiagnostics? = null,
+    testDiagnostics: us.xnetik.tv.core.plugin.TestDiagnostics? = null,
     isReadOnly: Boolean = false
 ) {
     var showResults by remember { mutableStateOf(false) }

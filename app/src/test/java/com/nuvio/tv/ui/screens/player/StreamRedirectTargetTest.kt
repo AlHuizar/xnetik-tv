@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.Stream
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

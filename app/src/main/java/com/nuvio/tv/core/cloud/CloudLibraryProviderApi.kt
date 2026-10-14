@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.cloud
+package us.xnetik.tv.core.cloud
 
-import com.nuvio.tv.core.debrid.DebridProvider
+import us.xnetik.tv.core.debrid.DebridProvider
 
 interface CloudLibraryProviderApi {
     val provider: DebridProvider

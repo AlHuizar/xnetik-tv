@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.domain.model.StreamClientResolve
 
 internal fun <T> selectDebridFile(
     files: List<T>,

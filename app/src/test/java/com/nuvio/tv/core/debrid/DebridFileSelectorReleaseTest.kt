@@ -1,9 +1,9 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.data.remote.dto.PremiumizeDirectDownloadFileDto
-import com.nuvio.tv.data.remote.dto.RealDebridTorrentFileDto
-import com.nuvio.tv.data.remote.dto.TorboxTorrentFileDto
-import com.nuvio.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.data.remote.dto.PremiumizeDirectDownloadFileDto
+import us.xnetik.tv.data.remote.dto.RealDebridTorrentFileDto
+import us.xnetik.tv.data.remote.dto.TorboxTorrentFileDto
+import us.xnetik.tv.domain.model.StreamClientResolve
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

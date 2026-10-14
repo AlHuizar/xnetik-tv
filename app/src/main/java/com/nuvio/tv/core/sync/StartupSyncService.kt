@@ -1,17 +1,17 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.os.SystemClock
 import android.util.Log
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.plugin.PluginManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.StartupSyncPreferences
-import com.nuvio.tv.data.local.WatchProgressPreferences
-import com.nuvio.tv.data.repository.AddonRepositoryImpl
-import com.nuvio.tv.data.repository.LibraryRepositoryImpl
-import com.nuvio.tv.data.repository.WatchProgressRepositoryImpl
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.plugin.PluginManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.StartupSyncPreferences
+import us.xnetik.tv.data.local.WatchProgressPreferences
+import us.xnetik.tv.data.repository.AddonRepositoryImpl
+import us.xnetik.tv.data.repository.LibraryRepositoryImpl
+import us.xnetik.tv.data.repository.WatchProgressRepositoryImpl
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.domain.model.LibrarySourceMode
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -67,7 +67,7 @@ class StartupSyncService @Inject constructor(
     private val watchProgressPreferences: WatchProgressPreferences,
     private val profileManager: ProfileManager,
     private val startupSyncPreferences: StartupSyncPreferences,
-    private val cwEnrichmentCache: com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache
+    private val cwEnrichmentCache: us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private var startupPullJob: Job? = null

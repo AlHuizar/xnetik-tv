@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync.androidtv
+package us.xnetik.tv.core.sync.androidtv
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit

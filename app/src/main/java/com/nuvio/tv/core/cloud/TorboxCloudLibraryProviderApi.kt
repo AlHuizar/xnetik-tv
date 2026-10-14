@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.cloud
+package us.xnetik.tv.core.cloud
 
-import com.nuvio.tv.core.debrid.DebridProviders
-import com.nuvio.tv.data.remote.api.TorboxApi
-import com.nuvio.tv.data.remote.dto.TorboxCloudFileDto
-import com.nuvio.tv.data.remote.dto.TorboxCloudItemDto
-import com.nuvio.tv.data.remote.dto.TorboxEnvelopeDto
+import us.xnetik.tv.core.debrid.DebridProviders
+import us.xnetik.tv.data.remote.api.TorboxApi
+import us.xnetik.tv.data.remote.dto.TorboxCloudFileDto
+import us.xnetik.tv.data.remote.dto.TorboxCloudItemDto
+import us.xnetik.tv.data.remote.dto.TorboxEnvelopeDto
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CancellationException

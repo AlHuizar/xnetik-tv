@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.data.local.CachedNextUpItem
-import com.nuvio.tv.domain.model.ContinueWatchingSortMode
+import us.xnetik.tv.data.local.CachedNextUpItem
+import us.xnetik.tv.domain.model.ContinueWatchingSortMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.withContext
@@ -97,7 +97,7 @@ internal suspend fun HomeViewModel.applyConclusiveOlderNextUpResults(
     withContext(Dispatchers.IO) {
         if (profileManager.activeProfileId.value != pipelineProfileId) return@withContext
         val snapshot = (_uiState.value.continueWatchingItems + _uiState.value.upcomingItems)
-            .toCachedNextUpSnapshot(com.nuvio.tv.ui.components.brokenImageUrls)
+            .toCachedNextUpSnapshot(us.xnetik.tv.ui.components.brokenImageUrls)
         runCatching {
             cwEnrichmentCache.saveNextUpSnapshot(snapshot, force = true)
         }

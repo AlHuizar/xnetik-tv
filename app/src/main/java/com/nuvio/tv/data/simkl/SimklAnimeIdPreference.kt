@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 /**
  * Determines which external ID is used as the canonical content ID for anime entries

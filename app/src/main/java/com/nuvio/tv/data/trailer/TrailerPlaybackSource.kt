@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.trailer
+package us.xnetik.tv.data.trailer
 
 data class TrailerPlaybackSource(
     val videoUrl: String,

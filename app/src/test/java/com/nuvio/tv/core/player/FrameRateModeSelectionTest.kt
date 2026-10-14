@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
-import com.nuvio.tv.core.player.FrameRateUtils.DisplayModeSpec
+import us.xnetik.tv.core.player.FrameRateUtils.DisplayModeSpec
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

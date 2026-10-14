@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.graphics.ColorSpace
 import android.os.Build
@@ -60,18 +60,18 @@ import androidx.compose.ui.unit.dp
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.ui.util.StableList
-import com.nuvio.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.util.StableList
+import us.xnetik.tv.ui.util.recompositionHighlighter
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.colorSpace
 import coil3.request.crossfade
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.formatHeroRuntime
-import com.nuvio.tv.ui.util.LocalRecompositionHighlighterEnabled
-import com.nuvio.tv.ui.util.localizedContentType
-import com.nuvio.tv.ui.util.localizedGenreLabel
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.formatHeroRuntime
+import us.xnetik.tv.ui.util.LocalRecompositionHighlighterEnabled
+import us.xnetik.tv.ui.util.localizedContentType
+import us.xnetik.tv.ui.util.localizedGenreLabel
 import kotlinx.coroutines.delay
 
 private const val AUTO_ADVANCE_INTERVAL_MS = 10000L
@@ -90,7 +90,7 @@ fun HeroCarousel(
     fullWidth: Dp = Dp.Unspecified,
     initialActiveIndex: Int = 0,
     mdbListShowOnHero: Boolean = false,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     modifier: Modifier = Modifier
 ) {
     if (items.isEmpty()) return
@@ -226,7 +226,7 @@ private fun HeroCarouselSlide(
     showImdbRatings: Boolean,
     showBackdrop: Boolean,
     mdbListShowOnHero: Boolean = false,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
 ) {
     val highlighterEnabled = LocalRecompositionHighlighterEnabled.current
     val context = LocalContext.current

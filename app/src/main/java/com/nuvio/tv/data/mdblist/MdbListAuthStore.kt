@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.profile.ProfileScopedCredentialStore
+import us.xnetik.tv.core.profile.ProfileScopedCredentialStore
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

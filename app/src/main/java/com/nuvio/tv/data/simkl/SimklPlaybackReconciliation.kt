@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 
 internal fun SimklSyncSnapshot.reconcileWatchedPlayback(): SimklSyncSnapshot {
     if (playback.isEmpty()) return this

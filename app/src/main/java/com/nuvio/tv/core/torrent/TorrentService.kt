@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.torrent
+package us.xnetik.tv.core.torrent
 
 import android.content.Context
 import android.os.SystemClock
@@ -6,7 +6,7 @@ import android.util.Log
 import com.nuvio.engine.NuvioEngine
 import com.nuvio.engine.NuvioEventType
 import com.nuvio.engine.NuvioStream
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import java.util.concurrent.atomic.AtomicReference

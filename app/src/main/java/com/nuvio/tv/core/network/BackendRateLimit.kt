@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
 import io.ktor.client.plugins.api.createClientPlugin
 import io.ktor.http.HttpHeaders

@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.domain.model.StreamBehaviorHints
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamClientResolve
-import com.nuvio.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.domain.model.StreamBehaviorHints
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.domain.model.StreamDebridCacheState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Deferred
@@ -251,7 +251,7 @@ class DirectDebridResolver @Inject constructor(
     }
 
     private fun localTorrentResolveCredential(
-        settings: com.nuvio.tv.domain.model.DebridSettings
+        settings: us.xnetik.tv.domain.model.DebridSettings
     ): DebridServiceCredential? =
         settings.activeResolverCredential
             ?.takeIf { credential -> credential.provider.supports(DebridProviderCapability.LocalTorrentResolve) }

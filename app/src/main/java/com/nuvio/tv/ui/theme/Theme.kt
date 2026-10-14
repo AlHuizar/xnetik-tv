@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.theme
+package us.xnetik.tv.ui.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -8,10 +8,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.darkColorScheme
-import com.nuvio.tv.domain.model.AppFont
-import com.nuvio.tv.domain.model.AppTheme
-import com.nuvio.tv.domain.model.CustomThemeColors
-import com.nuvio.tv.domain.model.SettingsUiStyle
+import us.xnetik.tv.domain.model.AppFont
+import us.xnetik.tv.domain.model.AppTheme
+import us.xnetik.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.SettingsUiStyle
 
 data class NuvioExtendedColors(
     val backgroundElevated: Color,

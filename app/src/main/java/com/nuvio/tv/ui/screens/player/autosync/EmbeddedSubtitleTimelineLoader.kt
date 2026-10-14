@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 import androidx.media3.common.C
 import androidx.media3.common.MimeTypes
@@ -8,8 +8,8 @@ import androidx.media3.container.Mp4Box
 import androidx.media3.extractor.GaplessInfoHolder
 import androidx.media3.extractor.mp4.BoxParser
 import androidx.media3.extractor.mp4.TrackSampleTable
-import com.nuvio.tv.core.network.NoDelaySocketFactory
-import com.nuvio.tv.ui.screens.player.SubtitleSyncCue
+import us.xnetik.tv.core.network.NoDelaySocketFactory
+import us.xnetik.tv.ui.screens.player.SubtitleSyncCue
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope

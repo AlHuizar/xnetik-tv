@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.util.Log
-import com.nuvio.tv.data.remote.api.ImdbApiParentsGuideCategory
-import com.nuvio.tv.data.remote.api.ParentalGuideApi
+import us.xnetik.tv.data.remote.api.ImdbApiParentsGuideCategory
+import us.xnetik.tv.data.remote.api.ParentalGuideApi
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton

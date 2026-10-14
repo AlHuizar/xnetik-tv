@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.collection
+package us.xnetik.tv.ui.screens.collection
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -28,9 +28,9 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.core.trakt.TraktPublicListSearchResult
-import com.nuvio.tv.domain.model.TmdbCollectionMediaType
+import us.xnetik.tv.R
+import us.xnetik.tv.core.trakt.TraktPublicListSearchResult
+import us.xnetik.tv.domain.model.TmdbCollectionMediaType
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

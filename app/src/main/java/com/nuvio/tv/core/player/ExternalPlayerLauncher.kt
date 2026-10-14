@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 object ExternalPlayerLauncher {
 

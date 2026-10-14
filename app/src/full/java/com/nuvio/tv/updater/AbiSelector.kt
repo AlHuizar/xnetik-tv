@@ -1,7 +1,7 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
 import android.os.Build
-import com.nuvio.tv.data.remote.dto.GitHubAssetDto
+import us.xnetik.tv.data.remote.dto.GitHubAssetDto
 
 internal object AbiSelector {
 

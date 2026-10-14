@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.sync.library
+package us.xnetik.tv.core.sync.library
 
-import com.nuvio.tv.domain.model.LibraryDeltaApplyResult
-import com.nuvio.tv.domain.model.LibraryDeltaEvent
-import com.nuvio.tv.domain.model.LibrarySnapshotApplyResult
-import com.nuvio.tv.domain.model.LibrarySyncState
-import com.nuvio.tv.domain.model.SavedLibraryItem
+import us.xnetik.tv.domain.model.LibraryDeltaApplyResult
+import us.xnetik.tv.domain.model.LibraryDeltaEvent
+import us.xnetik.tv.domain.model.LibrarySnapshotApplyResult
+import us.xnetik.tv.domain.model.LibrarySyncState
+import us.xnetik.tv.domain.model.SavedLibraryItem
 
 interface LibrarySyncLocalStore {
     suspend fun getSyncState(profileId: Int): LibrarySyncState

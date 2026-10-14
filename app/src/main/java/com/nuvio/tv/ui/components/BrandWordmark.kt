@@ -1,12 +1,12 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.brandWordmarkResource
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.brandWordmarkResource
 
 @Composable
 fun BrandWordmark(

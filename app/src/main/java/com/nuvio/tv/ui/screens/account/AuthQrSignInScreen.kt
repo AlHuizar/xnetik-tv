@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.account
+package us.xnetik.tv.ui.screens.account
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.content.Intent
 import android.net.Uri
@@ -61,13 +61,13 @@ import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.ui.components.BrandWordmark
-import com.nuvio.tv.ui.components.SkeletonBar
-import com.nuvio.tv.ui.components.rememberShimmerBrush
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.ui.components.BrandWordmark
+import us.xnetik.tv.ui.components.SkeletonBar
+import us.xnetik.tv.ui.components.rememberShimmerBrush
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.cos

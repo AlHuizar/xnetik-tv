@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.plugin.cloudstream
+package us.xnetik.tv.core.plugin.cloudstream
 
 import android.util.Log
 import com.lagradost.cloudstream3.AnimeLoadResponse
@@ -21,12 +21,12 @@ import com.lagradost.cloudstream3.utils.ExtractorLink
 import com.lagradost.cloudstream3.utils.ExtractorLinkType
 import com.lagradost.cloudstream3.utils.Qualities
 import com.lagradost.cloudstream3.app
-import com.nuvio.tv.core.plugin.TestDiagnostics
-import com.nuvio.tv.core.plugin.matchPluginEpisodeIndex
-import com.nuvio.tv.core.tmdb.TmdbMetadataService
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.LocalScraperResult
+import us.xnetik.tv.core.plugin.TestDiagnostics
+import us.xnetik.tv.core.plugin.matchPluginEpisodeIndex
+import us.xnetik.tv.core.tmdb.TmdbMetadataService
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.LocalScraperResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -850,7 +850,7 @@ class ExternalExtensionRunner @Inject constructor(
         }
     }
 
-    private fun List<SubtitleFile>.toDomainSubtitles(addonName: String): List<com.nuvio.tv.domain.model.Subtitle> {
+    private fun List<SubtitleFile>.toDomainSubtitles(addonName: String): List<us.xnetik.tv.domain.model.Subtitle> {
         return this.mapNotNull { file ->
             val subUrl = file.url.takeIf { it.isNotBlank() } ?: return@mapNotNull null
             val lang = file.lang.takeIf { it.isNotBlank() } ?: "Unknown"
@@ -860,7 +860,7 @@ class ExternalExtensionRunner @Inject constructor(
                 prop?.invoke(file) as? Map<String, String>
             }.getOrNull()?.ifEmpty { null }
 
-            com.nuvio.tv.domain.model.Subtitle(
+            us.xnetik.tv.domain.model.Subtitle(
                 id = "$lang-$subUrl",
                 url = subUrl,
                 lang = lang,
@@ -874,7 +874,7 @@ class ExternalExtensionRunner @Inject constructor(
 
     private fun ExtractorLink.toLocalScraperResult(
         providerName: String,
-        subtitles: List<com.nuvio.tv.domain.model.Subtitle> = emptyList()
+        subtitles: List<us.xnetik.tv.domain.model.Subtitle> = emptyList()
     ): LocalScraperResult {
         val qualityStr = Qualities.getStringByInt(quality).ifEmpty { null }
         val streamType = when (type) {

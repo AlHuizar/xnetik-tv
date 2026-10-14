@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -7,12 +7,12 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.core.streams.STREAM_BADGE_IMPORT_LIMIT
-import com.nuvio.tv.core.streams.StreamBadgePlacement
-import com.nuvio.tv.domain.model.DetailImdbRatingsVisibility
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.core.streams.STREAM_BADGE_IMPORT_LIMIT
+import us.xnetik.tv.core.streams.StreamBadgePlacement
+import us.xnetik.tv.domain.model.DetailImdbRatingsVisibility
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
 
 @Composable
 internal fun LayoutDetailPageSection(

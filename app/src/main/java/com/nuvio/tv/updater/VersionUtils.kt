@@ -1,4 +1,4 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
 internal data class SemanticVersion(
     val major: Long,

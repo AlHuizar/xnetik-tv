@@ -1,16 +1,16 @@
-package com.nuvio.tv.data.mapper
+package us.xnetik.tv.data.mapper
 
-import com.nuvio.tv.data.remote.dto.AddonManifestDto
-import com.nuvio.tv.data.remote.dto.AddonBehaviorHintsDto
-import com.nuvio.tv.data.remote.dto.CatalogDescriptorDto
-import com.nuvio.tv.data.remote.dto.StremioAddonsConfigDto
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.AddonBehaviorHints
-import com.nuvio.tv.domain.model.AddonResource
-import com.nuvio.tv.domain.model.CatalogExtra
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.StremioAddonsConfig
+import us.xnetik.tv.data.remote.dto.AddonManifestDto
+import us.xnetik.tv.data.remote.dto.AddonBehaviorHintsDto
+import us.xnetik.tv.data.remote.dto.CatalogDescriptorDto
+import us.xnetik.tv.data.remote.dto.StremioAddonsConfigDto
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.AddonBehaviorHints
+import us.xnetik.tv.domain.model.AddonResource
+import us.xnetik.tv.domain.model.CatalogExtra
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.StremioAddonsConfig
 
 fun AddonManifestDto.toDomain(baseUrl: String): Addon {
     val manifestTypes = types.map { it.trim() }.filter { it.isNotEmpty() }

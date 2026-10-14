@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.plugin.cloudstream
+package us.xnetik.tv.core.plugin.cloudstream
 
 import android.util.Log
-import com.nuvio.tv.domain.model.ExternalPluginEntry
-import com.nuvio.tv.domain.model.ExternalRepoManifest
+import us.xnetik.tv.domain.model.ExternalPluginEntry
+import us.xnetik.tv.domain.model.ExternalRepoManifest
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import kotlinx.coroutines.Dispatchers
@@ -10,7 +10,7 @@ import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
-import com.nuvio.tv.core.network.IPv4FirstDns
+import us.xnetik.tv.core.network.IPv4FirstDns
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import javax.inject.Inject

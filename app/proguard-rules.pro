@@ -30,6 +30,7 @@
 -keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
 # Keep all project API interfaces
 -keep class com.nuvio.tv.data.remote.api.** { *; }
+-keep class us.xnetik.tv.data.remote.api.** { *; }
 
 # ── OkHttp ─────────────────────────────────────────────────────────────────────
 -dontwarn okhttp3.internal.platform.**
@@ -41,6 +42,8 @@
 # Keep all DTO classes used with Moshi/Retrofit
 -keep class com.nuvio.tv.data.remote.dto.** { *; }
 -keep class com.nuvio.tv.domain.model.** { *; }
+-keep class us.xnetik.tv.data.remote.dto.** { *; }
+-keep class us.xnetik.tv.domain.model.** { *; }
 
 # ── Kotlin ─────────────────────────────────────────────────────────────────────
 -keepattributes *Annotation*
@@ -54,6 +57,7 @@
 -keep class fi.iki.elonen.** { *; }
 # Keep server classes and their inner data classes (serialized with Gson)
 -keep class com.nuvio.tv.core.server.** { *; }
+-keep class us.xnetik.tv.core.server.** { *; }
 
 # ── Torrent streaming (Nuvio Engine) ───────────────────────────────────────────
 -keep class com.nuvio.tv.core.torrent.** { *; }
@@ -67,6 +71,8 @@
 # Keep PluginRuntime and related classes for JS bindings
 -keep class com.nuvio.tv.core.plugin.** { *; }
 -keepclassmembers class com.nuvio.tv.core.plugin.** { *; }
+-keep class us.xnetik.tv.core.plugin.** { *; }
+-keepclassmembers class us.xnetik.tv.core.plugin.** { *; }
 
 # ── ExoPlayer / Media3 ────────────────────────────────────────────────────────
 -dontwarn androidx.media3.**
@@ -97,6 +103,7 @@
 -keep class io.ktor.** { *; }
 -dontwarn io.ktor.**
 -keep class com.nuvio.tv.data.remote.supabase.** { *; }
+-keep class us.xnetik.tv.data.remote.supabase.** { *; }
 # Keep @Serializable classes and their generated serializers
 -keepclassmembers class * {
     kotlinx.serialization.KSerializer serializer(...);

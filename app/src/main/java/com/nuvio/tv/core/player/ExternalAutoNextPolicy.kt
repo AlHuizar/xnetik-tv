@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 /**
  * Pure decision rules for the external-player auto-next state machine, split out from

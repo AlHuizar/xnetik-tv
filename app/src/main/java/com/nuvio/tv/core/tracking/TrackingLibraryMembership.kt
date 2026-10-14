@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.ListMembershipChanges
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll

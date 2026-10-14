@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.remote.dto.mdblist
+package us.xnetik.tv.data.remote.dto.mdblist
 
-import com.nuvio.tv.domain.model.MDBListRatings
-import com.nuvio.tv.domain.model.RottenTomatoesStatus
+import us.xnetik.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.RottenTomatoesStatus
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import org.junit.Assert.assertEquals

@@ -1,19 +1,19 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
-import com.nuvio.tv.domain.model.DetailImdbRatingsVisibility
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.MetaTrailer
-import com.nuvio.tv.domain.model.NextToWatch
-import com.nuvio.tv.domain.model.TraktCommentReview
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.MDBListRatings
-import com.nuvio.tv.domain.model.HomeImdbRatingsVisibility
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.domain.model.DetailImdbRatingsVisibility
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.MetaTrailer
+import us.xnetik.tv.domain.model.NextToWatch
+import us.xnetik.tv.domain.model.TraktCommentReview
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.HomeImdbRatingsVisibility
 
 enum class MoreLikeThisSource {
     TMDB,
@@ -66,7 +66,7 @@ data class MetaDetailsUiState(
     val episodeWatchedPendingKeys: Set<String> = emptySet(),
     val blurUnwatchedEpisodes: Boolean = false,
     val randomEpisodeEnabled: Boolean = false,
-    val episodeShuffle: com.nuvio.tv.domain.model.EpisodeShuffleSettings = com.nuvio.tv.domain.model.EpisodeShuffleSettings(),
+    val episodeShuffle: us.xnetik.tv.domain.model.EpisodeShuffleSettings = us.xnetik.tv.domain.model.EpisodeShuffleSettings(),
     val shufflePoolEmpty: Boolean = false,
     val episodeOptionsOverlayStyle: EpisodeOptionsOverlayStyle = EpisodeOptionsOverlayStyle.BLUR,
     val overallRatingsVisibility: HomeImdbRatingsVisibility = HomeImdbRatingsVisibility.SHOW_ALL,
@@ -81,7 +81,7 @@ data class MetaDetailsUiState(
     val isEpisodeRatingsLoading: Boolean = false,
     val episodeRatingsError: String? = null,
     val mdbListRatings: MDBListRatings? = null,
-    val mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    val mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     val isMdbListRatingsActive: Boolean = false,
     val tmdbRating: Float? = null,
     val comments: List<TraktCommentReview> = emptyList(),

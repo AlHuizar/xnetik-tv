@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.account
+package us.xnetik.tv.ui.screens.account
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
@@ -49,8 +49,8 @@ import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.AuthState
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.AuthState
 
 private const val SHOW_SYNC_CODE_FEATURES = false
 
@@ -276,7 +276,7 @@ private fun AccountInfoCard(label: String, value: String) {
 
 @Composable
 private fun LinkedDevicesSection(
-    devices: List<com.nuvio.tv.data.remote.supabase.SupabaseLinkedDevice>,
+    devices: List<us.xnetik.tv.data.remote.supabase.SupabaseLinkedDevice>,
     onUnlink: (String) -> Unit
 ) {
     Column {

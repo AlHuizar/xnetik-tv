@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

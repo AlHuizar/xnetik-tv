@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test

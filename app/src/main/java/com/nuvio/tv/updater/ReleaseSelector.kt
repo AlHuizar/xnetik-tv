@@ -1,6 +1,6 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
-import com.nuvio.tv.data.remote.dto.GitHubReleaseDto
+import us.xnetik.tv.data.remote.dto.GitHubReleaseDto
 
 internal object ReleaseSelector {
     private val prereleaseNamePattern = Regex(

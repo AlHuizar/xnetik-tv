@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.LibraryListPrivacy
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

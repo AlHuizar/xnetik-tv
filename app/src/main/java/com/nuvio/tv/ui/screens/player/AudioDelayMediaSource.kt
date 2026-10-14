@@ -1,6 +1,6 @@
 @file:androidx.annotation.OptIn(UnstableApi::class)
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.media3.common.C
 import androidx.media3.common.MimeTypes

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.torrent
+package us.xnetik.tv.core.torrent
 
 internal const val TorrentInitialByteProgressMidpoint = 5_242_880L
 private const val TorrentInitialBufferTargetMs = 10_000L

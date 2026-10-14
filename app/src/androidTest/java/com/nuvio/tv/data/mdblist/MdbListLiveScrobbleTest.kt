@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
 import java.io.File
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.runBlocking

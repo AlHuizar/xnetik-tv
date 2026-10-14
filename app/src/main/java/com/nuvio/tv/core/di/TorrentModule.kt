@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.di
+package us.xnetik.tv.core.di
 
 import android.content.Context
-import com.nuvio.tv.core.torrent.TorrentService
-import com.nuvio.tv.core.torrent.TorrentSettings
+import us.xnetik.tv.core.torrent.TorrentService
+import us.xnetik.tv.core.torrent.TorrentSettings
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

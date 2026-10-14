@@ -1,10 +1,10 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
-import com.nuvio.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
+import us.xnetik.tv.core.tracking.TrackingProviderId
 
 @Composable
 fun LibraryListTab.localizedMembershipTitle(): String {

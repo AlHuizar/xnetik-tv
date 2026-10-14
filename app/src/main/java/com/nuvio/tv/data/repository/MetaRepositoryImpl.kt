@@ -1,21 +1,21 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.mapper.toDomain
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.data.mediaserver.messageRes
-import com.nuvio.tv.data.mediaserver.serverFailure
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.AddonResource
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.R
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.mapper.toDomain
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.mediaserver.messageRes
+import us.xnetik.tv.data.mediaserver.serverFailure
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.AddonResource
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.R
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -727,7 +727,7 @@ class MetaRepositoryImpl @Inject constructor(
         return MetaAttemptFailure(
             addonName = addon.displayName,
             kind = MetaFailureKind.MISSING,
-            detail = context.getString(com.nuvio.tv.R.string.meta_error_detail_no_metadata_for_id)
+            detail = context.getString(us.xnetik.tv.R.string.meta_error_detail_no_metadata_for_id)
         )
     }
 

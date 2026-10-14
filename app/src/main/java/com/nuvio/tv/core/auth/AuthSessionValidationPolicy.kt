@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.auth
+package us.xnetik.tv.core.auth
 
 internal fun isInvalidRemoteSessionResponse(
     statusCode: Int?,

@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.runtime.withFrameNanos

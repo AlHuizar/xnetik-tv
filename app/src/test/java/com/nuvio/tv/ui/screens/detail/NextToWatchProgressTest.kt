@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchProgress
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

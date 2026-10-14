@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.net.Uri
 import android.util.Log
@@ -20,7 +20,7 @@ import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.SynchronousQueue
 import java.util.concurrent.ThreadFactory
 import java.util.concurrent.TimeUnit
-import com.nuvio.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.PlayerSettings
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicInteger
 import android.os.SystemClock
@@ -571,7 +571,7 @@ internal class ParallelRangeDataSource(
     private var inFlightServeLogged: Boolean = false
 
     private val sessionChunkCap: Int = effectivePrefetchDepth +
-        if (com.nuvio.tv.ui.screens.settings.MemoryBudget.isLowRamTier) 2 else 4
+        if (us.xnetik.tv.ui.screens.settings.MemoryBudget.isLowRamTier) 2 else 4
 
     override fun open(dataSpec: DataSpec): Long {
         val isSubtitle = dataSpec.uri.getQueryParameter("nuvio_type") == "subtitle"

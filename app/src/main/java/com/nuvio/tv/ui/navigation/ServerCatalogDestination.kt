@@ -1,13 +1,13 @@
-package com.nuvio.tv.ui.navigation
+package us.xnetik.tv.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavHostController
-import com.nuvio.tv.ui.screens.CatalogSeeAllScreen
-import com.nuvio.tv.ui.screens.ServerCatalogViewModel
-import com.nuvio.tv.ui.screens.home.HomeViewModel
+import us.xnetik.tv.ui.screens.CatalogSeeAllScreen
+import us.xnetik.tv.ui.screens.ServerCatalogViewModel
+import us.xnetik.tv.ui.screens.home.HomeViewModel
 
 @Composable
 internal fun ServerCatalogDestination(

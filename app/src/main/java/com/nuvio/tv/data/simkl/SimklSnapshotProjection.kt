@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.selectPreferredTrackingNextUpSeeds
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.core.tracking.selectPreferredTrackingNextUpSeeds
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 
 internal class SimklSnapshotProjection private constructor(
     val library: SimklLibraryProjection,

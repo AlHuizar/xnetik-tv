@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.util.Log
 import androidx.media3.common.PlaybackException
@@ -6,7 +6,7 @@ import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.HttpDataSource
 import androidx.media3.exoplayer.mediacodec.MediaCodecRenderer
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -144,11 +144,11 @@ internal fun isAudioTrackFailure(errorCode: Int, combinedMessage: String): Boole
 
 internal fun httpStatusExplanation(context: android.content.Context, code: Int): String {
     return when (code) {
-        401, 410 -> context.getString(com.nuvio.tv.R.string.player_error_stream_expired)
-        404 -> context.getString(com.nuvio.tv.R.string.player_error_stream_removed)
-        429 -> context.getString(com.nuvio.tv.R.string.player_error_stream_rate_limited)
-        in 500..599 -> context.getString(com.nuvio.tv.R.string.player_error_stream_unavailable)
-        in 400..499 -> context.getString(com.nuvio.tv.R.string.player_error_stream_blocked)
+        401, 410 -> context.getString(us.xnetik.tv.R.string.player_error_stream_expired)
+        404 -> context.getString(us.xnetik.tv.R.string.player_error_stream_removed)
+        429 -> context.getString(us.xnetik.tv.R.string.player_error_stream_rate_limited)
+        in 500..599 -> context.getString(us.xnetik.tv.R.string.player_error_stream_unavailable)
+        in 400..499 -> context.getString(us.xnetik.tv.R.string.player_error_stream_blocked)
         else -> ""
     }
 }
@@ -180,7 +180,7 @@ internal fun PlaybackException.toDisplayMessage(context: android.content.Context
     // Check for unrecognized format (provider returned non-video content)
     val isUnrecognizedFormat = findCauseOfType<androidx.media3.exoplayer.source.UnrecognizedInputFormatException>() != null
     if (isUnrecognizedFormat) {
-        return context.getString(com.nuvio.tv.R.string.player_error_source_invalid_content, errorCodeName)
+        return context.getString(us.xnetik.tv.R.string.player_error_source_invalid_content, errorCodeName)
     }
 
     val decoderInit = findCauseOfType<MediaCodecRenderer.DecoderInitializationException>()
@@ -216,7 +216,7 @@ internal fun Throwable.toDisplayMessage(context: android.content.Context, fallba
     return meaningfulMessage
         ?: message?.takeIf { it.isNotBlank() }
         ?: fallback
-        ?: context.getString(com.nuvio.tv.R.string.player_error_playback_fallback)
+        ?: context.getString(us.xnetik.tv.R.string.player_error_playback_fallback)
 }
 
 private fun Throwable.findMostRelevantCauseMessage(): String? {

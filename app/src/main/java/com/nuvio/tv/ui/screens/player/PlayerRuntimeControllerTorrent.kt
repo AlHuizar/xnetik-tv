@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.util.Log
-import com.nuvio.tv.R
-import com.nuvio.tv.core.torrent.TorrentState
-import com.nuvio.tv.core.torrent.torrentInitialLoadingProgress
-import com.nuvio.tv.domain.model.Stream
+import us.xnetik.tv.R
+import us.xnetik.tv.core.torrent.TorrentState
+import us.xnetik.tv.core.torrent.torrentInitialLoadingProgress
+import us.xnetik.tv.domain.model.Stream
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update

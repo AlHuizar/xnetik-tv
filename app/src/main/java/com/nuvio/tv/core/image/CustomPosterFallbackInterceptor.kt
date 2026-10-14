@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.image
+package us.xnetik.tv.core.image
 
 import coil3.intercept.Interceptor
 import coil3.request.ImageResult

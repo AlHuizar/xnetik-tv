@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.util
+package us.xnetik.tv.ui.util
 
 import android.os.SystemClock
 import android.view.KeyEvent

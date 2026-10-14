@@ -1,15 +1,15 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.content.Context
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.EpisodeShuffleProfile
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.EpisodeShuffle
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.NextToWatch
-import com.nuvio.tv.domain.model.ShuffleSurface
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.EpisodeShuffleProfile
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.EpisodeShuffle
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.NextToWatch
+import us.xnetik.tv.domain.model.ShuffleSurface
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
 
 internal fun applyDetailShuffle(
     state: MetaDetailsUiState,

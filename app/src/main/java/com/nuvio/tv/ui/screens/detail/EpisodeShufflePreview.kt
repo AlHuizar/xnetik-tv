@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.foundation.background
@@ -48,13 +48,13 @@ import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.ui.components.PlayManualOverrideDialog
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
-import com.nuvio.tv.ui.screens.ambient.AmbientDialogEffect
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.ui.components.PlayManualOverrideDialog
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.screens.ambient.AmbientDialogEffect
 
 @Composable
 internal fun EpisodeShufflePreview(

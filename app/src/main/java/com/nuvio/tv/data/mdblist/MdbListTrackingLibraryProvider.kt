@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.TrackingLibraryProvider
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.core.tracking.TrackingLibraryProvider
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.ListMembershipChanges
 import javax.inject.Inject
 import javax.inject.Singleton
 

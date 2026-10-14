@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.domain.model.isPlaceholder
+import us.xnetik.tv.domain.model.isPlaceholder
 
 /**
  * A catalog row draws the sweeping placeholder shimmer only while it is still loading and its

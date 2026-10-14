@@ -1,20 +1,20 @@
-package com.nuvio.tv.core.plugin
+package us.xnetik.tv.core.plugin
 
 import android.util.Log
-import com.nuvio.tv.core.plugin.cloudstream.toNuvioType
-import com.nuvio.tv.core.plugin.cloudstream.tvTypeFromString
-import com.nuvio.tv.core.plugin.cloudstream.ExternalExtensionLoader
-import com.nuvio.tv.core.plugin.cloudstream.ExternalExtensionRunner
-import com.nuvio.tv.core.plugin.cloudstream.ExternalRepoParser
-import com.nuvio.tv.data.local.PluginDataStore
-import com.nuvio.tv.domain.model.ExternalPluginEntry
-import com.nuvio.tv.domain.model.LocalScraperResult
-import com.nuvio.tv.domain.model.PluginManifest
-import com.nuvio.tv.domain.model.PluginRepository
-import com.nuvio.tv.domain.model.RemotePluginInfo
-import com.nuvio.tv.domain.model.RepositoryType
-import com.nuvio.tv.domain.model.ScraperInfo
-import com.nuvio.tv.domain.model.ScraperManifestInfo
+import us.xnetik.tv.core.plugin.cloudstream.toNuvioType
+import us.xnetik.tv.core.plugin.cloudstream.tvTypeFromString
+import us.xnetik.tv.core.plugin.cloudstream.ExternalExtensionLoader
+import us.xnetik.tv.core.plugin.cloudstream.ExternalExtensionRunner
+import us.xnetik.tv.core.plugin.cloudstream.ExternalRepoParser
+import us.xnetik.tv.data.local.PluginDataStore
+import us.xnetik.tv.domain.model.ExternalPluginEntry
+import us.xnetik.tv.domain.model.LocalScraperResult
+import us.xnetik.tv.domain.model.PluginManifest
+import us.xnetik.tv.domain.model.PluginRepository
+import us.xnetik.tv.domain.model.RemotePluginInfo
+import us.xnetik.tv.domain.model.RepositoryType
+import us.xnetik.tv.domain.model.ScraperInfo
+import us.xnetik.tv.domain.model.ScraperManifestInfo
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.CoroutineDispatcher
@@ -63,8 +63,8 @@ private const val MANIFEST_SUFFIX = "/manifest.json"
 class PluginManager @Inject constructor(
     private val dataStore: PluginDataStore,
     private val runtime: PluginRuntime,
-    private val pluginSyncService: com.nuvio.tv.core.sync.PluginSyncService,
-    private val authManager: com.nuvio.tv.core.auth.AuthManager,
+    private val pluginSyncService: us.xnetik.tv.core.sync.PluginSyncService,
+    private val authManager: us.xnetik.tv.core.auth.AuthManager,
     private val externalRepoParser: ExternalRepoParser,
     private val externalExtensionLoader: ExternalExtensionLoader,
     private val externalExtensionRunner: ExternalExtensionRunner
@@ -76,7 +76,7 @@ class PluginManager @Inject constructor(
     private val manifestAdapter = moshi.adapter(PluginManifest::class.java)
     
     private val httpClient = OkHttpClient.Builder()
-        .dns(com.nuvio.tv.core.network.IPv4FirstDns())
+        .dns(us.xnetik.tv.core.network.IPv4FirstDns())
         .connectTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
         .build()
@@ -418,7 +418,7 @@ class PluginManager @Inject constructor(
 
     private suspend fun addExternalRepository(
         repoUrl: String,
-        parseResult: com.nuvio.tv.core.plugin.cloudstream.ExternalRepoParseResult
+        parseResult: us.xnetik.tv.core.plugin.cloudstream.ExternalRepoParseResult
     ): Result<PluginRepository> {
         // Prevent duplicate repos by URL
         val existingRepo = dataStore.repositories.first()

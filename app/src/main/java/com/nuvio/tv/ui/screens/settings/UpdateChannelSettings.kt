@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.activity.ComponentActivity
 import androidx.compose.material.icons.Icons
@@ -16,9 +16,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.nuvio.tv.R
-import com.nuvio.tv.updater.UpdateChannel
-import com.nuvio.tv.updater.UpdateViewModel
+import us.xnetik.tv.R
+import us.xnetik.tv.updater.UpdateChannel
+import us.xnetik.tv.updater.UpdateViewModel
 
 @Composable
 internal fun UpdateChannelSettings(

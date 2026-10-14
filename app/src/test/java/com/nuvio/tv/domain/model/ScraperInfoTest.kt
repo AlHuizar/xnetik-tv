@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

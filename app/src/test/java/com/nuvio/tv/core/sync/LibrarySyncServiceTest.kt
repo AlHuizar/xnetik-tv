@@ -1,15 +1,15 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
-import com.nuvio.tv.core.sync.library.LibrarySyncLocalStore
-import com.nuvio.tv.core.sync.library.LibrarySyncRemoteDataSource
-import com.nuvio.tv.domain.model.LibraryDeltaApplyResult
-import com.nuvio.tv.domain.model.LibraryDeltaEvent
-import com.nuvio.tv.domain.model.LibrarySnapshotApplyResult
-import com.nuvio.tv.domain.model.LibrarySyncKey
-import com.nuvio.tv.domain.model.LibrarySyncReducer
-import com.nuvio.tv.domain.model.LibrarySyncState
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.SavedLibraryItem
+import us.xnetik.tv.core.sync.library.LibrarySyncLocalStore
+import us.xnetik.tv.core.sync.library.LibrarySyncRemoteDataSource
+import us.xnetik.tv.domain.model.LibraryDeltaApplyResult
+import us.xnetik.tv.domain.model.LibraryDeltaEvent
+import us.xnetik.tv.domain.model.LibrarySnapshotApplyResult
+import us.xnetik.tv.domain.model.LibrarySyncKey
+import us.xnetik.tv.domain.model.LibrarySyncReducer
+import us.xnetik.tv.domain.model.LibrarySyncState
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.SavedLibraryItem
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

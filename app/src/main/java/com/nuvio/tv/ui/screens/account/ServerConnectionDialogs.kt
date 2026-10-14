@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.account
+package us.xnetik.tv.ui.screens.account
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -51,11 +51,11 @@ import androidx.tv.material3.IconButton
 import androidx.tv.material3.IconButtonDefaults
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.ServerConfiguration
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.ServerConfiguration
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.theme.NuvioTheme
 import kotlinx.coroutines.delay
 
 @Composable

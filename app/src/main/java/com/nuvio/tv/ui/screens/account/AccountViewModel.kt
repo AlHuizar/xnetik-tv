@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.account
+package us.xnetik.tv.ui.screens.account
 
 import android.content.Context
 import android.os.Build
@@ -6,34 +6,34 @@ import android.os.SystemClock
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.auth.diagnostics.AuthDiagnosticsSession
-import com.nuvio.tv.core.logging.bodySnippetForLog
-import com.nuvio.tv.core.logging.diagnosticSummary
-import com.nuvio.tv.core.logging.rawForLog
-import com.nuvio.tv.core.logging.urlForLog
-import com.nuvio.tv.core.plugin.PluginManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.qr.QrCodeGenerator
-import com.nuvio.tv.core.sync.AddonSyncService
-import com.nuvio.tv.core.sync.LibrarySyncService
-import com.nuvio.tv.core.sync.PluginSyncService
-import com.nuvio.tv.core.sync.WatchProgressSyncService
-import com.nuvio.tv.core.sync.WatchedItemsSyncService
-import com.nuvio.tv.core.sync.ProfileSettingsSyncService
-import com.nuvio.tv.core.sync.ProviderCredentialSyncService
-import com.nuvio.tv.data.local.LibraryPreferences
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.data.local.TraktAuthDataStore
-import com.nuvio.tv.data.local.WatchProgressPreferences
-import com.nuvio.tv.data.repository.AddonRepositoryImpl
-import com.nuvio.tv.data.repository.AuthDiagnosticReportRepository
-import com.nuvio.tv.data.repository.LibraryRepositoryImpl
-import com.nuvio.tv.data.repository.WatchProgressRepositoryImpl
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.domain.model.ServerConfiguration
-import com.nuvio.tv.domain.repository.SyncRepository
+import us.xnetik.tv.R
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.auth.diagnostics.AuthDiagnosticsSession
+import us.xnetik.tv.core.logging.bodySnippetForLog
+import us.xnetik.tv.core.logging.diagnosticSummary
+import us.xnetik.tv.core.logging.rawForLog
+import us.xnetik.tv.core.logging.urlForLog
+import us.xnetik.tv.core.plugin.PluginManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.qr.QrCodeGenerator
+import us.xnetik.tv.core.sync.AddonSyncService
+import us.xnetik.tv.core.sync.LibrarySyncService
+import us.xnetik.tv.core.sync.PluginSyncService
+import us.xnetik.tv.core.sync.WatchProgressSyncService
+import us.xnetik.tv.core.sync.WatchedItemsSyncService
+import us.xnetik.tv.core.sync.ProfileSettingsSyncService
+import us.xnetik.tv.core.sync.ProviderCredentialSyncService
+import us.xnetik.tv.data.local.LibraryPreferences
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.data.local.WatchProgressPreferences
+import us.xnetik.tv.data.repository.AddonRepositoryImpl
+import us.xnetik.tv.data.repository.AuthDiagnosticReportRepository
+import us.xnetik.tv.data.repository.LibraryRepositoryImpl
+import us.xnetik.tv.data.repository.WatchProgressRepositoryImpl
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.domain.model.ServerConfiguration
+import us.xnetik.tv.domain.repository.SyncRepository
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -541,7 +541,7 @@ class AccountViewModel @Inject constructor(
                     ProfileSyncStats(
                         profileId = pid,
                         profileName = local?.name ?: remote?.name
-                            ?: context.getString(com.nuvio.tv.R.string.profile_default_name, pid),
+                            ?: context.getString(us.xnetik.tv.R.string.profile_default_name, pid),
                         avatarColorHex = local?.avatarColorHex ?: remote?.color ?: "#1E88E5",
                         addons = response.addons[pidStr] ?: 0,
                         plugins = response.plugins[pidStr] ?: 0,

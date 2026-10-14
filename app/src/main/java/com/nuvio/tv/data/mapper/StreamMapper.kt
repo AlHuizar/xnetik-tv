@@ -1,20 +1,20 @@
-package com.nuvio.tv.data.mapper
+package us.xnetik.tv.data.mapper
 
-import com.nuvio.tv.data.remote.dto.BehaviorHintsDto
-import com.nuvio.tv.data.remote.dto.ProxyHeadersDto
-import com.nuvio.tv.data.remote.dto.StreamClientResolveParsedDto
-import com.nuvio.tv.data.remote.dto.StreamClientResolveRawDto
-import com.nuvio.tv.data.remote.dto.StreamClientResolveStreamDto
-import com.nuvio.tv.data.remote.dto.StreamClientResolveDto
-import com.nuvio.tv.data.remote.dto.StreamDto
-import com.nuvio.tv.domain.model.ProxyHeaders
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBehaviorHints
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.domain.model.StreamClientResolve
-import com.nuvio.tv.domain.model.StreamClientResolveParsed
-import com.nuvio.tv.domain.model.StreamClientResolveRaw
-import com.nuvio.tv.domain.model.StreamClientResolveStream
+import us.xnetik.tv.data.remote.dto.BehaviorHintsDto
+import us.xnetik.tv.data.remote.dto.ProxyHeadersDto
+import us.xnetik.tv.data.remote.dto.StreamClientResolveParsedDto
+import us.xnetik.tv.data.remote.dto.StreamClientResolveRawDto
+import us.xnetik.tv.data.remote.dto.StreamClientResolveStreamDto
+import us.xnetik.tv.data.remote.dto.StreamClientResolveDto
+import us.xnetik.tv.data.remote.dto.StreamDto
+import us.xnetik.tv.domain.model.ProxyHeaders
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBehaviorHints
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.domain.model.StreamClientResolveParsed
+import us.xnetik.tv.domain.model.StreamClientResolveRaw
+import us.xnetik.tv.domain.model.StreamClientResolveStream
 
 fun StreamDto.toDomain(addonName: String, addonLogo: String?): Stream = Stream(
     name = name,

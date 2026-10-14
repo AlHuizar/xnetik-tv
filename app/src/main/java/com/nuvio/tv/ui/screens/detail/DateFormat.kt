@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.text.format.DateFormat
-import com.nuvio.tv.core.util.parseEpisodeReleaseLocalDate
+import us.xnetik.tv.core.util.parseEpisodeReleaseLocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 

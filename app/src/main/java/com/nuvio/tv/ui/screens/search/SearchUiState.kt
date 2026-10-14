@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.search
+package us.xnetik.tv.ui.screens.search
 
 import androidx.compose.runtime.Immutable
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.MetaPreview
 
 internal const val MIN_SEARCH_QUERY_LENGTH = 2
 

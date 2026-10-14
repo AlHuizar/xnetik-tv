@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull

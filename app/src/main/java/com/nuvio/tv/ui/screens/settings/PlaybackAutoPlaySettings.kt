@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.view.KeyEvent
 import androidx.compose.foundation.BorderStroke
@@ -46,7 +46,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.TextStyle
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.tv.material3.Border
 import androidx.tv.material3.Button
 import androidx.tv.material3.ButtonDefaults
@@ -56,12 +56,12 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.NextEpisodeThresholdMode
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.data.local.StreamAutoPlaySource
-import com.nuvio.tv.ui.components.NuvioDialog
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.NextEpisodeThresholdMode
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.data.local.StreamAutoPlaySource
+import us.xnetik.tv.ui.components.NuvioDialog
 import kotlin.math.roundToInt
 import java.util.Locale
 

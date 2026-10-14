@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.torrent
+package us.xnetik.tv.core.torrent
 
 internal val DefaultTorrentTrackers = listOf(
     "udp://zer0day.ch:1337/announce",

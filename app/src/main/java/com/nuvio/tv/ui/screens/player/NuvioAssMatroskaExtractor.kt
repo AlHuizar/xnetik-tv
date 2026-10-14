@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.annotation.OptIn
 import androidx.media3.common.C
@@ -12,7 +12,7 @@ import androidx.media3.extractor.ExtractorOutput
 import androidx.media3.extractor.TrackOutput
 import androidx.media3.extractor.mkv.EbmlProcessor
 import androidx.media3.extractor.text.SubtitleParser
-import com.nuvio.tv.core.player.SubtitleCharsetDetector
+import us.xnetik.tv.core.player.SubtitleCharsetDetector
 import com.nuvio.tv.core.player.dvmkv.MatroskaExtractor
 import com.nuvio.tv.core.player.dvmkv.MatroskaExtractor.DolbyVisionSampleTransformer
 import io.github.peerless2012.ass.media.AssHandler

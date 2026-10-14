@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.navigation
+package us.xnetik.tv.ui.navigation
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.EnterTransition
@@ -35,11 +35,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.nuvio.tv.ui.screens.cast.CastDetailScreen
+import us.xnetik.tv.ui.screens.cast.CastDetailScreen
 import java.util.WeakHashMap
-import com.nuvio.tv.ui.screens.detail.MetaDetailsScreen
-import com.nuvio.tv.ui.screens.tmdb.TmdbEntityBrowseScreen
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.screens.detail.MetaDetailsScreen
+import us.xnetik.tv.ui.screens.tmdb.TmdbEntityBrowseScreen
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 internal const val DETAIL_CHILD_IDLE = "detail_child_idle"
 

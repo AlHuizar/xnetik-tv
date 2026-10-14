@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.screens.home.shuffleFocusKey
+import us.xnetik.tv.ui.screens.home.shuffleFocusKey
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -35,9 +35,9 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.ui.screens.home.ContinueWatchingItem
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.ui.screens.home.ContinueWatchingItem
 import kotlin.math.abs
 
 @OptIn(ExperimentalTvMaterial3Api::class, ExperimentalComposeUiApi::class)

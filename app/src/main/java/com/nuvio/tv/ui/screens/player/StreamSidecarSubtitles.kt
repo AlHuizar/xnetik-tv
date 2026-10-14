@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.Subtitle
 
 /**
  * One-shot sidecar subtitles for the stream that is about to play.

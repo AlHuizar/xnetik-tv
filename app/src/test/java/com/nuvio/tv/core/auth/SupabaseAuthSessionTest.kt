@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.auth
+package us.xnetik.tv.core.auth
 
-import com.nuvio.tv.data.remote.supabase.TvLoginExchangeResult
+import us.xnetik.tv.data.remote.supabase.TvLoginExchangeResult
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test

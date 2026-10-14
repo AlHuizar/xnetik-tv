@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.plugin
+package us.xnetik.tv.core.plugin
 
 internal object PluginSafety {
     fun isVideoEasyScraper(

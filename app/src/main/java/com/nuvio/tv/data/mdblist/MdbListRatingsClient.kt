@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.data.remote.api.MDBListApi
-import com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaResponseDto
-import com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaRequestDto
+import us.xnetik.tv.data.remote.api.MDBListApi
+import us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaResponseDto
+import us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaRequestDto
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 import javax.inject.Inject

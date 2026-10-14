@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 internal data class AutoSyncSubtitleCandidate(
     val url: String,

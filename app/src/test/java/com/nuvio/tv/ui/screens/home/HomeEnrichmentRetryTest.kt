@@ -1,17 +1,17 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.core.tmdb.TmdbEnrichment
-import com.nuvio.tv.core.tmdb.TmdbMetadataService
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.domain.model.TmdbSettings
-import com.nuvio.tv.domain.repository.MetaRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.core.tmdb.TmdbEnrichment
+import us.xnetik.tv.core.tmdb.TmdbMetadataService
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.domain.model.TmdbSettings
+import us.xnetik.tv.domain.repository.MetaRepository
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every
@@ -427,22 +427,22 @@ class HomeEnrichmentRetryTest {
         // first {} on several of them from launches that do not catch. Those throw
         // NoSuchElementException into the view model scope, which kotlinx-coroutines-test then
         // reports against whichever test runs next. Stub the ones this pipeline touches.
-        val profileManager = mockk<com.nuvio.tv.core.profile.ProfileManager>(relaxed = true) {
+        val profileManager = mockk<us.xnetik.tv.core.profile.ProfileManager>(relaxed = true) {
             // Never ready, so the init chain parks instead of running the whole home pipeline.
             every { activeProfileReady } returns MutableStateFlow(false)
             every { activeProfileId } returns MutableStateFlow(1)
         }
         val cwEnrichmentCache =
-            mockk<com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache>(relaxed = true) {
+            mockk<us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache>(relaxed = true) {
                 every { cacheCleared } returns MutableStateFlow(0)
             }
         val watchProgressRepository =
-            mockk<com.nuvio.tv.domain.repository.WatchProgressRepository>(relaxed = true) {
+            mockk<us.xnetik.tv.domain.repository.WatchProgressRepository>(relaxed = true) {
                 every { getAllEpisodeProgress(any()) } returns flowOf(emptyMap())
             }
         val viewModel = HomeViewModel(
             episodeShuffleStore = mockk(relaxed = true),
-            episodeShuffle = com.nuvio.tv.domain.model.EpisodeShuffle(),
+            episodeShuffle = us.xnetik.tv.domain.model.EpisodeShuffle(),
             appContext = mockk(relaxed = true),
             addonRepository = mockk(relaxed = true),
             startupSyncService = mockk(relaxed = true),

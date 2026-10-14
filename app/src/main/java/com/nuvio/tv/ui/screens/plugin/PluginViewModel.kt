@@ -1,15 +1,15 @@
-package com.nuvio.tv.ui.screens.plugin
+package us.xnetik.tv.ui.screens.plugin
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.plugin.PluginManager
-import com.nuvio.tv.core.plugin.PluginSafety
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.qr.QrCodeGenerator
-import com.nuvio.tv.core.server.DeviceIpAddress
-import com.nuvio.tv.core.server.RepositoryConfigServer
+import us.xnetik.tv.R
+import us.xnetik.tv.core.plugin.PluginManager
+import us.xnetik.tv.core.plugin.PluginSafety
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.qr.QrCodeGenerator
+import us.xnetik.tv.core.server.DeviceIpAddress
+import us.xnetik.tv.core.server.RepositoryConfigServer
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow

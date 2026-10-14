@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.core.tracking.TrackingEpisode
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.core.tracking.TrackingScrobbleEvent
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.TrackingEpisode
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleEvent
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.launch

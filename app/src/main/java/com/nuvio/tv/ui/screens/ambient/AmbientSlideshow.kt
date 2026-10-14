@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.ambient
+package us.xnetik.tv.ui.screens.ambient
 
 import android.content.Context
 import androidx.compose.animation.core.Animatable

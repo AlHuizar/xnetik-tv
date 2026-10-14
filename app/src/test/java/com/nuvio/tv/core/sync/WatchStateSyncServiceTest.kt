@@ -1,14 +1,14 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.tracking.TrackingProgressProviderRegistry
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.WatchProgressPreferences
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
-import com.nuvio.tv.domain.model.mutationKey
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.tracking.TrackingProgressProviderRegistry
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.WatchProgressPreferences
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.model.mutationKey
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.postgrest.result.PostgrestResult
 import io.mockk.coEvery

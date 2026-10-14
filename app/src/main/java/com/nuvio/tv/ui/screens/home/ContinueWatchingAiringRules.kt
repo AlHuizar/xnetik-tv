@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 /**
  * Pure Continue Watching rules for currently-airing / fully-watched series.

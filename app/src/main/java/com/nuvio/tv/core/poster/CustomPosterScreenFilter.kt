@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.poster
+package us.xnetik.tv.core.poster
 
 /**
  * Returns the pattern only if [screen] is enabled in [enabledScreens], empty string otherwise.

@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 /**
  * Early stop for one candidate subtitle. A correct subtitle aligns clearly with any full-dialogue

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player.dvmkv
+package us.xnetik.tv.core.player.dvmkv
 
 import androidx.media3.common.C
 import org.junit.Assert.assertEquals

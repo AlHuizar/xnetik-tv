@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.selectPreferredTrackingNextUpSeeds
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.core.tracking.selectPreferredTrackingNextUpSeeds
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 
 internal class MdbListProgressProjection(snapshot: MdbListSyncSnapshot) {
     private val mediaIndex = MdbListMediaIndex(snapshot)

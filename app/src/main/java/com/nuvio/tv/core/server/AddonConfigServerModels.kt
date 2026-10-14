@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.server
+package us.xnetik.tv.core.server
 
 import java.util.UUID
 

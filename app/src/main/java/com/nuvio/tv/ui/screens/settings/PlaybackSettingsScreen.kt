@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
@@ -22,11 +22,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.nuvio.tv.R
-import com.nuvio.tv.core.torrent.TorrentCacheClearResult
-import com.nuvio.tv.core.torrent.TorrentSettingsData
-import com.nuvio.tv.core.torrent.TorrentState
-import com.nuvio.tv.data.local.PlayerSettings
+import us.xnetik.tv.R
+import us.xnetik.tv.core.torrent.TorrentCacheClearResult
+import us.xnetik.tv.core.torrent.TorrentSettingsData
+import us.xnetik.tv.core.torrent.TorrentState
+import us.xnetik.tv.data.local.PlayerSettings
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

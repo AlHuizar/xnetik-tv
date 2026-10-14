@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.ui.draw.clip
@@ -54,7 +54,7 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.style.TextDirection
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.Border
 import androidx.tv.material3.Card
@@ -63,18 +63,18 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.stableKey
-import com.nuvio.tv.domain.model.stableItemKeys
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.stableItemKey
-import com.nuvio.tv.domain.model.stableItemKeys
-import com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.ui.util.formatAddonTypeLabel
-import com.nuvio.tv.ui.util.localizedContentType
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.stableKey
+import us.xnetik.tv.domain.model.stableItemKeys
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.stableItemKey
+import us.xnetik.tv.domain.model.stableItemKeys
+import us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.ui.util.formatAddonTypeLabel
+import us.xnetik.tv.ui.util.localizedContentType
+import us.xnetik.tv.ui.util.contentTextDirection
 import androidx.compose.ui.platform.LocalContext
 
 @OptIn(ExperimentalTvMaterial3Api::class, ExperimentalComposeUiApi::class, ExperimentalFoundationApi::class)

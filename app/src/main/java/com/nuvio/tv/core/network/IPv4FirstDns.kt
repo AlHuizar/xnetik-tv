@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
 import okhttp3.Dns
 import java.net.Inet4Address

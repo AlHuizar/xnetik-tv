@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.content.Context
-import com.nuvio.tv.ui.screens.player.NuvioExoPlayerPerformanceHelper
+import us.xnetik.tv.ui.screens.player.NuvioExoPlayerPerformanceHelper
 
 /**
  * Trailers render through a TextureView on top of the home UI, so a 4K trailer costs a few hundred

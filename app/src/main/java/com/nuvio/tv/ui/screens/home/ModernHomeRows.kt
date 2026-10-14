@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalFoundationApi::class, kotlinx.coroutines.FlowPreview::class)
 
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.animation.core.AnimationSpec
@@ -98,38 +98,38 @@ import coil3.request.ImageRequest
 import coil3.request.CachePolicy
 import coil3.request.crossfade
 import coil3.request.transformations
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL
-import com.nuvio.tv.domain.model.isPlaceholder
-import com.nuvio.tv.ui.components.ContinueWatchingCard
-import com.nuvio.tv.ui.components.continueWatchingArtworkWidth
-import com.nuvio.tv.ui.components.continueWatchingImageCacheKey
-import com.nuvio.tv.ui.components.continueWatchingImageModel
-import com.nuvio.tv.ui.components.continueWatchingShouldBlur
-import com.nuvio.tv.ui.components.continueWatchingUsesEpisodeThumbnails
-import com.nuvio.tv.ui.components.LocalCardDepthStyle
-import com.nuvio.tv.ui.components.MonochromePosterPlaceholder
-import com.nuvio.tv.ui.components.TrailerPlayer
-import com.nuvio.tv.ui.components.WatchedMarker
-import com.nuvio.tv.ui.components.placeholderCardShimmer
-import com.nuvio.tv.ui.components.nuvioCardDepth
-import com.nuvio.tv.ui.components.rememberArtworkBackedCardGlow
-import com.nuvio.tv.ui.components.rememberPlaceholderShimmerOffsetState
-import com.nuvio.tv.LocalSidebarExpanded
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL
+import us.xnetik.tv.domain.model.isPlaceholder
+import us.xnetik.tv.ui.components.ContinueWatchingCard
+import us.xnetik.tv.ui.components.continueWatchingArtworkWidth
+import us.xnetik.tv.ui.components.continueWatchingImageCacheKey
+import us.xnetik.tv.ui.components.continueWatchingImageModel
+import us.xnetik.tv.ui.components.continueWatchingShouldBlur
+import us.xnetik.tv.ui.components.continueWatchingUsesEpisodeThumbnails
+import us.xnetik.tv.ui.components.LocalCardDepthStyle
+import us.xnetik.tv.ui.components.MonochromePosterPlaceholder
+import us.xnetik.tv.ui.components.TrailerPlayer
+import us.xnetik.tv.ui.components.WatchedMarker
+import us.xnetik.tv.ui.components.placeholderCardShimmer
+import us.xnetik.tv.ui.components.nuvioCardDepth
+import us.xnetik.tv.ui.components.rememberArtworkBackedCardGlow
+import us.xnetik.tv.ui.components.rememberPlaceholderShimmerOffsetState
+import us.xnetik.tv.LocalSidebarExpanded
 import kotlin.math.abs
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
-import com.nuvio.tv.ui.util.recompositionHighlighter
-import com.nuvio.tv.ui.util.StableMap
-import com.nuvio.tv.ui.util.StableRef
-import com.nuvio.tv.ui.util.asStable
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.rememberLongPressKeyTracker
+import us.xnetik.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.util.StableMap
+import us.xnetik.tv.ui.util.StableRef
+import us.xnetik.tv.ui.util.asStable
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.rememberLongPressKeyTracker
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.debounce
 
@@ -726,7 +726,7 @@ internal fun ModernRowSection(
                         .memoryCacheKey(cacheKey)
                         .size(width = widthPx, height = heightPx)
                         .apply {
-                            if (blur) transformations(com.nuvio.tv.ui.util.BlurTransformation())
+                            if (blur) transformations(us.xnetik.tv.ui.util.BlurTransformation())
                         }
                         .build()
                 )
@@ -1201,7 +1201,7 @@ private fun ModernCarouselCard(
         with(density) { cardHeight.roundToPx() }.coerceAtLeast(1)
     }
 
-    val revalidationKey = com.nuvio.tv.core.image.rememberImageRevalidationKey(imageUrl)
+    val revalidationKey = us.xnetik.tv.core.image.rememberImageRevalidationKey(imageUrl)
     var customPosterLoadFailed by remember(imageUrl) { mutableStateOf(false) }
     val imageModel = remember(context, imageUrl, requestWidthPx, requestHeightPx, revalidationKey) {
         imageUrl?.let {
@@ -1222,7 +1222,7 @@ private fun ModernCarouselCard(
             }
             if (!fallbackUrl.isNullOrBlank() && fallbackUrl != it) {
                 builder.memoryCacheKeyExtras(
-                    mapOf(com.nuvio.tv.core.image.CustomPosterFallbackInterceptor.FALLBACK_URL_KEY to fallbackUrl)
+                    mapOf(us.xnetik.tv.core.image.CustomPosterFallbackInterceptor.FALLBACK_URL_KEY to fallbackUrl)
                 )
             }
             builder.build()

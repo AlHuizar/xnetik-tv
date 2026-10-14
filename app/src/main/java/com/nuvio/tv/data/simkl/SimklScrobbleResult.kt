@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.core.tracking.TrackingScrobbleEvent
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleEvent
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.decodeFromJsonElement

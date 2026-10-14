@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.image
+package us.xnetik.tv.core.image
 
 import android.util.Log
 import coil3.ImageLoader

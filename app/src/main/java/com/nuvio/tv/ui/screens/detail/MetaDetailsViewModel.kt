@@ -1,50 +1,50 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.core.player.StreamAutoPlayPolicy
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.core.tmdb.TmdbMetadataService
-import com.nuvio.tv.core.tmdb.TmdbMovieCollection
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.MDBListSettingsDataStore
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.data.local.TraktAuthDataStore
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
-import com.nuvio.tv.data.repository.ImdbEpisodeRatingsRepository
-import com.nuvio.tv.data.repository.MDBListRepository
-import com.nuvio.tv.data.repository.TraktCommentsService
-import com.nuvio.tv.data.repository.TraktRelatedService
-import com.nuvio.tv.data.repository.parseContentIds
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
-import com.nuvio.tv.core.tracking.toggleTrackingMembershipSelection
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaTrailer
-import com.nuvio.tv.domain.model.NextToWatch
-import com.nuvio.tv.domain.model.TmdbSettings
-import com.nuvio.tv.domain.model.TraktCommentReview
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.repository.LibraryRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.data.local.TrailerSettingsDataStore
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.data.trailer.TrailerService
-import com.nuvio.tv.core.util.withAppLocale
-import com.nuvio.tv.core.util.isUnreleased
-import com.nuvio.tv.core.util.selectEpisodeReleaseValue
+import us.xnetik.tv.core.player.StreamAutoPlayPolicy
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.core.tmdb.TmdbMetadataService
+import us.xnetik.tv.core.tmdb.TmdbMovieCollection
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.MDBListSettingsDataStore
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.data.repository.ImdbEpisodeRatingsRepository
+import us.xnetik.tv.data.repository.MDBListRepository
+import us.xnetik.tv.data.repository.TraktCommentsService
+import us.xnetik.tv.data.repository.TraktRelatedService
+import us.xnetik.tv.data.repository.parseContentIds
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.core.tracking.toggleTrackingMembershipSelection
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaTrailer
+import us.xnetik.tv.domain.model.NextToWatch
+import us.xnetik.tv.domain.model.TmdbSettings
+import us.xnetik.tv.domain.model.TraktCommentReview
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.repository.LibraryRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.data.local.TrailerSettingsDataStore
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.trailer.TrailerService
+import us.xnetik.tv.core.util.withAppLocale
+import us.xnetik.tv.core.util.isUnreleased
+import us.xnetik.tv.core.util.selectEpisodeReleaseValue
 import java.time.LocalDate
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
@@ -70,8 +70,8 @@ import kotlinx.coroutines.launch
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
@@ -96,16 +96,16 @@ class MetaDetailsViewModel @Inject constructor(
     private val traktCommentsService: TraktCommentsService,
     private val traktRelatedService: TraktRelatedService,
     private val traktSettingsDataStore: TraktSettingsDataStore,
-    private val simklRelatedService: com.nuvio.tv.data.simkl.SimklRelatedService,
-    private val simklAuthRepository: com.nuvio.tv.data.simkl.SimklAuthRepository,
+    private val simklRelatedService: us.xnetik.tv.data.simkl.SimklRelatedService,
+    private val simklAuthRepository: us.xnetik.tv.data.simkl.SimklAuthRepository,
     private val layoutPreferenceDataStore: LayoutPreferenceDataStore,
-    private val episodeShuffleStore: com.nuvio.tv.data.local.EpisodeShuffleStore,
-    private val episodeShuffle: com.nuvio.tv.domain.model.EpisodeShuffle,
+    private val episodeShuffleStore: us.xnetik.tv.data.local.EpisodeShuffleStore,
+    private val episodeShuffle: us.xnetik.tv.domain.model.EpisodeShuffle,
     private val playerSettingsDataStore: PlayerSettingsDataStore,
     private val profileManager: ProfileManager,
     private val metaDetailsSessionState: MetaDetailsSessionState,
-    private val watchedSeriesStateHolder: com.nuvio.tv.data.local.WatchedSeriesStateHolder,
-    val posterOptions: com.nuvio.tv.ui.components.posteroptions.PosterOptionsController,
+    private val watchedSeriesStateHolder: us.xnetik.tv.data.local.WatchedSeriesStateHolder,
+    val posterOptions: us.xnetik.tv.ui.components.posteroptions.PosterOptionsController,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
     private val itemId: String = savedStateHandle["itemId"] ?: ""
@@ -152,7 +152,7 @@ class MetaDetailsViewModel @Inject constructor(
     private var hideUnreleasedContent = false
     private var traktCommentsEnabled = false
     private var traktAuthenticated = false
-    private var moreLikeThisSourcePreference = com.nuvio.tv.data.local.MoreLikeThisSourcePreference.TRAKT
+    private var moreLikeThisSourcePreference = us.xnetik.tv.data.local.MoreLikeThisSourcePreference.TRAKT
 
     /** Content ID used for watch-progress and watched-items lookups.
      *  Starts as the navigation [itemId] (which may be "tmdb:123") and is
@@ -640,7 +640,7 @@ class MetaDetailsViewModel @Inject constructor(
         }
     }
 
-    suspend fun setEpisodeShuffle(settings: com.nuvio.tv.domain.model.EpisodeShuffleSettings): Boolean {
+    suspend fun setEpisodeShuffle(settings: us.xnetik.tv.domain.model.EpisodeShuffleSettings): Boolean {
         val meta = uiState.value.meta ?: return false
         val profileId = profileManager.activeProfileId.value
         val previous = uiState.value.episodeShuffle
@@ -860,7 +860,7 @@ class MetaDetailsViewModel @Inject constructor(
             name = enrichment.localizedTitle ?: enrichment.originalTitle
                 ?: context.getString(R.string.detail_tmdb_fallback_title, tmdbId),
             poster = enrichment.poster,
-            posterShape = com.nuvio.tv.domain.model.PosterShape.POSTER,
+            posterShape = us.xnetik.tv.domain.model.PosterShape.POSTER,
             background = enrichment.backdrop,
             logo = enrichment.logo,
             description = enrichment.description,
@@ -1335,7 +1335,7 @@ class MetaDetailsViewModel @Inject constructor(
             } else {
                 rawRecommendations
             }.withCustomPosterUrls(
-                com.nuvio.tv.core.poster.patternForScreen(pattern, com.nuvio.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
+                us.xnetik.tv.core.poster.patternForScreen(pattern, us.xnetik.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
             )
 
             _uiState.update { state ->
@@ -1357,7 +1357,7 @@ class MetaDetailsViewModel @Inject constructor(
 
     private fun shouldLoadTraktMoreLikeThis(meta: Meta): Boolean {
         if (!traktAuthenticated) return false
-        if (moreLikeThisSourcePreference != com.nuvio.tv.data.local.MoreLikeThisSourcePreference.TRAKT) return false
+        if (moreLikeThisSourcePreference != us.xnetik.tv.data.local.MoreLikeThisSourcePreference.TRAKT) return false
         return when (meta.type) {
             ContentType.MOVIE -> true
             ContentType.SERIES, ContentType.TV -> true
@@ -1366,7 +1366,7 @@ class MetaDetailsViewModel @Inject constructor(
     }
 
     private fun shouldLoadSimklMoreLikeThis(): Boolean {
-        if (moreLikeThisSourcePreference != com.nuvio.tv.data.local.MoreLikeThisSourcePreference.SIMKL) return false
+        if (moreLikeThisSourcePreference != us.xnetik.tv.data.local.MoreLikeThisSourcePreference.SIMKL) return false
         return simklAuthRepository.state.value.isAuthenticated
     }
 
@@ -1396,7 +1396,7 @@ class MetaDetailsViewModel @Inject constructor(
             } else {
                 collection.items
             }.withCustomPosterUrls(
-                com.nuvio.tv.core.poster.patternForScreen(collectionPattern, com.nuvio.tv.core.poster.CustomPosterScreen.DETAILS, collectionEnabledScreens)
+                us.xnetik.tv.core.poster.patternForScreen(collectionPattern, us.xnetik.tv.core.poster.CustomPosterScreen.DETAILS, collectionEnabledScreens)
             )
 
             _uiState.update { state ->
@@ -2220,7 +2220,7 @@ class MetaDetailsViewModel @Inject constructor(
                 pendingDefaultLibraryToggle = null
                 _uiState.update { it.copy(defaultLibraryTogglePending = false) }
                 showMessage(
-                    message = error.message ?: context.getString(com.nuvio.tv.R.string.detail_error_update_library_failed),
+                    message = error.message ?: context.getString(us.xnetik.tv.R.string.detail_error_update_library_failed),
                     isError = true
                 )
             }
@@ -2245,11 +2245,11 @@ class MetaDetailsViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         pickerPending = false,
-                        pickerError = error.message ?: context.getString(com.nuvio.tv.R.string.detail_error_load_lists_failed),
+                        pickerError = error.message ?: context.getString(us.xnetik.tv.R.string.detail_error_load_lists_failed),
                         showListPicker = false
                     )
                 }
-                showMessage(error.message ?: context.getString(com.nuvio.tv.R.string.detail_error_load_lists_failed), isError = true)
+                showMessage(error.message ?: context.getString(us.xnetik.tv.R.string.detail_error_load_lists_failed), isError = true)
             }
         }
     }
@@ -2298,10 +2298,10 @@ class MetaDetailsViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         pickerPending = false,
-                        pickerError = error.message ?: context.getString(com.nuvio.tv.R.string.detail_error_update_lists_failed)
+                        pickerError = error.message ?: context.getString(us.xnetik.tv.R.string.detail_error_update_lists_failed)
                     )
                 }
-                showMessage(error.message ?: context.getString(com.nuvio.tv.R.string.detail_error_update_lists_failed), isError = true)
+                showMessage(error.message ?: context.getString(us.xnetik.tv.R.string.detail_error_update_lists_failed), isError = true)
             }
         }
     }
@@ -2354,7 +2354,7 @@ class MetaDetailsViewModel @Inject constructor(
                         pickerPending = false,
                         removalConfirmations = emptyList(),
                         pickerError = error.message
-                            ?: context.getString(com.nuvio.tv.R.string.detail_error_update_lists_failed)
+                            ?: context.getString(us.xnetik.tv.R.string.detail_error_update_lists_failed)
                     )
                 }
             }
@@ -2403,7 +2403,7 @@ class MetaDetailsViewModel @Inject constructor(
                 }
                 showMessage(
                     message = error.message
-                        ?: context.getString(com.nuvio.tv.R.string.detail_error_update_library_failed),
+                        ?: context.getString(us.xnetik.tv.R.string.detail_error_update_library_failed),
                     isError = true
                 )
             }
@@ -2451,7 +2451,7 @@ class MetaDetailsViewModel @Inject constructor(
                 }
             }.onFailure { error ->
                 showMessage(
-                    message = error.message ?: context.getString(com.nuvio.tv.R.string.detail_error_update_watched_failed),
+                    message = error.message ?: context.getString(us.xnetik.tv.R.string.detail_error_update_watched_failed),
                     isError = true
                 )
             }
@@ -2487,7 +2487,7 @@ class MetaDetailsViewModel @Inject constructor(
                 }
             }.onFailure { error ->
                 showMessage(
-                    message = error.message ?: context.getString(com.nuvio.tv.R.string.detail_error_update_episode_watched_failed),
+                    message = error.message ?: context.getString(us.xnetik.tv.R.string.detail_error_update_episode_watched_failed),
                     isError = true
                 )
             }
@@ -2865,7 +2865,7 @@ class MetaDetailsViewModel @Inject constructor(
                 } else {
                     null
                 }
-                externalUrl?.let { com.nuvio.tv.data.trailer.TrailerPlaybackSource(videoUrl = it) }
+                externalUrl?.let { us.xnetik.tv.data.trailer.TrailerPlaybackSource(videoUrl = it) }
             }
             val url = source?.videoUrl
             val audioUrl = source?.audioUrl

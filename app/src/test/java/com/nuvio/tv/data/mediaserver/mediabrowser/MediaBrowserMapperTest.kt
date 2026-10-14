@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.mediaserver.mediabrowser
+package us.xnetik.tv.data.mediaserver.mediabrowser
 
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.data.mediaserver.ServerMediaKind
-import com.nuvio.tv.domain.model.ContentType
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.mediaserver.ServerMediaKind
+import us.xnetik.tv.domain.model.ContentType
 import kotlinx.serialization.json.Json
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

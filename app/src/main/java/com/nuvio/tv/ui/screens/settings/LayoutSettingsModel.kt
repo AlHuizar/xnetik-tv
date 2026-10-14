@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -13,7 +13,7 @@ import androidx.compose.material.icons.filled.RoundedCorner
 import androidx.compose.material.icons.filled.ViewAgenda
 import androidx.compose.material.icons.filled.ViewInAr
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 internal enum class LayoutSection(
     @param:StringRes val title: Int,

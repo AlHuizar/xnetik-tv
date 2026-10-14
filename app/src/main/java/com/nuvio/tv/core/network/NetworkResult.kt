@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
 sealed class NetworkResult<out T> {
     data class Success<T>(val data: T) : NetworkResult<T>()

@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.media3.common.util.UnstableApi
-import com.nuvio.tv.data.local.BufferSettings
-import com.nuvio.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.BufferSettings
+import us.xnetik.tv.data.local.PlayerSettings
 
 /**
  * Shared memory budget constants and helpers for buffer + parallel connection settings.

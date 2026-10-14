@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.compose.runtime.Immutable
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MDBListRatings
-import com.nuvio.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.MetaPreview
 import kotlin.math.ceil
 
 @Immutable
@@ -49,7 +49,7 @@ data class PostPlayRecommendationUiState(
     val countdownSeconds: Int? = null,
     val isTrailerPlaying: Boolean = false,
     val hasAutoPlayedTrailer: Boolean = false,
-    val mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+    val mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
 ) {
     val canNavigatePrevious: Boolean
         get() = !isChangingRecommendation && recommendationIndex > 0

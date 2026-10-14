@@ -1,15 +1,15 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.EpisodeShuffleStore
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.domain.model.EpisodeShuffle
-import com.nuvio.tv.domain.model.EpisodeShuffleSettings
-import com.nuvio.tv.domain.model.ShuffleSurface
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.repository.WatchProgressRepository
-import com.nuvio.tv.ui.screens.player.PlayerNextEpisodeRules
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.EpisodeShuffleStore
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.domain.model.EpisodeShuffle
+import us.xnetik.tv.domain.model.EpisodeShuffleSettings
+import us.xnetik.tv.domain.model.ShuffleSurface
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.ui.screens.player.PlayerNextEpisodeRules
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject

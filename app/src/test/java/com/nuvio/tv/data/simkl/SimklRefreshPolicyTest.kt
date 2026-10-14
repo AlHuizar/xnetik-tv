@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.async
 import kotlinx.coroutines.runBlocking

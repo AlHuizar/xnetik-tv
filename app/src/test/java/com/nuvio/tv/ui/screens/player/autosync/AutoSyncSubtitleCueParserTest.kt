@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull

@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mapper
+package us.xnetik.tv.data.mapper
 
-import com.nuvio.tv.data.remote.dto.MetaResponseDto
+import us.xnetik.tv.data.remote.dto.MetaResponseDto
 import com.squareup.moshi.Moshi
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.profile
+package us.xnetik.tv.core.profile
 
 import android.content.Context
 import androidx.test.ext.junit.runners.AndroidJUnit4

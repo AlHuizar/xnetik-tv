@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.Video
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.Video
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 

@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.data.remote.dto.PremiumizeDirectDownloadFileDto
-import com.nuvio.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.data.remote.dto.PremiumizeDirectDownloadFileDto
+import us.xnetik.tv.domain.model.StreamClientResolve
 import javax.inject.Inject
 import javax.inject.Singleton
 

@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 // Matroska carries no per track bitrate element, so its extractor leaves Format.bitrate unset and
 // every consumer of it reads nothing; file size over duration is the only rate a mkv can report.

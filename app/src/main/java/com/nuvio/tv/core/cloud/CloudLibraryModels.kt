@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.cloud
+package us.xnetik.tv.core.cloud
 
-import com.nuvio.tv.core.debrid.DebridProvider
-import com.nuvio.tv.domain.model.Video
+import us.xnetik.tv.core.debrid.DebridProvider
+import us.xnetik.tv.domain.model.Video
 
 enum class CloudLibraryItemType {
     Torrent,

@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.cast
+package us.xnetik.tv.ui.screens.cast
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
@@ -67,7 +67,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.style.TextDirection
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.contentTextDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -85,20 +85,20 @@ import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PersonDetail
-import com.nuvio.tv.ui.components.GridContentCard
-import com.nuvio.tv.ui.components.PosterCardStyle
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.LocalLandscapePosterMode
-import com.nuvio.tv.ui.components.rememberShimmerBrush
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PersonDetail
+import us.xnetik.tv.ui.components.GridContentCard
+import us.xnetik.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.LocalLandscapePosterMode
+import us.xnetik.tv.ui.components.rememberShimmerBrush
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalTvMaterial3Api::class)
@@ -158,7 +158,7 @@ fun CastDetailScreen(
         }
 
         val posterOptionsState by viewModel.posterOptions.state.collectAsState()
-        com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+        us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
             state = posterOptionsState,
             controller = viewModel.posterOptions,
             onNavigateToDetail = { id, type, addonBaseUrl ->
@@ -175,7 +175,7 @@ private fun CastDetailContent(
     isBiographyExpanded: Boolean,
     onBiographyExpandedChange: (Boolean) -> Unit,
     onNavigateToDetail: (itemId: String, itemType: String, addonBaseUrl: String?) -> Unit,
-    posterOptions: com.nuvio.tv.ui.components.posteroptions.PosterOptionsController,
+    posterOptions: us.xnetik.tv.ui.components.posteroptions.PosterOptionsController,
     posterCardCornerRadiusDp: Int = 12,
     isItemWatched: (MetaPreview) -> Boolean = { false }
 ) {

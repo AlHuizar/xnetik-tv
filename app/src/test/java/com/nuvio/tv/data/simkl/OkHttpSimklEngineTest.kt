@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import java.io.IOException
 import okio.Buffer

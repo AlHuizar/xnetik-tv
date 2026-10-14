@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 import androidx.annotation.VisibleForTesting
-import com.nuvio.tv.core.player.SubtitleCharsetDetector
-import com.nuvio.tv.ui.screens.player.PlayerPlaybackNetworking
+import us.xnetik.tv.core.player.SubtitleCharsetDetector
+import us.xnetik.tv.ui.screens.player.PlayerPlaybackNetworking
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.suspendCancellableCoroutine
 import okhttp3.Call

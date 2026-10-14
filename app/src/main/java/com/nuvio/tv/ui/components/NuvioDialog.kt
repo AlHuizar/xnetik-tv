@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.contentTextDirection
 
 import android.os.SystemClock
 import android.view.KeyEvent as AndroidKeyEvent
@@ -37,7 +37,7 @@ import androidx.compose.ui.window.DialogProperties
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.ui.screens.ambient.AmbientDialogEffect
+import us.xnetik.tv.ui.screens.ambient.AmbientDialogEffect
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable

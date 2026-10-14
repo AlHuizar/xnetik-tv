@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.util
+package us.xnetik.tv.ui.util
 
 import android.content.Context
-import com.nuvio.tv.R
-import com.nuvio.tv.core.util.isEpisodeReleaseAired
-import com.nuvio.tv.core.util.parseEpisodeReleaseLocalDate
+import us.xnetik.tv.R
+import us.xnetik.tv.core.util.isEpisodeReleaseAired
+import us.xnetik.tv.core.util.parseEpisodeReleaseLocalDate
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.temporal.ChronoUnit

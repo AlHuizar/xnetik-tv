@@ -1,12 +1,12 @@
-package com.nuvio.tv.data.trailer
+package us.xnetik.tv.data.trailer
 
 import android.util.Log
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
-import com.nuvio.tv.data.remote.api.TmdbApi
-import com.nuvio.tv.data.remote.api.TrailerApi
-import com.nuvio.tv.data.remote.api.TrailerResponse
-import com.nuvio.tv.domain.model.TmdbSettings
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.data.remote.api.TmdbApi
+import us.xnetik.tv.data.remote.api.TrailerApi
+import us.xnetik.tv.data.remote.api.TrailerResponse
+import us.xnetik.tv.domain.model.TmdbSettings
 import io.mockk.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest

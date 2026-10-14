@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.server
+package us.xnetik.tv.core.server
 
 import android.content.Context
 import android.content.res.Configuration
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import java.util.Locale
 
 object DebridFormatterWebPage {

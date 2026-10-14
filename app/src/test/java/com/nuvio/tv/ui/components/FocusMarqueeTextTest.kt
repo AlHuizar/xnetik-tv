@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import org.junit.Assert.assertTrue
 import org.junit.Test

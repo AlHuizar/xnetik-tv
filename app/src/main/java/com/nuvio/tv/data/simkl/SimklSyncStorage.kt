@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nuvio.tv.data.local.ProfileDataStoreFactory
+import us.xnetik.tv.data.local.ProfileDataStoreFactory
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.first

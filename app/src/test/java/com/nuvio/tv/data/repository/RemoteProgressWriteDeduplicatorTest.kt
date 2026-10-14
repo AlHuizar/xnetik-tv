@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchProgress
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test

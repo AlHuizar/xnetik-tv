@@ -1,15 +1,15 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import android.util.Log
-import com.nuvio.tv.core.tracking.TRACKING_SCROBBLE_DIAGNOSTIC_TAG
-import com.nuvio.tv.core.tracking.TrackingCapability
-import com.nuvio.tv.core.tracking.TrackingProvider
-import com.nuvio.tv.core.tracking.TrackingProviderDescriptor
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.core.tracking.TrackingScrobbleEvent
-import com.nuvio.tv.core.tracking.TrackingScrobbler
-import com.nuvio.tv.core.tracking.scrobbleDiagnosticSummary
+import us.xnetik.tv.core.tracking.TRACKING_SCROBBLE_DIAGNOSTIC_TAG
+import us.xnetik.tv.core.tracking.TrackingCapability
+import us.xnetik.tv.core.tracking.TrackingProvider
+import us.xnetik.tv.core.tracking.TrackingProviderDescriptor
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleEvent
+import us.xnetik.tv.core.tracking.TrackingScrobbler
+import us.xnetik.tv.core.tracking.scrobbleDiagnosticSummary
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineScope

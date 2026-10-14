@@ -1,19 +1,19 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.network.safeApiCall
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.data.mapper.toDomainOrNull
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.data.mediaserver.messageRes
-import com.nuvio.tv.data.mediaserver.serverFailure
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.repository.CatalogRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.network.safeApiCall
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.data.mapper.toDomainOrNull
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.data.mediaserver.messageRes
+import us.xnetik.tv.data.mediaserver.serverFailure
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.repository.CatalogRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.Flow
@@ -45,7 +45,7 @@ class CatalogRepositoryImpl @Inject constructor(
         skipStep: Int,
         extraArgs: Map<String, String>,
         supportsSkip: Boolean,
-        posterScreen: com.nuvio.tv.core.poster.CustomPosterScreen
+        posterScreen: us.xnetik.tv.core.poster.CustomPosterScreen
     ): Flow<NetworkResult<CatalogRow>> = flow {
         emit(NetworkResult.Loading)
 
@@ -79,7 +79,7 @@ class CatalogRepositoryImpl @Inject constructor(
                     .mapNotNull { it?.toDomainOrNull(type, addonBaseUrl) }
                     .distinctBy { it.id }
                     .withCustomPosterUrls(
-                        com.nuvio.tv.core.poster.patternForScreen(posterPattern, posterScreen, enabledScreens)
+                        us.xnetik.tv.core.poster.patternForScreen(posterPattern, posterScreen, enabledScreens)
                     )
                 Log.d(
                     TAG,

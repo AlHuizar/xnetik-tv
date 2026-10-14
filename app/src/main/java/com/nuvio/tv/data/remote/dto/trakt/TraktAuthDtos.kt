@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.remote.dto.trakt
+package us.xnetik.tv.data.remote.dto.trakt
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

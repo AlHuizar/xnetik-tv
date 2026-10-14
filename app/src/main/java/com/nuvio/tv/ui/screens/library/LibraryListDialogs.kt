@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.foundation.background
@@ -38,17 +38,17 @@ import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibraryListPrivacy
 import kotlinx.coroutines.delay
-import com.nuvio.tv.domain.model.localizedTitle
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.localizedTitle
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.theme.NuvioTheme
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDirection
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.TrackingListManagementCapabilities
-import com.nuvio.tv.ui.screens.ambient.AmbientDialogEffect
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.TrackingListManagementCapabilities
+import us.xnetik.tv.ui.screens.ambient.AmbientDialogEffect
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable

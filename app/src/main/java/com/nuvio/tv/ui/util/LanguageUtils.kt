@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.util
+package us.xnetik.tv.ui.util
 
 import android.content.Context
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import java.util.Locale
 
 private val EPISODE_PATTERN = Regex("^Episode (\\d+)$", RegexOption.IGNORE_CASE)

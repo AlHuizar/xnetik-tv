@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens
+package us.xnetik.tv.ui.screens
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -44,14 +44,14 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.ui.components.ClassicLayoutPreview
-import com.nuvio.tv.ui.components.GridLayoutPreview
-import com.nuvio.tv.ui.components.ModernLayoutPreview
-import com.nuvio.tv.ui.screens.settings.LayoutSettingsEvent
-import com.nuvio.tv.ui.screens.settings.LayoutSettingsViewModel
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.ui.components.ClassicLayoutPreview
+import us.xnetik.tv.ui.components.GridLayoutPreview
+import us.xnetik.tv.ui.components.ModernLayoutPreview
+import us.xnetik.tv.ui.screens.settings.LayoutSettingsEvent
+import us.xnetik.tv.ui.screens.settings.LayoutSettingsViewModel
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @Composable
 fun LayoutSelectionScreen(

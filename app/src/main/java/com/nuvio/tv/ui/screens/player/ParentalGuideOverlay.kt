@@ -1,9 +1,9 @@
 @file:OptIn(androidx.tv.material3.ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.accentBrush
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.accentBrush
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing

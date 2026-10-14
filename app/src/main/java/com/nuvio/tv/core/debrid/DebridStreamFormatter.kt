@@ -1,16 +1,16 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.core.streams.CompiledStreamBadgeFilter
-import com.nuvio.tv.core.streams.StreamBadgeMatcher
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.DebridStreamEncode
-import com.nuvio.tv.domain.model.DebridStreamQuality
-import com.nuvio.tv.domain.model.DebridStreamResolution
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBadge
-import com.nuvio.tv.domain.model.StreamClientResolve
-import com.nuvio.tv.domain.model.StreamClientResolveParsed
-import com.nuvio.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.core.streams.CompiledStreamBadgeFilter
+import us.xnetik.tv.core.streams.StreamBadgeMatcher
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.DebridStreamEncode
+import us.xnetik.tv.domain.model.DebridStreamQuality
+import us.xnetik.tv.domain.model.DebridStreamResolution
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBadge
+import us.xnetik.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.domain.model.StreamClientResolveParsed
+import us.xnetik.tv.domain.model.StreamDebridCacheState
 import javax.inject.Inject
 import javax.inject.Singleton
 

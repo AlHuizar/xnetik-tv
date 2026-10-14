@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.poster
+package us.xnetik.tv.core.poster
 
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchProgress
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

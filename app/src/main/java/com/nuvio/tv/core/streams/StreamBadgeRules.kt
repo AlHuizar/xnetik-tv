@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.streams
+package us.xnetik.tv.core.streams
 
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBadge
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBadge
 import java.util.regex.Pattern
 import java.util.regex.Matcher
 import kotlinx.serialization.EncodeDefault

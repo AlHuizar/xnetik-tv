@@ -1,13 +1,13 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.core.tracking.TrackingScrobbleEvent
-import com.nuvio.tv.core.tracking.TrackingScrobbler
-import com.nuvio.tv.core.tracking.TrackingSeekScrobblePolicy
-import com.nuvio.tv.data.remote.dto.trakt.TraktIdsDto
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleEvent
+import us.xnetik.tv.core.tracking.TrackingScrobbler
+import us.xnetik.tv.core.tracking.TrackingSeekScrobblePolicy
+import us.xnetik.tv.data.remote.dto.trakt.TraktIdsDto
 import javax.inject.Inject
 import javax.inject.Singleton
 

@@ -1,7 +1,7 @@
-package com.nuvio.tv.domain.repository
+package us.xnetik.tv.domain.repository
 
-import com.nuvio.tv.data.remote.supabase.ClaimSyncResult
-import com.nuvio.tv.data.remote.supabase.SupabaseLinkedDevice
+import us.xnetik.tv.data.remote.supabase.ClaimSyncResult
+import us.xnetik.tv.data.remote.supabase.SupabaseLinkedDevice
 
 interface SyncRepository {
     suspend fun generateSyncCode(pin: String): Result<String>

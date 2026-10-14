@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -8,14 +8,14 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.core.streams.PlaybackAvailability
-import com.nuvio.tv.data.local.PluginDataStore
-import com.nuvio.tv.data.mediaserver.ServerRepository
-import com.nuvio.tv.data.mediaserver.ServerStreams
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.ui.screens.home.ContinueWatchingItem
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.core.streams.PlaybackAvailability
+import us.xnetik.tv.data.local.PluginDataStore
+import us.xnetik.tv.data.mediaserver.ServerRepository
+import us.xnetik.tv.data.mediaserver.ServerStreams
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.ui.screens.home.ContinueWatchingItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine

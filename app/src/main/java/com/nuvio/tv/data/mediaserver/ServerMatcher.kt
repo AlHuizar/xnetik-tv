@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import android.util.Log
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.core.tracking.parseTrackingExternalIds
-import com.nuvio.tv.domain.repository.MetaRepository
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.parseTrackingExternalIds
+import us.xnetik.tv.domain.repository.MetaRepository
 import java.time.LocalDate
 import javax.inject.Inject
 import javax.inject.Singleton

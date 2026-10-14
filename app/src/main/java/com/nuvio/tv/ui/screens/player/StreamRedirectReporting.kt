@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.annotation.OptIn
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DataSpec
-import com.nuvio.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.Stream
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import java.util.concurrent.atomic.AtomicReference
 

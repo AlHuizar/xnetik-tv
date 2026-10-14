@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchProgress
 import java.util.concurrent.TimeUnit
 import kotlin.math.roundToInt
 

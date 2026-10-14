@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import coil3.transition.CrossfadeDrawable
 import coil3.request.ImageResult

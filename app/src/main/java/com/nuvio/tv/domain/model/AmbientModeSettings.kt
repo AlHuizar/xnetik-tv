@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 data class AmbientModeSettings(
     val enabled: Boolean = true,

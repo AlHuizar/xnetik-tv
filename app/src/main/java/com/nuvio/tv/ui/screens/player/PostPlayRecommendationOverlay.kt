@@ -3,7 +3,7 @@
     androidx.compose.ui.ExperimentalComposeUiApi::class
 )
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.annotation.RawRes
@@ -83,20 +83,20 @@ import coil3.compose.rememberAsyncImagePainter
 import coil3.imageLoader
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.ui.components.ImdbRatingSourceLabel
-import com.nuvio.tv.ui.components.MDBListRatingsRow
-import com.nuvio.tv.ui.components.PlayManualOverrideDialog
-import com.nuvio.tv.ui.components.SynopsisDescription
-import com.nuvio.tv.ui.components.SynopsisOverlay
-import com.nuvio.tv.ui.components.TrailerPlayer
-import com.nuvio.tv.ui.theme.NuvioMotion
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.formatHeroRuntime
-import com.nuvio.tv.ui.util.localizedGenreLabel
-import com.nuvio.tv.ui.util.rememberLongPressKeyTracker
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.ui.components.ImdbRatingSourceLabel
+import us.xnetik.tv.ui.components.MDBListRatingsRow
+import us.xnetik.tv.ui.components.PlayManualOverrideDialog
+import us.xnetik.tv.ui.components.SynopsisDescription
+import us.xnetik.tv.ui.components.SynopsisOverlay
+import us.xnetik.tv.ui.components.TrailerPlayer
+import us.xnetik.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.formatHeroRuntime
+import us.xnetik.tv.ui.util.localizedGenreLabel
+import us.xnetik.tv.ui.util.rememberLongPressKeyTracker
 import java.util.Locale
 import kotlinx.coroutines.delay
 
@@ -116,7 +116,7 @@ fun PostPlayRecommendationOverlay(
     onTrailerEnded: () -> Unit,
     onPreviousRecommendation: () -> Unit,
     onNextRecommendation: () -> Unit,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     modifier: Modifier = Modifier
 ) {
     val recommendation = state.recommendation ?: return
@@ -471,7 +471,7 @@ private fun PostPlayRecommendationSummary(
     playFocusRequester: FocusRequester,
     onShowSynopsis: () -> Unit,
     onDescriptionTruncationChanged: (Boolean) -> Unit,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
 ) {
     val context = LocalContext.current
     val headerVisibility = remember {

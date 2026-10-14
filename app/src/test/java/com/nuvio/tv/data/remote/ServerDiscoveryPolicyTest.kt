@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.remote
+package us.xnetik.tv.data.remote
 
-import com.nuvio.tv.domain.model.isPublicServerHost
+import us.xnetik.tv.domain.model.isPublicServerHost
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertThrows

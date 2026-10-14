@@ -1,19 +1,19 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import androidx.compose.runtime.Immutable
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
-import com.nuvio.tv.data.local.StartupAuthNotice
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.HomeImdbRatingsVisibility
-import com.nuvio.tv.domain.model.DetailImdbRatingsVisibility
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.data.local.StartupAuthNotice
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.HomeImdbRatingsVisibility
+import us.xnetik.tv.domain.model.DetailImdbRatingsVisibility
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.WatchProgress
 
 @Immutable
 data class HomeUiState(
@@ -72,10 +72,10 @@ data class HomeUiState(
     val startupAuthNotice: StartupAuthNotice? = null,
     val homeRows: List<HomeRow> = emptyList(),
     val customPosterUrlPattern: String = "",
-    val customPosterEnabledScreens: Set<com.nuvio.tv.core.poster.CustomPosterScreen> =
-        com.nuvio.tv.core.poster.CustomPosterScreen.ALL,
+    val customPosterEnabledScreens: Set<us.xnetik.tv.core.poster.CustomPosterScreen> =
+        us.xnetik.tv.core.poster.CustomPosterScreen.ALL,
     val mdbListShowOnHero: Boolean = false,
-    val mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+    val mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
 )
 
 @Immutable
@@ -93,7 +93,7 @@ sealed class ContinueWatchingItem {
         override val shufflePlayback: Boolean = false,
         val originalPoster: String? = null,
         val customLandscapePoster: String? = null,
-        val mdbListRatings: com.nuvio.tv.domain.model.MDBListRatings? = null
+        val mdbListRatings: us.xnetik.tv.domain.model.MDBListRatings? = null
     ) : ContinueWatchingItem()
 
     @Immutable
@@ -139,7 +139,7 @@ data class NextUpInfo(
     val seedSeason: Int? = null,
     val seedEpisode: Int? = null,
     val contentLanguage: String? = null,
-    val mdbListRatings: com.nuvio.tv.domain.model.MDBListRatings? = null
+    val mdbListRatings: us.xnetik.tv.domain.model.MDBListRatings? = null
 )
 
 @Immutable
@@ -207,7 +207,7 @@ sealed class GridItem {
         val collectionId: String,
         val collectionTitle: String,
         val focusGlowEnabled: Boolean,
-        val folder: com.nuvio.tv.domain.model.CollectionFolder
+        val folder: us.xnetik.tv.domain.model.CollectionFolder
     ) : GridItem()
 }
 

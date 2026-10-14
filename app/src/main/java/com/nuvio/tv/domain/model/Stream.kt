@@ -1,8 +1,8 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 import androidx.compose.runtime.Immutable
-import com.nuvio.tv.core.debrid.DebridProviders
-import com.nuvio.tv.data.mediaserver.ServerPlaybackTarget
+import us.xnetik.tv.core.debrid.DebridProviders
+import us.xnetik.tv.data.mediaserver.ServerPlaybackTarget
 
 /**
  * Represents a stream source from a Stremio addon

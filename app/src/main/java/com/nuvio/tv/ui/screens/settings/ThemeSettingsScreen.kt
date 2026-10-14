@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.app.Activity
 import android.content.Context
@@ -66,17 +66,17 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.LocaleCache
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.AppIconOption
-import com.nuvio.tv.domain.model.AppTheme
-import com.nuvio.tv.domain.model.CustomThemeColors
-import com.nuvio.tv.domain.model.SettingsUiStyle
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.theme.ThemeColors
-import com.nuvio.tv.ui.theme.accentBrush
-import com.nuvio.tv.ui.theme.getFontFamily
+import us.xnetik.tv.LocaleCache
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.AppIconOption
+import us.xnetik.tv.domain.model.AppTheme
+import us.xnetik.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.SettingsUiStyle
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.theme.ThemeColors
+import us.xnetik.tv.ui.theme.accentBrush
+import us.xnetik.tv.ui.theme.getFontFamily
 import kotlinx.coroutines.delay
 import java.util.Locale
 

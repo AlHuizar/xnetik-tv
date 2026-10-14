@@ -1,9 +1,9 @@
-package com.nuvio.tv.core.streams
+package us.xnetik.tv.core.streams
 
-import com.nuvio.tv.data.local.StreamBadgeSettingsDataStore
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBadge
+import us.xnetik.tv.data.local.StreamBadgeSettingsDataStore
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBadge
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext

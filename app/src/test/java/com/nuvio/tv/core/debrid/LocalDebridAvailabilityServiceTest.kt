@@ -1,11 +1,11 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBehaviorHints
-import com.nuvio.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBehaviorHints
+import us.xnetik.tv.domain.model.StreamDebridCacheState
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

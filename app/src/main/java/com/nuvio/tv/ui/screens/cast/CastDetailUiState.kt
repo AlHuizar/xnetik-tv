@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.cast
+package us.xnetik.tv.ui.screens.cast
 
-import com.nuvio.tv.domain.model.PersonDetail
+import us.xnetik.tv.domain.model.PersonDetail
 
 sealed interface CastDetailUiState {
     data object Loading : CastDetailUiState

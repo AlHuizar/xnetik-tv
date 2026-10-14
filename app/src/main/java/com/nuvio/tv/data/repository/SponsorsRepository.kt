@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.BuildConfig
+import us.xnetik.tv.BuildConfig
 import javax.inject.Inject
 import javax.inject.Singleton
 

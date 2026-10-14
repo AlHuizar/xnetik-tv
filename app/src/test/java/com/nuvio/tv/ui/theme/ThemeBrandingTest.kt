@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.theme
+package us.xnetik.tv.ui.theme
 
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.AppTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.AppTheme
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

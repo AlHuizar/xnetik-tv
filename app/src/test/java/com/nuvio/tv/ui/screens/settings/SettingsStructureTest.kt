@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.PlayerSettings
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -78,7 +78,7 @@ class SettingsStructureTest {
 
     @Test
     fun `focused poster has no options on the grid layout`() {
-        assertFalse(LayoutSettingsUiState(selectedLayout = com.nuvio.tv.domain.model.HomeLayout.GRID).focusedPosterHasOptions())
-        assertTrue(LayoutSettingsUiState(selectedLayout = com.nuvio.tv.domain.model.HomeLayout.CLASSIC).focusedPosterHasOptions())
+        assertFalse(LayoutSettingsUiState(selectedLayout = us.xnetik.tv.domain.model.HomeLayout.GRID).focusedPosterHasOptions())
+        assertTrue(LayoutSettingsUiState(selectedLayout = us.xnetik.tv.domain.model.HomeLayout.CLASSIC).focusedPosterHasOptions())
     }
 }

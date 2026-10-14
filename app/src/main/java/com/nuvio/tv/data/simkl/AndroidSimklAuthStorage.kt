@@ -1,13 +1,13 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import android.util.Base64
-import com.nuvio.tv.core.profile.ProfileScopedCredentialStore
+import us.xnetik.tv.core.profile.ProfileScopedCredentialStore
 import dagger.hilt.android.qualifiers.ApplicationContext
-import com.nuvio.tv.data.local.ProfileDataStore
+import us.xnetik.tv.data.local.ProfileDataStore
 import java.security.KeyStore
 import javax.crypto.Cipher
 import javax.crypto.KeyGenerator
@@ -279,7 +279,7 @@ class AndroidSimklAuthStorage @Inject constructor(
         const val METADATA_KEY = "metadata"
         const val TOKEN_KEY = "access_token"
         const val KEYSTORE_PROVIDER = "AndroidKeyStore"
-        const val KEY_ALIAS = "com.nuvio.tv.simkl.credentials.v1"
+        const val KEY_ALIAS = "us.xnetik.tv.simkl.credentials.v1"
         const val TRANSFORMATION = "AES/GCM/NoPadding"
         const val GCM_TAG_BITS = 128
     }

@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.util.Log
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.data.remote.supabase.MembershipOverviewRemoteDataSource
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.domain.model.MembershipOverview
-import com.nuvio.tv.domain.model.MembershipOverviewState
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.data.remote.supabase.MembershipOverviewRemoteDataSource
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.domain.model.MembershipOverview
+import us.xnetik.tv.domain.model.MembershipOverviewState
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

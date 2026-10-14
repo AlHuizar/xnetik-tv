@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.cloud
+package us.xnetik.tv.core.cloud
 
-import com.nuvio.tv.core.debrid.DebridProviders
-import com.nuvio.tv.data.remote.api.PremiumizeApi
-import com.nuvio.tv.data.remote.dto.PremiumizeCloudFileDto
+import us.xnetik.tv.core.debrid.DebridProviders
+import us.xnetik.tv.data.remote.api.PremiumizeApi
+import us.xnetik.tv.data.remote.dto.PremiumizeCloudFileDto
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CancellationException

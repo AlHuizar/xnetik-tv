@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.domain.model.NextToWatch
+import us.xnetik.tv.domain.model.NextToWatch
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton

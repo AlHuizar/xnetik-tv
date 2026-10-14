@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.data.local.AuthSessionNoticeDataStore
-import com.nuvio.tv.data.local.TraktAuthDataStore
-import com.nuvio.tv.data.local.TraktAuthState
-import com.nuvio.tv.data.remote.api.TraktApi
+import us.xnetik.tv.data.local.AuthSessionNoticeDataStore
+import us.xnetik.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.data.local.TraktAuthState
+import us.xnetik.tv.data.remote.api.TraktApi
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

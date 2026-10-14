@@ -1,13 +1,13 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.core.runtime.AppRestarter
-import com.nuvio.tv.data.local.DeviceLocalPlayerPreferences
-import com.nuvio.tv.data.local.ImagePerformancePreferences
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.data.local.SentrySettingsDataStore
+import us.xnetik.tv.core.runtime.AppRestarter
+import us.xnetik.tv.data.local.DeviceLocalPlayerPreferences
+import us.xnetik.tv.data.local.ImagePerformancePreferences
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.data.local.SentrySettingsDataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow

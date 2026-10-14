@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import android.util.Log
-import com.nuvio.tv.core.profile.ProfileScopedCredentialStore
+import us.xnetik.tv.core.profile.ProfileScopedCredentialStore
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.NonCancellable

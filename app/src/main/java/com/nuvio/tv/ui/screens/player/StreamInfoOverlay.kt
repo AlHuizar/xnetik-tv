@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.view.KeyEvent
 import androidx.compose.foundation.BorderStroke
@@ -34,7 +34,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onPlaced
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -48,8 +48,8 @@ import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.util.languageCodeToName
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.util.languageCodeToName
 
 @Composable
 fun StreamInfoOverlay(

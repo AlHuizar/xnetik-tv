@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.util
+package us.xnetik.tv.core.util
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull

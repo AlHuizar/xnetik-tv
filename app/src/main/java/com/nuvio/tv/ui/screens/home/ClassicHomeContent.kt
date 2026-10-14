@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
-import com.nuvio.tv.LocalContentFocusRequester
+import us.xnetik.tv.LocalContentFocusRequester
 import androidx.compose.animation.core.AnimationSpec
 import androidx.compose.foundation.background
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -45,34 +45,34 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.focus.focusRestorer
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalDensity
-import com.nuvio.tv.ui.util.dpadVerticalFastScroll
-import com.nuvio.tv.ui.util.asStable
+import us.xnetik.tv.ui.util.dpadVerticalFastScroll
+import us.xnetik.tv.ui.util.asStable
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.ExperimentalTvMaterial3Api
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.CollectionFolder
-import com.nuvio.tv.domain.model.legacyKey
-import com.nuvio.tv.domain.model.stableItemKeys
-import com.nuvio.tv.domain.model.stableKey
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.CollectionFolder
+import us.xnetik.tv.domain.model.legacyKey
+import us.xnetik.tv.domain.model.stableItemKeys
+import us.xnetik.tv.domain.model.stableKey
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Alignment
-import com.nuvio.tv.ui.components.CatalogRowSection
-import com.nuvio.tv.ui.components.CollectionRowSection
-import com.nuvio.tv.ui.components.ContinueWatchingSection
-import com.nuvio.tv.ui.components.LocalLandscapePosterMode
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.ui.components.HeroCarousel
-import com.nuvio.tv.ui.components.HeroCarouselBackdrop
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.LocalStartupSplashEnabled
-import com.nuvio.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.ui.components.CatalogRowSection
+import us.xnetik.tv.ui.components.CollectionRowSection
+import us.xnetik.tv.ui.components.ContinueWatchingSection
+import us.xnetik.tv.ui.components.LocalLandscapePosterMode
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.ui.components.HeroCarousel
+import us.xnetik.tv.ui.components.HeroCarouselBackdrop
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.LocalStartupSplashEnabled
+import us.xnetik.tv.ui.components.PosterCardStyle
 import androidx.compose.ui.res.stringResource
 import androidx.tv.material3.MaterialTheme
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 private class FocusSnapshot(
     var rowIndex: Int,
@@ -638,7 +638,7 @@ fun ClassicHomeContent(
                         uiState.customPosterEnabledScreens,
                     ) {
                         uiState.continueWatchingItems.withCustomPosterUrls(
-                            com.nuvio.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, com.nuvio.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
+                            us.xnetik.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, us.xnetik.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
                         )
                     },
                     onItemClick = { item ->
@@ -724,7 +724,7 @@ fun ClassicHomeContent(
                         uiState.customPosterEnabledScreens,
                     ) {
                         uiState.upcomingItems.withCustomPosterUrls(
-                            com.nuvio.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, com.nuvio.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
+                            us.xnetik.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, us.xnetik.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
                         )
                     },
                     title = stringResource(R.string.upcoming_section_title),

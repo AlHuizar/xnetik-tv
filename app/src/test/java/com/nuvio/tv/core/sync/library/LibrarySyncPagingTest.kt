@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync.library
+package us.xnetik.tv.core.sync.library
 
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals

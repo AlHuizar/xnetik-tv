@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.theme
+package us.xnetik.tv.ui.theme
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.graphics.luminance
-import com.nuvio.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.CustomThemeColors
 
 fun CustomThemeColors.toColorPalette(): ThemeColorPalette {
     val gradient = colors.map { Color(it or 0xFF000000.toInt()) }

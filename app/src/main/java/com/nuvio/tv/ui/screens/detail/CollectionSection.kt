@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -33,9 +33,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.ui.components.GridContentCard
-import com.nuvio.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.ui.components.GridContentCard
+import us.xnetik.tv.ui.components.PosterCardStyle
 
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalFoundationApi::class)
 @Composable

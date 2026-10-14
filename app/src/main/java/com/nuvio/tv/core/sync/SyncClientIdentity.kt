@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext

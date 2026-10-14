@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.remote.supabase
+package us.xnetik.tv.data.remote.supabase
 
-import com.nuvio.tv.domain.model.CosmeticEntitlement
-import com.nuvio.tv.domain.model.CosmeticEntitlements
-import com.nuvio.tv.domain.model.MemberAccess
-import com.nuvio.tv.domain.model.MemberTier
+import us.xnetik.tv.domain.model.CosmeticEntitlement
+import us.xnetik.tv.domain.model.CosmeticEntitlements
+import us.xnetik.tv.domain.model.MemberAccess
+import us.xnetik.tv.domain.model.MemberTier
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.serialization.Serializable
 import javax.inject.Inject

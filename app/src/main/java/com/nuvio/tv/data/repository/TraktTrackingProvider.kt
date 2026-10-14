@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.tracking.TrackingCapability
-import com.nuvio.tv.core.tracking.TrackingProvider
-import com.nuvio.tv.core.tracking.TrackingProviderDescriptor
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.core.tracking.TrackingCapability
+import us.xnetik.tv.core.tracking.TrackingProvider
+import us.xnetik.tv.core.tracking.TrackingProviderDescriptor
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.data.local.TraktAuthDataStore
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CoroutineScope

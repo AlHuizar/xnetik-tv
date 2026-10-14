@@ -1,15 +1,15 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.Subtitle
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.Subtitle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.nuvio.tv.core.network.IPv4FirstDns
-import com.nuvio.tv.core.player.SubtitleCharsetDetector
+import us.xnetik.tv.core.network.IPv4FirstDns
+import us.xnetik.tv.core.player.SubtitleCharsetDetector
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.HttpUrl.Companion.toHttpUrl
@@ -189,7 +189,7 @@ private fun PlayerRuntimeController.maybeLoadSubtitleAutoSyncCues(force: Boolean
                     subtitleAutoSyncLoading = false,
                     subtitleAutoSyncCues = parsedCues,
                     subtitleAutoSyncError = if (parsedCues.isEmpty()) {
-                        context.getString(com.nuvio.tv.R.string.subtitle_timing_file_no_lines)
+                        context.getString(us.xnetik.tv.R.string.subtitle_timing_file_no_lines)
                     } else {
                         null
                     },
@@ -206,7 +206,7 @@ private fun PlayerRuntimeController.maybeLoadSubtitleAutoSyncCues(force: Boolean
                 it.copy(
                     subtitleAutoSyncLoading = false,
                     subtitleAutoSyncCues = emptyList(),
-                    subtitleAutoSyncError = e.message ?: context.getString(com.nuvio.tv.R.string.subtitle_timing_load_lines_failed),
+                    subtitleAutoSyncError = e.message ?: context.getString(us.xnetik.tv.R.string.subtitle_timing_load_lines_failed),
                     subtitleAutoSyncLoadedTrackKey = selectedTrackKey
                 )
             }
@@ -426,16 +426,16 @@ private fun PlayerRuntimeController.executeSubtitleDownload(
     val response = executeSubtitleRequest(request)
     response.use {
         if (!response.isSuccessful) {
-            error(context.getString(com.nuvio.tv.R.string.subtitle_download_failed_http, response.code))
+            error(context.getString(us.xnetik.tv.R.string.subtitle_download_failed_http, response.code))
         }
         val bodyBytes = response.body?.bytes()
-            ?: error(context.getString(com.nuvio.tv.R.string.subtitle_download_empty_content))
+            ?: error(context.getString(us.xnetik.tv.R.string.subtitle_download_empty_content))
         if (bodyBytes.isEmpty()) {
-            error(context.getString(com.nuvio.tv.R.string.subtitle_download_empty_content))
+            error(context.getString(us.xnetik.tv.R.string.subtitle_download_empty_content))
         }
         val body = SubtitleCharsetDetector.decode(bodyBytes, languageHint = languageHint)
         if (body.isBlank()) {
-            error(context.getString(com.nuvio.tv.R.string.subtitle_download_empty_content))
+            error(context.getString(us.xnetik.tv.R.string.subtitle_download_empty_content))
         }
         return body
     }

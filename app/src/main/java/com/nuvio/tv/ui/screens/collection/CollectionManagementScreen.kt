@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.collection
+package us.xnetik.tv.ui.screens.collection
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -62,12 +62,12 @@ import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Surface
 import androidx.tv.material3.SurfaceDefaults
 import androidx.tv.material3.Text
-import com.nuvio.tv.data.local.ValidationResult
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.R
+import us.xnetik.tv.data.local.ValidationResult
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.R
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.TextStyle

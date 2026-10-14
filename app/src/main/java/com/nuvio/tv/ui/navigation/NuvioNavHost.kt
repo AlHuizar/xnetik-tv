@@ -1,12 +1,12 @@
-package com.nuvio.tv.ui.navigation
+package us.xnetik.tv.ui.navigation
 
-import com.nuvio.tv.ui.theme.NuvioMotion
-import com.nuvio.tv.ui.components.PlaybackAvailabilityProvider
-import com.nuvio.tv.ui.components.LocalPlaybackAvailability
-import com.nuvio.tv.ui.components.canStream
+import us.xnetik.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.components.PlaybackAvailabilityProvider
+import us.xnetik.tv.ui.components.LocalPlaybackAvailability
+import us.xnetik.tv.ui.components.canStream
 import android.widget.Toast
 import androidx.compose.ui.platform.LocalContext
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.EnterTransition
@@ -22,41 +22,41 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.domain.model.ExperienceMode
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.ui.screens.CatalogSeeAllScreen
-import com.nuvio.tv.ui.screens.ExperienceModeSelectionScreen
-import com.nuvio.tv.ui.screens.LayoutSelectionScreen
-import com.nuvio.tv.ui.screens.detail.MetaDetailsScreen
-import com.nuvio.tv.ui.screens.home.HomeScreen
-import com.nuvio.tv.ui.screens.addon.AddonManagerScreen
-import com.nuvio.tv.ui.screens.addon.CatalogOrderScreen
-import com.nuvio.tv.ui.screens.library.LibraryScreen
-import com.nuvio.tv.ui.screens.player.PlayerExitReason
-import com.nuvio.tv.ui.screens.player.PlayerScreen
-import com.nuvio.tv.ui.screens.player.PostPlayRecommendation
-import com.nuvio.tv.ui.screens.player.playerBackOpensCurrentEpisodeStreams
-import com.nuvio.tv.ui.screens.plugin.PluginScreen
-import com.nuvio.tv.ui.screens.search.DiscoverScreen
-import com.nuvio.tv.ui.screens.search.SearchScreen
-import com.nuvio.tv.ui.screens.settings.AboutScreen
-import com.nuvio.tv.ui.screens.settings.LayoutSettingsScreen
-import com.nuvio.tv.ui.screens.settings.LicensesAttributionsScreen
-import com.nuvio.tv.ui.screens.settings.PlaybackSettingsScreen
-import com.nuvio.tv.ui.screens.settings.SettingsScreen
-import com.nuvio.tv.ui.screens.settings.SupportersContributorsScreen
-import com.nuvio.tv.ui.screens.settings.ThemeSettingsScreen
-import com.nuvio.tv.ui.screens.settings.TrackingSettingsScreen
-import com.nuvio.tv.ui.screens.settings.TmdbSettingsScreen
-import com.nuvio.tv.ui.screens.stream.StreamScreen
-import com.nuvio.tv.ui.screens.home.ContinueWatchingItem
-import com.nuvio.tv.ui.screens.account.AuthQrSignInScreen
-import com.nuvio.tv.ui.screens.cast.CastDetailScreen
-import com.nuvio.tv.ui.screens.profile.ProfileSelectionMode
-import com.nuvio.tv.ui.screens.profile.ProfileSelectionScreen
-import com.nuvio.tv.ui.screens.tmdb.TmdbEntityBrowseScreen
-import com.nuvio.tv.ui.screens.home.HeroBackdropState
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.domain.model.ExperienceMode
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.ui.screens.CatalogSeeAllScreen
+import us.xnetik.tv.ui.screens.ExperienceModeSelectionScreen
+import us.xnetik.tv.ui.screens.LayoutSelectionScreen
+import us.xnetik.tv.ui.screens.detail.MetaDetailsScreen
+import us.xnetik.tv.ui.screens.home.HomeScreen
+import us.xnetik.tv.ui.screens.addon.AddonManagerScreen
+import us.xnetik.tv.ui.screens.addon.CatalogOrderScreen
+import us.xnetik.tv.ui.screens.library.LibraryScreen
+import us.xnetik.tv.ui.screens.player.PlayerExitReason
+import us.xnetik.tv.ui.screens.player.PlayerScreen
+import us.xnetik.tv.ui.screens.player.PostPlayRecommendation
+import us.xnetik.tv.ui.screens.player.playerBackOpensCurrentEpisodeStreams
+import us.xnetik.tv.ui.screens.plugin.PluginScreen
+import us.xnetik.tv.ui.screens.search.DiscoverScreen
+import us.xnetik.tv.ui.screens.search.SearchScreen
+import us.xnetik.tv.ui.screens.settings.AboutScreen
+import us.xnetik.tv.ui.screens.settings.LayoutSettingsScreen
+import us.xnetik.tv.ui.screens.settings.LicensesAttributionsScreen
+import us.xnetik.tv.ui.screens.settings.PlaybackSettingsScreen
+import us.xnetik.tv.ui.screens.settings.SettingsScreen
+import us.xnetik.tv.ui.screens.settings.SupportersContributorsScreen
+import us.xnetik.tv.ui.screens.settings.ThemeSettingsScreen
+import us.xnetik.tv.ui.screens.settings.TrackingSettingsScreen
+import us.xnetik.tv.ui.screens.settings.TmdbSettingsScreen
+import us.xnetik.tv.ui.screens.stream.StreamScreen
+import us.xnetik.tv.ui.screens.home.ContinueWatchingItem
+import us.xnetik.tv.ui.screens.account.AuthQrSignInScreen
+import us.xnetik.tv.ui.screens.cast.CastDetailScreen
+import us.xnetik.tv.ui.screens.profile.ProfileSelectionMode
+import us.xnetik.tv.ui.screens.profile.ProfileSelectionScreen
+import us.xnetik.tv.ui.screens.tmdb.TmdbEntityBrowseScreen
+import us.xnetik.tv.ui.screens.home.HeroBackdropState
 
 @Composable
 fun NuvioNavHost(
@@ -1125,7 +1125,7 @@ private fun PlaybackNavHost(
         }
 
         composable(Screen.Search.route) { backStackEntry ->
-            val searchViewModel: com.nuvio.tv.ui.screens.search.SearchViewModel =
+            val searchViewModel: us.xnetik.tv.ui.screens.search.SearchViewModel =
                 androidx.hilt.navigation.compose.hiltViewModel(backStackEntry)
             SearchScreen(
                 viewModel = searchViewModel,
@@ -1289,7 +1289,7 @@ private fun PlaybackNavHost(
         }
 
         composable(Screen.Collections.route) {
-            com.nuvio.tv.ui.screens.collection.CollectionManagementScreen(
+            us.xnetik.tv.ui.screens.collection.CollectionManagementScreen(
                 onNavigateToEditor = { collectionId ->
                     navController.navigate(Screen.CollectionEditor.createRoute(collectionId))
                 },
@@ -1307,7 +1307,7 @@ private fun PlaybackNavHost(
                 }
             )
         ) {
-            com.nuvio.tv.ui.screens.collection.CollectionEditorScreen(
+            us.xnetik.tv.ui.screens.collection.CollectionEditorScreen(
                 onBack = { navController.popBackStack() }
             )
         }
@@ -1319,7 +1319,7 @@ private fun PlaybackNavHost(
                 navArgument("folderId") { type = NavType.StringType }
             )
         ) {
-            com.nuvio.tv.ui.screens.collection.FolderDetailScreen(
+            us.xnetik.tv.ui.screens.collection.FolderDetailScreen(
                 onNavigateToDetail = { itemId, itemType, addonBaseUrl ->
                     val heroBackdrop = HeroBackdropState.consumeAndClear()
                     navController.navigate(Screen.Detail.createRoute(itemId, itemType, addonBaseUrl, heroBackdropUrl = heroBackdrop))
@@ -1388,14 +1388,14 @@ private fun PlaybackNavHost(
                     try { navController.getBackStackEntry(Screen.Search.route) } catch (_: Exception) { null }
                 } else null
             }
-            val searchViewModel: com.nuvio.tv.ui.screens.search.SearchViewModel? =
+            val searchViewModel: us.xnetik.tv.ui.screens.search.SearchViewModel? =
                 if (searchBackStackEntry != null) {
-                    androidx.hilt.navigation.compose.hiltViewModel<com.nuvio.tv.ui.screens.search.SearchViewModel>(searchBackStackEntry)
+                    androidx.hilt.navigation.compose.hiltViewModel<us.xnetik.tv.ui.screens.search.SearchViewModel>(searchBackStackEntry)
                 } else null
             val homeBackStackEntry = androidx.compose.runtime.remember {
                 try { navController.getBackStackEntry(Screen.Home.route) } catch (_: Exception) { null }
             }
-            val homeViewModel: com.nuvio.tv.ui.screens.home.HomeViewModel =
+            val homeViewModel: us.xnetik.tv.ui.screens.home.HomeViewModel =
                 if (homeBackStackEntry != null) {
                     androidx.hilt.navigation.compose.hiltViewModel(homeBackStackEntry)
                 } else {

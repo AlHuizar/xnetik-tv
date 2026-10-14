@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.profile
+package us.xnetik.tv.core.profile
 
 interface ProfileScopedCredentialStore {
     fun removeProfile(profileId: Int)

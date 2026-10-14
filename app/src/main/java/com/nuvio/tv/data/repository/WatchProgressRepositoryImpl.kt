@@ -1,37 +1,37 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.sync.WatchProgressSyncService
-import com.nuvio.tv.core.sync.WatchStateMutationStore
-import com.nuvio.tv.core.sync.WatchedItemsSyncService
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.sync.WatchProgressSyncService
+import us.xnetik.tv.core.sync.WatchStateMutationStore
+import us.xnetik.tv.core.sync.WatchedItemsSyncService
 import android.os.SystemClock
 import android.util.Log
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.WatchProgressSource
-import com.nuvio.tv.data.local.WatchProgressPreferences
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.data.mediaserver.ServerWatchMark
-import com.nuvio.tv.data.mediaserver.ServerWatched
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
-import com.nuvio.tv.domain.model.WatchedMutationKey
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.core.tracking.TrackingHistoryItem
-import com.nuvio.tv.core.tracking.TrackingHistoryWriterRegistry
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingProgressProvider
-import com.nuvio.tv.core.tracking.TrackingProgressProviderRegistry
-import com.nuvio.tv.core.tracking.mergeProgressProjectionWithRetainedLocal
-import com.nuvio.tv.core.tracking.mergeWatchedEpisodeProjection
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.core.tracking.buildTrackingMediaReference
-import com.nuvio.tv.core.tracking.effectiveWatchProgressSource
-import com.nuvio.tv.core.tracking.providerId
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.WatchProgressSource
+import us.xnetik.tv.data.local.WatchProgressPreferences
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.mediaserver.ServerWatchMark
+import us.xnetik.tv.data.mediaserver.ServerWatched
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.model.WatchedMutationKey
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.core.tracking.TrackingHistoryItem
+import us.xnetik.tv.core.tracking.TrackingHistoryWriterRegistry
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingProgressProvider
+import us.xnetik.tv.core.tracking.TrackingProgressProviderRegistry
+import us.xnetik.tv.core.tracking.mergeProgressProjectionWithRetainedLocal
+import us.xnetik.tv.core.tracking.mergeWatchedEpisodeProjection
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.core.tracking.buildTrackingMediaReference
+import us.xnetik.tv.core.tracking.effectiveWatchProgressSource
+import us.xnetik.tv.core.tracking.providerId
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -130,14 +130,14 @@ internal fun resolveProviderEpisodeProgress(
 class WatchProgressRepositoryImpl @Inject constructor(
     private val watchProgressPreferences: WatchProgressPreferences,
     private val traktSettingsDataStore: TraktSettingsDataStore,
-    private val layoutPreferenceDataStore: com.nuvio.tv.data.local.LayoutPreferenceDataStore,
+    private val layoutPreferenceDataStore: us.xnetik.tv.data.local.LayoutPreferenceDataStore,
     private val watchProgressSyncService: WatchProgressSyncService,
     private val watchedItemsPreferences: WatchedItemsPreferences,
     private val watchedItemsSyncService: WatchedItemsSyncService,
     private val authManager: AuthManager,
     private val metaRepository: MetaRepository,
     private val tmdbService: TmdbService,
-    private val profileManager: com.nuvio.tv.core.profile.ProfileManager,
+    private val profileManager: us.xnetik.tv.core.profile.ProfileManager,
     private val trackingProgressProviders: TrackingProgressProviderRegistry,
     private val trackingHistoryWriters: TrackingHistoryWriterRegistry,
     private val mutationStore: WatchStateMutationStore,

@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.nuvio.tv.BuildConfig
+import us.xnetik.tv.BuildConfig
 import java.io.File
 import java.util.concurrent.TimeUnit
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.ListMembershipChanges
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

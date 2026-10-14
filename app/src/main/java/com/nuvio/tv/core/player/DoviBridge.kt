@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.util.Log
-import com.nuvio.tv.BuildConfig
+import us.xnetik.tv.BuildConfig
 import java.util.concurrent.atomic.AtomicLong
 
 object DoviBridge {

@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.ui.graphics.Color
-import com.nuvio.tv.domain.model.MemberTier
+import us.xnetik.tv.domain.model.MemberTier
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

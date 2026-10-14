@@ -1,13 +1,13 @@
-package com.nuvio.tv.ui.screens.collection
+package us.xnetik.tv.ui.screens.collection
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.sync.CollectionSyncService
-import com.nuvio.tv.data.local.CollectionsDataStore
-import com.nuvio.tv.data.local.ValidationResult
-import com.nuvio.tv.domain.model.Collection
+import us.xnetik.tv.R
+import us.xnetik.tv.core.sync.CollectionSyncService
+import us.xnetik.tv.data.local.CollectionsDataStore
+import us.xnetik.tv.data.local.ValidationResult
+import us.xnetik.tv.domain.model.Collection
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -191,8 +191,8 @@ class CollectionManagementViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val client = okhttp3.OkHttpClient.Builder()
-                    .dns(com.nuvio.tv.core.network.IPv4FirstDns())
-                    .socketFactory(com.nuvio.tv.core.network.NoDelaySocketFactory)
+                    .dns(us.xnetik.tv.core.network.IPv4FirstDns())
+                    .socketFactory(us.xnetik.tv.core.network.NoDelaySocketFactory)
                     .build()
                 val request = okhttp3.Request.Builder().url(url).build()
                 val response = withContext(Dispatchers.IO) {

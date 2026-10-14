@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.view.KeyEvent
 import androidx.compose.foundation.background
@@ -30,12 +30,12 @@ import androidx.tv.material3.Button
 import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.formatHexColor
-import com.nuvio.tv.domain.model.parseHexColor
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.formatHexColor
+import us.xnetik.tv.domain.model.parseHexColor
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 @Composable
 internal fun HexColorDialog(

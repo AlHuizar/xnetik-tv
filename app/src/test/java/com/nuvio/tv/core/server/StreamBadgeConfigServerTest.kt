@@ -1,11 +1,11 @@
-package com.nuvio.tv.core.server
+package us.xnetik.tv.core.server
 
 import com.google.gson.Gson
-import com.nuvio.tv.core.streams.StreamBadgeFilter
-import com.nuvio.tv.core.streams.StreamBadgeImport
-import com.nuvio.tv.core.streams.StreamBadgePlacement
-import com.nuvio.tv.core.streams.StreamBadgeRules
-import com.nuvio.tv.core.streams.StreamBadgeSettings
+import us.xnetik.tv.core.streams.StreamBadgeFilter
+import us.xnetik.tv.core.streams.StreamBadgeImport
+import us.xnetik.tv.core.streams.StreamBadgePlacement
+import us.xnetik.tv.core.streams.StreamBadgeRules
+import us.xnetik.tv.core.streams.StreamBadgeSettings
 import fi.iki.elonen.NanoHTTPD
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue

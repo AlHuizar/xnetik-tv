@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.content.Intent
 import android.net.Uri
@@ -60,10 +60,10 @@ import androidx.tv.material3.Text
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.R
-import com.nuvio.tv.core.cloud.PremiumizeCloudLibraryPosterUrl
-import com.nuvio.tv.core.cloud.TorboxCloudLibraryPosterUrl
-import com.nuvio.tv.core.cloud.cloudLibraryDisplayArtworkUrl
+import us.xnetik.tv.R
+import us.xnetik.tv.core.cloud.PremiumizeCloudLibraryPosterUrl
+import us.xnetik.tv.core.cloud.TorboxCloudLibraryPosterUrl
+import us.xnetik.tv.core.cloud.cloudLibraryDisplayArtworkUrl
 
 private const val NuvioRepositoryUrl = "https://github.com/NuvioMedia/NuvioTV"
 private const val TmdbUrl = "https://www.themoviedb.org"

@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.data.remote.api.MDBListApi
-import com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaRatingDto
-import com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaRequestDto
-import com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaResponseDto
+import us.xnetik.tv.data.remote.api.MDBListApi
+import us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaRatingDto
+import us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaRequestDto
+import us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaResponseDto
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import io.mockk.coEvery

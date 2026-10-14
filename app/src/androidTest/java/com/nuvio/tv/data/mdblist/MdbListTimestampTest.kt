@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import java.time.Instant

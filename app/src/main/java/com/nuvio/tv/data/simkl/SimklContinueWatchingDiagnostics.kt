@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingDiagnosticIdentity
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.core.tracking.TrackingDiagnosticIdentity
+import us.xnetik.tv.domain.model.WatchProgress
 import java.util.Locale
 
 internal enum class SimklSeedDiagnosticFlag {
@@ -264,7 +264,7 @@ internal fun buildSimklSeedDiagnosticReport(
 
 private fun String.diagnosticKey(): String = trim().lowercase(Locale.ROOT)
 
-private fun com.nuvio.tv.domain.model.WatchedItem?.toDiagnosticEpisode(): SimklDiagnosticEpisode? =
+private fun us.xnetik.tv.domain.model.WatchedItem?.toDiagnosticEpisode(): SimklDiagnosticEpisode? =
     this?.episode?.let { episode -> SimklDiagnosticEpisode(season, episode) }
 
 private fun WatchProgress?.toDiagnosticEpisode(): SimklDiagnosticEpisode? =

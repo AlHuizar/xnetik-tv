@@ -1,15 +1,15 @@
-package com.nuvio.tv.core.di
+package us.xnetik.tv.core.di
 
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.core.auth.TransientAuthRefreshException
-import com.nuvio.tv.core.auth.shouldRetryAuthRefreshResponse
-import com.nuvio.tv.core.network.BackendRateLimitCoordinator
-import com.nuvio.tv.core.network.BackendRateLimitPlugin
-import com.nuvio.tv.core.network.backendRetryDelayMillis
-import com.nuvio.tv.core.network.isRetryableBackendResponse
-import com.nuvio.tv.core.network.isSafeBackendRetryRequest
-import com.nuvio.tv.data.local.ServerConfigurationStore
-import com.nuvio.tv.domain.model.ServerConfiguration
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.core.auth.TransientAuthRefreshException
+import us.xnetik.tv.core.auth.shouldRetryAuthRefreshResponse
+import us.xnetik.tv.core.network.BackendRateLimitCoordinator
+import us.xnetik.tv.core.network.BackendRateLimitPlugin
+import us.xnetik.tv.core.network.backendRetryDelayMillis
+import us.xnetik.tv.core.network.isRetryableBackendResponse
+import us.xnetik.tv.core.network.isSafeBackendRetryRequest
+import us.xnetik.tv.data.local.ServerConfigurationStore
+import us.xnetik.tv.domain.model.ServerConfiguration
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

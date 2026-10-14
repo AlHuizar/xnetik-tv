@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.ambient
+package us.xnetik.tv.ui.screens.ambient
 
 import android.view.KeyEvent
 import android.view.Window

@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.theme
+package us.xnetik.tv.ui.theme
 
 import androidx.compose.ui.graphics.Color
-import com.nuvio.tv.domain.model.AppTheme
-import com.nuvio.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.AppTheme
+import us.xnetik.tv.domain.model.CustomThemeColors
 
 data class ThemeColorPalette(
     val secondary: Color,

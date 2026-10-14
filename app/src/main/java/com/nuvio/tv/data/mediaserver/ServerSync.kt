@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

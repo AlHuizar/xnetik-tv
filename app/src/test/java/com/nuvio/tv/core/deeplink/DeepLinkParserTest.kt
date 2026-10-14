@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.deeplink
+package us.xnetik.tv.core.deeplink
 
-import com.nuvio.tv.domain.deeplink.AppDeepLink
+import us.xnetik.tv.domain.deeplink.AppDeepLink
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

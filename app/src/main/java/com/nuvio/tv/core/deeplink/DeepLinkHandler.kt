@@ -1,9 +1,9 @@
-package com.nuvio.tv.core.deeplink
+package us.xnetik.tv.core.deeplink
 
 import android.content.Context
-import com.nuvio.tv.R
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.R
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.domain.repository.AddonRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 

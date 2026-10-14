@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import android.content.Context
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
-import com.nuvio.tv.core.player.TrailerVideoPolicy
-import com.nuvio.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.player.TrailerVideoPolicy
+import us.xnetik.tv.core.profile.ProfileManager
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flatMapLatest

@@ -1,12 +1,12 @@
-package com.nuvio.tv.core.auth
+package us.xnetik.tv.core.auth
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.core.sync.androidtv.AndroidTvChannelManager
-import com.nuvio.tv.core.profile.ProfileScopedCredentialStore
-import com.nuvio.tv.data.local.ProfileDataStore
-import com.nuvio.tv.data.local.ProfileDataStoreFactory
-import com.nuvio.tv.data.local.ProfileLockStateDataStore
+import us.xnetik.tv.core.sync.androidtv.AndroidTvChannelManager
+import us.xnetik.tv.core.profile.ProfileScopedCredentialStore
+import us.xnetik.tv.data.local.ProfileDataStore
+import us.xnetik.tv.data.local.ProfileDataStoreFactory
+import us.xnetik.tv.data.local.ProfileLockStateDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
 import javax.inject.Inject

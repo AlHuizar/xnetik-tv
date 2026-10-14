@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibrarySourceMode
 
 data class LibraryProviderOrder(
     val source: LibrarySourceMode,

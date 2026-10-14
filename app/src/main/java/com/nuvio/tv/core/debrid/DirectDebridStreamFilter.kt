@@ -1,22 +1,22 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.DebridStreamAudioChannel
-import com.nuvio.tv.domain.model.DebridStreamAudioTag
-import com.nuvio.tv.domain.model.DebridStreamCodecFilter
-import com.nuvio.tv.domain.model.DebridStreamEncode
-import com.nuvio.tv.domain.model.DebridStreamFeatureFilter
-import com.nuvio.tv.domain.model.DebridStreamLanguage
-import com.nuvio.tv.domain.model.DebridStreamMinimumQuality
-import com.nuvio.tv.domain.model.DebridStreamPreferences
-import com.nuvio.tv.domain.model.DebridStreamQuality
-import com.nuvio.tv.domain.model.DebridStreamResolution
-import com.nuvio.tv.domain.model.DebridStreamSortCriterion
-import com.nuvio.tv.domain.model.DebridStreamSortDirection
-import com.nuvio.tv.domain.model.DebridStreamSortKey
-import com.nuvio.tv.domain.model.DebridStreamSortMode
-import com.nuvio.tv.domain.model.DebridStreamVisualTag
-import com.nuvio.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.DebridStreamAudioChannel
+import us.xnetik.tv.domain.model.DebridStreamAudioTag
+import us.xnetik.tv.domain.model.DebridStreamCodecFilter
+import us.xnetik.tv.domain.model.DebridStreamEncode
+import us.xnetik.tv.domain.model.DebridStreamFeatureFilter
+import us.xnetik.tv.domain.model.DebridStreamLanguage
+import us.xnetik.tv.domain.model.DebridStreamMinimumQuality
+import us.xnetik.tv.domain.model.DebridStreamPreferences
+import us.xnetik.tv.domain.model.DebridStreamQuality
+import us.xnetik.tv.domain.model.DebridStreamResolution
+import us.xnetik.tv.domain.model.DebridStreamSortCriterion
+import us.xnetik.tv.domain.model.DebridStreamSortDirection
+import us.xnetik.tv.domain.model.DebridStreamSortKey
+import us.xnetik.tv.domain.model.DebridStreamSortMode
+import us.xnetik.tv.domain.model.DebridStreamVisualTag
+import us.xnetik.tv.domain.model.Stream
 
 object DirectDebridStreamFilter {
     const val FALLBACK_SOURCE_NAME = "Direct Debrid"

@@ -1,16 +1,16 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.network.safeApiCall
-import com.nuvio.tv.data.local.AddonPreferences
-import com.nuvio.tv.data.mapper.toDomain
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.network.safeApiCall
+import us.xnetik.tv.data.local.AddonPreferences
+import us.xnetik.tv.data.mapper.toDomain
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.repository.AddonRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -32,8 +32,8 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.launch
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.sync.AddonSyncService
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.sync.AddonSyncService
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.ExperimentalCoroutinesApi

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
 internal const val TRACKING_SCROBBLE_DIAGNOSTIC_TAG = "SimklScrobbleDiag"
 

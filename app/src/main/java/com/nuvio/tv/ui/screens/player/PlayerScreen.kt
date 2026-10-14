@@ -3,12 +3,12 @@
     androidx.compose.ui.ExperimentalComposeUiApi::class
 )
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioMotion
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.accentBrush
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.accentBrush
 
 import android.util.Log
 import android.view.KeyEvent
@@ -92,7 +92,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.layout.onPlaced
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
@@ -123,16 +123,16 @@ import androidx.tv.material3.Text
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.core.player.PlayerWindowBackdrop
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.LibassRenderType
-import com.nuvio.tv.data.local.SubtitleStyleSettings
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.R
+import us.xnetik.tv.core.player.PlayerWindowBackdrop
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.LibassRenderType
+import us.xnetik.tv.data.local.SubtitleStyleSettings
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.ui.components.LoadingIndicator
 import android.text.format.DateFormat
 import java.util.Date
 import java.util.Locale
@@ -473,9 +473,9 @@ fun PlayerScreen(
     }
     LaunchedEffect(uiState.frameRateMatchingMode) {
         if (activity != null &&
-            uiState.frameRateMatchingMode == com.nuvio.tv.data.local.FrameRateMatchingMode.OFF
+            uiState.frameRateMatchingMode == us.xnetik.tv.data.local.FrameRateMatchingMode.OFF
         ) {
-            com.nuvio.tv.core.player.FrameRateUtils.restoreOriginalDisplayMode(activity)
+            us.xnetik.tv.core.player.FrameRateUtils.restoreOriginalDisplayMode(activity)
         }
     }
     // Restore original display mode when leaving the player
@@ -483,11 +483,11 @@ fun PlayerScreen(
     DisposableEffect(activity) {
         onDispose {
             if (activity != null) {
-                if (currentFrameRateMatchingMode == com.nuvio.tv.data.local.FrameRateMatchingMode.START_STOP) {
-                    com.nuvio.tv.core.player.FrameRateUtils.restoreOriginalDisplayMode(activity)
+                if (currentFrameRateMatchingMode == us.xnetik.tv.data.local.FrameRateMatchingMode.START_STOP) {
+                    us.xnetik.tv.core.player.FrameRateUtils.restoreOriginalDisplayMode(activity)
                 } else {
-                    com.nuvio.tv.core.player.FrameRateUtils.cleanupDisplayListener()
-                    com.nuvio.tv.core.player.FrameRateUtils.clearOriginalDisplayMode()
+                    us.xnetik.tv.core.player.FrameRateUtils.cleanupDisplayListener()
+                    us.xnetik.tv.core.player.FrameRateUtils.clearOriginalDisplayMode()
                 }
             }
         }

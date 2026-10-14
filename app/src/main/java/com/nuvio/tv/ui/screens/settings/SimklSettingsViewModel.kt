@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.data.simkl.SimklAuthError
-import com.nuvio.tv.data.simkl.SimklAuthException
-import com.nuvio.tv.data.simkl.SimklAuthRepository
-import com.nuvio.tv.data.simkl.SimklConnectionMode
-import com.nuvio.tv.data.simkl.SimklPinPollResult
-import com.nuvio.tv.data.simkl.SimklSyncRepository
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.data.simkl.SimklAuthError
+import us.xnetik.tv.data.simkl.SimklAuthException
+import us.xnetik.tv.data.simkl.SimklAuthRepository
+import us.xnetik.tv.data.simkl.SimklConnectionMode
+import us.xnetik.tv.data.simkl.SimklPinPollResult
+import us.xnetik.tv.data.simkl.SimklSyncRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject

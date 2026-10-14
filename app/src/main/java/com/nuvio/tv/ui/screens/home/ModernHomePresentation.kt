@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import android.content.Context
 import androidx.compose.runtime.Immutable
-import com.nuvio.tv.LocaleCache
-import com.nuvio.tv.R
-import com.nuvio.tv.core.util.withAppLocale
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL
-import com.nuvio.tv.domain.model.stableItemKey
-import com.nuvio.tv.ui.util.StableList
-import com.nuvio.tv.ui.util.asStable
+import us.xnetik.tv.LocaleCache
+import us.xnetik.tv.R
+import us.xnetik.tv.core.util.withAppLocale
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL
+import us.xnetik.tv.domain.model.stableItemKey
+import us.xnetik.tv.ui.util.StableList
+import us.xnetik.tv.ui.util.asStable
 import kotlinx.coroutines.withContext
 
 @Immutable
@@ -23,8 +23,8 @@ internal data class ModernHomePresentationInput(
     val showCatalogTypeSuffix: Boolean,
     val showFullReleaseDate: Boolean,
     val showImdbRatings: Boolean,
-    val detailImdbRatingsVisibility: com.nuvio.tv.domain.model.DetailImdbRatingsVisibility =
-        com.nuvio.tv.domain.model.DetailImdbRatingsVisibility.SHOW_ALL,
+    val detailImdbRatingsVisibility: us.xnetik.tv.domain.model.DetailImdbRatingsVisibility =
+        us.xnetik.tv.domain.model.DetailImdbRatingsVisibility.SHOW_ALL,
     val localeTag: String
 )
 
@@ -289,7 +289,7 @@ internal fun buildModernHomePresentation(
                             heroPreview = HeroPreview(
                                 title = "", logo = null, description = null,
                                 contentTypeText = null, yearText = null, imdbText = null,
-                                genres = com.nuvio.tv.ui.util.StableList(emptyList()), poster = null, backdrop = null,
+                                genres = us.xnetik.tv.ui.util.StableList(emptyList()), poster = null, backdrop = null,
                                 imageUrl = PLACEHOLDER_IMAGE_URL
                             ),
                             payload = ModernPayload.Catalog(

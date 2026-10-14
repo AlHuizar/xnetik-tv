@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.graphics.Bitmap
 import android.os.SystemClock
@@ -29,16 +29,16 @@ import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.unit.dp
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.EpisodeShuffleSettings
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.ui.components.ContinueWatchingCard
-import com.nuvio.tv.ui.screens.home.ContinueWatchingItem
-import com.nuvio.tv.ui.screens.home.NextUpInfo
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.EpisodeShuffleSettings
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.ui.components.ContinueWatchingCard
+import us.xnetik.tv.ui.screens.home.ContinueWatchingItem
+import us.xnetik.tv.ui.screens.home.NextUpInfo
+import us.xnetik.tv.ui.theme.NuvioTheme
 import java.io.File
 import kotlinx.coroutines.CompletableDeferred
 import org.junit.Assert.assertEquals

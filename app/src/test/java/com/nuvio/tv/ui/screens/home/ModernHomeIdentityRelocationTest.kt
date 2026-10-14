@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.ui.util.StableList
+import us.xnetik.tv.ui.util.StableList
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

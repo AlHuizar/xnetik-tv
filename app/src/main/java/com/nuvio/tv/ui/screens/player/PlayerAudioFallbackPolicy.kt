@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 /**
  * Recovery ladder for audio failures that persist on the same stream: safe audio, then forced PCM

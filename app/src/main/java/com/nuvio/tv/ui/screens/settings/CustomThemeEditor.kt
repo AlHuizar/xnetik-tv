@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -47,17 +47,17 @@ import androidx.tv.material3.CardDefaults
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.CustomThemeColors
-import com.nuvio.tv.domain.model.formatHexColor
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.theme.LocalNuvioFocusRingStyle
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.ThemeColors
-import com.nuvio.tv.ui.theme.accentBrush
-import com.nuvio.tv.ui.theme.createFocusRingStyle
-import com.nuvio.tv.ui.theme.toColorPalette
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.formatHexColor
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.theme.LocalNuvioFocusRingStyle
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.ThemeColors
+import us.xnetik.tv.ui.theme.accentBrush
+import us.xnetik.tv.ui.theme.createFocusRingStyle
+import us.xnetik.tv.ui.theme.toColorPalette
 
 @Composable
 internal fun CustomThemeDialog(

@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import android.content.Context
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.AddonResource
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.supportsExtra
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.AddonResource
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.supportsExtra
+import us.xnetik.tv.domain.repository.AddonRepository
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.flow.MutableStateFlow

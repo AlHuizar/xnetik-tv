@@ -1,27 +1,27 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.R
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.trakt.traktBestBackdropUrl
-import com.nuvio.tv.core.trakt.traktBestLogoUrl
-import com.nuvio.tv.core.trakt.traktBestPosterUrl
-import com.nuvio.tv.data.remote.api.TraktApi
-import com.nuvio.tv.data.remote.dto.trakt.TraktCreateOrUpdateListRequestDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktIdsDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktListItemDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktListItemsMutationRequestDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktListItemsMutationResponseDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktListMovieRequestItemDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktListShowRequestItemDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktListSummaryDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktReorderListsRequestDto
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.ListMembershipSnapshot
-import com.nuvio.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.R
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.trakt.traktBestBackdropUrl
+import us.xnetik.tv.core.trakt.traktBestLogoUrl
+import us.xnetik.tv.core.trakt.traktBestPosterUrl
+import us.xnetik.tv.data.remote.api.TraktApi
+import us.xnetik.tv.data.remote.dto.trakt.TraktCreateOrUpdateListRequestDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktIdsDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktListItemDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktListItemsMutationRequestDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktListItemsMutationResponseDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktListMovieRequestItemDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktListShowRequestItemDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktListSummaryDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktReorderListsRequestDto
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.ListMembershipSnapshot
+import us.xnetik.tv.domain.model.LibraryListPrivacy
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -176,10 +176,10 @@ class TraktLibraryService @Inject constructor(
                     privacy = privacy.apiValue
                 )
             )
-        } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+        } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
         if (!response.isSuccessful) {
-            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_create_list_failed)))
+            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_create_list_failed)))
         }
 
         val createdTab = response.body()?.let(::mapListTab)
@@ -228,10 +228,10 @@ class TraktLibraryService @Inject constructor(
                         privacy = privacy.apiValue
                     )
                 )
-            } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+            } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
             if (!response.isSuccessful) {
-                throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_update_list_failed)))
+                throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_update_list_failed)))
             }
         }
     }
@@ -254,10 +254,10 @@ class TraktLibraryService @Inject constructor(
                     id = ME_PATH,
                     listId = listId
                 )
-            } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+            } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
             if (!response.isSuccessful && response.code() != 204) {
-                throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_delete_list_failed)))
+                throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_delete_list_failed)))
             }
         }
     }
@@ -289,10 +289,10 @@ class TraktLibraryService @Inject constructor(
                     id = ME_PATH,
                     body = TraktReorderListsRequestDto(rank = rank)
                 )
-            } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+            } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
             if (!response.isSuccessful) {
-                throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_reorder_lists_failed)))
+                throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_reorder_lists_failed)))
             }
         }
     }
@@ -506,7 +506,7 @@ class TraktLibraryService @Inject constructor(
                     sort = "rank",
                     page = page
                 )
-            } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_fetch_watchlist_movies))
+            } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_fetch_watchlist_movies))
         }
 
         val shows = fetchAllPages<TraktListItemDto> { page ->
@@ -518,7 +518,7 @@ class TraktLibraryService @Inject constructor(
                     sort = "rank",
                     page = page
                 )
-            } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_fetch_watchlist_shows))
+            } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_fetch_watchlist_shows))
         }
 
         return (movies + shows)
@@ -540,10 +540,10 @@ class TraktLibraryService @Inject constructor(
                 authorization = authHeader,
                 id = ME_PATH
             )
-        } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_fetch_personal_lists))
+        } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_fetch_personal_lists))
 
         if (!response.isSuccessful) {
-            throw IllegalStateException("${appContext.getString(com.nuvio.tv.R.string.trakt_library_error_fetch_personal_lists)} (${response.code()})")
+            throw IllegalStateException("${appContext.getString(us.xnetik.tv.R.string.trakt_library_error_fetch_personal_lists)} (${response.code()})")
         }
 
         val personal = response.body().orEmpty()
@@ -607,7 +607,7 @@ class TraktLibraryService @Inject constructor(
                     sortBy = sortBy?.takeIf { it.isNotBlank() },
                     sortHow = sortHow?.takeIf { it.isNotBlank() }
                 )
-            } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_fetch_list_items))
+            } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_fetch_list_items))
         }
         return items.mapNotNull { mapListItem(listKey = listKey, item = it) }
     }
@@ -619,7 +619,7 @@ class TraktLibraryService @Inject constructor(
 
         return LibraryListTab(
             key = PERSONAL_KEY_PREFIX + listIdPath,
-            title = dto.name?.takeIf { it.isNotBlank() } ?: appContext.getString(com.nuvio.tv.R.string.library_list_fallback_title),
+            title = dto.name?.takeIf { it.isNotBlank() } ?: appContext.getString(us.xnetik.tv.R.string.library_list_fallback_title),
             type = LibraryListTab.Type.PERSONAL,
             traktListId = traktId,
             slug = slug,
@@ -718,10 +718,10 @@ class TraktLibraryService @Inject constructor(
                 authorization = authHeader,
                 body = body
             )
-        } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+        } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
         if (!response.isSuccessful || !isSuccessfulAddResponse(response.body())) {
-            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_add_watchlist_failed)))
+            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_add_watchlist_failed)))
         }
     }
 
@@ -732,10 +732,10 @@ class TraktLibraryService @Inject constructor(
                 authorization = authHeader,
                 body = body
             )
-        } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+        } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
         if (!response.isSuccessful) {
-            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_remove_watchlist_failed)))
+            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_remove_watchlist_failed)))
         }
     }
 
@@ -748,10 +748,10 @@ class TraktLibraryService @Inject constructor(
                 listId = listId,
                 body = body
             )
-        } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+        } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
         if (!response.isSuccessful || !isSuccessfulAddResponse(response.body())) {
-            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_add_to_list_failed)))
+            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_add_to_list_failed)))
         }
     }
 
@@ -764,17 +764,17 @@ class TraktLibraryService @Inject constructor(
                 listId = listId,
                 body = body
             )
-        } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_request_failed))
+        } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_request_failed))
 
         if (!response.isSuccessful) {
-            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(com.nuvio.tv.R.string.trakt_library_error_remove_from_list_failed)))
+            throw IllegalStateException(errorMessageForCode(response.code(), appContext.getString(us.xnetik.tv.R.string.trakt_library_error_remove_from_list_failed)))
         }
     }
 
     private fun buildMutationBody(item: LibraryEntryInput): TraktListItemsMutationRequestDto {
         val ids = resolveIds(item)
         if (!ids.hasAnyId()) {
-            throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_missing_compatible_ids))
+            throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_missing_compatible_ids))
         }
 
         val normalizedType = normalizeItemType(item.itemType)
@@ -820,9 +820,9 @@ class TraktLibraryService @Inject constructor(
 
     private fun errorMessageForCode(code: Int, defaultMessage: String): String {
         return when (code) {
-            401, 403 -> appContext.getString(com.nuvio.tv.R.string.trakt_library_error_auth_expired)
-            404 -> appContext.getString(com.nuvio.tv.R.string.trakt_library_error_list_not_found)
-            420 -> appContext.getString(com.nuvio.tv.R.string.trakt_library_error_list_limit_reached)
+            401, 403 -> appContext.getString(us.xnetik.tv.R.string.trakt_library_error_auth_expired)
+            404 -> appContext.getString(us.xnetik.tv.R.string.trakt_library_error_list_not_found)
+            420 -> appContext.getString(us.xnetik.tv.R.string.trakt_library_error_list_limit_reached)
             else -> "$defaultMessage ($code)"
         }
     }
@@ -875,7 +875,7 @@ class TraktLibraryService @Inject constructor(
         while (true) {
             val response = fetch(currentPage)
             if (!response.isSuccessful) {
-                throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_library_error_paginated_fetch_failed, response.code()))
+                throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_library_error_paginated_fetch_failed, response.code()))
             }
             allItems.addAll(response.body().orEmpty())
             val pageCount = response.headers()["X-Pagination-Page-Count"]?.toIntOrNull() ?: 1

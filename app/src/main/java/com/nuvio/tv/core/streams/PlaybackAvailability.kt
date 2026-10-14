@@ -1,9 +1,9 @@
-package com.nuvio.tv.core.streams
+package us.xnetik.tv.core.streams
 
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.ScraperInfo
-import com.nuvio.tv.domain.model.Video
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.ScraperInfo
+import us.xnetik.tv.domain.model.Video
 
 internal fun Addon.supportsStreamResource(type: String, videoId: String): Boolean =
     supportsResource("stream", type, videoId)

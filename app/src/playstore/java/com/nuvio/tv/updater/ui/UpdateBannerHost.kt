@@ -1,7 +1,7 @@
-package com.nuvio.tv.updater.ui
+package us.xnetik.tv.updater.ui
 
 import androidx.compose.runtime.Composable
-import com.nuvio.tv.updater.UpdateUiState
+import us.xnetik.tv.updater.UpdateUiState
 
 @Composable
 fun UpdateBannerHost(

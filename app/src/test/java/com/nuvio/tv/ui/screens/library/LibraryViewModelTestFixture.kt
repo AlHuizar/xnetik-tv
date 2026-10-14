@@ -1,25 +1,25 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.tracking.TrackingLibraryProvider
-import com.nuvio.tv.core.tracking.TrackingLibrarySorter
-import com.nuvio.tv.core.tracking.TrackingLibraryProviderRegistry
-import com.nuvio.tv.core.tracking.TrackingListManagementCapabilities
-import com.nuvio.tv.core.tracking.TrackingListManager
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.LibraryPreferences
-import com.nuvio.tv.data.local.WatchedSeriesStateHolder
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.repository.LibraryRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.tracking.TrackingLibraryProvider
+import us.xnetik.tv.core.tracking.TrackingLibrarySorter
+import us.xnetik.tv.core.tracking.TrackingLibraryProviderRegistry
+import us.xnetik.tv.core.tracking.TrackingListManagementCapabilities
+import us.xnetik.tv.core.tracking.TrackingListManager
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.LibraryPreferences
+import us.xnetik.tv.data.local.WatchedSeriesStateHolder
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.repository.LibraryRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import io.mockk.every
 import io.mockk.coEvery
 import io.mockk.mockk
@@ -58,7 +58,7 @@ internal class LibraryViewModelTestFixture(sorter: TrackingLibrarySorter? = null
             every { posterCardWidthDp } returns flowOf(126)
             every { posterCardCornerRadiusDp } returns flowOf(12)
             every { customPosterUrlPattern } returns flowOf("")
-            every { customPosterEnabledScreens } returns flowOf(com.nuvio.tv.core.poster.CustomPosterScreen.ALL)
+            every { customPosterEnabledScreens } returns flowOf(us.xnetik.tv.core.poster.CustomPosterScreen.ALL)
         },
         libraryPreferences = mockk<LibraryPreferences>(relaxed = true) {
             every { sortOption } returns persistedSort

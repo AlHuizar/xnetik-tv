@@ -1,12 +1,12 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.local.EpisodeShuffleProfile
-import com.nuvio.tv.domain.model.ContinueWatchingSortMode
-import com.nuvio.tv.domain.model.EpisodeShuffle
-import com.nuvio.tv.domain.model.ShuffleSurface
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.data.local.EpisodeShuffleProfile
+import us.xnetik.tv.domain.model.ContinueWatchingSortMode
+import us.xnetik.tv.domain.model.EpisodeShuffle
+import us.xnetik.tv.domain.model.ShuffleSurface
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest

@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 private val supporterThemes = linkedMapOf(
     AppTheme.GOLD to CosmeticEntitlement.GOLD_THEME,

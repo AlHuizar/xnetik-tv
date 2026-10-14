@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
-import com.nuvio.tv.MainDispatcherRule
-import com.nuvio.tv.core.tracking.TrackingLibrarySorter
-import com.nuvio.tv.data.mdblist.MdbListLibraryProjection
-import com.nuvio.tv.data.mdblist.MdbListLibrarySnapshot
-import com.nuvio.tv.data.mdblist.decodeMdbListLibraryPage
+import us.xnetik.tv.MainDispatcherRule
+import us.xnetik.tv.core.tracking.TrackingLibrarySorter
+import us.xnetik.tv.data.mdblist.MdbListLibraryProjection
+import us.xnetik.tv.data.mdblist.MdbListLibrarySnapshot
+import us.xnetik.tv.data.mdblist.decodeMdbListLibraryPage
 import io.mockk.mockk
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.flowOf

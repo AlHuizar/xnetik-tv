@@ -1,9 +1,9 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -63,10 +63,10 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.Dv7HandlingMode
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.domain.model.ExperienceMode
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.Dv7HandlingMode
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.domain.model.ExperienceMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -80,13 +80,13 @@ import java.net.URL
 @dagger.hilt.EntryPoint
 @dagger.hilt.InstallIn(dagger.hilt.components.SingletonComponent::class)
 private interface ClearCwCacheEntryPoint {
-    fun cwEnrichmentCache(): com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache
+    fun cwEnrichmentCache(): us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache
 }
 
 @dagger.hilt.EntryPoint
 @dagger.hilt.InstallIn(dagger.hilt.components.SingletonComponent::class)
 private interface ProfileManagerEntryPoint {
-    fun profileManager(): com.nuvio.tv.core.profile.ProfileManager
+    fun profileManager(): us.xnetik.tv.core.profile.ProfileManager
 }
 
 private enum class NetworkTestState { Idle, TestingLatency, TestingDownload, Done, Error }
@@ -143,7 +143,7 @@ private suspend fun fetchFastComUrls(context: android.content.Context): List<Str
         inputStream.bufferedReader().use { it.readText() }.also { disconnect() }
     }
     val scriptPath = Regex("""<script src="(/app[^"]+\.js)"""").find(html)?.groupValues?.get(1)
-        ?: throw Exception(context.getString(com.nuvio.tv.R.string.network_fast_error_script_path_missing))
+        ?: throw Exception(context.getString(us.xnetik.tv.R.string.network_fast_error_script_path_missing))
 
     // 2. Extract the API token from the JS bundle
     val js = (URL("https://fast.com$scriptPath").openConnection() as HttpURLConnection).run {
@@ -153,7 +153,7 @@ private suspend fun fetchFastComUrls(context: android.content.Context): List<Str
         inputStream.bufferedReader().use { it.readText() }.also { disconnect() }
     }
     val token = Regex("""token:"([^"]+)"""").find(js)?.groupValues?.get(1)
-        ?: throw Exception(context.getString(com.nuvio.tv.R.string.network_fast_error_token_missing))
+        ?: throw Exception(context.getString(us.xnetik.tv.R.string.network_fast_error_token_missing))
 
     // 3. Fetch CDN URLs from the speed-test API
     val apiJson = (URL("https://api.fast.com/netflix/speedtest/v2?https=true&token=$token&urlCount=15")
@@ -188,10 +188,10 @@ fun AdvancedSettingsContent(
     // override and the last-playback diagnostics card.
     val playbackVm: PlaybackSettingsViewModel = hiltViewModel()
     val dvPlayerSettings by playbackVm.playerSettings.collectAsStateWithLifecycle(
-        initialValue = com.nuvio.tv.data.local.PlayerSettings()
+        initialValue = us.xnetik.tv.data.local.PlayerSettings()
     )
     val dvDiagnostics by playbackVm.lastPlaybackDiagnostics.collectAsStateWithLifecycle(
-        initialValue = com.nuvio.tv.core.player.LastPlaybackDiagnostics.EMPTY
+        initialValue = us.xnetik.tv.core.player.LastPlaybackDiagnostics.EMPTY
     )
 
     // Stream Speed Test States
@@ -231,7 +231,7 @@ fun AdvancedSettingsContent(
             estimatedBitrate = formatBitrate
         } else if (!lastStreamUrl.isNullOrBlank() && dvDiagnostics.durationMs > 0) {
             kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
-                val size = com.nuvio.tv.core.network.StreamSpeedTester.getStreamContentLength(lastStreamUrl, lastHeadersMap)
+                val size = us.xnetik.tv.core.network.StreamSpeedTester.getStreamContentLength(lastStreamUrl, lastHeadersMap)
                 if (size > 0) {
                     val durationSecs = dvDiagnostics.durationMs / 1000.0
                     if (durationSecs > 0) {
@@ -256,7 +256,7 @@ fun AdvancedSettingsContent(
 
             try {
                 streamTestState = "Baseline"
-                val baseline = com.nuvio.tv.core.network.StreamSpeedTester.runBaselineTest(
+                val baseline = us.xnetik.tv.core.network.StreamSpeedTester.runBaselineTest(
                     lastStreamUrl,
                     lastHeadersMap
                 )
@@ -269,10 +269,10 @@ fun AdvancedSettingsContent(
                 }
 
                 val measureChunkBytes =
-                    com.nuvio.tv.data.local.PlayerSettings.DEFAULT_PARALLEL_CHUNK_SIZE_KB.toLong() * 1024L
+                    us.xnetik.tv.data.local.PlayerSettings.DEFAULT_PARALLEL_CHUNK_SIZE_KB.toLong() * 1024L
 
                 streamTestState = "Parallel1"
-                streamParallel1Speed = com.nuvio.tv.core.network.StreamSpeedTester.runParallelChunkTest(
+                streamParallel1Speed = us.xnetik.tv.core.network.StreamSpeedTester.runParallelChunkTest(
                     lastStreamUrl,
                     lastHeadersMap,
                     chunkSizeBytes = measureChunkBytes,
@@ -280,7 +280,7 @@ fun AdvancedSettingsContent(
                 ).mbps
 
                 streamTestState = "Parallel4"
-                streamParallel4Speed = com.nuvio.tv.core.network.StreamSpeedTester.runParallelChunkTest(
+                streamParallel4Speed = us.xnetik.tv.core.network.StreamSpeedTester.runParallelChunkTest(
                     lastStreamUrl,
                     lastHeadersMap,
                     chunkSizeBytes = measureChunkBytes,
@@ -288,7 +288,7 @@ fun AdvancedSettingsContent(
                 ).mbps
 
                 streamTestState = "Parallel8"
-                streamParallel8Speed = com.nuvio.tv.core.network.StreamSpeedTester.runParallelChunkTest(
+                streamParallel8Speed = us.xnetik.tv.core.network.StreamSpeedTester.runParallelChunkTest(
                     lastStreamUrl,
                     lastHeadersMap,
                     chunkSizeBytes = measureChunkBytes,
@@ -296,7 +296,7 @@ fun AdvancedSettingsContent(
                 ).mbps
 
                 streamTestState = "Parallel16"
-                streamParallel16Speed = com.nuvio.tv.core.network.StreamSpeedTester.runParallelChunkTest(
+                streamParallel16Speed = us.xnetik.tv.core.network.StreamSpeedTester.runParallelChunkTest(
                     lastStreamUrl,
                     lastHeadersMap,
                     chunkSizeBytes = measureChunkBytes,

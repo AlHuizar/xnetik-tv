@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
 import java.io.IOException
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CompletableDeferred

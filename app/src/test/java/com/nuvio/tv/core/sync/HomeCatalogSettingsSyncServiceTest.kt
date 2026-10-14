@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.jsonPrimitive

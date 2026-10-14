@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.core.tracking.TrackingLibraryProvider
-import com.nuvio.tv.core.tracking.TrackingListManager
-import com.nuvio.tv.core.tracking.TrackingListManagementCapabilities
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.data.local.TraktAuthDataStore
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.core.tracking.TrackingLibraryProvider
+import us.xnetik.tv.core.tracking.TrackingListManager
+import us.xnetik.tv.core.tracking.TrackingListManagementCapabilities
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.ListMembershipChanges
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.map

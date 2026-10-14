@@ -1,4 +1,4 @@
-package com.nuvio.tv
+package us.xnetik.tv
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

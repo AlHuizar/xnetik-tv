@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 const val DEFAULT_CARD_DEPTH_EDGE_STRENGTH = 28
 const val DEFAULT_CARD_DEPTH_SHEEN_STRENGTH = 10

@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 /**
  * Pure startup playback decisions for [Player.STATE_READY] before and after the first

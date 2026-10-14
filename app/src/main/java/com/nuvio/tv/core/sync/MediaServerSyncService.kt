@@ -1,16 +1,16 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.os.SystemClock
 import android.util.Log
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.mediaserver.ServerRepository
-import com.nuvio.tv.data.mediaserver.ServerSyncSnapshot
-import com.nuvio.tv.data.mediaserver.SyncedServer
-import com.nuvio.tv.data.mediaserver.mergeSyncedServers
-import com.nuvio.tv.data.mediaserver.toSyncPayload
-import com.nuvio.tv.data.remote.supabase.SupabaseMediaServers
-import com.nuvio.tv.domain.model.AuthState
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.mediaserver.ServerRepository
+import us.xnetik.tv.data.mediaserver.ServerSyncSnapshot
+import us.xnetik.tv.data.mediaserver.SyncedServer
+import us.xnetik.tv.data.mediaserver.mergeSyncedServers
+import us.xnetik.tv.data.mediaserver.toSyncPayload
+import us.xnetik.tv.data.remote.supabase.SupabaseMediaServers
+import us.xnetik.tv.domain.model.AuthState
 import io.github.jan.supabase.postgrest.Postgrest
 import javax.inject.Inject
 import javax.inject.Singleton

@@ -1,4 +1,4 @@
-package com.nuvio.tv
+package us.xnetik.tv
 
 import android.content.Context
 import android.content.Intent
@@ -105,16 +105,16 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import com.nuvio.tv.ui.screens.ambient.AmbientIdleController
-import com.nuvio.tv.ui.screens.ambient.AmbientModeHost
-import com.nuvio.tv.ui.screens.ambient.LocalAmbientIdleController
-import com.nuvio.tv.ui.components.LocalStartupLoadingState
-import com.nuvio.tv.ui.components.LocalStartupSplashEnabled
-import com.nuvio.tv.ui.components.StartupLoadingState
-import com.nuvio.tv.ui.components.StartupDestination
-import com.nuvio.tv.ui.components.shouldShowStartupSplash
-import com.nuvio.tv.ui.components.startupDestinationForRoute
-import com.nuvio.tv.core.runtime.PluginRuntimeHooks
+import us.xnetik.tv.ui.screens.ambient.AmbientIdleController
+import us.xnetik.tv.ui.screens.ambient.AmbientModeHost
+import us.xnetik.tv.ui.screens.ambient.LocalAmbientIdleController
+import us.xnetik.tv.ui.components.LocalStartupLoadingState
+import us.xnetik.tv.ui.components.LocalStartupSplashEnabled
+import us.xnetik.tv.ui.components.StartupLoadingState
+import us.xnetik.tv.ui.components.StartupDestination
+import us.xnetik.tv.ui.components.shouldShowStartupSplash
+import us.xnetik.tv.ui.components.startupDestinationForRoute
+import us.xnetik.tv.core.runtime.PluginRuntimeHooks
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
@@ -141,68 +141,72 @@ import androidx.tv.material3.contentColorFor
 import androidx.tv.material3.rememberDrawerState
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
-import com.nuvio.tv.R
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.auth.DeviceSessionRegistration
-import com.nuvio.tv.core.deeplink.DeepLinkHandler
-import com.nuvio.tv.core.deeplink.DeepLinkParser
-import com.nuvio.tv.core.player.PlayerWindowBackdrop
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.sync.ProfileSyncService
-import com.nuvio.tv.core.sync.StartupSyncService
-import com.nuvio.tv.core.tracking.TrackingProgressRefreshCoordinator
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.data.local.AppOnboardingDataStore
-import com.nuvio.tv.data.local.AuthSessionNoticeDataStore
-import com.nuvio.tv.data.local.ExperienceModeDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.StartupAuthNotice
-import com.nuvio.tv.data.local.ThemeDataStore
-import com.nuvio.tv.data.repository.MemberAccessRepository
-import com.nuvio.tv.data.remote.supabase.AvatarRepository
-import com.nuvio.tv.domain.model.AppFont
-import com.nuvio.tv.domain.model.AppTheme
-import com.nuvio.tv.domain.model.CustomThemeColors
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.domain.model.CardDepthStyle
-import com.nuvio.tv.domain.model.CosmeticEntitlement
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.domain.model.ExperienceMode
-import com.nuvio.tv.domain.model.MemberAccess
-import com.nuvio.tv.domain.model.ProfileBackgroundSelection
-import com.nuvio.tv.domain.model.resolveProfileBackgroundSelection
-import com.nuvio.tv.domain.model.SettingsUiStyle
-import com.nuvio.tv.domain.model.resolveAppTheme
-import com.nuvio.tv.domain.model.resolveCustomThemeColors
-import com.nuvio.tv.domain.deeplink.AppDeepLink
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.ui.components.NuvioScrollDefaults
-import com.nuvio.tv.ui.components.BrandWordmark
-import com.nuvio.tv.ui.components.LocalCardDepthStyle
-import com.nuvio.tv.ui.components.LocalLandscapePosterMode
-import com.nuvio.tv.ui.components.LocalAlwaysBackdropWithLogo
-import com.nuvio.tv.ui.components.ProfileAvatarCircle
-import com.nuvio.tv.ui.navigation.NuvioNavHost
-import com.nuvio.tv.ui.navigation.Screen
-import com.nuvio.tv.ui.membership.LocalMemberAccess
-import com.nuvio.tv.ui.screens.account.AuthQrSignInScreen
-import com.nuvio.tv.ui.screens.addon.EssentialAddonSetupScreen
-import com.nuvio.tv.ui.screens.profile.ProfileSelectionScreen
-import com.nuvio.tv.ui.theme.NuvioComponents
-import com.nuvio.tv.ui.theme.NuvioLayout
-import com.nuvio.tv.ui.theme.NuvioMotion
-import com.nuvio.tv.ui.theme.NuvioPrimitives
-import com.nuvio.tv.ui.theme.NuvioRadii
-import com.nuvio.tv.ui.theme.NuvioStrokes
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.ThemeColors
-import com.nuvio.tv.ui.theme.accentBrush
-import com.nuvio.tv.ui.theme.brandWordmarkResource
-import com.nuvio.tv.ui.util.LocalFastHorizontalNavigationEnabled
-import com.nuvio.tv.ui.util.LocalRecompositionHighlighterEnabled
-import com.nuvio.tv.ui.util.rememberDrawerItemFocusRequesters
-import com.nuvio.tv.updater.UpdateViewModel
-import com.nuvio.tv.updater.ui.UpdateBannerHost
+import us.xnetik.tv.R
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.auth.DeviceSessionRegistration
+import us.xnetik.tv.core.deeplink.DeepLinkHandler
+import us.xnetik.tv.core.deeplink.DeepLinkParser
+import us.xnetik.tv.core.player.PlayerWindowBackdrop
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.sync.ProfileSyncService
+import us.xnetik.tv.core.sync.StartupSyncService
+import us.xnetik.tv.core.tracking.TrackingProgressRefreshCoordinator
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.data.local.AppOnboardingDataStore
+import us.xnetik.tv.data.local.AuthSessionNoticeDataStore
+import us.xnetik.tv.data.local.ExperienceModeDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.StartupAuthNotice
+import us.xnetik.tv.data.local.ThemeDataStore
+import us.xnetik.tv.data.repository.MemberAccessRepository
+import us.xnetik.tv.data.remote.supabase.AvatarRepository
+import us.xnetik.tv.domain.model.AppFont
+import us.xnetik.tv.domain.model.AppTheme
+import us.xnetik.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.domain.model.CardDepthStyle
+import us.xnetik.tv.domain.model.CosmeticEntitlement
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.ExperienceMode
+import us.xnetik.tv.domain.model.MemberAccess
+import us.xnetik.tv.domain.model.ProfileBackgroundSelection
+import us.xnetik.tv.domain.model.resolveProfileBackgroundSelection
+import us.xnetik.tv.domain.model.SettingsUiStyle
+import us.xnetik.tv.domain.model.resolveAppTheme
+import us.xnetik.tv.domain.model.resolveCustomThemeColors
+import us.xnetik.tv.domain.deeplink.AppDeepLink
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.ui.components.NuvioScrollDefaults
+import us.xnetik.tv.ui.components.BrandWordmark
+import us.xnetik.tv.ui.components.LocalCardDepthStyle
+import us.xnetik.tv.ui.components.LocalLandscapePosterMode
+import us.xnetik.tv.ui.components.LocalAlwaysBackdropWithLogo
+import us.xnetik.tv.ui.components.ProfileAvatarCircle
+import us.xnetik.tv.core.access.DeviceAccessChecker
+import us.xnetik.tv.core.access.DeviceStatus
+import us.xnetik.tv.core.access.syncRemoteAddons
+import us.xnetik.tv.ui.screens.access.LockScreen
+import us.xnetik.tv.ui.navigation.NuvioNavHost
+import us.xnetik.tv.ui.navigation.Screen
+import us.xnetik.tv.ui.membership.LocalMemberAccess
+import us.xnetik.tv.ui.screens.account.AuthQrSignInScreen
+import us.xnetik.tv.ui.screens.addon.EssentialAddonSetupScreen
+import us.xnetik.tv.ui.screens.profile.ProfileSelectionScreen
+import us.xnetik.tv.ui.theme.NuvioComponents
+import us.xnetik.tv.ui.theme.NuvioLayout
+import us.xnetik.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioPrimitives
+import us.xnetik.tv.ui.theme.NuvioRadii
+import us.xnetik.tv.ui.theme.NuvioStrokes
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.ThemeColors
+import us.xnetik.tv.ui.theme.accentBrush
+import us.xnetik.tv.ui.theme.brandWordmarkResource
+import us.xnetik.tv.ui.util.LocalFastHorizontalNavigationEnabled
+import us.xnetik.tv.ui.util.LocalRecompositionHighlighterEnabled
+import us.xnetik.tv.ui.util.rememberDrawerItemFocusRequesters
+import us.xnetik.tv.updater.UpdateViewModel
+import us.xnetik.tv.updater.ui.UpdateBannerHost
 import dagger.hilt.android.AndroidEntryPoint
 import dev.chrisbanes.haze.HazeState
 import dev.chrisbanes.haze.HazeInputScale
@@ -288,7 +292,7 @@ open class MainActivity : ComponentActivity() {
     lateinit var startupSyncService: StartupSyncService
 
     @Inject
-    lateinit var androidTvChannelSyncService: com.nuvio.tv.core.sync.androidtv.AndroidTvChannelSyncService
+    lateinit var androidTvChannelSyncService: us.xnetik.tv.core.sync.androidtv.AndroidTvChannelSyncService
 
     @Inject
     lateinit var profileSyncService: ProfileSyncService
@@ -312,13 +316,13 @@ open class MainActivity : ComponentActivity() {
     lateinit var avatarRepository: AvatarRepository
 
     @Inject
-    lateinit var profileBackgroundRepository: com.nuvio.tv.data.remote.supabase.ProfileBackgroundRepository
+    lateinit var profileBackgroundRepository: us.xnetik.tv.data.remote.supabase.ProfileBackgroundRepository
 
     @Inject
-    lateinit var trailerPlayerPool: com.nuvio.tv.core.player.TrailerPlayerPool
+    lateinit var trailerPlayerPool: us.xnetik.tv.core.player.TrailerPlayerPool
 
     @Inject
-    lateinit var externalPlaybackTracker: com.nuvio.tv.core.player.ExternalPlaybackTracker
+    lateinit var externalPlaybackTracker: us.xnetik.tv.core.player.ExternalPlaybackTracker
 
     @Inject
     lateinit var deepLinkHandler: DeepLinkHandler
@@ -330,7 +334,7 @@ open class MainActivity : ComponentActivity() {
 
     /** Activity-level launcher for external video players. Survives all navigation changes. */
     private val externalPlayerLauncher = registerForActivityResult(
-        com.nuvio.tv.core.player.ExternalPlayerResultContract()
+        us.xnetik.tv.core.player.ExternalPlayerResultContract()
     ) { result ->
         Log.d("MainActivity", "External player ActivityResult: $result")
         externalPlaybackTracker.onActivityResult(result)
@@ -370,8 +374,8 @@ open class MainActivity : ComponentActivity() {
         PluginRuntimeHooks.onActivityCreate(this)
 
         window?.decorView?.post {
-            val snapshot = com.nuvio.tv.core.player.DisplayCapabilities.detect(this)
-            com.nuvio.tv.core.player.DisplayCapabilities.logSummary(snapshot)
+            val snapshot = us.xnetik.tv.core.player.DisplayCapabilities.detect(this)
+            us.xnetik.tv.core.player.DisplayCapabilities.logSummary(snapshot)
         }
 
         // Extract extras set by the Continue Watching launcher channel preview programs.
@@ -389,6 +393,22 @@ open class MainActivity : ComponentActivity() {
         captureDeepLinkIntent(intent)
 
         setContent {
+            val context = LocalContext.current
+            var deviceStatus by remember { mutableStateOf<DeviceStatus?>(null) }
+            LaunchedEffect(Unit) {
+                deviceStatus = DeviceAccessChecker.check(context)
+            }
+            if (deviceStatus == DeviceStatus.LOCKED) {
+                LockScreen(deviceId = DeviceAccessChecker.getDeviceId(context))
+                return@setContent
+            }
+
+            if (deviceStatus == DeviceStatus.ACTIVE) {
+                LaunchedEffect(Unit) {
+                    syncRemoteAddons(addonRepository)
+                }
+            }
+
             var hasSelectedProfileThisSession by rememberSaveable { mutableStateOf(false) }
             var startupSession by remember { mutableIntStateOf(0) }
             // Triggered immediately on profile click (before system confirms selection).
@@ -406,7 +426,6 @@ open class MainActivity : ComponentActivity() {
             }
             val hasSeenAuthQrOnFirstLaunch by hasSeenAuthQrFlow.collectAsState(initial = null)
             val authState by authManager.authState.collectAsState()
-            val context = LocalContext.current
 
             LaunchedEffect(authSessionNoticeDataStore, context) {
                 authSessionNoticeDataStore.pendingNotice.collect { notice ->
@@ -473,7 +492,7 @@ open class MainActivity : ComponentActivity() {
                 }
             }
 
-            var avatarCatalog by remember { mutableStateOf(emptyList<com.nuvio.tv.data.remote.supabase.AvatarCatalogItem>()) }
+            var avatarCatalog by remember { mutableStateOf(emptyList<us.xnetik.tv.data.remote.supabase.AvatarCatalogItem>()) }
             val avatarMemberAccess by memberAccessRepository.access.collectAsState()
             val hasProfileAvatarAccess = avatarMemberAccess.entitlements
                 .includes(CosmeticEntitlement.PROFILE_AVATARS)
@@ -619,7 +638,7 @@ open class MainActivity : ComponentActivity() {
                     )
                 }
                 val highlighterEnabled = BuildConfig.IS_DEBUG_BUILD && mainUiPrefs.composeHighlighterEnabled
-                com.nuvio.tv.ui.util.RecompositionHighlighterFlag.enabled = highlighterEnabled
+                us.xnetik.tv.ui.util.RecompositionHighlighterFlag.enabled = highlighterEnabled
                 val profileBgSelection = resolveProfileBackgroundSelection(
                     profile = activeProfile,
                     entitlements = mainUiPrefs.memberAccess.entitlements
@@ -705,7 +724,7 @@ open class MainActivity : ComponentActivity() {
                     LocalAlwaysBackdropWithLogo provides mainUiPrefs.alwaysBackdropWithLogo,
                     LocalMemberAccess provides mainUiPrefs.memberAccess,
                     LocalAmbientIdleController provides ambientIdleController,
-                    com.nuvio.tv.core.player.LocalTrailerPlayerPool provides trailerPlayerPool,
+                    us.xnetik.tv.core.player.LocalTrailerPlayerPool provides trailerPlayerPool,
                     LocalSplashBackground provides splashBackground,
                     LocalStartupLoadingState provides startupLoadingState,
                     LocalStartupSplashEnabled provides startupSplashEnabled
@@ -1192,7 +1211,7 @@ open class MainActivity : ComponentActivity() {
 
                             val autoNextOverlay by externalPlaybackTracker.autoNextOverlay.collectAsState()
                             autoNextOverlay?.let { ov ->
-                                com.nuvio.tv.ui.screens.player.LoadingOverlay(
+                                us.xnetik.tv.ui.screens.player.LoadingOverlay(
                                     visible = true,
                                     backdropUrl = ov.backdrop,
                                     logoUrl = ov.logo,
@@ -1240,7 +1259,7 @@ open class MainActivity : ComponentActivity() {
                         }
                     }
                     if (splashAlpha > 0f) {
-                        com.nuvio.tv.ui.components.StartupSplashScreen(
+                        us.xnetik.tv.ui.components.StartupSplashScreen(
                             profileColorHex = splashBackground.profileColorHex,
                             profileBackgroundUrl = splashBackground.backgroundUrl,
                             backgroundCacheKey = splashBackground.backgroundCacheKey,
@@ -1781,7 +1800,7 @@ private fun LegacySidebarButton(
                 .offset(x = 13.dp)
         )
         if (expanded) {
-            com.nuvio.tv.ui.components.AutoResizeText(
+            us.xnetik.tv.ui.components.AutoResizeText(
                 text = label,
                 color = contentColor,
                 textAlign = TextAlign.Start,
@@ -2348,7 +2367,7 @@ private fun navigateToDrawerRoute(
                 // "home" not yet on the back stack (e.g. nav graph not fully initialized).
                 return
             }
-            val homeViewModel = androidx.lifecycle.ViewModelProvider(homeEntry)[com.nuvio.tv.ui.screens.home.HomeViewModel::class.java]
+            val homeViewModel = androidx.lifecycle.ViewModelProvider(homeEntry)[us.xnetik.tv.ui.screens.home.HomeViewModel::class.java]
             homeViewModel.requestScrollToTop()
         }
         return

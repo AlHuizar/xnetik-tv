@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.navigation
+package us.xnetik.tv.ui.navigation
 
 internal fun postPlayRecommendationPopUpRoute(previousRoute: String?): String {
     return if (previousRoute.orEmpty().startsWith("stream/")) {

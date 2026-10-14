@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
-import com.nuvio.tv.ui.screens.player.SubtitleSyncCue
+import us.xnetik.tv.ui.screens.player.SubtitleSyncCue
 import kotlin.math.abs
 import kotlin.math.roundToLong
 

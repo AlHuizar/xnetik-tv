@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.data.local.NextEpisodeThresholdMode
-import com.nuvio.tv.data.repository.SkipInterval
-import com.nuvio.tv.domain.model.Video
+import us.xnetik.tv.data.local.NextEpisodeThresholdMode
+import us.xnetik.tv.data.repository.SkipInterval
+import us.xnetik.tv.domain.model.Video
 import java.time.Clock
 import java.time.Instant
 import java.time.ZoneId

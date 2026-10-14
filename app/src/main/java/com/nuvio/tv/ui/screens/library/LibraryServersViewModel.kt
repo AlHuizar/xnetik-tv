@@ -1,14 +1,14 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.data.mediaserver.ServerFailure
-import com.nuvio.tv.data.mediaserver.ServerLibraryRef
-import com.nuvio.tv.data.mediaserver.ServerRepository
-import com.nuvio.tv.data.mediaserver.ServersUiState
-import com.nuvio.tv.data.mediaserver.serverFailure
-import com.nuvio.tv.domain.model.CatalogRow
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.data.mediaserver.ServerFailure
+import us.xnetik.tv.data.mediaserver.ServerLibraryRef
+import us.xnetik.tv.data.mediaserver.ServerRepository
+import us.xnetik.tv.data.mediaserver.ServersUiState
+import us.xnetik.tv.data.mediaserver.serverFailure
+import us.xnetik.tv.domain.model.CatalogRow
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException

@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.app.Activity
 import android.os.SystemClock
 import android.util.Log
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.lang.ref.WeakReference

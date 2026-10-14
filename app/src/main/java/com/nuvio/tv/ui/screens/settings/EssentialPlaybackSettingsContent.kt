@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,11 +20,11 @@ import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.AudioLanguageOption
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.data.local.SubtitleLanguageOption
-import com.nuvio.tv.ui.components.P2pConsentDialog
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.AudioLanguageOption
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.data.local.SubtitleLanguageOption
+import us.xnetik.tv.ui.components.P2pConsentDialog
 import kotlinx.coroutines.launch
 
 @Composable

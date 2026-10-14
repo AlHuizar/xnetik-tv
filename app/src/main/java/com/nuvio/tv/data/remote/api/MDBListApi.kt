@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.remote.api
+package us.xnetik.tv.data.remote.api
 
-import com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaResponseDto
-import com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaRequestDto
+import us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaResponseDto
+import us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaRequestDto
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET

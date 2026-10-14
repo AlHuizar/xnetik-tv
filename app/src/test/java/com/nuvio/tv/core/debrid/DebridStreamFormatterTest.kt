@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBehaviorHints
-import com.nuvio.tv.domain.model.StreamDebridCacheState
-import com.nuvio.tv.domain.model.StreamDebridCacheStatus
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBehaviorHints
+import us.xnetik.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.domain.model.StreamDebridCacheStatus
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test

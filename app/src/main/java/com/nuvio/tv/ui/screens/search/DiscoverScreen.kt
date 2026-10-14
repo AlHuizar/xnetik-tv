@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.search
+package us.xnetik.tv.ui.screens.search
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.screens.home.HeroBackdropState
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.screens.home.HeroBackdropState
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -27,12 +27,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.ui.components.EmptyScreenState
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.PosterCardStyle
-import com.nuvio.tv.ui.theme.NuvioColors
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.ui.components.EmptyScreenState
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.ui.theme.NuvioColors
 import kotlin.math.roundToInt
 
 @Composable
@@ -134,7 +134,7 @@ fun DiscoverScreen(
         }
 
         val posterOptionsState by viewModel.posterOptions.state.collectAsState()
-        com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+        us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
             state = posterOptionsState,
             controller = viewModel.posterOptions,
             onNavigateToDetail = { id, type, addonBaseUrl ->

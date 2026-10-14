@@ -1,13 +1,13 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.data.local.StreamAutoPlaySource
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBehaviorHints
-import com.nuvio.tv.domain.model.StreamDebridCacheState
-import com.nuvio.tv.domain.model.StreamDebridCacheStatus
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.data.local.StreamAutoPlaySource
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBehaviorHints
+import us.xnetik.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.domain.model.StreamDebridCacheStatus
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

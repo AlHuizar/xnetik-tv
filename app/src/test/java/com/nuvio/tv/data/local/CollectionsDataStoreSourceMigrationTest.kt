@@ -1,13 +1,13 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import android.content.Context
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.domain.model.AddonCatalogCollectionSource
-import com.nuvio.tv.domain.model.TmdbCollectionFilters
-import com.nuvio.tv.domain.model.TmdbCollectionMediaType
-import com.nuvio.tv.domain.model.TmdbCollectionSource
-import com.nuvio.tv.domain.model.TmdbCollectionSourceType
-import com.nuvio.tv.domain.model.TraktCollectionSource
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.domain.model.AddonCatalogCollectionSource
+import us.xnetik.tv.domain.model.TmdbCollectionFilters
+import us.xnetik.tv.domain.model.TmdbCollectionMediaType
+import us.xnetik.tv.domain.model.TmdbCollectionSource
+import us.xnetik.tv.domain.model.TmdbCollectionSourceType
+import us.xnetik.tv.domain.model.TraktCollectionSource
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.Assert.assertEquals
@@ -60,11 +60,11 @@ class CollectionsDataStoreSourceMigrationTest {
 
     @Test
     fun `export includes provider aware tmdb sources`() {
-        val collection = com.nuvio.tv.domain.model.Collection(
+        val collection = us.xnetik.tv.domain.model.Collection(
             id = "collection",
             title = "TMDB",
             folders = listOf(
-                com.nuvio.tv.domain.model.CollectionFolder(
+                us.xnetik.tv.domain.model.CollectionFolder(
                     id = "folder",
                     title = "Marvel",
                     sources = listOf(
@@ -100,11 +100,11 @@ class CollectionsDataStoreSourceMigrationTest {
 
     @Test
     fun `export and import preserve trakt public list sources`() {
-        val collection = com.nuvio.tv.domain.model.Collection(
+        val collection = us.xnetik.tv.domain.model.Collection(
             id = "collection",
             title = "Trakt",
             folders = listOf(
-                com.nuvio.tv.domain.model.CollectionFolder(
+                us.xnetik.tv.domain.model.CollectionFolder(
                     id = "folder",
                     title = "Public Lists",
                     sources = listOf(
@@ -163,7 +163,7 @@ class CollectionsDataStoreSourceMigrationTest {
         assertFalse(result.valid)
         verify {
             context.getString(
-                com.nuvio.tv.R.string.collections_import_error_missing_trakt_list_id,
+                us.xnetik.tv.R.string.collections_import_error_missing_trakt_list_id,
                 "Trakt",
                 "Public Lists",
                 1
@@ -173,11 +173,11 @@ class CollectionsDataStoreSourceMigrationTest {
 
     @Test
     fun `import and export preserve folder hero video url`() {
-        val collection = com.nuvio.tv.domain.model.Collection(
+        val collection = us.xnetik.tv.domain.model.Collection(
             id = "collection",
             title = "Videos",
             folders = listOf(
-                com.nuvio.tv.domain.model.CollectionFolder(
+                us.xnetik.tv.domain.model.CollectionFolder(
                     id = "folder",
                     title = "Featured",
                     heroBackdropUrl = "https://example.com/backdrop.jpg",

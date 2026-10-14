@@ -1,12 +1,12 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.data.remote.api.TraktApi
-import com.nuvio.tv.data.remote.dto.trakt.TraktCommentDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktIdsDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktSearchResultDto
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.TraktCommentReview
+import us.xnetik.tv.data.remote.api.TraktApi
+import us.xnetik.tv.data.remote.dto.trakt.TraktCommentDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktIdsDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktSearchResultDto
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.TraktCommentReview
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import javax.inject.Inject
@@ -61,7 +61,7 @@ class TraktCommentsService @Inject constructor(
         meta: Meta,
         fallbackItemId: String? = null,
         fallbackItemType: String? = null,
-        targetEpisode: com.nuvio.tv.domain.model.Video? = null,
+        targetEpisode: us.xnetik.tv.domain.model.Video? = null,
         page: Int = 1,
         forceRefresh: Boolean = false
     ): TraktCommentsPage {
@@ -138,7 +138,7 @@ class TraktCommentsService @Inject constructor(
                     limit = COMMENTS_LIMIT
                 )
             }
-        } ?: throw IllegalStateException(appContext.getString(com.nuvio.tv.R.string.trakt_comments_error_request_failed))
+        } ?: throw IllegalStateException(appContext.getString(us.xnetik.tv.R.string.trakt_comments_error_request_failed))
 
         val comments = when {
             response.code() == 404 -> emptyList()
@@ -172,7 +172,7 @@ class TraktCommentsService @Inject constructor(
         meta: Meta,
         fallbackItemId: String?,
         fallbackItemType: String?,
-        targetEpisode: com.nuvio.tv.domain.model.Video?
+        targetEpisode: us.xnetik.tv.domain.model.Video?
     ): ResolvedCommentsTarget? {
         val type = resolveCommentsType(
             meta = meta,
@@ -222,7 +222,7 @@ class TraktCommentsService @Inject constructor(
     private fun resolveCommentsType(
         meta: Meta,
         fallbackItemType: String?,
-        targetEpisode: com.nuvio.tv.domain.model.Video?
+        targetEpisode: us.xnetik.tv.domain.model.Video?
     ): TraktCommentsType? {
         if (targetEpisode?.season != null && targetEpisode.episode != null) {
             return when (meta.type) {
@@ -314,7 +314,7 @@ private fun toReviewModel(dto: TraktCommentDto, appContext: android.content.Cont
         ?.takeIf { it.isNotBlank() }
         ?: dto.user?.username
             ?.takeIf { it.isNotBlank() }
-        ?: appContext.getString(com.nuvio.tv.R.string.trakt_user_fallback)
+        ?: appContext.getString(us.xnetik.tv.R.string.trakt_user_fallback)
 
     return TraktCommentReview(
         id = dto.id,

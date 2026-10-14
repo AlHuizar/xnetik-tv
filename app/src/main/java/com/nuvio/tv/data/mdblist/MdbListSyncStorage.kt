@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nuvio.tv.data.local.ProfileDataStoreFactory
+import us.xnetik.tv.data.local.ProfileDataStoreFactory
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CancellationException

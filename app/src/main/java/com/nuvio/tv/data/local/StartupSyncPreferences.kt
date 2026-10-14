@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit

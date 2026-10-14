@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
-import com.nuvio.tv.core.tracking.parseTrackingExternalIds
+import us.xnetik.tv.core.tracking.parseTrackingExternalIds
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotEquals

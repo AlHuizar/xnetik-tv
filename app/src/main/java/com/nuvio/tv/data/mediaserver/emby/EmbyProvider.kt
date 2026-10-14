@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.mediaserver.emby
+package us.xnetik.tv.data.mediaserver.emby
 
-import com.nuvio.tv.data.mediaserver.mediabrowser.Endpoint
-import com.nuvio.tv.data.mediaserver.mediabrowser.MediaBrowserProvider
-import com.nuvio.tv.data.mediaserver.mediabrowser.PublicInfo
-import com.nuvio.tv.data.mediaserver.mediabrowser.ServerClientIdentity
-import com.nuvio.tv.data.mediaserver.mediabrowser.pathSegment
+import us.xnetik.tv.data.mediaserver.mediabrowser.Endpoint
+import us.xnetik.tv.data.mediaserver.mediabrowser.MediaBrowserProvider
+import us.xnetik.tv.data.mediaserver.mediabrowser.PublicInfo
+import us.xnetik.tv.data.mediaserver.mediabrowser.ServerClientIdentity
+import us.xnetik.tv.data.mediaserver.mediabrowser.pathSegment
 import okhttp3.OkHttpClient
 
 internal class EmbyProvider(

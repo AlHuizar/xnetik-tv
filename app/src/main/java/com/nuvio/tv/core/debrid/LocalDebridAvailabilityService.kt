@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamDebridCacheState
-import com.nuvio.tv.domain.model.StreamDebridCacheStatus
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamDebridCacheState
+import us.xnetik.tv.domain.model.StreamDebridCacheStatus
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 import javax.inject.Singleton

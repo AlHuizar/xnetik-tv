@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import android.util.Log
-import com.nuvio.tv.core.tracking.TrackingDiagnosticIdentity
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.core.tracking.TrackingDiagnosticIdentity
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 import java.util.Locale
 
 internal enum class SimklCwDiagnosticOrigin {

@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.TrackingListManagementCapabilities
-import com.nuvio.tv.core.tracking.TrackingListManager
-import com.nuvio.tv.core.tracking.supportsMembershipFor
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.core.tracking.TrackingListManagementCapabilities
+import us.xnetik.tv.core.tracking.TrackingListManager
+import us.xnetik.tv.core.tracking.supportsMembershipFor
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.ListMembershipChanges
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.buildJsonObject

@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.ui.components.LocalCardDepthStyle
-import com.nuvio.tv.ui.components.nuvioCardDepth
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.ui.components.LocalCardDepthStyle
+import us.xnetik.tv.ui.components.nuvioCardDepth
+import us.xnetik.tv.ui.util.contentTextDirection
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -67,7 +67,7 @@ import androidx.tv.material3.CardDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.MetaCastMember
+import us.xnetik.tv.domain.model.MetaCastMember
 
 @OptIn(ExperimentalTvMaterial3Api::class, ExperimentalComposeUiApi::class, ExperimentalFoundationApi::class)
 @Composable

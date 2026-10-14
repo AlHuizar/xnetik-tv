@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 internal data class EpisodeMappingEntry(
     val season: Int,

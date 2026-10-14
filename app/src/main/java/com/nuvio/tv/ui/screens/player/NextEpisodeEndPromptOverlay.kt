@@ -1,8 +1,8 @@
 @file:OptIn(androidx.compose.ui.ExperimentalComposeUiApi::class)
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.focusGroup
@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @Composable
 fun NextEpisodeEndPromptOverlay(

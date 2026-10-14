@@ -1,13 +1,13 @@
-package com.nuvio.tv.data.mapper
+package us.xnetik.tv.data.mapper
 
-import com.nuvio.tv.data.remote.dto.MetaDto
-import com.nuvio.tv.data.remote.dto.MetaLinkDto
-import com.nuvio.tv.data.remote.dto.VideoDto
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaLink
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.Video
+import us.xnetik.tv.data.remote.dto.MetaDto
+import us.xnetik.tv.data.remote.dto.MetaLinkDto
+import us.xnetik.tv.data.remote.dto.VideoDto
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaLink
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.Video
 
 fun MetaDto.toDomain(episodeLabel: String = "Episode"): Meta {
     val directorMembers = mapPeople(appExtras?.directors, roleFallback = "Director", forceRole = true)

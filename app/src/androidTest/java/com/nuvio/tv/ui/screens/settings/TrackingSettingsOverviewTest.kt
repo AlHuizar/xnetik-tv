@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.runtime.remember
 import androidx.compose.ui.focus.FocusRequester
@@ -17,12 +17,12 @@ import androidx.compose.ui.test.performKeyInput
 import androidx.compose.ui.test.pressKey
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.data.local.WatchProgressSource
-import com.nuvio.tv.data.simkl.SimklConnectionMode
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.data.local.WatchProgressSource
+import us.xnetik.tv.data.simkl.SimklConnectionMode
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.ui.theme.NuvioTheme
 import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test

@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
 import java.time.Instant
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter

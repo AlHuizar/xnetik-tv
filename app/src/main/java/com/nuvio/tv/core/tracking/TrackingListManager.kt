@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.LibraryListPrivacy
 
 data class TrackingListManagementCapabilities(
     val privacyOptions: List<LibraryListPrivacy>,

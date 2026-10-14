@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
-import com.nuvio.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.TrackingExternalIds
 
 enum class ServerCapability {
     SEARCH,

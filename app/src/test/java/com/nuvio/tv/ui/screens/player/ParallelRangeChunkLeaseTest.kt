@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.net.Uri
 import android.os.SystemClock
@@ -129,7 +129,7 @@ class ParallelRangeChunkLeaseTest {
     private fun spec(position: Long) = DataSpec.Builder().setUri(fileUri).setPosition(position).build()
 
     private fun pooledBuffer(allocation: Allocation): Any =
-        Class.forName("com.nuvio.tv.ui.screens.player.ParallelRangeDataSource\$PooledBuffer")
+        Class.forName("us.xnetik.tv.ui.screens.player.ParallelRangeDataSource\$PooledBuffer")
             .declaredConstructors.single().apply { isAccessible = true }.newInstance(allocation, allocation.buffer)
 
     private fun call(target: Any, name: String, vararg args: Any?): Any? = target.javaClass.declaredMethods

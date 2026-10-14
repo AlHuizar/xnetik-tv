@@ -1,43 +1,43 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.media3.exoplayer.ExoPlayer
-import com.nuvio.tv.core.debrid.DirectDebridResolver
-import com.nuvio.tv.core.debrid.DirectDebridStreamPreparer
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackSessionStore
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackProgressStore
-import com.nuvio.tv.core.cloud.CloudLibraryRepository
-import com.nuvio.tv.core.plugin.PluginManager
-import com.nuvio.tv.core.player.StreamAutoPlayPolicy
-import com.nuvio.tv.core.tracking.TrackingScrobbleCoordinator
-import com.nuvio.tv.core.torrent.TorrentService
-import com.nuvio.tv.core.torrent.TorrentSettings
-import com.nuvio.tv.data.local.AudioDelayRouteDataStore
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.data.local.DeviceLocalPlayerPreferences
-import com.nuvio.tv.data.local.MDBListSettingsDataStore
-import com.nuvio.tv.data.local.StreamLinkCacheDataStore
-import com.nuvio.tv.data.local.StreamBadgeSettingsDataStore
-import com.nuvio.tv.data.repository.ParentalGuideRepository
-import com.nuvio.tv.data.repository.MDBListRepository
-import com.nuvio.tv.data.repository.SkipIntroRepository
-import com.nuvio.tv.data.repository.TraktEpisodeMappingService
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.StreamRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.core.tmdb.TmdbMetadataService
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
-import com.nuvio.tv.data.local.TraktAuthDataStore
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.TrailerSettingsDataStore
-import com.nuvio.tv.data.local.WatchedSeriesStateHolder
-import com.nuvio.tv.data.repository.TraktRelatedService
-import com.nuvio.tv.data.trailer.TrailerService
+import us.xnetik.tv.core.debrid.DirectDebridResolver
+import us.xnetik.tv.core.debrid.DirectDebridStreamPreparer
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackSessionStore
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackProgressStore
+import us.xnetik.tv.core.cloud.CloudLibraryRepository
+import us.xnetik.tv.core.plugin.PluginManager
+import us.xnetik.tv.core.player.StreamAutoPlayPolicy
+import us.xnetik.tv.core.tracking.TrackingScrobbleCoordinator
+import us.xnetik.tv.core.torrent.TorrentService
+import us.xnetik.tv.core.torrent.TorrentSettings
+import us.xnetik.tv.data.local.AudioDelayRouteDataStore
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.data.local.DeviceLocalPlayerPreferences
+import us.xnetik.tv.data.local.MDBListSettingsDataStore
+import us.xnetik.tv.data.local.StreamLinkCacheDataStore
+import us.xnetik.tv.data.local.StreamBadgeSettingsDataStore
+import us.xnetik.tv.data.repository.ParentalGuideRepository
+import us.xnetik.tv.data.repository.MDBListRepository
+import us.xnetik.tv.data.repository.SkipIntroRepository
+import us.xnetik.tv.data.repository.TraktEpisodeMappingService
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.StreamRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.core.tmdb.TmdbMetadataService
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.TrailerSettingsDataStore
+import us.xnetik.tv.data.local.WatchedSeriesStateHolder
+import us.xnetik.tv.data.repository.TraktRelatedService
+import us.xnetik.tv.data.trailer.TrailerService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.StateFlow
@@ -55,7 +55,7 @@ class PlayerViewModel @Inject constructor(
     private val streamRepository: StreamRepository,
     private val addonRepository: AddonRepository,
     private val pluginManager: PluginManager,
-    private val subtitleRepository: com.nuvio.tv.domain.repository.SubtitleRepository,
+    private val subtitleRepository: us.xnetik.tv.domain.repository.SubtitleRepository,
     private val parentalGuideRepository: ParentalGuideRepository,
     private val trackingScrobbleCoordinator: TrackingScrobbleCoordinator,
     private val traktEpisodeMappingService: TraktEpisodeMappingService,
@@ -64,12 +64,12 @@ class PlayerViewModel @Inject constructor(
     private val deviceLocalPlayerPreferences: DeviceLocalPlayerPreferences,
     private val streamLinkCacheDataStore: StreamLinkCacheDataStore,
     private val streamBadgeSettingsDataStore: StreamBadgeSettingsDataStore,
-    private val bingeGroupCacheDataStore: com.nuvio.tv.data.local.BingeGroupCacheDataStore,
-    private val layoutPreferenceDataStore: com.nuvio.tv.data.local.LayoutPreferenceDataStore,
-    private val episodeShufflePlayback: com.nuvio.tv.core.player.EpisodeShufflePlayback,
-    private val watchedItemsPreferences: com.nuvio.tv.data.local.WatchedItemsPreferences,
+    private val bingeGroupCacheDataStore: us.xnetik.tv.data.local.BingeGroupCacheDataStore,
+    private val layoutPreferenceDataStore: us.xnetik.tv.data.local.LayoutPreferenceDataStore,
+    private val episodeShufflePlayback: us.xnetik.tv.core.player.EpisodeShufflePlayback,
+    private val watchedItemsPreferences: us.xnetik.tv.data.local.WatchedItemsPreferences,
     private val watchedSeriesStateHolder: WatchedSeriesStateHolder,
-    private val trackPreferenceDataStore: com.nuvio.tv.data.local.TrackPreferenceDataStore,
+    private val trackPreferenceDataStore: us.xnetik.tv.data.local.TrackPreferenceDataStore,
     private val audioDelayRouteDataStore: AudioDelayRouteDataStore,
     private val torrentService: TorrentService,
     private val torrentSettings: TorrentSettings,
@@ -78,28 +78,28 @@ class PlayerViewModel @Inject constructor(
     private val tmdbSettingsDataStore: TmdbSettingsDataStore,
     private val mdbListRepository: MDBListRepository,
     private val mdbListSettingsDataStore: MDBListSettingsDataStore,
-    private val trailerPlayerPool: com.nuvio.tv.core.player.TrailerPlayerPool,
+    private val trailerPlayerPool: us.xnetik.tv.core.player.TrailerPlayerPool,
     private val trailerService: TrailerService,
     private val trailerSettingsDataStore: TrailerSettingsDataStore,
     private val traktRelatedService: TraktRelatedService,
     private val traktAuthDataStore: TraktAuthDataStore,
     private val traktSettingsDataStore: TraktSettingsDataStore,
-    private val simklRelatedService: com.nuvio.tv.data.simkl.SimklRelatedService,
-    private val simklAuthRepository: com.nuvio.tv.data.simkl.SimklAuthRepository,
+    private val simklRelatedService: us.xnetik.tv.data.simkl.SimklRelatedService,
+    private val simklAuthRepository: us.xnetik.tv.data.simkl.SimklAuthRepository,
     private val directDebridResolver: DirectDebridResolver,
-    private val youTubeStreamResolver: com.nuvio.tv.core.streams.YouTubeStreamResolver,
+    private val youTubeStreamResolver: us.xnetik.tv.core.streams.YouTubeStreamResolver,
     private val directDebridStreamPreparer: DirectDebridStreamPreparer,
     private val cloudLibraryRepository: CloudLibraryRepository,
     private val cloudPlaybackProgressStore: CloudLibraryPlaybackProgressStore,
     private val cloudPlaybackSessionStore: CloudLibraryPlaybackSessionStore,
-    private val streamBadgePresentation: com.nuvio.tv.core.streams.StreamBadgePresentation,
-    private val playbackIssueReportRepository: com.nuvio.tv.data.repository.PlaybackIssueReportRepository,
-    private val externalPlaybackTracker: com.nuvio.tv.core.player.ExternalPlaybackTracker,
-    private val subtitleFileCache: com.nuvio.tv.core.player.SubtitleFileCache,
-    private val tvRecommendationManager: com.nuvio.tv.core.recommendations.TvRecommendationManager,
-    private val serverPlayback: com.nuvio.tv.data.mediaserver.ServerPlayback,
-    private val serverStreams: com.nuvio.tv.data.mediaserver.ServerStreams,
-    profileManager: com.nuvio.tv.core.profile.ProfileManager,
+    private val streamBadgePresentation: us.xnetik.tv.core.streams.StreamBadgePresentation,
+    private val playbackIssueReportRepository: us.xnetik.tv.data.repository.PlaybackIssueReportRepository,
+    private val externalPlaybackTracker: us.xnetik.tv.core.player.ExternalPlaybackTracker,
+    private val subtitleFileCache: us.xnetik.tv.core.player.SubtitleFileCache,
+    private val tvRecommendationManager: us.xnetik.tv.core.recommendations.TvRecommendationManager,
+    private val serverPlayback: us.xnetik.tv.data.mediaserver.ServerPlayback,
+    private val serverStreams: us.xnetik.tv.data.mediaserver.ServerStreams,
+    profileManager: us.xnetik.tv.core.profile.ProfileManager,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -318,7 +318,7 @@ class PlayerViewModel @Inject constructor(
             return
         }
         val videoId = controller.currentVideoId ?: contentId
-        val metadata = com.nuvio.tv.core.player.ExternalPlaybackMetadata(
+        val metadata = us.xnetik.tv.core.player.ExternalPlaybackMetadata(
             contentId = contentId,
             contentType = controller.contentType ?: "movie",
             contentName = controller.contentName ?: controller.title,
@@ -339,7 +339,7 @@ class PlayerViewModel @Inject constructor(
             val addonSubtitles = controller.uiState.value.addonSubtitles
             if (addonSubtitles.isNotEmpty()) {
                 addonSubtitles.map {
-                    com.nuvio.tv.core.player.SubtitleInput(
+                    us.xnetik.tv.core.player.SubtitleInput(
                         url = it.url,
                         name = "${it.getDisplayLanguage()} - ${it.addonName}",
                         lang = it.lang

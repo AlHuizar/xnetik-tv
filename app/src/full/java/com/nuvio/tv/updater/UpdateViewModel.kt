@@ -1,11 +1,11 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.R
-import com.nuvio.tv.updater.model.AppUpdate
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.R
+import us.xnetik.tv.updater.model.AppUpdate
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File

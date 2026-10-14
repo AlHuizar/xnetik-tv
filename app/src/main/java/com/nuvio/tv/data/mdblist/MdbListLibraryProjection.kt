@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryEntry
 
 internal class MdbListLibraryProjection(snapshot: MdbListLibrarySnapshot) {
     val entries: List<LibraryEntry>

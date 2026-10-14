@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -53,23 +53,23 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.core.poster.CustomPosterScreen
-import com.nuvio.tv.domain.model.CardDepthStyle
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.ContinueWatchingSortMode
-import com.nuvio.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_COVERAGE
-import com.nuvio.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_STRENGTH
-import com.nuvio.tv.domain.model.DEFAULT_CARD_DEPTH_SHEEN_STRENGTH
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.ui.components.CardCwStylePreview
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.components.PosterCwStylePreview
-import com.nuvio.tv.ui.components.WideCwStylePreview
-import com.nuvio.tv.ui.components.cardDepthVisual
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.core.poster.CustomPosterScreen
+import us.xnetik.tv.domain.model.CardDepthStyle
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.ContinueWatchingSortMode
+import us.xnetik.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_COVERAGE
+import us.xnetik.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_STRENGTH
+import us.xnetik.tv.domain.model.DEFAULT_CARD_DEPTH_SHEEN_STRENGTH
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.ui.components.CardCwStylePreview
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.components.PosterCwStylePreview
+import us.xnetik.tv.ui.components.WideCwStylePreview
+import us.xnetik.tv.ui.components.cardDepthVisual
 
 @Composable
 internal fun LayoutContinueWatchingSection(

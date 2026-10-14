@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.trailer
+package us.xnetik.tv.data.trailer
 
 import androidx.annotation.OptIn
 import androidx.media3.common.Format

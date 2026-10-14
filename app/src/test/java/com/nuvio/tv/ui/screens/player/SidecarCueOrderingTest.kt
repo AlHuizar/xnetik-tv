@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.media3.common.text.Cue
 import androidx.media3.extractor.text.CuesWithTiming

@@ -1,12 +1,12 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.tracking.TrackingListManager
-import com.nuvio.tv.core.tracking.TrackingLibrarySorter
-import com.nuvio.tv.core.tracking.TrackingRefreshGate
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.ListMembershipSnapshot
+import us.xnetik.tv.core.tracking.TrackingListManager
+import us.xnetik.tv.core.tracking.TrackingLibrarySorter
+import us.xnetik.tv.core.tracking.TrackingRefreshGate
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.ListMembershipSnapshot
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow

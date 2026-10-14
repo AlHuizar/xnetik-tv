@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 val PROFILE_AVATAR_COLORS: List<String> = listOf(
     "#E53935", // Crimson

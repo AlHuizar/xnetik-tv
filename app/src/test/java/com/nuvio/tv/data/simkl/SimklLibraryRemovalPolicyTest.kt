@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalImpact
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalImpact
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertSame
 import org.junit.Assert.assertThrows

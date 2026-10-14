@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.content.Context
 import android.view.KeyEvent as AndroidKeyEvent
@@ -64,18 +64,18 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.request.transformations
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.ui.components.ImdbRatingSourceLabel
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.BlurTransformation
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
-import com.nuvio.tv.ui.util.toAbsoluteAlignment
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.ui.components.ImdbRatingSourceLabel
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.BlurTransformation
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.util.toAbsoluteAlignment
 import kotlinx.coroutines.launch
 import java.util.Locale
-import com.nuvio.tv.ui.screens.ambient.AmbientDialogEffect
+import us.xnetik.tv.ui.screens.ambient.AmbientDialogEffect
 
 private data class EpisodeOverlayAction(
     val label: String,

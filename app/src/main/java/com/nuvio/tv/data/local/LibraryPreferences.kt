@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.MutablePreferences
 import androidx.datastore.preferences.core.Preferences
@@ -8,15 +8,15 @@ import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import com.google.gson.Gson
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.sync.library.LibrarySyncLocalStore
-import com.nuvio.tv.domain.model.LibraryDeltaApplyResult
-import com.nuvio.tv.domain.model.LibraryDeltaEvent
-import com.nuvio.tv.domain.model.LibrarySnapshotApplyResult
-import com.nuvio.tv.domain.model.LibrarySyncKey
-import com.nuvio.tv.domain.model.LibrarySyncReducer
-import com.nuvio.tv.domain.model.LibrarySyncState
-import com.nuvio.tv.domain.model.SavedLibraryItem
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.sync.library.LibrarySyncLocalStore
+import us.xnetik.tv.domain.model.LibraryDeltaApplyResult
+import us.xnetik.tv.domain.model.LibraryDeltaEvent
+import us.xnetik.tv.domain.model.LibrarySnapshotApplyResult
+import us.xnetik.tv.domain.model.LibrarySyncKey
+import us.xnetik.tv.domain.model.LibrarySyncReducer
+import us.xnetik.tv.domain.model.LibrarySyncState
+import us.xnetik.tv.domain.model.SavedLibraryItem
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first

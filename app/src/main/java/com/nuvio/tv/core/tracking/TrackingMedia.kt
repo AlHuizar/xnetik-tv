@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
 data class TrackingExternalIds(
     val imdb: String? = null,

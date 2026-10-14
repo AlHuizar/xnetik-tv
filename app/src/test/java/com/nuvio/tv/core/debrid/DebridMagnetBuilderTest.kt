@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBehaviorHints
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBehaviorHints
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

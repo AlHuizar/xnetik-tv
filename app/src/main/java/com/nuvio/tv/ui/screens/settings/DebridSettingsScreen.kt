@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.content.Context
 import android.view.KeyEvent
@@ -62,27 +62,27 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.core.debrid.DebridDeviceAuthorization
-import com.nuvio.tv.core.debrid.DebridDeviceAuthorizationTokenResult
-import com.nuvio.tv.core.debrid.DebridProvider
-import com.nuvio.tv.core.debrid.DebridProviderAuthMethod
-import com.nuvio.tv.core.debrid.DebridProviders
-import com.nuvio.tv.core.qr.QrCodeGenerator
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.domain.model.DebridStreamAudioChannel
-import com.nuvio.tv.domain.model.DebridStreamAudioTag
-import com.nuvio.tv.domain.model.DebridStreamEncode
-import com.nuvio.tv.domain.model.DebridStreamLanguage
-import com.nuvio.tv.domain.model.DebridStreamPreferences
-import com.nuvio.tv.domain.model.DebridStreamQuality
-import com.nuvio.tv.domain.model.DebridStreamResolution
-import com.nuvio.tv.domain.model.DebridStreamSortCriterion
-import com.nuvio.tv.domain.model.DebridStreamSortDirection
-import com.nuvio.tv.domain.model.DebridStreamSortKey
-import com.nuvio.tv.domain.model.DebridStreamVisualTag
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.addon.QrCodeOverlay
+import us.xnetik.tv.R
+import us.xnetik.tv.core.debrid.DebridDeviceAuthorization
+import us.xnetik.tv.core.debrid.DebridDeviceAuthorizationTokenResult
+import us.xnetik.tv.core.debrid.DebridProvider
+import us.xnetik.tv.core.debrid.DebridProviderAuthMethod
+import us.xnetik.tv.core.debrid.DebridProviders
+import us.xnetik.tv.core.qr.QrCodeGenerator
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.domain.model.DebridStreamAudioChannel
+import us.xnetik.tv.domain.model.DebridStreamAudioTag
+import us.xnetik.tv.domain.model.DebridStreamEncode
+import us.xnetik.tv.domain.model.DebridStreamLanguage
+import us.xnetik.tv.domain.model.DebridStreamPreferences
+import us.xnetik.tv.domain.model.DebridStreamQuality
+import us.xnetik.tv.domain.model.DebridStreamResolution
+import us.xnetik.tv.domain.model.DebridStreamSortCriterion
+import us.xnetik.tv.domain.model.DebridStreamSortDirection
+import us.xnetik.tv.domain.model.DebridStreamSortKey
+import us.xnetik.tv.domain.model.DebridStreamVisualTag
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.addon.QrCodeOverlay
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 

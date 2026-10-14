@@ -1,18 +1,18 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import android.content.Context
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.data.remote.dto.MetaDto
-import com.nuvio.tv.data.remote.dto.MetaResponseDto
-import com.nuvio.tv.data.repository.MetaRepositoryImpl
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.AddonResource
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.TmdbSettings
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.data.remote.dto.MetaDto
+import us.xnetik.tv.data.remote.dto.MetaResponseDto
+import us.xnetik.tv.data.repository.MetaRepositoryImpl
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.AddonResource
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.TmdbSettings
+import us.xnetik.tv.domain.repository.AddonRepository
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -134,7 +134,7 @@ class HomeEnrichmentRepositoryBoundaryTest {
     private fun HomeViewModel.seedCatalog(item: MetaPreview) {
         synchronized(catalogStateLock) {
             val rowKey = "seeded-row"
-            catalogsMap[rowKey] = com.nuvio.tv.domain.model.CatalogRow(
+            catalogsMap[rowKey] = us.xnetik.tv.domain.model.CatalogRow(
                 addonId = "catalog.addon",
                 addonName = "Catalog Addon",
                 addonBaseUrl = catalogSourceUrl,
@@ -163,21 +163,21 @@ class HomeEnrichmentRepositoryBoundaryTest {
     )
 
     private fun newViewModel(metaRepository: MetaRepositoryImpl): HomeViewModel {
-        val profileManager = mockk<com.nuvio.tv.core.profile.ProfileManager>(relaxed = true) {
+        val profileManager = mockk<us.xnetik.tv.core.profile.ProfileManager>(relaxed = true) {
             every { activeProfileReady } returns MutableStateFlow(false)
             every { activeProfileId } returns MutableStateFlow(1)
         }
         val cwEnrichmentCache =
-            mockk<com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache>(relaxed = true) {
+            mockk<us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache>(relaxed = true) {
                 every { cacheCleared } returns MutableStateFlow(0)
             }
         val watchProgressRepository =
-            mockk<com.nuvio.tv.domain.repository.WatchProgressRepository>(relaxed = true) {
+            mockk<us.xnetik.tv.domain.repository.WatchProgressRepository>(relaxed = true) {
                 every { getAllEpisodeProgress(any()) } returns flowOf(emptyMap())
             }
         val viewModel = HomeViewModel(
             episodeShuffleStore = mockk(relaxed = true),
-            episodeShuffle = com.nuvio.tv.domain.model.EpisodeShuffle(),
+            episodeShuffle = us.xnetik.tv.domain.model.EpisodeShuffle(),
             appContext = mockk(relaxed = true),
             addonRepository = mockk(relaxed = true),
             startupSyncService = mockk(relaxed = true),

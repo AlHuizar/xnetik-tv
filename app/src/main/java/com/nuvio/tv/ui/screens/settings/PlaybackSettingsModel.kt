@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.annotation.StringRes
 import androidx.compose.material.icons.Icons
@@ -13,9 +13,9 @@ import androidx.compose.material.icons.filled.SmartDisplay
 import androidx.compose.material.icons.filled.Subtitles
 import androidx.compose.material.icons.filled.VideoSettings
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.PlayerSettings
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.PlayerSettings
 
 internal typealias PlaybackSettingsUpdate = (suspend PlaybackSettingsViewModel.() -> Unit) -> Unit
 

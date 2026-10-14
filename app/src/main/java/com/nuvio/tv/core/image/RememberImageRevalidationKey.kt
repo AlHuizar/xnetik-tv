@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.image
+package us.xnetik.tv.core.image
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

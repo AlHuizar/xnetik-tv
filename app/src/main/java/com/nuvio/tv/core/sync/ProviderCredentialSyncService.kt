@@ -1,15 +1,15 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.os.SystemClock
 import android.util.Log
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.debrid.DebridProviders
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.AnimeSkipSettingsDataStore
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.local.MDBListSettingsDataStore
-import com.nuvio.tv.data.remote.supabase.SupabaseProviderCredential
-import com.nuvio.tv.domain.model.AuthState
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.debrid.DebridProviders
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.AnimeSkipSettingsDataStore
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.local.MDBListSettingsDataStore
+import us.xnetik.tv.data.remote.supabase.SupabaseProviderCredential
+import us.xnetik.tv.domain.model.AuthState
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope

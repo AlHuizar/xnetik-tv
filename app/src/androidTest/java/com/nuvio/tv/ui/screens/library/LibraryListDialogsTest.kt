@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
 import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.test.assertIsDisplayed
@@ -12,12 +12,12 @@ import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.TrackingListManagementCapabilities
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.components.posteroptions.PosterListPickerDialog
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.TrackingListManagementCapabilities
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.components.posteroptions.PosterListPickerDialog
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test

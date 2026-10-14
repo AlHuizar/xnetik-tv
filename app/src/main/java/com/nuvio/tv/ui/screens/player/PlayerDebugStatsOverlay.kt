@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.content.Context
 import android.net.TrafficStats
@@ -33,7 +33,7 @@ import androidx.compose.ui.unit.sp
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.tv.material3.Text
-import com.nuvio.tv.core.network.StreamSpeedTester
+import us.xnetik.tv.core.network.StreamSpeedTester
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext

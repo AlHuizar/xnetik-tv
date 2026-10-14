@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,8 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.ui.components.P2pConsentDialog
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.ui.components.P2pConsentDialog
 
 internal object PlaybackSettingsTestTags {
     fun section(section: PlaybackSection): String = "playback_section_${section.name.lowercase()}"

@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.data.remote.dto.trakt.TraktCommentDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktCommentUserDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktIdsDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktMovieDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktSearchResultDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktShowDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktCommentDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktCommentUserDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktIdsDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktMovieDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktSearchResultDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktShowDto
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull

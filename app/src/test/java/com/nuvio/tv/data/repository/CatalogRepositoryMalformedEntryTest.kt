@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.data.remote.dto.CatalogResponseDto
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.data.remote.dto.CatalogResponseDto
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import io.mockk.coEvery
@@ -40,7 +40,7 @@ class CatalogRepositoryMalformedEntryTest {
         coEvery { api.getCatalog(any()) } returns Response.success(response)
         val layoutPrefs = mockk<LayoutPreferenceDataStore> {
             every { customPosterUrlPattern } returns flowOf("")
-            every { customPosterEnabledScreens } returns flowOf(com.nuvio.tv.core.poster.CustomPosterScreen.ALL)
+            every { customPosterEnabledScreens } returns flowOf(us.xnetik.tv.core.poster.CustomPosterScreen.ALL)
         }
         val repository = CatalogRepositoryImpl(
             context = mockk<Context>(relaxed = true),

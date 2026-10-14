@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.server
+package us.xnetik.tv.core.server
 
 import android.content.Context
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import fi.iki.elonen.NanoHTTPD
 import java.nio.charset.StandardCharsets
 

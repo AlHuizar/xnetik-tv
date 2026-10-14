@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.mediaserver.mediabrowser
+package us.xnetik.tv.data.mediaserver.mediabrowser
 
-import com.nuvio.tv.data.mediaserver.ServerException
-import com.nuvio.tv.data.mediaserver.ServerFailure
+import us.xnetik.tv.data.mediaserver.ServerException
+import us.xnetik.tv.data.mediaserver.ServerFailure
 import java.io.IOException
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException

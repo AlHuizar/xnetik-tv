@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
-import com.nuvio.tv.MainDispatcherRule
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.MainDispatcherRule
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.model.LibrarySourceMode
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk

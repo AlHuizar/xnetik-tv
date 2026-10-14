@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.components.posteroptions
+package us.xnetik.tv.ui.components.posteroptions
 
 import androidx.compose.runtime.Immutable
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
 
 @Immutable
 data class PosterOptionsState(

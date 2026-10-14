@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.logging
+package us.xnetik.tv.core.logging
 
 fun String?.rawForLog(): String =
     this ?: "(null)"

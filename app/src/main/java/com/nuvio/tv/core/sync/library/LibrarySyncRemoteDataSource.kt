@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.sync.library
+package us.xnetik.tv.core.sync.library
 
-import com.nuvio.tv.domain.model.LibraryDeltaEvent
-import com.nuvio.tv.domain.model.LibrarySyncKey
-import com.nuvio.tv.domain.model.SavedLibraryItem
+import us.xnetik.tv.domain.model.LibraryDeltaEvent
+import us.xnetik.tv.domain.model.LibrarySyncKey
+import us.xnetik.tv.domain.model.SavedLibraryItem
 
 interface LibrarySyncRemoteDataSource {
     suspend fun pullSnapshot(

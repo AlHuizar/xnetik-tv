@@ -1,23 +1,23 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import android.util.Log
 import kotlinx.coroutines.CancellationException
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.LocaleCache
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.poster.CustomPosterScreen
-import com.nuvio.tv.core.poster.patternForScreen
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.core.tmdb.TmdbEnrichment
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.HomeImdbRatingsVisibility
-import com.nuvio.tv.domain.model.DetailImdbRatingsVisibility
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.TmdbSettings
+import us.xnetik.tv.LocaleCache
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.poster.CustomPosterScreen
+import us.xnetik.tv.core.poster.patternForScreen
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.core.tmdb.TmdbEnrichment
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.HomeImdbRatingsVisibility
+import us.xnetik.tv.domain.model.DetailImdbRatingsVisibility
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.TmdbSettings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.async
@@ -846,7 +846,7 @@ private fun HomeViewModel.applyEnrichmentToDisplayedRows(
         if (state.homeLayout == HomeLayout.MODERN) return@update state
         var changed = false
 
-        fun patch(row: com.nuvio.tv.domain.model.CatalogRow): com.nuvio.tv.domain.model.CatalogRow {
+        fun patch(row: us.xnetik.tv.domain.model.CatalogRow): us.xnetik.tv.domain.model.CatalogRow {
             val index = row.items.indexOfFirst { it.id == itemId }
             if (index < 0) return row
             val merged = transform(row.items[index])
@@ -931,7 +931,7 @@ private fun HomeViewModel.updateCatalogItemWithTmdb(itemId: String, enrichment: 
 
 internal fun HomeViewModel.updateCatalogItemMdbListRatings(
     itemId: String,
-    ratings: com.nuvio.tv.domain.model.MDBListRatings
+    ratings: us.xnetik.tv.domain.model.MDBListRatings
 ) {
     val order = currentMdbListSettings.ratingOrder
     fun mergeItem(currentItem: MetaPreview): MetaPreview =

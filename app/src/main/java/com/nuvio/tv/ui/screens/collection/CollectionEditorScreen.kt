@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.collection
+package us.xnetik.tv.ui.screens.collection
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -74,20 +74,20 @@ import androidx.tv.material3.Switch
 import androidx.tv.material3.SwitchDefaults
 import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
-import com.nuvio.tv.domain.model.AddonCatalogCollectionSource
-import com.nuvio.tv.domain.model.CollectionFolder
-import com.nuvio.tv.domain.model.CollectionSource
-import com.nuvio.tv.domain.model.FolderViewMode
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.TmdbCollectionFilters
-import com.nuvio.tv.domain.model.TmdbCollectionMediaType
-import com.nuvio.tv.domain.model.TmdbCollectionSort
-import com.nuvio.tv.domain.model.TmdbCollectionSource
-import com.nuvio.tv.domain.model.TmdbCollectionSourceType
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.R
+import us.xnetik.tv.domain.model.AddonCatalogCollectionSource
+import us.xnetik.tv.domain.model.CollectionFolder
+import us.xnetik.tv.domain.model.CollectionSource
+import us.xnetik.tv.domain.model.FolderViewMode
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.TmdbCollectionFilters
+import us.xnetik.tv.domain.model.TmdbCollectionMediaType
+import us.xnetik.tv.domain.model.TmdbCollectionSort
+import us.xnetik.tv.domain.model.TmdbCollectionSource
+import us.xnetik.tv.domain.model.TmdbCollectionSourceType
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.R
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.TextStyle
@@ -537,9 +537,9 @@ private fun FolderListItem(
                 )
                 val shapeLabel = stringResource(
                     when (folder.tileShape) {
-                        com.nuvio.tv.domain.model.PosterShape.POSTER -> R.string.collections_editor_shape_poster
-                        com.nuvio.tv.domain.model.PosterShape.LANDSCAPE -> R.string.collections_editor_shape_wide
-                        com.nuvio.tv.domain.model.PosterShape.SQUARE -> R.string.collections_editor_shape_square
+                        us.xnetik.tv.domain.model.PosterShape.POSTER -> R.string.collections_editor_shape_poster
+                        us.xnetik.tv.domain.model.PosterShape.LANDSCAPE -> R.string.collections_editor_shape_wide
+                        us.xnetik.tv.domain.model.PosterShape.SQUARE -> R.string.collections_editor_shape_square
                     }
                 )
                 Text(

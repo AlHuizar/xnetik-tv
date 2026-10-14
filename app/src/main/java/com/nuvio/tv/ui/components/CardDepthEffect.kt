@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.foundation.border
 import androidx.compose.runtime.staticCompositionLocalOf
@@ -9,9 +9,9 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
-import com.nuvio.tv.domain.model.CardDepthStyle
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_COVERAGE
+import us.xnetik.tv.domain.model.CardDepthStyle
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_COVERAGE
 
 val LocalCardDepthStyle = staticCompositionLocalOf { CardDepthStyle() }
 

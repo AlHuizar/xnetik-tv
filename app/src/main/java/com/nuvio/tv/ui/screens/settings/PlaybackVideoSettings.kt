@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.app.Activity
 import android.content.Context
@@ -37,14 +37,14 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.core.player.DisplayCapabilities
-import com.nuvio.tv.data.local.Dv7HandlingMode
-import com.nuvio.tv.data.local.FrameRateMatchingMode
-import com.nuvio.tv.data.local.MpvHardwareDecodeMode
-import com.nuvio.tv.data.local.PlayerPreference
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.core.player.DisplayCapabilities
+import us.xnetik.tv.data.local.Dv7HandlingMode
+import us.xnetik.tv.data.local.FrameRateMatchingMode
+import us.xnetik.tv.data.local.MpvHardwareDecodeMode
+import us.xnetik.tv.data.local.PlayerPreference
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 @Composable
 internal fun PlaybackVideoSection(

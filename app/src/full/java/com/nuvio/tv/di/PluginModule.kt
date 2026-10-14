@@ -1,13 +1,13 @@
-package com.nuvio.tv.di
+package us.xnetik.tv.di
 
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.plugin.PluginManager
-import com.nuvio.tv.core.plugin.PluginRuntime
-import com.nuvio.tv.core.plugin.cloudstream.ExternalExtensionLoader
-import com.nuvio.tv.core.plugin.cloudstream.ExternalExtensionRunner
-import com.nuvio.tv.core.plugin.cloudstream.ExternalRepoParser
-import com.nuvio.tv.core.sync.PluginSyncService
-import com.nuvio.tv.data.local.PluginDataStore
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.plugin.PluginManager
+import us.xnetik.tv.core.plugin.PluginRuntime
+import us.xnetik.tv.core.plugin.cloudstream.ExternalExtensionLoader
+import us.xnetik.tv.core.plugin.cloudstream.ExternalExtensionRunner
+import us.xnetik.tv.core.plugin.cloudstream.ExternalRepoParser
+import us.xnetik.tv.core.sync.PluginSyncService
+import us.xnetik.tv.data.local.PluginDataStore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

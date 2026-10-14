@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import android.util.Log
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -9,29 +9,29 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.sync.LocalHomeCatalogSettingsState
-import com.nuvio.tv.core.sync.SyncHomeCatalogPayload
-import com.nuvio.tv.core.sync.buildHomeCatalogSyncPayload
-import com.nuvio.tv.core.sync.homeCatalogKey
-import com.nuvio.tv.core.sync.homeCollectionKey
-import com.nuvio.tv.core.sync.withLocalServerKeys
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CardDepthStyle
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.ContinueWatchingSortMode
-import com.nuvio.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_COVERAGE
-import com.nuvio.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_STRENGTH
-import com.nuvio.tv.domain.model.DEFAULT_CARD_DEPTH_SHEEN_STRENGTH
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.DetailImdbRatingsVisibility
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.domain.model.HomeImdbRatingsVisibility
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.sync.LocalHomeCatalogSettingsState
+import us.xnetik.tv.core.sync.SyncHomeCatalogPayload
+import us.xnetik.tv.core.sync.buildHomeCatalogSyncPayload
+import us.xnetik.tv.core.sync.homeCatalogKey
+import us.xnetik.tv.core.sync.homeCollectionKey
+import us.xnetik.tv.core.sync.withLocalServerKeys
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CardDepthStyle
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.ContinueWatchingSortMode
+import us.xnetik.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_COVERAGE
+import us.xnetik.tv.domain.model.DEFAULT_CARD_DEPTH_EDGE_STRENGTH
+import us.xnetik.tv.domain.model.DEFAULT_CARD_DEPTH_SHEEN_STRENGTH
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.DetailImdbRatingsVisibility
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.domain.model.HomeImdbRatingsVisibility
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -437,8 +437,8 @@ class LayoutPreferenceDataStore @Inject constructor(
         prefs[customPosterUrlPatternKey] ?: ""
     }
 
-    val customPosterEnabledScreens: Flow<Set<com.nuvio.tv.core.poster.CustomPosterScreen>> = profileFlow { prefs ->
-        com.nuvio.tv.core.poster.CustomPosterScreen.fromStorageValue(prefs[customPosterEnabledScreensKey])
+    val customPosterEnabledScreens: Flow<Set<us.xnetik.tv.core.poster.CustomPosterScreen>> = profileFlow { prefs ->
+        us.xnetik.tv.core.poster.CustomPosterScreen.fromStorageValue(prefs[customPosterEnabledScreensKey])
     }
 
     suspend fun setMemoryOnlyVerticalScroll(enabled: Boolean) {
@@ -488,9 +488,9 @@ class LayoutPreferenceDataStore @Inject constructor(
         }
     }
 
-    suspend fun setCustomPosterEnabledScreens(screens: Set<com.nuvio.tv.core.poster.CustomPosterScreen>) {
+    suspend fun setCustomPosterEnabledScreens(screens: Set<us.xnetik.tv.core.poster.CustomPosterScreen>) {
         store().edit { prefs ->
-            val stored = com.nuvio.tv.core.poster.CustomPosterScreen.toStorageValue(screens)
+            val stored = us.xnetik.tv.core.poster.CustomPosterScreen.toStorageValue(screens)
             if (stored == null) {
                 prefs.remove(customPosterEnabledScreensKey)
             } else {

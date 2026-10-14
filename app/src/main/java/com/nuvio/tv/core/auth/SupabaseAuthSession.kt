@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.auth
+package us.xnetik.tv.core.auth
 
-import com.nuvio.tv.data.remote.supabase.TvLoginExchangeResult
+import us.xnetik.tv.data.remote.supabase.TvLoginExchangeResult
 import io.github.jan.supabase.auth.Auth
 import io.github.jan.supabase.auth.user.UserInfo
 import io.github.jan.supabase.auth.user.UserSession

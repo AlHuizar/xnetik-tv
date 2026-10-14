@@ -1,18 +1,18 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.AVAILABLE_SUBTITLE_LANGUAGES
-import com.nuvio.tv.data.local.LibassRenderType
-import com.nuvio.tv.data.local.PlayerPreference
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.SubtitleLanguageOption
-import com.nuvio.tv.data.local.SubtitleStyleSettings
-import com.nuvio.tv.data.local.displayName
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.AVAILABLE_SUBTITLE_LANGUAGES
+import us.xnetik.tv.data.local.LibassRenderType
+import us.xnetik.tv.data.local.PlayerPreference
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.SubtitleLanguageOption
+import us.xnetik.tv.data.local.SubtitleStyleSettings
+import us.xnetik.tv.data.local.displayName
 
 private val subtitleColors = listOf(
     Color.White,

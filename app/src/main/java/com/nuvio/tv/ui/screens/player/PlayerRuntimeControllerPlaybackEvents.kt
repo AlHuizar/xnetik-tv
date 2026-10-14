@@ -1,26 +1,26 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.net.Uri
 import android.util.Log
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.SeekParameters
-import com.nuvio.tv.R
-import com.nuvio.tv.core.player.LastPlaybackDiagnostics
-import com.nuvio.tv.core.tracking.TRACKING_SCROBBLE_DIAGNOSTIC_TAG
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.core.tracking.TrackingScrobbleEvent
-import com.nuvio.tv.core.tracking.buildTrackingMediaReference
-import com.nuvio.tv.core.tracking.scrobbleDiagnosticIdentity
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.SubtitleStyleSettings
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.data.repository.PlaybackIssueErrorInput
-import com.nuvio.tv.data.repository.PlaybackIssuePlaybackSettingsInput
-import com.nuvio.tv.data.repository.PlaybackIssueReportInput
-import com.nuvio.tv.data.repository.SkipInterval
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.R
+import us.xnetik.tv.core.player.LastPlaybackDiagnostics
+import us.xnetik.tv.core.tracking.TRACKING_SCROBBLE_DIAGNOSTIC_TAG
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleEvent
+import us.xnetik.tv.core.tracking.buildTrackingMediaReference
+import us.xnetik.tv.core.tracking.scrobbleDiagnosticIdentity
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.SubtitleStyleSettings
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.repository.PlaybackIssueErrorInput
+import us.xnetik.tv.data.repository.PlaybackIssuePlaybackSettingsInput
+import us.xnetik.tv.data.repository.PlaybackIssueReportInput
+import us.xnetik.tv.data.repository.SkipInterval
+import us.xnetik.tv.domain.model.WatchProgress
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.isActive
@@ -171,7 +171,7 @@ internal fun shouldResetPostPlayStateAfterPlaybackEnded(
  * torrents, "service unavailable" error clips) often report a short duration and
  * reach STATE_ENDED. Treating those as natural completion marks the episode watched
  * and chains auto-play next through an entire season. Mirror the external-player
- * guard in [com.nuvio.tv.core.player.ExternalPlaybackTracker].
+ * guard in [us.xnetik.tv.core.player.ExternalPlaybackTracker].
  */
 internal fun shouldTreatAsNaturalPlaybackCompletion(
     hasRenderedFirstFrame: Boolean,
@@ -1650,7 +1650,7 @@ fun PlayerRuntimeController.onEvent(event: PlayerEvent) {
                 releasePlayer()
                 stopTorrentStream()
                 launchTorrentSourceStream(
-                    stream = com.nuvio.tv.domain.model.Stream(
+                    stream = us.xnetik.tv.domain.model.Stream(
                         name = _uiState.value.currentStreamName,
                         title = null,
                         description = null,
@@ -1891,9 +1891,9 @@ internal fun PlayerRuntimeController.buildStreamInfoData(): StreamInfoData {
             else -> null
         },
         playerEngine = when (currentInternalPlayerEngine) {
-            com.nuvio.tv.data.local.InternalPlayerEngine.EXOPLAYER -> context.getString(R.string.playback_engine_exoplayer)
-            com.nuvio.tv.data.local.InternalPlayerEngine.MVP_PLAYER -> context.getString(R.string.playback_engine_mvplayer)
-            com.nuvio.tv.data.local.InternalPlayerEngine.AUTO -> null
+            us.xnetik.tv.data.local.InternalPlayerEngine.EXOPLAYER -> context.getString(R.string.playback_engine_exoplayer)
+            us.xnetik.tv.data.local.InternalPlayerEngine.MVP_PLAYER -> context.getString(R.string.playback_engine_mvplayer)
+            us.xnetik.tv.data.local.InternalPlayerEngine.AUTO -> null
         },
         serverPlayback = serverPlaybackSummary()
     )

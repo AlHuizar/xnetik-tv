@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.data.local.TraktAuthDataStore
-import com.nuvio.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.domain.model.LibraryListPrivacy
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest

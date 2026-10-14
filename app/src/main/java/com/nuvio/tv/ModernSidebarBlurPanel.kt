@@ -1,4 +1,4 @@
-package com.nuvio.tv
+package us.xnetik.tv
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
@@ -52,16 +52,16 @@ import androidx.tv.material3.Icon
 import androidx.tv.material3.Text
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
-import com.nuvio.tv.ui.components.AutoResizeText
-import com.nuvio.tv.ui.components.BrandWordmark
-import com.nuvio.tv.ui.components.ProfileAvatarCircle
-import com.nuvio.tv.ui.theme.NuvioComponents
-import com.nuvio.tv.ui.theme.NuvioMotion
-import com.nuvio.tv.ui.theme.NuvioRadii
-import com.nuvio.tv.ui.theme.NuvioStrokes
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.accentBrush
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.components.AutoResizeText
+import us.xnetik.tv.ui.components.BrandWordmark
+import us.xnetik.tv.ui.components.ProfileAvatarCircle
+import us.xnetik.tv.ui.theme.NuvioComponents
+import us.xnetik.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioRadii
+import us.xnetik.tv.ui.theme.NuvioStrokes
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.accentBrush
+import us.xnetik.tv.ui.util.contentTextDirection
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.CompositingStrategy
 import androidx.compose.ui.draw.drawWithCache

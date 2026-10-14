@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.poster
+package us.xnetik.tv.core.poster
 
 import java.util.concurrent.ConcurrentHashMap
 

@@ -3,7 +3,7 @@
     androidx.compose.ui.ExperimentalComposeUiApi::class
 )
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -57,21 +57,21 @@ import coil3.request.crossfade
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalLayoutDirection
-import com.nuvio.tv.core.streams.StreamBadgePlacement
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.ui.components.SourceChipItem
-import com.nuvio.tv.ui.components.SourceChipStatus
-import com.nuvio.tv.ui.components.SourceStatusFilterChip
-import com.nuvio.tv.ui.components.StreamBadgeChips
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.toAbsoluteAlignment
+import us.xnetik.tv.core.streams.StreamBadgePlacement
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.ui.components.SourceChipItem
+import us.xnetik.tv.ui.components.SourceChipStatus
+import us.xnetik.tv.ui.components.SourceStatusFilterChip
+import us.xnetik.tv.ui.components.StreamBadgeChips
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.toAbsoluteAlignment
 import androidx.compose.ui.res.stringResource
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.withFrameNanos
 import kotlinx.coroutines.launch as coroutineLaunch
-import com.nuvio.tv.ui.components.RefreshFilterChip
-import com.nuvio.tv.R
+import us.xnetik.tv.ui.components.RefreshFilterChip
+import us.xnetik.tv.R
 
 @Composable
 internal fun StreamItem(

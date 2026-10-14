@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.trakt
+package us.xnetik.tv.core.trakt
 
-import com.nuvio.tv.data.remote.dto.trakt.TraktImagesDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktImagesDto
 
 private val traktHostPattern = Regex("""^[a-z0-9.-]*trakt\.tv/""", RegexOption.IGNORE_CASE)
 

@@ -1,27 +1,27 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.CollectionFolder
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.stableKey
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
-import com.nuvio.tv.ui.util.localizedContentType
-import com.nuvio.tv.ui.util.computeAirDateBadgeText
-import com.nuvio.tv.ui.util.formatHeroRuntime
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.components.formatContinueWatchingProgressLabel
-import com.nuvio.tv.ui.util.StableList
-import com.nuvio.tv.ui.util.StableMap
-import com.nuvio.tv.ui.util.StableSet
-import com.nuvio.tv.ui.util.asStable
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.CollectionFolder
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.stableKey
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.util.localizedContentType
+import us.xnetik.tv.ui.util.computeAirDateBadgeText
+import us.xnetik.tv.ui.util.formatHeroRuntime
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.components.formatContinueWatchingProgressLabel
+import us.xnetik.tv.ui.util.StableList
+import us.xnetik.tv.ui.util.StableMap
+import us.xnetik.tv.ui.util.StableSet
+import us.xnetik.tv.ui.util.asStable
 
 internal val YEAR_REGEX = Regex("""\b(19|20)\d{2}\b""")
 internal const val MODERN_HERO_TEXT_WIDTH_FRACTION = 0.42f
@@ -58,8 +58,8 @@ data class HeroPreview(
     val poster: String?,
     val backdrop: String?,
     val imageUrl: String?,
-    val mdbListRatings: com.nuvio.tv.domain.model.MDBListRatings? = null,
-    val mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    val mdbListRatings: us.xnetik.tv.domain.model.MDBListRatings? = null,
+    val mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     /** Snapshot of the backdrop URL captured before TMDB enrichment.
      *  Survives cache rebuilds so landscape cards keep their original art
      *  even after navigation away and back. */
@@ -287,8 +287,8 @@ internal fun buildContinueWatchingItem(
     item: ContinueWatchingItem,
     useLandscapePosters: Boolean,
     showImdbRatings: Boolean,
-    detailImdbRatingsVisibility: com.nuvio.tv.domain.model.DetailImdbRatingsVisibility =
-        com.nuvio.tv.domain.model.DetailImdbRatingsVisibility.SHOW_ALL,
+    detailImdbRatingsVisibility: us.xnetik.tv.domain.model.DetailImdbRatingsVisibility =
+        us.xnetik.tv.domain.model.DetailImdbRatingsVisibility.SHOW_ALL,
     airsDateTemplate: String,
     upcomingLabel: String,
     context: android.content.Context

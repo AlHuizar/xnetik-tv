@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.util.Log
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.data.remote.api.TraktApi
-import com.nuvio.tv.data.remote.dto.trakt.TraktEpisodeDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktIdsDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktMovieDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktScrobbleRequestDto
-import com.nuvio.tv.data.remote.dto.trakt.TraktShowDto
-import com.nuvio.tv.core.profile.ProfileManager
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.data.remote.api.TraktApi
+import us.xnetik.tv.data.remote.dto.trakt.TraktEpisodeDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktIdsDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktMovieDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktScrobbleRequestDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktShowDto
+import us.xnetik.tv.core.profile.ProfileManager
 import kotlinx.coroutines.delay
 import java.io.IOException
 import javax.inject.Inject

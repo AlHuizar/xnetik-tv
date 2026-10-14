@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.trailer
+package us.xnetik.tv.data.trailer
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

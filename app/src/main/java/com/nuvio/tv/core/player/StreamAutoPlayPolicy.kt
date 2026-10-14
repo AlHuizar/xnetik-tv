@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.StreamAutoPlayMode
 
 object StreamAutoPlayPolicy {
     fun isEffectivelyEnabled(playerSettings: PlayerSettings): Boolean {

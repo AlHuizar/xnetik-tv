@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import android.util.Log
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
-import com.nuvio.tv.core.tracking.mergeTrackingMembershipWithTabs
-import com.nuvio.tv.core.tracking.toggleTrackingMembershipSelection
-import com.nuvio.tv.data.repository.parseContentIds
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.core.tracking.mergeTrackingMembershipWithTabs
+import us.xnetik.tv.core.tracking.toggleTrackingMembershipSelection
+import us.xnetik.tv.data.repository.parseContentIds
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.WatchProgress
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
@@ -163,7 +163,7 @@ fun HomeViewModel.openPosterListPicker(item: MetaPreview, addonBaseUrl: String?)
                 state.copy(
                     showPosterListPicker = true,
                     posterListPickerPending = false,
-                    posterListPickerError = error.message ?: appContext.getString(com.nuvio.tv.R.string.home_poster_lists_error_load_failed)
+                    posterListPickerError = error.message ?: appContext.getString(us.xnetik.tv.R.string.home_poster_lists_error_load_failed)
                 )
             }
         }
@@ -223,7 +223,7 @@ fun HomeViewModel.savePosterListPickerMembership() {
             _uiState.update { state ->
                 state.copy(
                     posterListPickerPending = false,
-                    posterListPickerError = error.message ?: appContext.getString(com.nuvio.tv.R.string.home_poster_lists_error_update_failed)
+                    posterListPickerError = error.message ?: appContext.getString(us.xnetik.tv.R.string.home_poster_lists_error_update_failed)
                 )
             }
         }
@@ -266,7 +266,7 @@ fun HomeViewModel.confirmPosterListPickerRemoval() {
                     posterListPickerPending = false,
                     posterListPickerRemovalConfirmations = emptyList(),
                     posterListPickerError = error.message
-                        ?: appContext.getString(com.nuvio.tv.R.string.home_poster_lists_error_update_failed)
+                        ?: appContext.getString(us.xnetik.tv.R.string.home_poster_lists_error_update_failed)
                 )
             }
         }
@@ -449,12 +449,12 @@ private suspend fun HomeViewModel.unmarkSeriesWatched(item: MetaPreview) {
     )
 }
 
-private suspend fun HomeViewModel.fetchSeriesEpisodes(item: MetaPreview): List<com.nuvio.tv.domain.model.Video> {
+private suspend fun HomeViewModel.fetchSeriesEpisodes(item: MetaPreview): List<us.xnetik.tv.domain.model.Video> {
     val type = if (item.apiType.equals("tv", ignoreCase = true)) "series" else item.apiType
-    var episodes: List<com.nuvio.tv.domain.model.Video> = emptyList()
+    var episodes: List<us.xnetik.tv.domain.model.Video> = emptyList()
     metaRepository.getMetaFromPrimaryAddon(type, item.id)
         .collect { networkResult ->
-            if (networkResult is com.nuvio.tv.core.network.NetworkResult.Success) {
+            if (networkResult is us.xnetik.tv.core.network.NetworkResult.Success) {
                 episodes = networkResult.data.watchableEpisodes()
             }
         }

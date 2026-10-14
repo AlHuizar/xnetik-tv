@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.ambient
+package us.xnetik.tv.ui.screens.ambient
 
 import androidx.compose.ui.graphics.GraphicsLayerScope
 import androidx.compose.ui.util.lerp

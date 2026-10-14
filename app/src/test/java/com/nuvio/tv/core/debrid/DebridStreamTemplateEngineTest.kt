@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

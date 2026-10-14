@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
 import android.util.Log
 import java.io.File

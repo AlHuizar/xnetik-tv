@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 import javax.inject.Inject
 import javax.inject.Singleton

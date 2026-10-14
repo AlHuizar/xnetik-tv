@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import androidx.annotation.StringRes
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @StringRes
 fun ServerFailure.messageRes(): Int = when (this) {

@@ -1,11 +1,11 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.util.Log
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.PluginDataStore
-import com.nuvio.tv.data.remote.supabase.SupabasePlugin
-import com.nuvio.tv.domain.model.RemotePluginInfo
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.PluginDataStore
+import us.xnetik.tv.data.remote.supabase.SupabasePlugin
+import us.xnetik.tv.domain.model.RemotePluginInfo
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

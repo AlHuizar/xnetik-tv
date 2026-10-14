@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.util.Log
-import com.nuvio.tv.R
-import com.nuvio.tv.data.repository.PlaybackIssueErrorInput
+import us.xnetik.tv.R
+import us.xnetik.tv.data.repository.PlaybackIssueErrorInput
 import `is`.xyz.mpv.MPV
 import `is`.xyz.mpv.MPVNode
 import kotlinx.coroutines.delay

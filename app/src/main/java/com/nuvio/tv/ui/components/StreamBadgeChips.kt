@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.MarqueeSpacing
 import androidx.compose.foundation.background
@@ -31,7 +31,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.disk.DiskCache
@@ -43,7 +43,7 @@ import coil3.request.allowHardware
 import coil3.request.allowRgb565
 import coil3.request.crossfade
 import coil3.size.Precision
-import com.nuvio.tv.domain.model.StreamBadge
+import us.xnetik.tv.domain.model.StreamBadge
 import okio.Path.Companion.toOkioPath
 import kotlin.math.round
 

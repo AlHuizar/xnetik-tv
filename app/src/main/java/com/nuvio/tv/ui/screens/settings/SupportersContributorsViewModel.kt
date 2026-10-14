@@ -1,15 +1,15 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.repository.GitHubContributor
-import com.nuvio.tv.data.repository.GitHubContributorsRepository
-import com.nuvio.tv.data.repository.MembershipOverviewRepository
-import com.nuvio.tv.data.repository.DevelopmentSponsor
-import com.nuvio.tv.data.repository.SponsorsRepository
-import com.nuvio.tv.data.repository.SupporterMember
-import com.nuvio.tv.data.repository.SupportersRepository
-import com.nuvio.tv.domain.model.MembershipOverviewState
+import us.xnetik.tv.data.repository.GitHubContributor
+import us.xnetik.tv.data.repository.GitHubContributorsRepository
+import us.xnetik.tv.data.repository.MembershipOverviewRepository
+import us.xnetik.tv.data.repository.DevelopmentSponsor
+import us.xnetik.tv.data.repository.SponsorsRepository
+import us.xnetik.tv.data.repository.SupporterMember
+import us.xnetik.tv.data.repository.SupportersRepository
+import us.xnetik.tv.domain.model.MembershipOverviewState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -163,7 +163,7 @@ class SupportersContributorsViewModel @Inject constructor(
                             isSupportersLoading = false,
                             hasLoadedSupporters = false,
                             supporters = emptyList(),
-                            supportersErrorMessage = error.message ?: appContext.getString(com.nuvio.tv.R.string.supporters_error_load)
+                            supportersErrorMessage = error.message ?: appContext.getString(us.xnetik.tv.R.string.supporters_error_load)
                         )
                     }
                 }
@@ -200,7 +200,7 @@ class SupportersContributorsViewModel @Inject constructor(
                             isContributorsLoading = false,
                             hasLoadedContributors = false,
                             contributors = emptyList(),
-                            contributorsErrorMessage = error.message ?: appContext.getString(com.nuvio.tv.R.string.contributors_error_load)
+                            contributorsErrorMessage = error.message ?: appContext.getString(us.xnetik.tv.R.string.contributors_error_load)
                         )
                     }
                 }
@@ -237,7 +237,7 @@ class SupportersContributorsViewModel @Inject constructor(
                             isSponsorsLoading = false,
                             hasLoadedSponsors = false,
                             sponsors = emptyList(),
-                            sponsorsErrorMessage = error.message ?: appContext.getString(com.nuvio.tv.R.string.sponsors_error_load)
+                            sponsorsErrorMessage = error.message ?: appContext.getString(us.xnetik.tv.R.string.sponsors_error_load)
                         )
                     }
                 }

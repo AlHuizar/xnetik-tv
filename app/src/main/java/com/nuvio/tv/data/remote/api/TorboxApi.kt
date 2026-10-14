@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.remote.api
+package us.xnetik.tv.data.remote.api
 
-import com.nuvio.tv.data.remote.dto.TorboxCreateTorrentDataDto
-import com.nuvio.tv.data.remote.dto.TorboxCloudItemDto
-import com.nuvio.tv.data.remote.dto.TorboxCachedItemDto
-import com.nuvio.tv.data.remote.dto.TorboxCheckCachedRequestDto
-import com.nuvio.tv.data.remote.dto.TorboxDeviceAuthorizationDto
-import com.nuvio.tv.data.remote.dto.TorboxDeviceTokenDto
-import com.nuvio.tv.data.remote.dto.TorboxDeviceTokenRequestDto
-import com.nuvio.tv.data.remote.dto.TorboxEnvelopeDto
-import com.nuvio.tv.data.remote.dto.TorboxTorrentDataDto
+import us.xnetik.tv.data.remote.dto.TorboxCreateTorrentDataDto
+import us.xnetik.tv.data.remote.dto.TorboxCloudItemDto
+import us.xnetik.tv.data.remote.dto.TorboxCachedItemDto
+import us.xnetik.tv.data.remote.dto.TorboxCheckCachedRequestDto
+import us.xnetik.tv.data.remote.dto.TorboxDeviceAuthorizationDto
+import us.xnetik.tv.data.remote.dto.TorboxDeviceTokenDto
+import us.xnetik.tv.data.remote.dto.TorboxDeviceTokenRequestDto
+import us.xnetik.tv.data.remote.dto.TorboxEnvelopeDto
+import us.xnetik.tv.data.remote.dto.TorboxTorrentDataDto
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
 import retrofit2.Response

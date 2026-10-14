@@ -1,16 +1,16 @@
-package com.nuvio.tv.data.mapper
+package us.xnetik.tv.data.mapper
 
-import com.nuvio.tv.data.remote.dto.AppExtrasCastMemberDto
-import com.nuvio.tv.data.remote.dto.MetaBehaviorHintsDto
-import com.nuvio.tv.data.remote.dto.MetaReleaseDateCountryDto
-import com.nuvio.tv.data.remote.dto.MetaReleaseDatesEnvelopeDto
-import com.nuvio.tv.data.remote.dto.MetaTrailerDto
-import com.nuvio.tv.data.remote.dto.TrailerStreamDto
-import com.nuvio.tv.domain.model.MetaBehaviorHints
-import com.nuvio.tv.domain.model.MetaCastMember
-import com.nuvio.tv.domain.model.MetaReleaseDate
-import com.nuvio.tv.domain.model.MetaReleaseDateCountry
-import com.nuvio.tv.domain.model.MetaTrailer
+import us.xnetik.tv.data.remote.dto.AppExtrasCastMemberDto
+import us.xnetik.tv.data.remote.dto.MetaBehaviorHintsDto
+import us.xnetik.tv.data.remote.dto.MetaReleaseDateCountryDto
+import us.xnetik.tv.data.remote.dto.MetaReleaseDatesEnvelopeDto
+import us.xnetik.tv.data.remote.dto.MetaTrailerDto
+import us.xnetik.tv.data.remote.dto.TrailerStreamDto
+import us.xnetik.tv.domain.model.MetaBehaviorHints
+import us.xnetik.tv.domain.model.MetaCastMember
+import us.xnetik.tv.domain.model.MetaReleaseDate
+import us.xnetik.tv.domain.model.MetaReleaseDateCountry
+import us.xnetik.tv.domain.model.MetaTrailer
 
 internal fun coerceStringList(value: Any?): List<String> {
     return when (value) {

@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import kotlinx.serialization.json.JsonPrimitive
 import org.junit.Assert.assertEquals

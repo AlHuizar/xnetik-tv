@@ -1,17 +1,17 @@
-package com.nuvio.tv.ui.screens.tmdb
+package us.xnetik.tv.ui.screens.tmdb
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.core.tmdb.TmdbEntityBrowseData
-import com.nuvio.tv.core.tmdb.TmdbEntityKind
-import com.nuvio.tv.core.tmdb.TmdbEntityRailType
-import com.nuvio.tv.core.tmdb.TmdbEntityMediaType
-import com.nuvio.tv.core.tmdb.TmdbMetadataService
-import com.nuvio.tv.data.local.TmdbSettingsDataStore
+import us.xnetik.tv.R
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.core.tmdb.TmdbEntityBrowseData
+import us.xnetik.tv.core.tmdb.TmdbEntityKind
+import us.xnetik.tv.core.tmdb.TmdbEntityRailType
+import us.xnetik.tv.core.tmdb.TmdbEntityMediaType
+import us.xnetik.tv.core.tmdb.TmdbMetadataService
+import us.xnetik.tv.data.local.TmdbSettingsDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,10 +27,10 @@ class TmdbEntityBrowseViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val tmdbMetadataService: TmdbMetadataService,
     private val tmdbSettingsDataStore: TmdbSettingsDataStore,
-    private val watchProgressRepository: com.nuvio.tv.domain.repository.WatchProgressRepository,
-    private val watchedSeriesStateHolder: com.nuvio.tv.data.local.WatchedSeriesStateHolder,
-    private val layoutPreferenceDataStore: com.nuvio.tv.data.local.LayoutPreferenceDataStore,
-    val posterOptions: com.nuvio.tv.ui.components.posteroptions.PosterOptionsController,
+    private val watchProgressRepository: us.xnetik.tv.domain.repository.WatchProgressRepository,
+    private val watchedSeriesStateHolder: us.xnetik.tv.data.local.WatchedSeriesStateHolder,
+    private val layoutPreferenceDataStore: us.xnetik.tv.data.local.LayoutPreferenceDataStore,
+    val posterOptions: us.xnetik.tv.ui.components.posteroptions.PosterOptionsController,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -110,7 +110,7 @@ class TmdbEntityBrowseViewModel @Inject constructor(
                     latestData.withUpdatedRail(mediaType, railType) {
                         it.copy(
                             items = mergedItems.withCustomPosterUrls(
-                                com.nuvio.tv.core.poster.patternForScreen(pattern, com.nuvio.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
+                                us.xnetik.tv.core.poster.patternForScreen(pattern, us.xnetik.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
                             ),
                             currentPage = nextPage,
                             hasMore = pageResult.hasMore,
@@ -144,7 +144,7 @@ class TmdbEntityBrowseViewModel @Inject constructor(
                     val pattern = layoutPreferenceDataStore.customPosterUrlPattern.first()
                     val enabledScreens = layoutPreferenceDataStore.customPosterEnabledScreens.first()
                     TmdbEntityBrowseUiState.Success(browseData.withCustomPosterUrls(
-                        com.nuvio.tv.core.poster.patternForScreen(pattern, com.nuvio.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
+                        us.xnetik.tv.core.poster.patternForScreen(pattern, us.xnetik.tv.core.poster.CustomPosterScreen.DETAILS, enabledScreens)
                     ))
                 } else {
                     TmdbEntityBrowseUiState.Error(
@@ -166,7 +166,7 @@ class TmdbEntityBrowseViewModel @Inject constructor(
     private fun TmdbEntityBrowseData.withUpdatedRail(
         mediaType: TmdbEntityMediaType,
         railType: TmdbEntityRailType,
-        transform: (com.nuvio.tv.core.tmdb.TmdbEntityRail) -> com.nuvio.tv.core.tmdb.TmdbEntityRail
+        transform: (us.xnetik.tv.core.tmdb.TmdbEntityRail) -> us.xnetik.tv.core.tmdb.TmdbEntityRail
     ): TmdbEntityBrowseData {
         return copy(
             rails = rails.map { rail ->

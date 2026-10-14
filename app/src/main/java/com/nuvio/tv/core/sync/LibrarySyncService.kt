@@ -1,14 +1,14 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.util.Log
-import com.nuvio.tv.core.sync.library.LIBRARY_DELTA_PAGE_SIZE
-import com.nuvio.tv.core.sync.library.LIBRARY_SNAPSHOT_PAGE_SIZE
-import com.nuvio.tv.core.sync.library.LibrarySyncLocalStore
-import com.nuvio.tv.core.sync.library.LibrarySyncRemoteDataSource
-import com.nuvio.tv.core.sync.library.consumeCursorPages
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.domain.model.LibrarySyncReducer
-import com.nuvio.tv.domain.model.LibrarySyncState
+import us.xnetik.tv.core.sync.library.LIBRARY_DELTA_PAGE_SIZE
+import us.xnetik.tv.core.sync.library.LIBRARY_SNAPSHOT_PAGE_SIZE
+import us.xnetik.tv.core.sync.library.LibrarySyncLocalStore
+import us.xnetik.tv.core.sync.library.LibrarySyncRemoteDataSource
+import us.xnetik.tv.core.sync.library.consumeCursorPages
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.domain.model.LibrarySyncReducer
+import us.xnetik.tv.domain.model.LibrarySyncState
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex

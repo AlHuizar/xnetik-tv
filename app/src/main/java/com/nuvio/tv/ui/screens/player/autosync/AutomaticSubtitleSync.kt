@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 import android.os.SystemClock
 import androidx.media3.common.C
-import com.nuvio.tv.ui.screens.player.SubtitleSyncCue
+import us.xnetik.tv.ui.screens.player.SubtitleSyncCue
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers

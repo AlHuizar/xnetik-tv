@@ -1,9 +1,9 @@
-package com.nuvio.tv.core.plugin
+package us.xnetik.tv.core.plugin
 
-import com.nuvio.tv.domain.model.LocalScraperResult
-import com.nuvio.tv.domain.model.PluginRepository
-import com.nuvio.tv.domain.model.RemotePluginInfo
-import com.nuvio.tv.domain.model.ScraperInfo
+import us.xnetik.tv.domain.model.LocalScraperResult
+import us.xnetik.tv.domain.model.PluginRepository
+import us.xnetik.tv.domain.model.RemotePluginInfo
+import us.xnetik.tv.domain.model.ScraperInfo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.flowOf

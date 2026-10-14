@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.torrent
+package us.xnetik.tv.core.torrent
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertThrows

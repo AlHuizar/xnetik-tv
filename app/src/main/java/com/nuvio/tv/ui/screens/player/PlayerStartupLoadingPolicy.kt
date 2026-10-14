@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 /**
  * Loading overlay / playback-issue report decisions during startup buffering.

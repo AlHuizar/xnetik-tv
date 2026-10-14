@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.content.Intent
 import android.net.Uri
@@ -70,15 +70,15 @@ import coil3.compose.AsyncImagePainter
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.R
-import com.nuvio.tv.core.qr.QrCodeGenerator
-import com.nuvio.tv.data.repository.DevelopmentSponsor
-import com.nuvio.tv.data.repository.GitHubContributor
-import com.nuvio.tv.data.repository.SupporterMember
-import com.nuvio.tv.domain.model.MemberTier
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.R
+import us.xnetik.tv.core.qr.QrCodeGenerator
+import us.xnetik.tv.data.repository.DevelopmentSponsor
+import us.xnetik.tv.data.repository.GitHubContributor
+import us.xnetik.tv.data.repository.SupporterMember
+import us.xnetik.tv.domain.model.MemberTier
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter

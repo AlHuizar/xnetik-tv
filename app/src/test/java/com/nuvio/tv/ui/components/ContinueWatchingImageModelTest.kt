@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.ui.screens.home.ContinueWatchingItem
-import com.nuvio.tv.ui.screens.home.NextUpInfo
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.ui.screens.home.ContinueWatchingItem
+import us.xnetik.tv.ui.screens.home.NextUpInfo
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull

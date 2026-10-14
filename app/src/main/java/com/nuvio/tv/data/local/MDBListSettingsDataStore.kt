@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.domain.model.MDBListSettings
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.domain.model.MDBListSettings
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map

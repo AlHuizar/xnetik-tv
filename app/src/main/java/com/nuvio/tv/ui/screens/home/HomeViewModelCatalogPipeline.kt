@@ -1,23 +1,23 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
 import android.util.Log
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.Collection
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.domain.model.catalogRowStableKey
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.model.legacyKey
-import com.nuvio.tv.domain.model.mergeCatalogPage
-import com.nuvio.tv.domain.model.nextCatalogSkip
-import com.nuvio.tv.domain.model.skipStep
-import com.nuvio.tv.domain.model.stableKey
-import com.nuvio.tv.domain.model.WatchedItem
-import com.nuvio.tv.domain.model.supportsExtra
+import us.xnetik.tv.R
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.Collection
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.domain.model.catalogRowStableKey
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.model.legacyKey
+import us.xnetik.tv.domain.model.mergeCatalogPage
+import us.xnetik.tv.domain.model.nextCatalogSkip
+import us.xnetik.tv.domain.model.skipStep
+import us.xnetik.tv.domain.model.stableKey
+import us.xnetik.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.model.supportsExtra
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.delay
@@ -27,17 +27,17 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.withPermit
-import com.nuvio.tv.core.util.filterReleasedItems
+import us.xnetik.tv.core.util.filterReleasedItems
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
 
 private data class CatalogUpdateResult(
     val displayRows: List<CatalogRow>,
-    val heroItems: List<com.nuvio.tv.domain.model.MetaPreview>,
+    val heroItems: List<us.xnetik.tv.domain.model.MetaPreview>,
     val gridItems: List<GridItem>,
     val fullRows: List<CatalogRow>
 )
@@ -765,11 +765,11 @@ internal suspend fun HomeViewModel.updateCatalogRowsPipeline() {
                             val fakeItems = (0 until 8).map { i ->
                                 MetaPreview(
                                     id = "__placeholder_${placeholder.catalogKey}_$i",
-                                    type = com.nuvio.tv.domain.model.ContentType.fromString(placeholder.apiType),
+                                    type = us.xnetik.tv.domain.model.ContentType.fromString(placeholder.apiType),
                                     rawType = placeholder.apiType,
                                     name = " ",
                                     poster = PLACEHOLDER_IMAGE_URL,
-                                    posterShape = com.nuvio.tv.domain.model.PosterShape.POSTER,
+                                    posterShape = us.xnetik.tv.domain.model.PosterShape.POSTER,
                                     background = null,
                                     logo = null,
                                     description = null,
@@ -784,7 +784,7 @@ internal suspend fun HomeViewModel.updateCatalogRowsPipeline() {
                                 addonBaseUrl = placeholder.addonBaseUrl,
                                 catalogId = placeholder.catalogId,
                                 catalogName = placeholder.catalogName,
-                                type = com.nuvio.tv.domain.model.ContentType.fromString(placeholder.apiType),
+                                type = us.xnetik.tv.domain.model.ContentType.fromString(placeholder.apiType),
                                 rawType = placeholder.apiType,
                                 items = fakeItems,
                                 isLoading = true,
@@ -1127,7 +1127,7 @@ internal fun HomeViewModel.mergeRefreshedCatalogRow(
     if (fresh.items.isEmpty()) return true
     if (forceReplace) return false
 
-    val identity = { item: com.nuvio.tv.domain.model.MetaPreview -> item.apiType + ":" + item.id }
+    val identity = { item: us.xnetik.tv.domain.model.MetaPreview -> item.apiType + ":" + item.id }
     val currentIds = current.items.map(identity)
     val freshIds = fresh.items.map(identity)
 

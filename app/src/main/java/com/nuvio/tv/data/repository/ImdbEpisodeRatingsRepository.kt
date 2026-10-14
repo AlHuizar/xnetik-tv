@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.util.Log
-import com.nuvio.tv.data.remote.api.ImdbTapframeApi
-import com.nuvio.tv.data.remote.api.SeriesGraphApi
+import us.xnetik.tv.data.remote.api.ImdbTapframeApi
+import us.xnetik.tv.data.remote.api.SeriesGraphApi
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -122,7 +122,7 @@ class ImdbEpisodeRatingsRepository @Inject constructor(
         }
     }
 
-    private fun toRatingsMap(payload: List<com.nuvio.tv.data.remote.api.SeriesGraphSeasonRatingsDto>): Map<Pair<Int, Int>, Double> {
+    private fun toRatingsMap(payload: List<us.xnetik.tv.data.remote.api.SeriesGraphSeasonRatingsDto>): Map<Pair<Int, Int>, Double> {
         return buildMap {
             payload.forEach { season ->
                 season.episodes.orEmpty().forEach { episode ->

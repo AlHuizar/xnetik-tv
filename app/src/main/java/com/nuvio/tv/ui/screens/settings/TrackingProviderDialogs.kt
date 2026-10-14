@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.content.Intent
 import android.net.Uri
@@ -56,15 +56,15 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.core.qr.QrCodeGenerator
-import com.nuvio.tv.data.repository.TraktProgressService
-import com.nuvio.tv.data.simkl.SIMKL_AUTOMATIC_REFRESH_INTERVAL_MINUTES
-import com.nuvio.tv.data.simkl.SimklConnectionMode
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.theme.NuvioMotion
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.core.qr.QrCodeGenerator
+import us.xnetik.tv.data.repository.TraktProgressService
+import us.xnetik.tv.data.simkl.SIMKL_AUTOMATIC_REFRESH_INTERVAL_MINUTES
+import us.xnetik.tv.data.simkl.SimklConnectionMode
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioTheme
 import java.util.concurrent.TimeUnit
 import kotlinx.coroutines.delay
 

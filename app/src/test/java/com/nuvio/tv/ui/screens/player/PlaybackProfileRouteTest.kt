@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.lifecycle.SavedStateHandle
-import com.nuvio.tv.ui.navigation.Screen
+import us.xnetik.tv.ui.navigation.Screen
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue

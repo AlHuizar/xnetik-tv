@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.util
+package us.xnetik.tv.core.util
 
 import java.time.Clock
 import java.time.Instant

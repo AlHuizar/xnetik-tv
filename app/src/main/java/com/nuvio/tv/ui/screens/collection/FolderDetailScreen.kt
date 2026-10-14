@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.collection
+package us.xnetik.tv.ui.screens.collection
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -51,10 +51,10 @@ import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.input.key.type
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.dpadRepeatThrottle
-import com.nuvio.tv.ui.util.dpadVerticalFastScroll
-import com.nuvio.tv.ui.util.localizedContentType
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.dpadRepeatThrottle
+import us.xnetik.tv.ui.util.dpadVerticalFastScroll
+import us.xnetik.tv.ui.util.localizedContentType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -71,31 +71,31 @@ import androidx.tv.material3.Tab
 import androidx.tv.material3.TabRow
 import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
-import com.nuvio.tv.domain.model.FolderViewMode
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.ui.components.CatalogRowSection
-import com.nuvio.tv.ui.components.ContentCard
-import com.nuvio.tv.ui.components.GridContentCard
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.R
+import us.xnetik.tv.domain.model.FolderViewMode
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.ui.components.CatalogRowSection
+import us.xnetik.tv.ui.components.ContentCard
+import us.xnetik.tv.ui.components.GridContentCard
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.R
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.PosterCardStyle
-import com.nuvio.tv.ui.components.LocalCardDepthStyle
-import com.nuvio.tv.ui.components.LocalLandscapePosterMode
-import com.nuvio.tv.ui.components.nuvioCardDepth
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.ui.screens.home.ClassicFocusArtwork
-import com.nuvio.tv.ui.screens.home.ClassicFocusGradientBackdrop
-import com.nuvio.tv.ui.screens.home.ClassicHomeContent
-import com.nuvio.tv.ui.screens.home.toClassicFocusArtwork
-import com.nuvio.tv.ui.screens.home.ContinueWatchingItem
-import com.nuvio.tv.ui.screens.home.GridHomeContent
-import com.nuvio.tv.ui.screens.home.HeroBackdropState
-import com.nuvio.tv.ui.screens.home.HomeScreenFocusState
-import com.nuvio.tv.ui.screens.home.key
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.ui.screens.home.ModernHomeContent
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.ui.components.LocalCardDepthStyle
+import us.xnetik.tv.ui.components.LocalLandscapePosterMode
+import us.xnetik.tv.ui.components.nuvioCardDepth
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.ui.screens.home.ClassicFocusArtwork
+import us.xnetik.tv.ui.screens.home.ClassicFocusGradientBackdrop
+import us.xnetik.tv.ui.screens.home.ClassicHomeContent
+import us.xnetik.tv.ui.screens.home.toClassicFocusArtwork
+import us.xnetik.tv.ui.screens.home.ContinueWatchingItem
+import us.xnetik.tv.ui.screens.home.GridHomeContent
+import us.xnetik.tv.ui.screens.home.HeroBackdropState
+import us.xnetik.tv.ui.screens.home.HomeScreenFocusState
+import us.xnetik.tv.ui.screens.home.key
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.ui.screens.home.ModernHomeContent
 import androidx.compose.runtime.snapshotFlow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
@@ -128,7 +128,7 @@ fun FolderDetailScreen(
     }
 
     val isItemWatched: (MetaPreview) -> Boolean = remember(uiState.movieWatchedStatus) {
-        { item -> uiState.movieWatchedStatus[com.nuvio.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)] == true }
+        { item -> uiState.movieWatchedStatus[us.xnetik.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)] == true }
     }
 
     val enrichingItemId by viewModel.enrichingItemId.collectAsStateWithLifecycle()
@@ -213,7 +213,7 @@ fun FolderDetailScreen(
     }
 
     val posterOptionsState by viewModel.posterOptions.state.collectAsStateWithLifecycle()
-    com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+    us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
         state = posterOptionsState,
         controller = viewModel.posterOptions,
         onNavigateToDetail = { id, type, addonBaseUrl ->
@@ -223,7 +223,7 @@ fun FolderDetailScreen(
 }
 
 @Composable
-private fun FolderHeader(folder: com.nuvio.tv.domain.model.CollectionFolder) {
+private fun FolderHeader(folder: us.xnetik.tv.domain.model.CollectionFolder) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -235,9 +235,9 @@ private fun FolderHeader(folder: com.nuvio.tv.domain.model.CollectionFolder) {
             val iconWidth: androidx.compose.ui.unit.Dp
             val iconHeight: androidx.compose.ui.unit.Dp
             when (folder.tileShape) {
-                com.nuvio.tv.domain.model.PosterShape.POSTER -> { iconWidth = NuvioTheme.spacing.xxl; iconHeight = NuvioTheme.spacing.xxxl }
-                com.nuvio.tv.domain.model.PosterShape.LANDSCAPE -> { iconWidth = 64.dp; iconHeight = 36.dp }
-                com.nuvio.tv.domain.model.PosterShape.SQUARE -> { iconWidth = NuvioTheme.spacing.xxxl; iconHeight = NuvioTheme.spacing.xxxl }
+                us.xnetik.tv.domain.model.PosterShape.POSTER -> { iconWidth = NuvioTheme.spacing.xxl; iconHeight = NuvioTheme.spacing.xxxl }
+                us.xnetik.tv.domain.model.PosterShape.LANDSCAPE -> { iconWidth = 64.dp; iconHeight = 36.dp }
+                us.xnetik.tv.domain.model.PosterShape.SQUARE -> { iconWidth = NuvioTheme.spacing.xxxl; iconHeight = NuvioTheme.spacing.xxxl }
             }
             AsyncImage(
                 model = folder.coverImageUrl,
@@ -270,7 +270,7 @@ private fun FolderHeader(folder: com.nuvio.tv.domain.model.CollectionFolder) {
 @Composable
 private fun TabbedGridContent(
     uiState: FolderDetailUiState,
-    folder: com.nuvio.tv.domain.model.CollectionFolder,
+    folder: us.xnetik.tv.domain.model.CollectionFolder,
     tabFocusState: FolderDetailGridFocusState,
     onSelectTab: (Int) -> Unit,
     onNavigateToDetail: (String, String, String) -> Unit,
@@ -299,9 +299,9 @@ private fun TabbedGridContent(
             val iconWidth: androidx.compose.ui.unit.Dp
             val iconHeight: androidx.compose.ui.unit.Dp
             when (folder.tileShape) {
-                com.nuvio.tv.domain.model.PosterShape.POSTER -> { iconWidth = NuvioTheme.spacing.xxl; iconHeight = NuvioTheme.spacing.xxxl }
-                com.nuvio.tv.domain.model.PosterShape.LANDSCAPE -> { iconWidth = 64.dp; iconHeight = 36.dp }
-                com.nuvio.tv.domain.model.PosterShape.SQUARE -> { iconWidth = NuvioTheme.spacing.xxxl; iconHeight = NuvioTheme.spacing.xxxl }
+                us.xnetik.tv.domain.model.PosterShape.POSTER -> { iconWidth = NuvioTheme.spacing.xxl; iconHeight = NuvioTheme.spacing.xxxl }
+                us.xnetik.tv.domain.model.PosterShape.LANDSCAPE -> { iconWidth = 64.dp; iconHeight = 36.dp }
+                us.xnetik.tv.domain.model.PosterShape.SQUARE -> { iconWidth = NuvioTheme.spacing.xxxl; iconHeight = NuvioTheme.spacing.xxxl }
             }
             AsyncImage(
                 model = folder.coverImageUrl,
@@ -525,7 +525,7 @@ private fun TabbedGridContent(
                         val cardDepthStyle = LocalCardDepthStyle.current
                         val globalLandscape = LocalLandscapePosterMode.current
                         val loadingCardHeight = if (globalLandscape) {
-                            posterCardStyle.width / com.nuvio.tv.domain.model.PosterShape.LANDSCAPE.aspectRatio()
+                            posterCardStyle.width / us.xnetik.tv.domain.model.PosterShape.LANDSCAPE.aspectRatio()
                         } else {
                             posterCardStyle.width * 1.5f
                         }
@@ -783,7 +783,7 @@ private fun RowsContent(
                 }
                 val globalLandscape = LocalLandscapePosterMode.current
                 val containerHeight = if (globalLandscape) {
-                    posterCardStyle.width / com.nuvio.tv.domain.model.PosterShape.LANDSCAPE.aspectRatio()
+                    posterCardStyle.width / us.xnetik.tv.domain.model.PosterShape.LANDSCAPE.aspectRatio()
                 } else {
                     posterCardStyle.height
                 }
@@ -921,7 +921,7 @@ private fun FollowLayoutContent(
     val noOpRemoveCw: (String, Int?, Int?, Boolean) -> Unit = remember { { _, _, _, _ -> } }
     val noOpFolderDetail: (String, String) -> Unit = remember { { _, _ -> } }
     val isItemWatched: (MetaPreview) -> Boolean = remember(homeState.movieWatchedStatus) {
-        { item -> homeState.movieWatchedStatus[com.nuvio.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)] == true }
+        { item -> homeState.movieWatchedStatus[us.xnetik.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)] == true }
     }
     val loadMoreLabel = stringResource(R.string.action_load_more)
 

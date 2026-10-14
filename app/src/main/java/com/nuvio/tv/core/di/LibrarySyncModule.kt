@@ -1,9 +1,9 @@
-package com.nuvio.tv.core.di
+package us.xnetik.tv.core.di
 
-import com.nuvio.tv.core.sync.library.LibrarySyncLocalStore
-import com.nuvio.tv.core.sync.library.LibrarySyncRemoteDataSource
-import com.nuvio.tv.data.local.LibraryPreferences
-import com.nuvio.tv.data.remote.supabase.SupabaseLibrarySyncRemoteDataSource
+import us.xnetik.tv.core.sync.library.LibrarySyncLocalStore
+import us.xnetik.tv.core.sync.library.LibrarySyncRemoteDataSource
+import us.xnetik.tv.data.local.LibraryPreferences
+import us.xnetik.tv.data.remote.supabase.SupabaseLibrarySyncRemoteDataSource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

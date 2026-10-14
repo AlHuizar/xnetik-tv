@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
-import com.nuvio.tv.data.remote.supabase.SupabaseProviderCredential
+import us.xnetik.tv.data.remote.supabase.SupabaseProviderCredential
 import kotlinx.serialization.json.JsonPrimitive
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.contentOrNull

@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

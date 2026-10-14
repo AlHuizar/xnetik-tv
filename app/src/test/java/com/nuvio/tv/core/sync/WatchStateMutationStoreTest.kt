@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
-import com.nuvio.tv.TestPreferencesStore
-import com.nuvio.tv.data.local.ProfileDataStoreFactory
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
-import com.nuvio.tv.domain.model.WatchedMutationKey
+import us.xnetik.tv.TestPreferencesStore
+import us.xnetik.tv.data.local.ProfileDataStoreFactory
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.model.WatchedMutationKey
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest

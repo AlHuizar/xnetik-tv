@@ -1,12 +1,12 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DataSpec
 import androidx.media3.datasource.TransferListener
 import androidx.media3.datasource.okhttp.OkHttpDataSource
-import com.nuvio.tv.ui.screens.player.ParallelRangeDataSource
-import com.nuvio.tv.ui.screens.player.PlayerPlaybackNetworking
+import us.xnetik.tv.ui.screens.player.ParallelRangeDataSource
+import us.xnetik.tv.ui.screens.player.PlayerPlaybackNetworking
 import kotlinx.coroutines.launch
 import okhttp3.Request
 

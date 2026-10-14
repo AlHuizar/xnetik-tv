@@ -1,23 +1,23 @@
-package com.nuvio.tv.core.auth.diagnostics
+package us.xnetik.tv.core.auth.diagnostics
 
 import android.net.Uri
 import android.os.Build
 import android.os.SystemClock
 import android.util.Log
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticAppDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticDeviceDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticEnvironmentDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticEventDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticExceptionDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticFlowDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticNetworkDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticReportRequestDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticRequestDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticResponseDto
-import com.nuvio.tv.data.remote.dto.AuthDiagnosticTerminalDto
-import com.nuvio.tv.data.repository.AuthDiagnosticReportRepository
-import com.nuvio.tv.domain.model.ServerConfiguration
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticAppDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticDeviceDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticEnvironmentDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticEventDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticExceptionDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticFlowDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticNetworkDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticReportRequestDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticRequestDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticResponseDto
+import us.xnetik.tv.data.remote.dto.AuthDiagnosticTerminalDto
+import us.xnetik.tv.data.repository.AuthDiagnosticReportRepository
+import us.xnetik.tv.domain.model.ServerConfiguration
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
@@ -412,7 +412,7 @@ fun authDiagnosticFilteredBody(body: String?): String? {
 
 fun authNetworkErrorFamily(error: Throwable?): String? {
     if (error == null) return null
-    if (error.causeChain().any { it.startsWith("com.nuvio.tv.core.auth.AuthHttpException:") }) return null
+    if (error.causeChain().any { it.startsWith("us.xnetik.tv.core.auth.AuthHttpException:") }) return null
     return when {
         error.hasCause<UnknownHostException>() -> "dns"
         error.hasCause<SocketTimeoutException>() -> "timeout"

@@ -1,15 +1,15 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingEpisode
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.extractTrackingYear
-import com.nuvio.tv.core.tracking.parseTrackingExternalIds
-import com.nuvio.tv.core.tracking.trackingMediaKind
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.core.tracking.TrackingEpisode
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.extractTrackingYear
+import us.xnetik.tv.core.tracking.parseTrackingExternalIds
+import us.xnetik.tv.core.tracking.trackingMediaKind
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 
 data class SimklWatchedProjection(
     val items: List<WatchedItem>,

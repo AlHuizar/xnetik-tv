@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -21,10 +21,10 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.util.UnstableApi
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.VodCacheSizeMode
-import com.nuvio.tv.ui.screens.player.NuvioExoPlayerPerformanceHelper
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.VodCacheSizeMode
+import us.xnetik.tv.ui.screens.player.NuvioExoPlayerPerformanceHelper
 import kotlin.math.min
 
 @androidx.annotation.OptIn(UnstableApi::class)

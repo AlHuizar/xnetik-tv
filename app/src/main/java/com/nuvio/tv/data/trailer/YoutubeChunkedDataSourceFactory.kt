@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.trailer
+package us.xnetik.tv.data.trailer
 
 import android.net.Uri
 import android.util.Log

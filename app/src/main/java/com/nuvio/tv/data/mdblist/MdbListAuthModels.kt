@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

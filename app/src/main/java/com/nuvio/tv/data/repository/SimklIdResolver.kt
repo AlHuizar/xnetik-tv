@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.util.Log
-import com.nuvio.tv.data.simkl.SimklApiConfiguration
+import us.xnetik.tv.data.simkl.SimklApiConfiguration
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray

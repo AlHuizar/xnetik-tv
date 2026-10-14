@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingListStatus
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.PosterShape
+import us.xnetik.tv.core.tracking.TrackingListStatus
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.PosterShape
 
 const val SIMKL_STATUS_SELECTION_GROUP = "simkl:status"
 

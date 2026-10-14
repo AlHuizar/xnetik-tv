@@ -3,7 +3,7 @@
     androidx.compose.ui.ExperimentalComposeUiApi::class
 )
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -49,13 +49,13 @@ import android.view.KeyEvent
 import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onKeyEvent
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.SourceChipStatus
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.SourceChipStatus
+import us.xnetik.tv.ui.theme.NuvioTheme
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
 import androidx.compose.ui.platform.LocalContext
 
 @Composable

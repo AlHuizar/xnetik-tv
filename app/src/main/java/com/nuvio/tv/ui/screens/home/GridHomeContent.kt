@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.runtime.State
 import androidx.compose.foundation.lazy.grid.items
-import com.nuvio.tv.LocalContentFocusRequester
+import us.xnetik.tv.LocalContentFocusRequester
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -51,13 +51,13 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.ExperimentalComposeUiApi
-import com.nuvio.tv.ui.util.asStable
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.dpadRepeatThrottle
+import us.xnetik.tv.ui.util.asStable
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.dpadRepeatThrottle
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.tv.material3.Border
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
@@ -76,25 +76,25 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import com.nuvio.tv.domain.model.CollectionFolder
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.catalogRowStableKey
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.ui.components.GridContentCard
-import com.nuvio.tv.ui.components.LocalCardDepthStyle
-import com.nuvio.tv.ui.components.LocalLandscapePosterMode
-import com.nuvio.tv.ui.components.GridContinueWatchingSection
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.ui.components.HeroCarousel
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.LocalStartupSplashEnabled
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.PosterCardStyle
-import com.nuvio.tv.ui.components.collectionFolderCardImageUrl
-import com.nuvio.tv.ui.components.nuvioCardDepth
-import com.nuvio.tv.ui.components.rememberArtworkBackedCardGlow
+import us.xnetik.tv.domain.model.CollectionFolder
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.catalogRowStableKey
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.ui.components.GridContentCard
+import us.xnetik.tv.ui.components.LocalCardDepthStyle
+import us.xnetik.tv.ui.components.LocalLandscapePosterMode
+import us.xnetik.tv.ui.components.GridContinueWatchingSection
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.ui.components.HeroCarousel
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.LocalStartupSplashEnabled
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.ui.components.collectionFolderCardImageUrl
+import us.xnetik.tv.ui.components.nuvioCardDepth
+import us.xnetik.tv.ui.components.rememberArtworkBackedCardGlow
 
 @OptIn(ExperimentalTvMaterial3Api::class, ExperimentalFoundationApi::class, ExperimentalComposeUiApi::class)
 @Composable
@@ -112,7 +112,7 @@ fun GridHomeContent(
     isCatalogItemWatched: (MetaPreview) -> Boolean = { false },
     onCatalogItemLongPress: (MetaPreview, String) -> Unit = { _, _ -> },
     posterCardStyle: PosterCardStyle = PosterCardDefaults.Style,
-    onItemFocus: (com.nuvio.tv.domain.model.MetaPreview) -> Unit = {},
+    onItemFocus: (us.xnetik.tv.domain.model.MetaPreview) -> Unit = {},
     catalogSeeAllLabel: String? = null,
     onSaveGridFocusState: (Int, Int, String?) -> Unit,
     onFocusedRowKeyChanged: (String?) -> Unit = {},
@@ -198,7 +198,7 @@ fun GridHomeContent(
     ) {
         if (uiState.continueWatchingEnabled) {
             uiState.continueWatchingItems.withCustomPosterUrls(
-                com.nuvio.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, com.nuvio.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
+                us.xnetik.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, us.xnetik.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
             )
         } else {
             emptyList()
@@ -613,7 +613,7 @@ fun GridHomeContent(
                             uiState.customPosterEnabledScreens,
                         ) {
                             uiState.upcomingItems.withCustomPosterUrls(
-                                com.nuvio.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, com.nuvio.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
+                                us.xnetik.tv.core.poster.patternForScreen(uiState.customPosterUrlPattern, us.xnetik.tv.core.poster.CustomPosterScreen.CONTINUE_WATCHING, uiState.customPosterEnabledScreens)
                             )
                         },
                         title = stringResource(R.string.upcoming_section_title),

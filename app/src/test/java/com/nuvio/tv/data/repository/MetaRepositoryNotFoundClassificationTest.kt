@@ -1,12 +1,12 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.AddonResource
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.AddonResource
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.repository.AddonRepository
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -76,7 +76,7 @@ class MetaRepositoryNotFoundClassificationTest {
         // or the lookup would reach the caller with no failures and be treated as retryable.
         val api = mockk<AddonApi>()
         coEvery { api.getMeta(any()) } returns
-            Response.success(com.nuvio.tv.data.remote.dto.MetaResponseDto(meta = null))
+            Response.success(us.xnetik.tv.data.remote.dto.MetaResponseDto(meta = null))
         val repository = newRepository(api, addon("a"))
 
         val result = repository.getMetaFromAllAddons("movie", contentId).last()
@@ -90,7 +90,7 @@ class MetaRepositoryNotFoundClassificationTest {
         val api = mockk<AddonApi>()
         coEvery { api.getMeta(any()) } coAnswers {
             if (firstArg<String>().startsWith("https://a.")) {
-                Response.success(com.nuvio.tv.data.remote.dto.MetaResponseDto(meta = null))
+                Response.success(us.xnetik.tv.data.remote.dto.MetaResponseDto(meta = null))
             } else {
                 notFound()
             }
@@ -136,8 +136,8 @@ class MetaRepositoryNotFoundClassificationTest {
     fun `a successful lookup is not an error at all`() = runTest {
         val api = mockk<AddonApi>()
         coEvery { api.getMeta(any()) } returns Response.success(
-            com.nuvio.tv.data.remote.dto.MetaResponseDto(
-                meta = com.nuvio.tv.data.remote.dto.MetaDto(
+            us.xnetik.tv.data.remote.dto.MetaResponseDto(
+                meta = us.xnetik.tv.data.remote.dto.MetaDto(
                     id = contentId,
                     type = "movie",
                     name = "Test Meta"
@@ -151,11 +151,11 @@ class MetaRepositoryNotFoundClassificationTest {
         assertTrue(result is NetworkResult.Success)
     }
 
-    private fun notFound(): Response<com.nuvio.tv.data.remote.dto.MetaResponseDto> =
+    private fun notFound(): Response<us.xnetik.tv.data.remote.dto.MetaResponseDto> =
         Response.error(404, "".toResponseBody("application/json".toMediaType()))
 
     private fun apiAnswering(
-        answer: suspend () -> Response<com.nuvio.tv.data.remote.dto.MetaResponseDto>
+        answer: suspend () -> Response<us.xnetik.tv.data.remote.dto.MetaResponseDto>
     ): AddonApi = mockk<AddonApi>().also { api ->
         coEvery { api.getMeta(any()) } coAnswers { answer() }
     }

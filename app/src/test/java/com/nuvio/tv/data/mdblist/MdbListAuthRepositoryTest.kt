@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async

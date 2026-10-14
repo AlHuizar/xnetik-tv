@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.app.Activity
 import android.content.Context
@@ -11,46 +11,46 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.DefaultLoadControl
 import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
 import androidx.media3.decoder.ffmpeg.FfmpegAudioRenderer
-import com.nuvio.tv.core.player.BitrateAwareLoadControl
-import com.nuvio.tv.core.player.LastPlaybackDiagnostics
-import com.nuvio.tv.core.debrid.DirectDebridResolver
-import com.nuvio.tv.core.debrid.DirectDebridStreamPreparer
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackContext
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackProgressStore
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackSessionStore
-import com.nuvio.tv.core.cloud.CloudLibraryRepository
-import com.nuvio.tv.core.plugin.PluginManager
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingScrobbleCoordinator
-import com.nuvio.tv.core.torrent.TorrentService
-import com.nuvio.tv.data.local.AutoSkipSegmentType
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.MpvHardwareDecodeMode
-import com.nuvio.tv.data.local.NextEpisodeThresholdMode
-import com.nuvio.tv.data.local.AudioDelayRouteDataStore
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.data.local.DeviceLocalPlayerPreferences
-import com.nuvio.tv.data.local.StreamLinkCacheDataStore
-import com.nuvio.tv.data.local.StreamBadgeSettingsDataStore
-import com.nuvio.tv.data.local.BingeGroupCacheDataStore
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.data.mediaserver.ServerPlayback
-import com.nuvio.tv.data.mediaserver.ServerStreams
-import com.nuvio.tv.data.repository.ParentalGuideRepository
-import com.nuvio.tv.data.repository.PlaybackIssueErrorInput
-import com.nuvio.tv.data.repository.PlaybackIssueReportRepository
-import com.nuvio.tv.data.repository.SkipIntroRepository
-import com.nuvio.tv.data.repository.SkipInterval
-import com.nuvio.tv.data.repository.EpisodeMappingEntry
-import com.nuvio.tv.data.repository.TraktEpisodeMappingService
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.StreamRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.core.player.BitrateAwareLoadControl
+import us.xnetik.tv.core.player.LastPlaybackDiagnostics
+import us.xnetik.tv.core.debrid.DirectDebridResolver
+import us.xnetik.tv.core.debrid.DirectDebridStreamPreparer
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackContext
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackProgressStore
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackSessionStore
+import us.xnetik.tv.core.cloud.CloudLibraryRepository
+import us.xnetik.tv.core.plugin.PluginManager
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingScrobbleCoordinator
+import us.xnetik.tv.core.torrent.TorrentService
+import us.xnetik.tv.data.local.AutoSkipSegmentType
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.MpvHardwareDecodeMode
+import us.xnetik.tv.data.local.NextEpisodeThresholdMode
+import us.xnetik.tv.data.local.AudioDelayRouteDataStore
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.data.local.DeviceLocalPlayerPreferences
+import us.xnetik.tv.data.local.StreamLinkCacheDataStore
+import us.xnetik.tv.data.local.StreamBadgeSettingsDataStore
+import us.xnetik.tv.data.local.BingeGroupCacheDataStore
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.data.mediaserver.ServerPlayback
+import us.xnetik.tv.data.mediaserver.ServerStreams
+import us.xnetik.tv.data.repository.ParentalGuideRepository
+import us.xnetik.tv.data.repository.PlaybackIssueErrorInput
+import us.xnetik.tv.data.repository.PlaybackIssueReportRepository
+import us.xnetik.tv.data.repository.SkipIntroRepository
+import us.xnetik.tv.data.repository.SkipInterval
+import us.xnetik.tv.data.repository.EpisodeMappingEntry
+import us.xnetik.tv.data.repository.TraktEpisodeMappingService
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.StreamRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import androidx.media3.session.MediaSession
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.cancel
@@ -62,7 +62,7 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import com.nuvio.tv.core.util.withAppLocale
+import us.xnetik.tv.core.util.withAppLocale
 import java.lang.ref.WeakReference
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.concurrent.atomic.AtomicLong
@@ -74,7 +74,7 @@ class PlayerRuntimeController(
     internal val streamRepository: StreamRepository,
     internal val addonRepository: AddonRepository,
     internal val pluginManager: PluginManager,
-    internal val subtitleRepository: com.nuvio.tv.domain.repository.SubtitleRepository,
+    internal val subtitleRepository: us.xnetik.tv.domain.repository.SubtitleRepository,
     internal val parentalGuideRepository: ParentalGuideRepository,
     internal val trackingScrobbleCoordinator: TrackingScrobbleCoordinator,
     internal val traktEpisodeMappingService: TraktEpisodeMappingService,
@@ -84,25 +84,25 @@ class PlayerRuntimeController(
     internal val streamLinkCacheDataStore: StreamLinkCacheDataStore,
     internal val streamBadgeSettingsDataStore: StreamBadgeSettingsDataStore,
     internal val bingeGroupCacheDataStore: BingeGroupCacheDataStore,
-    internal val layoutPreferenceDataStore: com.nuvio.tv.data.local.LayoutPreferenceDataStore,
-    internal val episodeShufflePlayback: com.nuvio.tv.core.player.EpisodeShufflePlayback,
-    internal val watchedItemsPreferences: com.nuvio.tv.data.local.WatchedItemsPreferences,
-    internal val trackPreferenceDataStore: com.nuvio.tv.data.local.TrackPreferenceDataStore,
+    internal val layoutPreferenceDataStore: us.xnetik.tv.data.local.LayoutPreferenceDataStore,
+    internal val episodeShufflePlayback: us.xnetik.tv.core.player.EpisodeShufflePlayback,
+    internal val watchedItemsPreferences: us.xnetik.tv.data.local.WatchedItemsPreferences,
+    internal val trackPreferenceDataStore: us.xnetik.tv.data.local.TrackPreferenceDataStore,
     internal val audioDelayRouteDataStore: AudioDelayRouteDataStore,
     internal val torrentService: TorrentService,
-    internal val torrentSettings: com.nuvio.tv.core.torrent.TorrentSettings,
-    internal val tmdbService: com.nuvio.tv.core.tmdb.TmdbService,
-    internal val tmdbMetadataService: com.nuvio.tv.core.tmdb.TmdbMetadataService,
-    internal val tmdbSettingsDataStore: com.nuvio.tv.data.local.TmdbSettingsDataStore,
+    internal val torrentSettings: us.xnetik.tv.core.torrent.TorrentSettings,
+    internal val tmdbService: us.xnetik.tv.core.tmdb.TmdbService,
+    internal val tmdbMetadataService: us.xnetik.tv.core.tmdb.TmdbMetadataService,
+    internal val tmdbSettingsDataStore: us.xnetik.tv.data.local.TmdbSettingsDataStore,
     internal val directDebridResolver: DirectDebridResolver,
-    internal val youTubeStreamResolver: com.nuvio.tv.core.streams.YouTubeStreamResolver,
+    internal val youTubeStreamResolver: us.xnetik.tv.core.streams.YouTubeStreamResolver,
     internal val directDebridStreamPreparer: DirectDebridStreamPreparer,
     internal val cloudLibraryRepository: CloudLibraryRepository,
     internal val cloudPlaybackProgressStore: CloudLibraryPlaybackProgressStore,
     internal val cloudPlaybackSessionStore: CloudLibraryPlaybackSessionStore,
-    internal val streamBadgePresentation: com.nuvio.tv.core.streams.StreamBadgePresentation,
+    internal val streamBadgePresentation: us.xnetik.tv.core.streams.StreamBadgePresentation,
     internal val playbackIssueReportRepository: PlaybackIssueReportRepository,
-    internal val tvRecommendationManager: com.nuvio.tv.core.recommendations.TvRecommendationManager,
+    internal val tvRecommendationManager: us.xnetik.tv.core.recommendations.TvRecommendationManager,
     internal val serverPlayback: ServerPlayback,
     internal val serverStreams: ServerStreams,
     internal val profileId: Int,
@@ -213,7 +213,7 @@ class PlayerRuntimeController(
     }
 
     // Closed on exit (stopAndRelease) or when the ViewModel is cleared, whichever comes first.
-    private val playerSession = com.nuvio.tv.core.player.PlayerSessionTracker.open()
+    private val playerSession = us.xnetik.tv.core.player.PlayerSessionTracker.open()
 
     internal var currentVideoHash: String? = navigationArgs.videoHash
     internal var currentVideoSize: Long? = navigationArgs.videoSize
@@ -328,7 +328,7 @@ class PlayerRuntimeController(
                 .map { it.isPlaying }
                 .distinctUntilChanged()
                 .collect { isPlaying ->
-                    com.nuvio.tv.core.recommendations.TvRecommendationManager.isPlaybackActive.value = isPlaying
+                    us.xnetik.tv.core.recommendations.TvRecommendationManager.isPlaybackActive.value = isPlaying
                 }
         }
     }
@@ -446,7 +446,7 @@ class PlayerRuntimeController(
     internal var startupLoadingReportJob: Job? = null
     internal var sourceStreamsJob: Job? = null
     internal var sourceBadgeJob: Job? = null
-    internal var sourceFilterFullList: List<com.nuvio.tv.domain.model.Stream> = emptyList()
+    internal var sourceFilterFullList: List<us.xnetik.tv.domain.model.Stream> = emptyList()
     internal var sourceBadgedAddonNames: Set<String> = emptySet()
     internal var sourceStreamsScope: kotlinx.coroutines.CoroutineScope? = null
     internal var episodeStreamsScope: kotlinx.coroutines.CoroutineScope? = null
@@ -497,7 +497,7 @@ class PlayerRuntimeController(
     /** Back buffer (ms) the user configured, captured at build to restore once DV7 status is known. */
     internal var configuredBackBufferMs: Int = 0
     internal var metaVideos: List<Video> = emptyList()
-    internal var playbackShuffleState: com.nuvio.tv.core.player.PlaybackShuffleState? = null
+    internal var playbackShuffleState: us.xnetik.tv.core.player.PlaybackShuffleState? = null
     internal var cloudPlaybackContext: CloudLibraryPlaybackContext? =
         cloudPlaybackSessionStore.load(cloudSessionToken)
     internal var metaGenres: List<String> = emptyList()
@@ -537,7 +537,7 @@ class PlayerRuntimeController(
     internal var switchTraceSequence: Long = 0L
     internal var subtitleDisabledByPersistedPreference: Boolean = false
     internal var subtitleAddonRestoredByPersistedPreference: Boolean = false
-    internal var pendingRestoredAddonSubtitle: com.nuvio.tv.domain.model.Subtitle? = null
+    internal var pendingRestoredAddonSubtitle: us.xnetik.tv.domain.model.Subtitle? = null
     internal var attachedAddonSubtitleKeys: Set<String> = emptySet()
     internal var hasScannedTextTracksOnce: Boolean = false
     internal var streamReuseLastLinkEnabled: Boolean = false

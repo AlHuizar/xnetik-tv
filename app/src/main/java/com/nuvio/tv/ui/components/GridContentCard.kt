@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.animation.core.tween
@@ -44,19 +44,19 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.tv.material3.Border
 import androidx.tv.material3.Card
 import androidx.tv.material3.CardDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.CardDepthSurface
 import androidx.compose.ui.platform.LocalContext
-import com.nuvio.tv.ui.util.recompositionHighlighter
-import com.nuvio.tv.ui.util.rememberLongPressKeyTracker
+import us.xnetik.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.util.rememberLongPressKeyTracker
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
@@ -213,7 +213,7 @@ fun GridContentCard(
                 } else {
                     item.poster
                 }
-                val revalidationKey = com.nuvio.tv.core.image.rememberImageRevalidationKey(effectiveImageUrl)
+                val revalidationKey = us.xnetik.tv.core.image.rememberImageRevalidationKey(effectiveImageUrl)
                 val imageModel = remember(effectiveImageUrl, requestWidthPx, requestHeightPx, revalidationKey) {
                     val builder = ImageRequest.Builder(context)
                         .data(effectiveImageUrl)
@@ -226,7 +226,7 @@ fun GridContentCard(
                     val fallbackUrl = item.rawPosterUrl
                     if (!fallbackUrl.isNullOrBlank() && fallbackUrl != effectiveImageUrl) {
                         builder.memoryCacheKeyExtras(
-                            mapOf(com.nuvio.tv.core.image.CustomPosterFallbackInterceptor.FALLBACK_URL_KEY to fallbackUrl)
+                            mapOf(us.xnetik.tv.core.image.CustomPosterFallbackInterceptor.FALLBACK_URL_KEY to fallbackUrl)
                         )
                     }
                     builder.build()

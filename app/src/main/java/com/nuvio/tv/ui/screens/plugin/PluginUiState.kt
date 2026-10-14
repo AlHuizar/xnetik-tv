@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.plugin
+package us.xnetik.tv.ui.screens.plugin
 
 import android.graphics.Bitmap
-import com.nuvio.tv.core.plugin.TestDiagnostics
-import com.nuvio.tv.domain.model.LocalScraperResult
-import com.nuvio.tv.domain.model.PluginRepository
-import com.nuvio.tv.domain.model.ScraperInfo
+import us.xnetik.tv.core.plugin.TestDiagnostics
+import us.xnetik.tv.domain.model.LocalScraperResult
+import us.xnetik.tv.domain.model.PluginRepository
+import us.xnetik.tv.domain.model.ScraperInfo
 
 data class PluginUiState(
     val pluginsEnabled: Boolean = true,

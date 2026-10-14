@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.remote.supabase
+package us.xnetik.tv.data.remote.supabase
 
-import com.nuvio.tv.data.mediaserver.SyncedServer
+import us.xnetik.tv.data.mediaserver.SyncedServer
 import io.github.jan.supabase.auth.user.UserInfo
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName

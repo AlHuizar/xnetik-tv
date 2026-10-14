@@ -1,14 +1,14 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.EpisodeShuffleProfile
-import com.nuvio.tv.data.local.EpisodeShuffleStore
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.domain.model.EpisodeShuffle
-import com.nuvio.tv.domain.model.EpisodeShuffleSettings
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.EpisodeShuffleProfile
+import us.xnetik.tv.data.local.EpisodeShuffleStore
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.domain.model.EpisodeShuffle
+import us.xnetik.tv.domain.model.EpisodeShuffleSettings
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import io.mockk.every
 import io.mockk.mockk
 import io.mockk.verify

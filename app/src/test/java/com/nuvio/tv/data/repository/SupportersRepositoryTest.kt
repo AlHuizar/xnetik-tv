@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.data.remote.api.SupportersApi
-import com.nuvio.tv.data.remote.dto.SupportersWallGroupDto
-import com.nuvio.tv.data.remote.dto.SupportersWallMemberDto
-import com.nuvio.tv.data.remote.dto.SupportersWallResponseDto
-import com.nuvio.tv.domain.model.MemberTier
+import us.xnetik.tv.data.remote.api.SupportersApi
+import us.xnetik.tv.data.remote.dto.SupportersWallGroupDto
+import us.xnetik.tv.data.remote.dto.SupportersWallMemberDto
+import us.xnetik.tv.data.remote.dto.SupportersWallResponseDto
+import us.xnetik.tv.domain.model.MemberTier
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import okhttp3.MediaType.Companion.toMediaType

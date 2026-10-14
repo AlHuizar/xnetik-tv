@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.getValue

@@ -1,36 +1,36 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.R
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.network.safeApiCall
-import com.nuvio.tv.core.debrid.DebridStreamPresentation
-import com.nuvio.tv.core.debrid.LocalDebridAvailabilityService
-import com.nuvio.tv.core.plugin.PluginManager
-import com.nuvio.tv.core.plugin.resolvePluginSeasonEpisode
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.mapper.toDomain
-import com.nuvio.tv.data.mediaserver.ServerStreamSource
-import com.nuvio.tv.data.mediaserver.ServerStreams
-import com.nuvio.tv.data.mediaserver.messageRes
-import com.nuvio.tv.data.mediaserver.serverFailure
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.AddonStreams
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.LocalScraperResult
-import com.nuvio.tv.domain.model.PluginRepository
-import com.nuvio.tv.domain.model.ProxyHeaders
-import com.nuvio.tv.domain.model.ScraperInfo
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamBehaviorHints
-import com.nuvio.tv.core.streams.supportsStreamResource
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.StreamRepository
+import us.xnetik.tv.R
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.network.safeApiCall
+import us.xnetik.tv.core.debrid.DebridStreamPresentation
+import us.xnetik.tv.core.debrid.LocalDebridAvailabilityService
+import us.xnetik.tv.core.plugin.PluginManager
+import us.xnetik.tv.core.plugin.resolvePluginSeasonEpisode
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.mapper.toDomain
+import us.xnetik.tv.data.mediaserver.ServerStreamSource
+import us.xnetik.tv.data.mediaserver.ServerStreams
+import us.xnetik.tv.data.mediaserver.messageRes
+import us.xnetik.tv.data.mediaserver.serverFailure
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.AddonStreams
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.LocalScraperResult
+import us.xnetik.tv.domain.model.PluginRepository
+import us.xnetik.tv.domain.model.ProxyHeaders
+import us.xnetik.tv.domain.model.ScraperInfo
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamBehaviorHints
+import us.xnetik.tv.core.streams.supportsStreamResource
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.StreamRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async
@@ -262,7 +262,7 @@ class StreamRepositoryImpl @Inject constructor(
                             attemptedFailures += StreamAttemptFailure(
                                 addonName = addon.displayName,
                                 kind = StreamFailureKind.REQUEST_FAILED,
-                                detail = e.message ?: context.getString(com.nuvio.tv.R.string.stream_error_detail_addon_request_failed)
+                                detail = e.message ?: context.getString(us.xnetik.tv.R.string.stream_error_detail_addon_request_failed)
                             )
                         } finally {
                             if (completedJobs.incrementAndGet() >= totalJobs) {
@@ -365,7 +365,7 @@ class StreamRepositoryImpl @Inject constructor(
         } catch (e: Exception) {
             if (e is CancellationException) throw e
             Log.e(TAG, "Failed to fetch streams: ${e.message}", e)
-            emit(NetworkResult.Error(e.message ?: context.getString(com.nuvio.tv.R.string.stream_error_fetch_failed)))
+            emit(NetworkResult.Error(e.message ?: context.getString(us.xnetik.tv.R.string.stream_error_fetch_failed)))
         }
     }
 
@@ -552,7 +552,7 @@ class StreamRepositoryImpl @Inject constructor(
         val baseTitle = title.takeIf { it.isNotBlank() }
         val baseName = name?.takeIf { it.isNotBlank() }
         val quality = quality?.takeIf { it.isNotBlank() }
-        val qualityLabel = quality ?: context.getString(com.nuvio.tv.R.string.stream_quality_unknown)
+        val qualityLabel = quality ?: context.getString(us.xnetik.tv.R.string.stream_quality_unknown)
         val displayName = buildString {
             append(baseName ?: baseTitle ?: scraper.name)
             if (!toString().contains(qualityLabel)) {
@@ -604,7 +604,7 @@ class StreamRepositoryImpl @Inject constructor(
     /**
      * Build a description string from scraper result
      */
-    private fun buildDescription(result: com.nuvio.tv.domain.model.LocalScraperResult): String? {
+    private fun buildDescription(result: us.xnetik.tv.domain.model.LocalScraperResult): String? {
         // Quality is shown in the stream name — only show size/language in description
         val parts = mutableListOf<String>()
         result.size?.let { parts.add(it) }
@@ -733,7 +733,7 @@ class StreamRepositoryImpl @Inject constructor(
         return StreamAttemptFailure(
             addonName = addon.displayName,
             kind = StreamFailureKind.MISSING,
-            detail = context.getString(com.nuvio.tv.R.string.stream_error_detail_no_streams_for_id)
+            detail = context.getString(us.xnetik.tv.R.string.stream_error_detail_no_streams_for_id)
         )
     }
 
@@ -743,15 +743,15 @@ class StreamRepositoryImpl @Inject constructor(
         }
         val normalizedReason = when {
             error.message.contains("Unable to resolve host", ignoreCase = true) ->
-                context.getString(com.nuvio.tv.R.string.stream_error_detail_addon_unreachable)
+                context.getString(us.xnetik.tv.R.string.stream_error_detail_addon_unreachable)
             error.message.contains("Failed to connect", ignoreCase = true) ->
-                context.getString(com.nuvio.tv.R.string.stream_error_detail_addon_connection_failed)
+                context.getString(us.xnetik.tv.R.string.stream_error_detail_addon_connection_failed)
             error.message.contains("timeout", ignoreCase = true) ->
-                context.getString(com.nuvio.tv.R.string.stream_error_detail_addon_timeout)
+                context.getString(us.xnetik.tv.R.string.stream_error_detail_addon_timeout)
             error.message.contains("CLEARTEXT communication", ignoreCase = true) ->
-                context.getString(com.nuvio.tv.R.string.stream_error_detail_addon_cleartext_blocked)
+                context.getString(us.xnetik.tv.R.string.stream_error_detail_addon_cleartext_blocked)
             error.message.isBlank() ->
-                context.getString(com.nuvio.tv.R.string.stream_error_detail_addon_request_failed)
+                context.getString(us.xnetik.tv.R.string.stream_error_detail_addon_request_failed)
             else -> error.message.replaceFirstChar { char ->
                 if (char.isLowerCase()) char.titlecase() else char.toString()
             }

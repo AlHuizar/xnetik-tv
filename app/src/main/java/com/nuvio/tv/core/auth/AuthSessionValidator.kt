@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.auth
+package us.xnetik.tv.core.auth
 
 import io.github.jan.supabase.auth.Auth
 import io.github.jan.supabase.exceptions.RestException

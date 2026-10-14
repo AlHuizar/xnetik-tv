@@ -1,14 +1,14 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import android.util.Log
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.CollectionsDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.remote.supabase.SupabaseHomeCatalogSettingsBlob
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.CollectionsDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.remote.supabase.SupabaseHomeCatalogSettingsBlob
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.repository.AddonRepository
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

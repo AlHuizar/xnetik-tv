@@ -1,27 +1,27 @@
-package com.nuvio.tv.core.di
+package us.xnetik.tv.core.di
 
-import com.nuvio.tv.data.simkl.AndroidSimklAuthStorage
-import com.nuvio.tv.data.simkl.AndroidSimklSyncStorage
-import com.nuvio.tv.data.simkl.SimklAuthStorage
-import com.nuvio.tv.data.simkl.SimklApiSyncRemote
-import com.nuvio.tv.data.simkl.SimklSyncRemote
-import com.nuvio.tv.data.simkl.SimklSyncStorage
-import com.nuvio.tv.core.tracking.TrackingLibraryProvider
-import com.nuvio.tv.core.tracking.TrackingProvider
-import com.nuvio.tv.data.repository.TraktTrackingLibraryProvider
-import com.nuvio.tv.data.repository.TraktTrackingProvider
-import com.nuvio.tv.data.simkl.SimklLibraryService
-import com.nuvio.tv.core.tracking.TrackingHistoryWriter
-import com.nuvio.tv.core.tracking.TrackingProgressProvider
-import com.nuvio.tv.data.repository.TraktTrackingHistoryWriter
-import com.nuvio.tv.data.repository.TraktTrackingProgressProvider
-import com.nuvio.tv.data.simkl.SimklTrackingHistoryWriter
-import com.nuvio.tv.data.simkl.SimklTrackingProgressProvider
-import com.nuvio.tv.data.simkl.SimklTrackingProvider
-import com.nuvio.tv.core.profile.ProfileScopedCredentialStore
-import com.nuvio.tv.data.mdblist.MdbListTrackingHistoryWriter
-import com.nuvio.tv.data.mdblist.MdbListTrackingProgressProvider
-import com.nuvio.tv.data.mdblist.MdbListTrackingProvider
+import us.xnetik.tv.data.simkl.AndroidSimklAuthStorage
+import us.xnetik.tv.data.simkl.AndroidSimklSyncStorage
+import us.xnetik.tv.data.simkl.SimklAuthStorage
+import us.xnetik.tv.data.simkl.SimklApiSyncRemote
+import us.xnetik.tv.data.simkl.SimklSyncRemote
+import us.xnetik.tv.data.simkl.SimklSyncStorage
+import us.xnetik.tv.core.tracking.TrackingLibraryProvider
+import us.xnetik.tv.core.tracking.TrackingProvider
+import us.xnetik.tv.data.repository.TraktTrackingLibraryProvider
+import us.xnetik.tv.data.repository.TraktTrackingProvider
+import us.xnetik.tv.data.simkl.SimklLibraryService
+import us.xnetik.tv.core.tracking.TrackingHistoryWriter
+import us.xnetik.tv.core.tracking.TrackingProgressProvider
+import us.xnetik.tv.data.repository.TraktTrackingHistoryWriter
+import us.xnetik.tv.data.repository.TraktTrackingProgressProvider
+import us.xnetik.tv.data.simkl.SimklTrackingHistoryWriter
+import us.xnetik.tv.data.simkl.SimklTrackingProgressProvider
+import us.xnetik.tv.data.simkl.SimklTrackingProvider
+import us.xnetik.tv.core.profile.ProfileScopedCredentialStore
+import us.xnetik.tv.data.mdblist.MdbListTrackingHistoryWriter
+import us.xnetik.tv.data.mdblist.MdbListTrackingProgressProvider
+import us.xnetik.tv.data.mdblist.MdbListTrackingProvider
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -34,7 +34,7 @@ import javax.inject.Singleton
 abstract class TrackingModule {
     @Binds
     @IntoSet
-    abstract fun bindMdbListLibrary(provider: com.nuvio.tv.data.mdblist.MdbListTrackingLibraryProvider): TrackingLibraryProvider
+    abstract fun bindMdbListLibrary(provider: us.xnetik.tv.data.mdblist.MdbListTrackingLibraryProvider): TrackingLibraryProvider
 
     @Binds
     @IntoSet

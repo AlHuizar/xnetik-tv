@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.emptyPreferences
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.domain.model.EpisodeShuffleSettings
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.domain.model.EpisodeShuffleSettings
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.flow.MutableStateFlow

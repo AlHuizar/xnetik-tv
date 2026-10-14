@@ -1,4 +1,4 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -8,7 +8,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import com.nuvio.tv.BuildConfig
+import us.xnetik.tv.BuildConfig
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

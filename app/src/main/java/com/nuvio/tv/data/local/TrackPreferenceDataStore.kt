@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nuvio.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.profile.ProfileManager
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -136,9 +136,9 @@ data class PersistedTrackPreference(
     val audioTrackId: String?
 )
 
-internal fun PersistedTrackPreference.toTrackPreference(): com.nuvio.tv.ui.screens.player.PlayerRuntimeController.TrackPreference? {
+internal fun PersistedTrackPreference.toTrackPreference(): us.xnetik.tv.ui.screens.player.PlayerRuntimeController.TrackPreference? {
     val audio = if (audioLanguage != null || audioName != null || audioTrackId != null) {
-        com.nuvio.tv.ui.screens.player.PlayerRuntimeController.RememberedTrackSelection(
+        us.xnetik.tv.ui.screens.player.PlayerRuntimeController.RememberedTrackSelection(
             language = audioLanguage,
             name = audioName,
             trackId = audioTrackId
@@ -146,26 +146,26 @@ internal fun PersistedTrackPreference.toTrackPreference(): com.nuvio.tv.ui.scree
     } else null
 
     val subtitle = when (subtitleType) {
-        "INTERNAL" -> com.nuvio.tv.ui.screens.player.PlayerRuntimeController.RememberedSubtitleSelection.Internal(
-            track = com.nuvio.tv.ui.screens.player.PlayerRuntimeController.RememberedTrackSelection(
+        "INTERNAL" -> us.xnetik.tv.ui.screens.player.PlayerRuntimeController.RememberedSubtitleSelection.Internal(
+            track = us.xnetik.tv.ui.screens.player.PlayerRuntimeController.RememberedTrackSelection(
                 language = subtitleLanguage,
                 name = subtitleName,
                 trackId = subtitleTrackId,
                 isForcedHint = subtitleIsForced
             )
         )
-        "ADDON" -> com.nuvio.tv.ui.screens.player.PlayerRuntimeController.RememberedSubtitleSelection.Addon(
+        "ADDON" -> us.xnetik.tv.ui.screens.player.PlayerRuntimeController.RememberedSubtitleSelection.Addon(
             id = addonSubtitleId ?: "",
             url = addonSubtitleUrl ?: "",
             language = subtitleLanguage ?: "",
             addonName = addonSubtitleAddonName ?: ""
         )
-        "DISABLED" -> com.nuvio.tv.ui.screens.player.PlayerRuntimeController.RememberedSubtitleSelection.Disabled
+        "DISABLED" -> us.xnetik.tv.ui.screens.player.PlayerRuntimeController.RememberedSubtitleSelection.Disabled
         else -> null
     }
 
     if (audio == null && subtitle == null) return null
-    return com.nuvio.tv.ui.screens.player.PlayerRuntimeController.TrackPreference(
+    return us.xnetik.tv.ui.screens.player.PlayerRuntimeController.TrackPreference(
         audio = audio,
         subtitle = subtitle
     )

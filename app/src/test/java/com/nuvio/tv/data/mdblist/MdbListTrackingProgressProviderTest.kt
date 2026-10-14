@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.domain.model.WatchedItem
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.flow.MutableStateFlow

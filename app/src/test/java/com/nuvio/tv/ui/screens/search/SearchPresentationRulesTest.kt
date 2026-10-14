@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.search
+package us.xnetik.tv.ui.screens.search
 
-import com.nuvio.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.DiscoverLocation
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

@@ -3,7 +3,7 @@
     androidx.compose.ui.ExperimentalComposeUiApi::class
 )
 
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -55,15 +55,15 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.contentTextDirection
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.contentTextDirection
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlin.math.abs
 import kotlin.math.exp
-import com.nuvio.tv.ui.screens.ambient.AmbientDialogEffect
+import us.xnetik.tv.ui.screens.ambient.AmbientDialogEffect
 
 @Composable
 fun SynopsisDescription(

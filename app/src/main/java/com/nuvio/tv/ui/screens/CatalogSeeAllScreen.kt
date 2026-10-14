@@ -1,9 +1,9 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens
+package us.xnetik.tv.ui.screens
 
-import com.nuvio.tv.domain.model.catalogRowLegacyKey
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.catalogRowLegacyKey
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
@@ -41,7 +41,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.platform.LocalLifecycleOwner
-import com.nuvio.tv.ui.util.dpadRepeatThrottle
+import us.xnetik.tv.ui.util.dpadRepeatThrottle
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -50,22 +50,22 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.components.EmptyScreenState
-import com.nuvio.tv.ui.components.GridContentCard
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.LocalCardDepthStyle
-import com.nuvio.tv.ui.components.nuvioCardDepth
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.PosterCardStyle
-import com.nuvio.tv.ui.screens.home.HomeEvent
-import com.nuvio.tv.ui.screens.home.HomeViewModel
-import com.nuvio.tv.ui.screens.search.SearchEvent
-import com.nuvio.tv.ui.screens.search.SearchViewModel
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.legacyKey
-import com.nuvio.tv.domain.model.stableItemKeys
-import com.nuvio.tv.domain.model.stableKey
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.components.EmptyScreenState
+import us.xnetik.tv.ui.components.GridContentCard
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.LocalCardDepthStyle
+import us.xnetik.tv.ui.components.nuvioCardDepth
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.ui.screens.home.HomeEvent
+import us.xnetik.tv.ui.screens.home.HomeViewModel
+import us.xnetik.tv.ui.screens.search.SearchEvent
+import us.xnetik.tv.ui.screens.search.SearchViewModel
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.legacyKey
+import us.xnetik.tv.domain.model.stableItemKeys
+import us.xnetik.tv.domain.model.stableKey
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlin.math.roundToInt
 
@@ -80,7 +80,7 @@ fun CatalogSeeAllScreen(
     searchViewModel: SearchViewModel? = null,
     serverCatalog: ServerCatalogViewModel? = null,
     viewModel: HomeViewModel = hiltViewModel(),
-    posterOptionsViewModel: com.nuvio.tv.ui.components.posteroptions.PosterOptionsViewModel = hiltViewModel(),
+    posterOptionsViewModel: us.xnetik.tv.ui.components.posteroptions.PosterOptionsViewModel = hiltViewModel(),
     onNavigateToDetail: (String, String, String) -> Unit,
     onBackPress: () -> Unit
 ) {
@@ -240,7 +240,7 @@ fun CatalogSeeAllScreen(
                 LazyVerticalGrid(
                     state = gridState,
                     columns = GridCells.Adaptive(
-                        minSize = if (com.nuvio.tv.ui.components.LocalLandscapePosterMode.current) posterCardStyle.height else posterCardStyle.width
+                        minSize = if (us.xnetik.tv.ui.components.LocalLandscapePosterMode.current) posterCardStyle.height else posterCardStyle.width
                     ),
                     modifier = Modifier.dpadRepeatThrottle(),
                     contentPadding = PaddingValues(
@@ -262,7 +262,7 @@ fun CatalogSeeAllScreen(
                             else item.id in (searchWatchedMovieIds?.value ?: emptySet())
                         } else {
                             uiState.movieWatchedStatus[
-                                com.nuvio.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)
+                                us.xnetik.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)
                             ] == true
                         }
                         val itemFocusKey = catalogItemFocusKey(item)
@@ -303,8 +303,8 @@ fun CatalogSeeAllScreen(
                             val cardShape = remember(posterCardStyle.cornerRadius) {
                                 androidx.compose.foundation.shape.RoundedCornerShape(posterCardStyle.cornerRadius)
                             }
-                            val cardDepthStyle = com.nuvio.tv.ui.components.LocalCardDepthStyle.current
-                            val globalLandscape = com.nuvio.tv.ui.components.LocalLandscapePosterMode.current
+                            val cardDepthStyle = us.xnetik.tv.ui.components.LocalCardDepthStyle.current
+                            val globalLandscape = us.xnetik.tv.ui.components.LocalLandscapePosterMode.current
                             Column(
                                 modifier = Modifier
                                     .then(if (globalLandscape) Modifier.fillMaxWidth() else Modifier.width(posterCardStyle.width))
@@ -313,7 +313,7 @@ fun CatalogSeeAllScreen(
                                     onClick = {},
                                     modifier = Modifier
                                         .then(
-                                            if (globalLandscape) Modifier.fillMaxWidth().aspectRatio(com.nuvio.tv.domain.model.PosterShape.LANDSCAPE.aspectRatio())
+                                            if (globalLandscape) Modifier.fillMaxWidth().aspectRatio(us.xnetik.tv.domain.model.PosterShape.LANDSCAPE.aspectRatio())
                                             else Modifier.width(posterCardStyle.width).height(posterCardStyle.height)
                                         )
                                         .then(Modifier.focusProperties { canFocus = false }),
@@ -330,7 +330,7 @@ fun CatalogSeeAllScreen(
                                             .then(
                                                 Modifier.nuvioCardDepth(
                                                     shape = cardShape,
-                                                    surface = com.nuvio.tv.domain.model.CardDepthSurface.POSTERS,
+                                                    surface = us.xnetik.tv.domain.model.CardDepthSurface.POSTERS,
                                                     style = cardDepthStyle
                                                 )
                                             ),
@@ -366,7 +366,7 @@ fun CatalogSeeAllScreen(
         }
 
         val posterOptionsState by posterOptionsController.state.collectAsState()
-        com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+        us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
             state = posterOptionsState,
             controller = posterOptionsController,
             onNavigateToDetail = { id, type2, addonBaseUrl ->

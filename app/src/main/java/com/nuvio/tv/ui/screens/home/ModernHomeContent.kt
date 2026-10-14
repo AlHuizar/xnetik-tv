@@ -4,9 +4,9 @@
     kotlinx.coroutines.FlowPreview::class
 )
 
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.AnimationSpec
@@ -60,7 +60,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import androidx.tv.material3.Border
 import androidx.tv.material3.Card
 import androidx.tv.material3.CardDefaults
@@ -74,19 +74,19 @@ import coil3.memory.MemoryCache
 import coil3.request.ImageRequest
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.ContinueWatchingOptionsDialog
-import com.nuvio.tv.LocalSidebarExpanded
-import com.nuvio.tv.LocalContentFocusRequester
-import com.nuvio.tv.ui.util.LocalRecompositionHighlighterEnabled
-import com.nuvio.tv.ui.util.StableList
-import com.nuvio.tv.ui.util.StableRef
-import com.nuvio.tv.ui.util.asStable
-import com.nuvio.tv.ui.util.formatHeroRuntime
-import com.nuvio.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.ContinueWatchingOptionsDialog
+import us.xnetik.tv.LocalSidebarExpanded
+import us.xnetik.tv.LocalContentFocusRequester
+import us.xnetik.tv.ui.util.LocalRecompositionHighlighterEnabled
+import us.xnetik.tv.ui.util.StableList
+import us.xnetik.tv.ui.util.StableRef
+import us.xnetik.tv.ui.util.asStable
+import us.xnetik.tv.ui.util.formatHeroRuntime
+import us.xnetik.tv.ui.util.recompositionHighlighter
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import kotlinx.coroutines.delay
@@ -183,7 +183,7 @@ fun ModernHomeContent(
     if (carouselRows.list.isEmpty()) {
         if (uiState.heroSectionEnabled && uiState.heroItems.isNotEmpty()) {
             Box(modifier = Modifier.fillMaxSize()) {
-                com.nuvio.tv.ui.components.HeroCarousel(
+                us.xnetik.tv.ui.components.HeroCarousel(
                     items = uiState.heroItems.asStable(),
                     showImdbRatings = uiState.homeImdbRatingsVisibility.showRatings,
                     onItemClick = { item ->

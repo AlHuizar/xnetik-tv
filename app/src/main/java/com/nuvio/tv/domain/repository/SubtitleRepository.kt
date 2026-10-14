@@ -1,6 +1,6 @@
-package com.nuvio.tv.domain.repository
+package us.xnetik.tv.domain.repository
 
-import com.nuvio.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.Subtitle
 
 interface SubtitleRepository {
     /**

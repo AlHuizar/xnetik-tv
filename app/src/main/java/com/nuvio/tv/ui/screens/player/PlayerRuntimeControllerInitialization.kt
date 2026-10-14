@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.content.Context
 import android.content.res.Resources
@@ -60,25 +60,25 @@ import androidx.media3.extractor.ts.TsExtractor
 import androidx.media3.session.MediaSession
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
-import com.nuvio.tv.R
-import com.nuvio.tv.core.player.DolbyVisionCodecFallback
-import com.nuvio.tv.core.player.DolbyVisionBaseLayerPolicy
-import com.nuvio.tv.core.player.BitrateAwareLoadControl
-import com.nuvio.tv.core.player.DolbyVisionConversionConfig
-import com.nuvio.tv.core.player.DolbyVisionConversionStats
-import com.nuvio.tv.core.player.DolbyVisionExtractorsFactory
-import com.nuvio.tv.core.player.DoviBridge
-import com.nuvio.tv.core.player.LastPlaybackDiagnostics
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.ui.screens.settings.MemoryBudget
-import com.nuvio.tv.data.local.AudioLanguageOption
-import com.nuvio.tv.data.local.Dv7HandlingMode
-import com.nuvio.tv.data.local.FrameRateMatchingMode
-import com.nuvio.tv.data.local.SUBTITLE_LANGUAGE_FORCED
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.repository.PlaybackIssueErrorInput
-import com.nuvio.tv.domain.model.Subtitle
+import us.xnetik.tv.R
+import us.xnetik.tv.core.player.DolbyVisionCodecFallback
+import us.xnetik.tv.core.player.DolbyVisionBaseLayerPolicy
+import us.xnetik.tv.core.player.BitrateAwareLoadControl
+import us.xnetik.tv.core.player.DolbyVisionConversionConfig
+import us.xnetik.tv.core.player.DolbyVisionConversionStats
+import us.xnetik.tv.core.player.DolbyVisionExtractorsFactory
+import us.xnetik.tv.core.player.DoviBridge
+import us.xnetik.tv.core.player.LastPlaybackDiagnostics
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.ui.screens.settings.MemoryBudget
+import us.xnetik.tv.data.local.AudioLanguageOption
+import us.xnetik.tv.data.local.Dv7HandlingMode
+import us.xnetik.tv.data.local.FrameRateMatchingMode
+import us.xnetik.tv.data.local.SUBTITLE_LANGUAGE_FORCED
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.repository.PlaybackIssueErrorInput
+import us.xnetik.tv.domain.model.Subtitle
 import io.github.peerless2012.ass.media.kt.buildWithAssSupport
 import io.github.peerless2012.ass.media.type.AssRenderType
 import kotlinx.coroutines.async
@@ -874,7 +874,7 @@ internal fun PlayerRuntimeController.initializePlayer(
             val bluetoothStereoDownmix = isBluetoothAudioOutput
             val effectiveDownmixEnabled = playerSettings.effectiveDownmixEnabled || bluetoothStereoDownmix
             val effectiveAudioOutputChannels = if (bluetoothStereoDownmix) {
-                com.nuvio.tv.data.local.AudioOutputChannels.CHANNELS_2_0
+                us.xnetik.tv.data.local.AudioOutputChannels.CHANNELS_2_0
             } else {
                 playerSettings.audioOutputChannels
             }
@@ -1864,13 +1864,13 @@ internal fun PlayerRuntimeController.initializePlayer(
         } catch (e: Exception) {
             if (
                 maybeAutoSwitchInternalPlayerOnStartupError(
-                    detailedError = e.message ?: context.getString(com.nuvio.tv.R.string.player_error_initialize_failed),
+                    detailedError = e.message ?: context.getString(us.xnetik.tv.R.string.player_error_initialize_failed),
                     allowEngineFailover = allowEngineFailover
                 )
             ) {
                 return@launch
             }
-            val displayError = e.toDisplayMessage(context, context.getString(com.nuvio.tv.R.string.player_error_initialize_failed))
+            val displayError = e.toDisplayMessage(context, context.getString(us.xnetik.tv.R.string.player_error_initialize_failed))
             val diagnostics = LastPlaybackDiagnostics(
                 timestampMs = System.currentTimeMillis(),
                 host = currentStreamUrl.safeHost(),
@@ -2116,7 +2116,7 @@ private class SubtitleOffsetRenderersFactory(
     private val videoBoundsFractionProvider: () -> RectF?,
     private val gainAudioProcessor: GainAudioProcessor,
     private val downmixEnabled: Boolean,
-    private val audioOutputChannels: com.nuvio.tv.data.local.AudioOutputChannels,
+    private val audioOutputChannels: us.xnetik.tv.data.local.AudioOutputChannels,
     private val downmixNormalizationEnabled: Boolean,
     private val forceOpticalPassthrough: Boolean,
     private val bluetoothForcePcm: Boolean = false,
@@ -2290,7 +2290,7 @@ private class SubtitleOffsetRenderersFactory(
 }
 private fun FfmpegAudioRenderer.applyDownmixSettings(
     downmixEnabled: Boolean,
-    audioOutputChannels: com.nuvio.tv.data.local.AudioOutputChannels,
+    audioOutputChannels: us.xnetik.tv.data.local.AudioOutputChannels,
     downmixNormalizationEnabled: Boolean,
     forceOpticalPassthrough: Boolean
 ) {
@@ -2675,7 +2675,7 @@ private class SafeBandwidthMeter(
 private fun PlayerRuntimeController.recordFirstFrameDiagnostics(
     player: ExoPlayer,
     currentDiagnostics: LastPlaybackDiagnostics,
-    playerSettings: com.nuvio.tv.data.local.PlayerSettings
+    playerSettings: us.xnetik.tv.data.local.PlayerSettings
 ): LastPlaybackDiagnostics {
     val startupMs = (System.currentTimeMillis() - playerInitializationStartedAtMs).coerceAtLeast(0L)
     val conversionCalls = DoviBridge.getConversionCallCount()

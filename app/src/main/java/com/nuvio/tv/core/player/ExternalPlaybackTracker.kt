@@ -1,28 +1,28 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackResult
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackProgressStore
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackSessionStore
-import com.nuvio.tv.core.cloud.CloudLibraryRepository
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.tracking.TrackingMediaKind
-import com.nuvio.tv.core.tracking.TrackingMediaReference
-import com.nuvio.tv.core.tracking.TrackingScrobbleAction
-import com.nuvio.tv.core.tracking.TrackingScrobbleCoordinator
-import com.nuvio.tv.core.tracking.TrackingScrobbleEvent
-import com.nuvio.tv.core.tracking.buildTrackingMediaReference
-import com.nuvio.tv.core.util.parseRuntimeMinutes
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
-import com.nuvio.tv.data.repository.SkipIntroRepository
-import com.nuvio.tv.data.repository.SkipInterval
-import com.nuvio.tv.ui.screens.player.PlayerNextEpisodeRules
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackResult
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackProgressStore
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackSessionStore
+import us.xnetik.tv.core.cloud.CloudLibraryRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.tracking.TrackingMediaKind
+import us.xnetik.tv.core.tracking.TrackingMediaReference
+import us.xnetik.tv.core.tracking.TrackingScrobbleAction
+import us.xnetik.tv.core.tracking.TrackingScrobbleCoordinator
+import us.xnetik.tv.core.tracking.TrackingScrobbleEvent
+import us.xnetik.tv.core.tracking.buildTrackingMediaReference
+import us.xnetik.tv.core.util.parseRuntimeMinutes
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.data.repository.SkipIntroRepository
+import us.xnetik.tv.data.repository.SkipInterval
+import us.xnetik.tv.ui.screens.player.PlayerNextEpisodeRules
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -191,7 +191,7 @@ class ExternalPlaybackTracker @Inject constructor(
     private val cloudLibraryRepository: CloudLibraryRepository,
     private val cloudPlaybackProgressStore: CloudLibraryPlaybackProgressStore,
     private val cloudPlaybackSessionStore: CloudLibraryPlaybackSessionStore,
-    private val profileManager: com.nuvio.tv.core.profile.ProfileManager
+    private val profileManager: us.xnetik.tv.core.profile.ProfileManager
 ) {
     companion object {
         private const val TAG = "ExtPlaybackTracker"

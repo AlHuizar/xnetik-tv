@@ -1,12 +1,12 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.screens.player.autosync.AutoSyncPreferences
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.screens.player.autosync.AutoSyncPreferences
 
 /** AutoSync-owned settings rows; keeps AutoSync state out of NuvioTV PlayerSettingsDataStore. */
 @Composable

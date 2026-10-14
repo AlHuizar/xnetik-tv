@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.navigation.Screen
+import us.xnetik.tv.ui.navigation.Screen
 
 enum class StartupDestination {
     Loading,

@@ -1,6 +1,6 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
-import com.nuvio.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.data.mediaserver.ServerItemRef
 
 object LibrarySyncReducer {
     fun sanitize(state: LibrarySyncState): LibrarySyncState {

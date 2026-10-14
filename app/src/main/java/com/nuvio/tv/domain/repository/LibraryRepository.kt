@@ -1,14 +1,14 @@
-package com.nuvio.tv.domain.repository
+package us.xnetik.tv.domain.repository
 
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.ListMembershipSnapshot
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.core.tracking.TrackingMembershipApplyResult
-import com.nuvio.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.ListMembershipSnapshot
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.core.tracking.TrackingMembershipApplyResult
+import us.xnetik.tv.core.tracking.TrackingProviderId
 import kotlinx.coroutines.flow.Flow
 
 interface LibraryRepository {

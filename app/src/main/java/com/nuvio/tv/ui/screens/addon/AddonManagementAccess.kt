@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.addon
+package us.xnetik.tv.ui.screens.addon
 
-import com.nuvio.tv.core.server.AddonWebConfigMode
-import com.nuvio.tv.domain.model.ExperienceMode
-import com.nuvio.tv.domain.model.UserProfile
+import us.xnetik.tv.core.server.AddonWebConfigMode
+import us.xnetik.tv.domain.model.ExperienceMode
+import us.xnetik.tv.domain.model.UserProfile
 
 internal object AddonManagementAccess {
 

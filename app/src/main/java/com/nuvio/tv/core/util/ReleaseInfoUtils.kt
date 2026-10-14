@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.util
+package us.xnetik.tv.core.util
 
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.MetaPreview
 import java.time.Clock
 import java.time.LocalDate
 

@@ -1,6 +1,6 @@
 @file:OptIn(androidx.media3.common.util.UnstableApi::class)
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.os.Handler
 import android.os.Looper
@@ -14,9 +14,9 @@ import androidx.media3.extractor.text.CuesWithTiming
 import androidx.media3.extractor.text.DefaultSubtitleParserFactory
 import androidx.media3.extractor.text.SubtitleParser
 import androidx.media3.ui.SubtitleView
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.ui.screens.player.autosync.AutoSyncSyncedSubtitle
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.ui.screens.player.autosync.AutoSyncSyncedSubtitle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive

@@ -1,13 +1,13 @@
-package com.nuvio.tv.ui.screens
+package us.xnetik.tv.ui.screens
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.mergeCatalogPage
-import com.nuvio.tv.domain.model.nextCatalogSkip
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.mergeCatalogPage
+import us.xnetik.tv.domain.model.nextCatalogSkip
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException

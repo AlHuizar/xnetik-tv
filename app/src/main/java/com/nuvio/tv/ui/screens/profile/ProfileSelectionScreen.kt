@@ -1,13 +1,13 @@
-package com.nuvio.tv.ui.screens.profile
+package us.xnetik.tv.ui.screens.profile
 
 import androidx.tv.material3.MaterialTheme
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.theme.NuvioMotion
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.ThemeColors
-import com.nuvio.tv.ui.theme.brandWordmarkResource
-import com.nuvio.tv.ui.theme.createFocusRingStyle
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.ThemeColors
+import us.xnetik.tv.ui.theme.brandWordmarkResource
+import us.xnetik.tv.ui.theme.createFocusRingStyle
 
 import android.graphics.Rect
 import android.view.KeyEvent as AndroidKeyEvent
@@ -104,24 +104,24 @@ import androidx.tv.material3.Button
 import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.Text
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.core.sync.SetProfilePinResult
-import com.nuvio.tv.data.remote.supabase.AvatarCatalogItem
-import com.nuvio.tv.data.remote.supabase.ProfileBackgroundCatalogItem
-import com.nuvio.tv.domain.model.UserProfile
-import com.nuvio.tv.ui.components.AvatarPickerGrid
-import com.nuvio.tv.ui.components.CustomProfileBackgroundImage
-import com.nuvio.tv.ui.components.MemberBrandWordmark
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.components.ProfileBackgroundImage
-import com.nuvio.tv.ui.components.ProfileBackgroundPicker
-import com.nuvio.tv.ui.components.ProfileAvatarCircle
-import com.nuvio.tv.ui.components.ProfileEditorTab
-import com.nuvio.tv.ui.components.ProfileEditorTabs
-import com.nuvio.tv.ui.membership.Membership
-import com.nuvio.tv.ui.util.rememberLongPressKeyTracker
-import com.nuvio.tv.domain.model.ProfileBackgroundSelection
-import com.nuvio.tv.domain.model.resolveProfileBackgroundSelection
+import us.xnetik.tv.R
+import us.xnetik.tv.core.sync.SetProfilePinResult
+import us.xnetik.tv.data.remote.supabase.AvatarCatalogItem
+import us.xnetik.tv.data.remote.supabase.ProfileBackgroundCatalogItem
+import us.xnetik.tv.domain.model.UserProfile
+import us.xnetik.tv.ui.components.AvatarPickerGrid
+import us.xnetik.tv.ui.components.CustomProfileBackgroundImage
+import us.xnetik.tv.ui.components.MemberBrandWordmark
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.components.ProfileBackgroundImage
+import us.xnetik.tv.ui.components.ProfileBackgroundPicker
+import us.xnetik.tv.ui.components.ProfileAvatarCircle
+import us.xnetik.tv.ui.components.ProfileEditorTab
+import us.xnetik.tv.ui.components.ProfileEditorTabs
+import us.xnetik.tv.ui.membership.Membership
+import us.xnetik.tv.ui.util.rememberLongPressKeyTracker
+import us.xnetik.tv.domain.model.ProfileBackgroundSelection
+import us.xnetik.tv.domain.model.resolveProfileBackgroundSelection
 import kotlinx.coroutines.delay
 
 private object ProfileSelectionSpacing {
@@ -201,7 +201,7 @@ fun ProfileSelectionScreen(
     onProfileClicked: () -> Unit = {},
     onProfileSelectionFailed: () -> Unit = {},
     onProfileFocusChanged: ((colorHex: String?, backgroundUrl: String?, memoryCacheKey: String?) -> Unit)? = null,
-    onProfileThemeFocused: ((com.nuvio.tv.domain.model.AppTheme?) -> Unit)? = null,
+    onProfileThemeFocused: ((us.xnetik.tv.domain.model.AppTheme?) -> Unit)? = null,
     screenMode: ProfileSelectionMode = ProfileSelectionMode.Selection,
     onBackPress: (() -> Unit)? = null,
     viewModel: ProfileSelectionViewModel = hiltViewModel()
@@ -896,7 +896,7 @@ private fun ProfileSelectionMainContent(
     profilePinEnabled: Map<Int, Boolean>,
     avatarImageUrlsById: Map<String, String>,
     brandWordmarkRes: Int? = null,
-    profileThemes: Map<Int, com.nuvio.tv.domain.model.AppTheme> = emptyMap(),
+    profileThemes: Map<Int, us.xnetik.tv.domain.model.AppTheme> = emptyMap(),
     onProfileFocused: (UserProfile?) -> Unit,
     onProfileSelected: (UserProfile) -> Unit,
     onProfileLongPress: (UserProfile) -> Unit,
@@ -971,7 +971,7 @@ private fun ProfileGrid(
     canAddProfile: Boolean,
     profilePinEnabled: Map<Int, Boolean>,
     avatarImageUrlsById: Map<String, String>,
-    profileThemes: Map<Int, com.nuvio.tv.domain.model.AppTheme> = emptyMap(),
+    profileThemes: Map<Int, us.xnetik.tv.domain.model.AppTheme> = emptyMap(),
     onProfileFocused: (UserProfile?) -> Unit,
     onProfileSelected: (UserProfile) -> Unit,
     onProfileLongPress: (UserProfile) -> Unit,
@@ -1069,7 +1069,7 @@ private fun ProfileCard(
     avatarImageUrl: String?,
     focusRequester: FocusRequester,
     compact: Boolean,
-    profileTheme: com.nuvio.tv.domain.model.AppTheme? = null,
+    profileTheme: us.xnetik.tv.domain.model.AppTheme? = null,
     onFocused: () -> Unit,
     onClick: () -> Unit,
     onLongPress: () -> Unit

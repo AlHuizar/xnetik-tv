@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.auth
+package us.xnetik.tv.core.auth
 
 import kotlinx.serialization.json.jsonPrimitive
 import org.junit.Assert.assertEquals

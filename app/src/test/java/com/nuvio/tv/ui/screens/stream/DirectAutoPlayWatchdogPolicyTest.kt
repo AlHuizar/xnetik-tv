@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.stream
+package us.xnetik.tv.ui.screens.stream
 
 import kotlinx.coroutines.async
 import kotlinx.coroutines.ExperimentalCoroutinesApi

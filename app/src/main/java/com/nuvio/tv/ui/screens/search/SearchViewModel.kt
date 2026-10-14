@@ -1,35 +1,35 @@
-package com.nuvio.tv.ui.screens.search
+package us.xnetik.tv.ui.screens.search
 
-import com.nuvio.tv.domain.model.catalogRowLegacyKey
+import us.xnetik.tv.domain.model.catalogRowLegacyKey
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.local.DiscoverSelectionDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.SearchHistoryDataStore
-import com.nuvio.tv.data.mediaserver.ServerCatalog
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.domain.model.catalogRowStableKey
-import com.nuvio.tv.domain.model.mergeCatalogPage
-import com.nuvio.tv.domain.model.nextCatalogSkip
-import com.nuvio.tv.domain.model.skipStep
-import com.nuvio.tv.domain.model.stableKey
-import com.nuvio.tv.domain.model.supportsExtra
-import com.nuvio.tv.core.util.filterReleasedItems
-import com.nuvio.tv.core.util.isUnreleased
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.R
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.local.DiscoverSelectionDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.SearchHistoryDataStore
+import us.xnetik.tv.data.mediaserver.ServerCatalog
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.catalogRowStableKey
+import us.xnetik.tv.domain.model.mergeCatalogPage
+import us.xnetik.tv.domain.model.nextCatalogSkip
+import us.xnetik.tv.domain.model.skipStep
+import us.xnetik.tv.domain.model.stableKey
+import us.xnetik.tv.domain.model.supportsExtra
+import us.xnetik.tv.core.util.filterReleasedItems
+import us.xnetik.tv.core.util.isUnreleased
+import us.xnetik.tv.domain.repository.AddonRepository
 import java.time.LocalDate
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL
-import com.nuvio.tv.domain.repository.CatalogRepository
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL
+import us.xnetik.tv.domain.repository.CatalogRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
@@ -51,13 +51,13 @@ import javax.inject.Inject
 class SearchViewModel @Inject constructor(
     private val addonRepository: AddonRepository,
     private val catalogRepository: CatalogRepository,
-    private val metaRepository: com.nuvio.tv.domain.repository.MetaRepository,
+    private val metaRepository: us.xnetik.tv.domain.repository.MetaRepository,
     private val discoverSelectionDataStore: DiscoverSelectionDataStore,
     private val layoutPreferenceDataStore: LayoutPreferenceDataStore,
     private val searchHistoryDataStore: SearchHistoryDataStore,
-    private val watchProgressRepository: com.nuvio.tv.domain.repository.WatchProgressRepository,
-    private val watchedSeriesStateHolder: com.nuvio.tv.data.local.WatchedSeriesStateHolder,
-    val posterOptions: com.nuvio.tv.ui.components.posteroptions.PosterOptionsController,
+    private val watchProgressRepository: us.xnetik.tv.domain.repository.WatchProgressRepository,
+    private val watchedSeriesStateHolder: us.xnetik.tv.data.local.WatchedSeriesStateHolder,
+    val posterOptions: us.xnetik.tv.ui.components.posteroptions.PosterOptionsController,
     private val serverCatalog: ServerCatalog,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
@@ -219,7 +219,7 @@ class SearchViewModel @Inject constructor(
             if (id in metaPrefetchedIds) return@launch
             metaPrefetchedIds.add(id)
             metaRepository.getMetaFromAllAddons(type = type, id = id)
-                .first { it !is com.nuvio.tv.core.network.NetworkResult.Loading }
+                .first { it !is us.xnetik.tv.core.network.NetworkResult.Loading }
             watchProgressRepository.getAllEpisodeProgress(id.substringBefore(":")).first()
         }
     }
@@ -396,7 +396,7 @@ class SearchViewModel @Inject constructor(
                             skipStep = 100,
                             extraArgs = mapOf("search" to query),
                             supportsSkip = false,
-                            posterScreen = com.nuvio.tv.core.poster.CustomPosterScreen.SEARCH
+                            posterScreen = us.xnetik.tv.core.poster.CustomPosterScreen.SEARCH
                         ).collect { result ->
                             if (result is NetworkResult.Success && _uiState.value.query.trim() == query) {
                                 val names = result.data.items.map { it.name }
@@ -571,7 +571,7 @@ class SearchViewModel @Inject constructor(
                 throw e
             } catch (e: Exception) {
                 if (generation == searchGeneration && activeSearchQuery == query) {
-                    _uiState.update { it.copy(isSearching = false, error = e.message ?: context.getString(com.nuvio.tv.R.string.search_error_load_addons_failed)) }
+                    _uiState.update { it.copy(isSearching = false, error = e.message ?: context.getString(us.xnetik.tv.R.string.search_error_load_addons_failed)) }
                 }
                 return@launch
             }
@@ -740,7 +740,7 @@ class SearchViewModel @Inject constructor(
             skipStep = skipStep,
             extraArgs = mapOf("search" to query),
             supportsSkip = supportsSkip,
-            posterScreen = com.nuvio.tv.core.poster.CustomPosterScreen.SEARCH
+            posterScreen = us.xnetik.tv.core.poster.CustomPosterScreen.SEARCH
         ).collect { result ->
             when (result) {
                 is NetworkResult.Success -> {
@@ -760,7 +760,7 @@ class SearchViewModel @Inject constructor(
                     pendingCatalogResponses = (pendingCatalogResponses - 1).coerceAtLeast(0)
                     // Ignore per-catalog errors unless we have nothing to show.
                     if (catalogsMap.isEmpty()) {
-                        _uiState.update { it.copy(error = result.message ?: context.getString(com.nuvio.tv.R.string.search_error_failed)) }
+                        _uiState.update { it.copy(error = result.message ?: context.getString(us.xnetik.tv.R.string.search_error_failed)) }
                     }
                     scheduleCatalogRowsUpdate()
                 }
@@ -817,7 +817,7 @@ class SearchViewModel @Inject constructor(
                 skipStep = currentRow.skipStep,
                 extraArgs = mapOf("search" to query),
                 supportsSkip = currentRow.supportsSkip,
-                posterScreen = com.nuvio.tv.core.poster.CustomPosterScreen.SEARCH
+                posterScreen = us.xnetik.tv.core.poster.CustomPosterScreen.SEARCH
             ).collect { result ->
                 when (result) {
                     is NetworkResult.Success -> {
@@ -1095,7 +1095,7 @@ class SearchViewModel @Inject constructor(
                 skipStep = selectedCatalog.skipStep,
                 extraArgs = extraArgs,
                 supportsSkip = selectedCatalog.supportsSkip,
-                posterScreen = com.nuvio.tv.core.poster.CustomPosterScreen.SEARCH
+                posterScreen = us.xnetik.tv.core.poster.CustomPosterScreen.SEARCH
             ).collect { result ->
                 if (_uiState.value.discoverLocation == DiscoverLocation.OFF) return@collect
                 when (result) {

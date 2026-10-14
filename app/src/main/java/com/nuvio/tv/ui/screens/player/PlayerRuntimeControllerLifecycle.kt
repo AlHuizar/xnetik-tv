@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.content.Intent
 import android.media.audiofx.AudioEffect
@@ -16,7 +16,7 @@ internal fun PlayerRuntimeController.releasePlayer(
 ) {
     logScrobbleDiagnostic("release_player", "flushPlaybackState=$flushPlaybackState")
     isReleasingPlayer = true
-    com.nuvio.tv.core.recommendations.TvRecommendationManager.isPlaybackActive.value = false
+    us.xnetik.tv.core.recommendations.TvRecommendationManager.isPlaybackActive.value = false
     if (flushPlaybackState) {
         if (!keepTorrentStream) stopTorrentStream()
         flushPlaybackSnapshotForSwitchOrExit()

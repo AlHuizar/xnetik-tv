@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

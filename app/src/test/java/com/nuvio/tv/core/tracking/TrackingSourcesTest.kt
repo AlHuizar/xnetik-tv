@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.data.local.WatchProgressSource
-import com.nuvio.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.data.local.WatchProgressSource
+import us.xnetik.tv.domain.model.LibrarySourceMode
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

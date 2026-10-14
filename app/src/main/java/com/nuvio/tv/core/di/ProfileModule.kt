@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.di
+package us.xnetik.tv.core.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

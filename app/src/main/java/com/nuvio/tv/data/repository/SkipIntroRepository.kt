@@ -1,15 +1,15 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.util.Log
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.AnimeSkipSettingsDataStore
-import com.nuvio.tv.data.remote.api.AniSkipApi
-import com.nuvio.tv.data.remote.api.AnimeSkipApi
-import com.nuvio.tv.data.remote.api.AnimeSkipRequest
-import com.nuvio.tv.data.remote.api.IntroDbApi
-import com.nuvio.tv.data.remote.api.IntroDbSegment
-import com.nuvio.tv.data.remote.api.IntroDbSegmentsResponse
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.AnimeSkipSettingsDataStore
+import us.xnetik.tv.data.remote.api.AniSkipApi
+import us.xnetik.tv.data.remote.api.AnimeSkipApi
+import us.xnetik.tv.data.remote.api.AnimeSkipRequest
+import us.xnetik.tv.data.remote.api.IntroDbApi
+import us.xnetik.tv.data.remote.api.IntroDbSegment
+import us.xnetik.tv.data.remote.api.IntroDbSegmentsResponse
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton

@@ -1,6 +1,6 @@
 @file:OptIn(androidx.media3.common.util.UnstableApi::class)
 
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
 import android.net.Uri
 import androidx.media3.common.C
@@ -17,7 +17,7 @@ import androidx.media3.extractor.SeekMap
 import androidx.media3.extractor.SniffFailure
 import androidx.media3.extractor.TrackOutput
 import androidx.media3.extractor.text.CueDecoder
-import com.nuvio.tv.ui.screens.player.SubtitleSyncCue
+import us.xnetik.tv.ui.screens.player.SubtitleSyncCue
 import java.io.EOFException
 import kotlin.math.max
 

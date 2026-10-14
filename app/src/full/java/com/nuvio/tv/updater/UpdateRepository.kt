@@ -1,8 +1,8 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.data.remote.api.GitHubReleaseApi
-import com.nuvio.tv.updater.model.AppUpdate
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.data.remote.api.GitHubReleaseApi
+import us.xnetik.tv.updater.model.AppUpdate
 import javax.inject.Inject
 import javax.inject.Singleton
 

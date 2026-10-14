@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.theme
+package us.xnetik.tv.ui.theme
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.runtime.Immutable

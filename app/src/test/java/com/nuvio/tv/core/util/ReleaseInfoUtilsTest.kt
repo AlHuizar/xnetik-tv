@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.util
+package us.xnetik.tv.core.util
 
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
 import java.time.Clock
 import java.time.Instant
 import java.time.LocalDate

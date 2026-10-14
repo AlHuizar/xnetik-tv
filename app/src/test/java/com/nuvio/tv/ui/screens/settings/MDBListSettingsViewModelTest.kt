@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.MainDispatcherRule
-import com.nuvio.tv.data.local.MDBListSettingsDataStore
-import com.nuvio.tv.data.mdblist.MdbListTestHarness
-import com.nuvio.tv.data.remote.api.MDBListApi
-import com.nuvio.tv.domain.model.MDBListSettings
+import us.xnetik.tv.MainDispatcherRule
+import us.xnetik.tv.data.local.MDBListSettingsDataStore
+import us.xnetik.tv.data.mdblist.MdbListTestHarness
+import us.xnetik.tv.data.remote.api.MDBListApi
+import us.xnetik.tv.domain.model.MDBListSettings
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every

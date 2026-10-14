@@ -1,6 +1,6 @@
 @file:OptIn(androidx.media3.common.util.UnstableApi::class)
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.text.SpannableStringBuilder
 import android.text.Spanned

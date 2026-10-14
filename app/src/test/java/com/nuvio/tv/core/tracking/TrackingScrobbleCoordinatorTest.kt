@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals

@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 enum class HomeLayout(val displayName: String) {
     CLASSIC("Classic View"),

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
 import java.util.Locale
 import java.util.concurrent.ConcurrentHashMap

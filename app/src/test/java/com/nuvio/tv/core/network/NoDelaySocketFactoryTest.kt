@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
-import com.nuvio.tv.ui.screens.player.PlayerPlaybackNetworking
+import us.xnetik.tv.ui.screens.player.PlayerPlaybackNetworking
 import okhttp3.Call
 import okhttp3.Connection
 import okhttp3.EventListener

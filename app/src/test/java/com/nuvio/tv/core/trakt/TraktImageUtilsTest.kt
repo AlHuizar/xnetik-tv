@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.trakt
+package us.xnetik.tv.core.trakt
 
-import com.nuvio.tv.data.remote.dto.trakt.TraktImagesDto
+import us.xnetik.tv.data.remote.dto.trakt.TraktImagesDto
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

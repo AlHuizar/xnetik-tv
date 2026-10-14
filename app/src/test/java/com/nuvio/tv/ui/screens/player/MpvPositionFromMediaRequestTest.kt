@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

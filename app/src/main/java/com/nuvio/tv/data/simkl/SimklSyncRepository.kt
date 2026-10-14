@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
 import android.util.Log
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.CancellationException

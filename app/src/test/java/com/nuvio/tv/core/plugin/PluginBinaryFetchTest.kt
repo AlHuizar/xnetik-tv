@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.plugin
+package us.xnetik.tv.core.plugin
 
 import com.google.gson.JsonParser
 import java.util.Base64

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.qr
+package us.xnetik.tv.core.qr
 
 import android.graphics.Bitmap
 import android.graphics.Canvas

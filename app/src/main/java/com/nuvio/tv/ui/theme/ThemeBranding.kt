@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.theme
+package us.xnetik.tv.ui.theme
 
 import androidx.annotation.DrawableRes
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.AppTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.AppTheme
 
 @get:DrawableRes
 val AppTheme.brandWordmarkResource: Int

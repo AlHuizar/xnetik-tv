@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.remote
+package us.xnetik.tv.data.remote
 
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.core.network.NoDelaySocketFactory
-import com.nuvio.tv.domain.model.ServerCapabilities
-import com.nuvio.tv.domain.model.ServerConfiguration
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.core.network.NoDelaySocketFactory
+import us.xnetik.tv.domain.model.ServerCapabilities
+import us.xnetik.tv.domain.model.ServerConfiguration
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.util.concurrent.TimeUnit

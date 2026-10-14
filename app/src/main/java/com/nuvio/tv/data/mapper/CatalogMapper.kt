@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.mapper
+package us.xnetik.tv.data.mapper
 
-import com.nuvio.tv.data.remote.dto.MetaPreviewDto
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
+import us.xnetik.tv.data.remote.dto.MetaPreviewDto
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
 
 fun MetaPreviewDto.toDomainOrNull(catalogType: String, sourceAddonBaseUrl: String? = null): MetaPreview? {
     val resolvedId = id?.takeIf { it.isNotBlank() } ?: return null

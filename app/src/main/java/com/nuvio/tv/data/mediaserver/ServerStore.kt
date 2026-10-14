@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import android.content.Context
-import com.nuvio.tv.core.profile.ProtectedProfilePreferences
+import us.xnetik.tv.core.profile.ProtectedProfilePreferences
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -27,7 +27,7 @@ data class StoredServers(
 class AndroidServerPersistence @Inject constructor(
     @ApplicationContext context: Context
 ) : ServerPersistence {
-    private val preferences = ProtectedProfilePreferences(context, "media_servers", "com.nuvio.tv.mediaservers.v1")
+    private val preferences = ProtectedProfilePreferences(context, "media_servers", "us.xnetik.tv.mediaservers.v1")
 
     override fun read(profileId: Int): String? = preferences.read(profileId)
     override fun write(profileId: Int, value: String?) = preferences.write(profileId, value)

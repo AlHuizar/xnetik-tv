@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import android.view.KeyEvent
-import com.nuvio.tv.domain.model.Video
+import us.xnetik.tv.domain.model.Video
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.search
+package us.xnetik.tv.ui.screens.search
 
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.screens.home.HeroBackdropState
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.screens.home.HeroBackdropState
 
 import android.Manifest
 import android.content.Intent
@@ -77,13 +77,13 @@ import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.platform.LocalContext
-import com.nuvio.tv.ui.util.recompositionHighlighter
-import com.nuvio.tv.ui.util.dpadRepeatThrottle
+import us.xnetik.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.util.dpadRepeatThrottle
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.unit.LayoutDirection
-import com.nuvio.tv.ui.util.RtlKeyUtils
+import us.xnetik.tv.ui.util.RtlKeyUtils
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.style.TextOverflow
@@ -102,14 +102,14 @@ import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.IconButton as TvIconButton
 import androidx.tv.material3.IconButtonDefaults as TvIconButtonDefaults
 import androidx.tv.material3.Text
-import com.nuvio.tv.ui.components.CatalogRowSection
-import com.nuvio.tv.ui.components.EmptyScreenState
-import com.nuvio.tv.ui.components.ErrorState
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.PosterCardStyle
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.domain.model.stableKey
+import us.xnetik.tv.ui.components.CatalogRowSection
+import us.xnetik.tv.ui.components.EmptyScreenState
+import us.xnetik.tv.ui.components.ErrorState
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.stableKey
 import android.view.inputmethod.CompletionInfo
 import android.view.inputmethod.InputMethodManager
 import androidx.compose.ui.platform.LocalView
@@ -117,7 +117,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 /** Skeleton rows shown while a search is pending, matching the two mobile renders. */
 private const val SEARCH_SKELETON_ROW_COUNT = 2
@@ -736,20 +736,20 @@ fun SearchScreen(
                     (hasPendingUnsubmittedQuery || uiState.isSearching) && visibleCatalogRows.isEmpty() -> {
                         items(SEARCH_SKELETON_ROW_COUNT, key = { "search_skeleton_$it" }) { index ->
                             val skeletonRow = remember(index) {
-                                com.nuvio.tv.domain.model.CatalogRow(
+                                us.xnetik.tv.domain.model.CatalogRow(
                                     addonId = "__skeleton",
                                     addonName = "",
                                     addonBaseUrl = "",
                                     catalogId = "skeleton_$index",
                                     catalogName = "",
-                                    type = com.nuvio.tv.domain.model.ContentType.MOVIE,
+                                    type = us.xnetik.tv.domain.model.ContentType.MOVIE,
                                     items = (0 until 8).map { i ->
-                                        com.nuvio.tv.domain.model.MetaPreview(
+                                        us.xnetik.tv.domain.model.MetaPreview(
                                             id = "__placeholder_skeleton_${index}_$i",
-                                            type = com.nuvio.tv.domain.model.ContentType.MOVIE,
+                                            type = us.xnetik.tv.domain.model.ContentType.MOVIE,
                                             name = " ",
-                                            poster = com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL,
-                                            posterShape = com.nuvio.tv.domain.model.PosterShape.POSTER,
+                                            poster = us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL,
+                                            posterShape = us.xnetik.tv.domain.model.PosterShape.POSTER,
                                             background = null,
                                             logo = null,
                                             description = null,
@@ -896,20 +896,20 @@ fun SearchScreen(
                         if (uiState.isSearching || hasPendingUnsubmittedQuery) {
                             item(key = "search_loading_more") {
                                 val skeletonRow = remember {
-                                    com.nuvio.tv.domain.model.CatalogRow(
+                                    us.xnetik.tv.domain.model.CatalogRow(
                                         addonId = "__skeleton",
                                         addonName = "",
                                         addonBaseUrl = "",
                                         catalogId = "skeleton_more",
                                         catalogName = "",
-                                        type = com.nuvio.tv.domain.model.ContentType.MOVIE,
+                                        type = us.xnetik.tv.domain.model.ContentType.MOVIE,
                                         items = (0 until 8).map { i ->
-                                            com.nuvio.tv.domain.model.MetaPreview(
+                                            us.xnetik.tv.domain.model.MetaPreview(
                                                 id = "__placeholder_skeleton_more_$i",
-                                                type = com.nuvio.tv.domain.model.ContentType.MOVIE,
+                                                type = us.xnetik.tv.domain.model.ContentType.MOVIE,
                                                 name = " ",
-                                                poster = com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL,
-                                                posterShape = com.nuvio.tv.domain.model.PosterShape.POSTER,
+                                                poster = us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL,
+                                                posterShape = us.xnetik.tv.domain.model.PosterShape.POSTER,
                                                 background = null,
                                                 logo = null,
                                                 description = null,
@@ -937,7 +937,7 @@ fun SearchScreen(
     }
 
     val posterOptionsState by viewModel.posterOptions.state.collectAsState()
-    com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+    us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
         state = posterOptionsState,
         controller = viewModel.posterOptions,
         onNavigateToDetail = { id, type, addonBaseUrl ->

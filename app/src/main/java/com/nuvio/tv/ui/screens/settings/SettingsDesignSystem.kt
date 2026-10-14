@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.annotation.RawRes
 import androidx.compose.animation.animateColorAsState
@@ -94,15 +94,15 @@ import androidx.tv.material3.Text
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.SettingsUiStyle
-import com.nuvio.tv.ui.components.FocusMarqueeText
-import com.nuvio.tv.ui.components.BrandWordmark
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.theme.NuvioComponents
-import com.nuvio.tv.ui.theme.NuvioRadii
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.SettingsUiStyle
+import us.xnetik.tv.ui.components.FocusMarqueeText
+import us.xnetik.tv.ui.components.BrandWordmark
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.theme.NuvioComponents
+import us.xnetik.tv.ui.theme.NuvioRadii
 
 internal val SettingsContainerRadius = NuvioComponents.tokens.settings.containerRadius
 internal val SettingsPillRadius = NuvioRadii.tokens.full

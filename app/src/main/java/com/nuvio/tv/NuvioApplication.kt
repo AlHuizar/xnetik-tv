@@ -1,4 +1,4 @@
-package com.nuvio.tv
+package us.xnetik.tv
 
 import android.app.ActivityManager
 import android.app.Application
@@ -7,7 +7,7 @@ import android.os.Build
 import android.os.StrictMode
 import coil3.ImageLoader
 import coil3.SingletonImageLoader
-import com.nuvio.tv.core.image.CustomPosterFallbackInterceptor
+import us.xnetik.tv.core.image.CustomPosterFallbackInterceptor
 import coil3.disk.DiskCache
 import coil3.memory.MemoryCache
 import coil3.gif.GifDecoder
@@ -19,18 +19,18 @@ import coil3.request.allowRgb565
 import coil3.bitmapFactoryMaxParallelism
 
 import okio.Path.Companion.toOkioPath
-import com.nuvio.tv.core.diagnostics.SentryInitializer
-import com.nuvio.tv.core.image.StaleWhileRevalidateCacheStrategy
-import com.nuvio.tv.core.runtime.PluginRuntimeHooks
-import com.nuvio.tv.core.sync.StartupSyncService
-import com.nuvio.tv.core.sync.androidtv.AndroidTvChannelSyncService
-import com.nuvio.tv.core.network.IPv4FirstDns
-import com.nuvio.tv.core.network.NoDelaySocketFactory
-import com.nuvio.tv.data.local.ImagePerformancePreferences
-import com.nuvio.tv.data.local.SentrySettingsDataStore
-import com.nuvio.tv.data.mediaserver.ServerMatcher
-import com.nuvio.tv.data.mediaserver.ServerUserStateProjection
-import com.nuvio.tv.data.simkl.SimklAnimeIdPreferenceHolder
+import us.xnetik.tv.core.diagnostics.SentryInitializer
+import us.xnetik.tv.core.image.StaleWhileRevalidateCacheStrategy
+import us.xnetik.tv.core.runtime.PluginRuntimeHooks
+import us.xnetik.tv.core.sync.StartupSyncService
+import us.xnetik.tv.core.sync.androidtv.AndroidTvChannelSyncService
+import us.xnetik.tv.core.network.IPv4FirstDns
+import us.xnetik.tv.core.network.NoDelaySocketFactory
+import us.xnetik.tv.data.local.ImagePerformancePreferences
+import us.xnetik.tv.data.local.SentrySettingsDataStore
+import us.xnetik.tv.data.mediaserver.ServerMatcher
+import us.xnetik.tv.data.mediaserver.ServerUserStateProjection
+import us.xnetik.tv.data.simkl.SimklAnimeIdPreferenceHolder
 import dagger.hilt.android.HiltAndroidApp
 import okhttp3.Cookie
 import okhttp3.CookieJar

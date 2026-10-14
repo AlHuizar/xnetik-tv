@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import java.nio.ByteBuffer
 import java.nio.CharBuffer

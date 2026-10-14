@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.ui.screens.home.shuffleFocusKey
+import us.xnetik.tv.ui.screens.home.shuffleFocusKey
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.foundation.BorderStroke
@@ -42,8 +42,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.input.key.onPreviewKeyEvent
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.CardDepthSurface
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.lazy.LazyListState
@@ -70,8 +70,8 @@ import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Button
 import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.Text
-import com.nuvio.tv.ui.screens.home.ContinueWatchingItem
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.screens.home.ContinueWatchingItem
+import us.xnetik.tv.ui.theme.NuvioTheme
 import androidx.compose.ui.platform.LocalContext
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
@@ -79,19 +79,19 @@ import coil3.request.transformations
 import coil3.request.crossfade
 import kotlin.math.roundToInt
 import java.util.concurrent.TimeUnit
-import com.nuvio.tv.ui.util.recompositionHighlighter
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
-import com.nuvio.tv.ui.util.rememberLongPressKeyTracker
-import com.nuvio.tv.ui.util.computeAirDateBadgeText
-import com.nuvio.tv.ui.util.computeAirDateBadgeTextShort
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.util.rememberLongPressKeyTracker
+import us.xnetik.tv.ui.util.computeAirDateBadgeText
+import us.xnetik.tv.ui.util.computeAirDateBadgeTextShort
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.TextStyle
-import com.nuvio.tv.domain.model.CardDepthStyle
+import us.xnetik.tv.domain.model.CardDepthStyle
 import kotlinx.coroutines.delay
 
 private val BadgeShape = RoundedCornerShape(NuvioTheme.radii.xs)
@@ -596,7 +596,7 @@ fun ContinueWatchingCard(
             )
             .size(width = requestWidthPx, height = requestHeightPx)
             .apply {
-                if (shouldBlur) transformations(com.nuvio.tv.ui.util.BlurTransformation())
+                if (shouldBlur) transformations(us.xnetik.tv.ui.util.BlurTransformation())
             }
         val fallbackUrl = when (item) {
             is ContinueWatchingItem.InProgress -> item.originalPoster
@@ -604,7 +604,7 @@ fun ContinueWatchingCard(
         }
         if (!fallbackUrl.isNullOrBlank() && fallbackUrl != effectiveImageModel) {
             builder.memoryCacheKeyExtras(
-                mapOf(com.nuvio.tv.core.image.CustomPosterFallbackInterceptor.FALLBACK_URL_KEY to fallbackUrl)
+                mapOf(us.xnetik.tv.core.image.CustomPosterFallbackInterceptor.FALLBACK_URL_KEY to fallbackUrl)
             )
         }
         builder.build()

@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
@@ -44,12 +44,12 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.TrailerPlayer
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.TrailerPlayer
 import kotlinx.coroutines.delay
 import android.view.KeyEvent
-import com.nuvio.tv.ui.screens.ambient.AmbientDialogEffect
+import us.xnetik.tv.ui.screens.ambient.AmbientDialogEffect
 
 @Stable
 class TrailerSeekOverlayState {

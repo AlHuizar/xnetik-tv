@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.BuildConfig
+import us.xnetik.tv.BuildConfig
 import okhttp3.HttpUrl.Companion.toHttpUrl
 
 data class SimklApiConfiguration(

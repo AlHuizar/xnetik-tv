@@ -1,13 +1,13 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.tracking.TrackingProgressProvider
-import com.nuvio.tv.core.tracking.TrackingProviderId
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.core.tracking.parseTrackingExternalIds
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.tracking.TrackingProgressProvider
+import us.xnetik.tv.core.tracking.TrackingProviderId
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.core.tracking.parseTrackingExternalIds
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow

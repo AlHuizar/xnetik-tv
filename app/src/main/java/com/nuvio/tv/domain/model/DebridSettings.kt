@@ -1,8 +1,8 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
-import com.nuvio.tv.core.debrid.DebridProviders
-import com.nuvio.tv.core.debrid.DebridStreamFormatterDefaults
-import com.nuvio.tv.core.debrid.supports
+import us.xnetik.tv.core.debrid.DebridProviders
+import us.xnetik.tv.core.debrid.DebridStreamFormatterDefaults
+import us.xnetik.tv.core.debrid.supports
 
 data class DebridSettings(
     val enabled: Boolean = false,
@@ -25,10 +25,10 @@ data class DebridSettings(
     val hasAnyApiKey: Boolean
         get() = DebridProviders.configuredServices(this).isNotEmpty()
 
-    val resolverServices: List<com.nuvio.tv.core.debrid.DebridServiceCredential>
+    val resolverServices: List<us.xnetik.tv.core.debrid.DebridServiceCredential>
         get() = DebridProviders.configuredResolverServices(this)
 
-    val activeResolverCredential: com.nuvio.tv.core.debrid.DebridServiceCredential?
+    val activeResolverCredential: us.xnetik.tv.core.debrid.DebridServiceCredential?
         get() = DebridProviders.preferredResolverService(this)
 
     val activeResolverProviderId: String?
@@ -42,7 +42,7 @@ data class DebridSettings(
 
     val hasCloudLibraryProvider: Boolean
         get() = DebridProviders.configuredServices(this)
-            .any { credential -> credential.provider.supports(com.nuvio.tv.core.debrid.DebridProviderCapability.CloudLibrary) }
+            .any { credential -> credential.provider.supports(us.xnetik.tv.core.debrid.DebridProviderCapability.CloudLibrary) }
 
     val canUseCloudLibrary: Boolean
         get() = cloudLibraryEnabled && hasCloudLibraryProvider

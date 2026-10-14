@@ -1,6 +1,6 @@
-package com.nuvio.tv.core.deeplink
+package us.xnetik.tv.core.deeplink
 
-import com.nuvio.tv.domain.deeplink.AppDeepLink
+import us.xnetik.tv.domain.deeplink.AppDeepLink
 import java.net.URI
 import java.net.URLDecoder
 

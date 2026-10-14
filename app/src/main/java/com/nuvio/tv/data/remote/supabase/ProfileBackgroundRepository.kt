@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.remote.supabase
+package us.xnetik.tv.data.remote.supabase
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.data.local.MemberCatalogStorage
+import us.xnetik.tv.data.local.MemberCatalogStorage
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.github.jan.supabase.postgrest.Postgrest
 import io.github.jan.supabase.storage.Storage

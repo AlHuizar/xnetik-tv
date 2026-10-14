@@ -1,6 +1,6 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.core.tracking.TrackingExternalIds
 
 internal fun SimklSyncSnapshot.applyScrobbleResult(
     result: SimklScrobbleResult,

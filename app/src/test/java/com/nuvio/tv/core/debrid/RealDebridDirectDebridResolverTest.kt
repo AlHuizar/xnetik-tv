@@ -1,14 +1,14 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.remote.api.RealDebridApi
-import com.nuvio.tv.data.remote.dto.RealDebridAddTorrentDto
-import com.nuvio.tv.data.remote.dto.RealDebridTorrentFileDto
-import com.nuvio.tv.data.remote.dto.RealDebridTorrentInfoDto
-import com.nuvio.tv.data.remote.dto.RealDebridUnrestrictLinkDto
-import com.nuvio.tv.domain.model.DebridSettings
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.remote.api.RealDebridApi
+import us.xnetik.tv.data.remote.dto.RealDebridAddTorrentDto
+import us.xnetik.tv.data.remote.dto.RealDebridTorrentFileDto
+import us.xnetik.tv.data.remote.dto.RealDebridTorrentInfoDto
+import us.xnetik.tv.data.remote.dto.RealDebridUnrestrictLinkDto
+import us.xnetik.tv.domain.model.DebridSettings
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamClientResolve
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.flow.flowOf

@@ -1,9 +1,9 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.data.local.NextEpisodeThresholdMode
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.repository.SkipInterval
-import com.nuvio.tv.domain.model.ContentType
+import us.xnetik.tv.data.local.NextEpisodeThresholdMode
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.repository.SkipInterval
+import us.xnetik.tv.domain.model.ContentType
 
 private const val MOVIE_RECOMMENDATION_PREFETCH_LEAD_PERCENT = 5
 

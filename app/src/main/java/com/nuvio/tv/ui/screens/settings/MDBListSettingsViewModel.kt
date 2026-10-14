@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.local.MDBListSettingsDataStore
-import com.nuvio.tv.data.mdblist.MdbListAuthStore
-import com.nuvio.tv.data.remote.api.MDBListApi
-import com.nuvio.tv.domain.model.MDBListSettings
+import us.xnetik.tv.data.local.MDBListSettingsDataStore
+import us.xnetik.tv.data.mdblist.MdbListAuthStore
+import us.xnetik.tv.data.remote.api.MDBListApi
+import us.xnetik.tv.domain.model.MDBListSettings
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -112,7 +112,7 @@ data class MDBListSettingsUiState(
     val showMetacritic: Boolean = true,
     val showMal: Boolean = true,
     val showOnHero: Boolean = false,
-    val ratingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+    val ratingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
 ) {
     fun fromSettings(settings: MDBListSettings): MDBListSettingsUiState = copy(
         enabled = settings.enabled,

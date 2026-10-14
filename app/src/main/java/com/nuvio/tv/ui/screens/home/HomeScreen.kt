@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.activity.compose.ReportDrawnWhen
 import androidx.compose.animation.AnimatedVisibility
@@ -45,25 +45,25 @@ import androidx.tv.material3.ButtonDefaults
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.localizedMembershipTitle
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.ui.components.ErrorState
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.LocalStartupLoadingState
-import com.nuvio.tv.ui.components.LocalStartupSplashEnabled
-import com.nuvio.tv.ui.components.shouldShowHomeStartupLoader
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.ui.components.PosterCardStyle
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.localizedMembershipTitle
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.ui.components.ErrorState
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.LocalStartupLoadingState
+import us.xnetik.tv.ui.components.LocalStartupSplashEnabled
+import us.xnetik.tv.ui.components.shouldShowHomeStartupLoader
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.ui.components.PosterCardStyle
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
-import com.nuvio.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
-import com.nuvio.tv.core.tracking.supportsMembershipFor
-import com.nuvio.tv.data.local.StartupAuthNotice
-import com.nuvio.tv.ui.components.posteroptions.TrackingRemovalConfirmationDialog
+import us.xnetik.tv.R
+import us.xnetik.tv.core.tracking.LOCAL_LIBRARY_LIST_KEY
+import us.xnetik.tv.core.tracking.supportsMembershipFor
+import us.xnetik.tv.data.local.StartupAuthNotice
+import us.xnetik.tv.ui.components.posteroptions.TrackingRemovalConfirmationDialog
 import kotlinx.coroutines.delay
 import kotlin.math.roundToInt
 

@@ -1,28 +1,28 @@
-package com.nuvio.tv.core.tmdb
+package us.xnetik.tv.core.tmdb
 
 import android.util.Log
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.data.remote.api.TmdbAggregateCreditsResponse
-import com.nuvio.tv.data.remote.api.TmdbApi
-import com.nuvio.tv.data.remote.api.TmdbCastMember
-import com.nuvio.tv.data.remote.api.TmdbCollectionPart
-import com.nuvio.tv.data.remote.api.TmdbCreditsResponse
-import com.nuvio.tv.data.remote.api.TmdbCrewMember
-import com.nuvio.tv.data.remote.api.TmdbDiscoverResult
-import com.nuvio.tv.data.remote.api.TmdbEpisode
-import com.nuvio.tv.data.remote.api.TmdbImage
-import com.nuvio.tv.data.remote.api.TmdbPersonCreditCast
-import com.nuvio.tv.data.remote.api.TmdbPersonCreditCrew
-import com.nuvio.tv.data.remote.api.TmdbPersonCreditsResponse
-import com.nuvio.tv.data.remote.api.TmdbRecommendationResult
-import com.nuvio.tv.data.remote.api.TmdbVideoResult
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MetaCastMember
-import com.nuvio.tv.domain.model.MetaCompany
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.MetaTrailer
-import com.nuvio.tv.domain.model.PersonDetail
-import com.nuvio.tv.domain.model.PosterShape
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.data.remote.api.TmdbAggregateCreditsResponse
+import us.xnetik.tv.data.remote.api.TmdbApi
+import us.xnetik.tv.data.remote.api.TmdbCastMember
+import us.xnetik.tv.data.remote.api.TmdbCollectionPart
+import us.xnetik.tv.data.remote.api.TmdbCreditsResponse
+import us.xnetik.tv.data.remote.api.TmdbCrewMember
+import us.xnetik.tv.data.remote.api.TmdbDiscoverResult
+import us.xnetik.tv.data.remote.api.TmdbEpisode
+import us.xnetik.tv.data.remote.api.TmdbImage
+import us.xnetik.tv.data.remote.api.TmdbPersonCreditCast
+import us.xnetik.tv.data.remote.api.TmdbPersonCreditCrew
+import us.xnetik.tv.data.remote.api.TmdbPersonCreditsResponse
+import us.xnetik.tv.data.remote.api.TmdbRecommendationResult
+import us.xnetik.tv.data.remote.api.TmdbVideoResult
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MetaCastMember
+import us.xnetik.tv.domain.model.MetaCompany
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.MetaTrailer
+import us.xnetik.tv.domain.model.PersonDetail
+import us.xnetik.tv.domain.model.PosterShape
 import java.time.LocalDate
 import java.util.Locale
 import java.util.concurrent.ConcurrentHashMap
@@ -1600,7 +1600,7 @@ private fun preferredRegions(normalizedLanguage: String): List<String> {
 }
 
 private fun selectMovieAgeRating(
-    countries: List<com.nuvio.tv.data.remote.api.TmdbMovieReleaseDateCountry>,
+    countries: List<us.xnetik.tv.data.remote.api.TmdbMovieReleaseDateCountry>,
     normalizedLanguage: String
 ): String? {
     val preferred = preferredRegions(normalizedLanguage)
@@ -1621,7 +1621,7 @@ private fun selectMovieAgeRating(
 }
 
 private fun selectTvAgeRating(
-    ratings: List<com.nuvio.tv.data.remote.api.TmdbTvContentRatingItem>,
+    ratings: List<us.xnetik.tv.data.remote.api.TmdbTvContentRatingItem>,
     normalizedLanguage: String
 ): String? {
     val preferred = preferredRegions(normalizedLanguage)

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.streams
+package us.xnetik.tv.core.streams
 
 data class StreamBadgeSettings(
     val rules: StreamBadgeRules = StreamBadgeRules(),

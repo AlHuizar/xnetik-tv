@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 /** Hands each AFR preflight a token. A stream switch or a player release makes older tokens stale. */
 internal class AfrPreflightGate {

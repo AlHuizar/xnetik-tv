@@ -1,6 +1,6 @@
 @file:OptIn(androidx.tv.material3.ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.updater.ui
+package us.xnetik.tv.updater.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.focusable
@@ -45,11 +45,11 @@ import androidx.tv.material3.Text
 import com.mikepenz.markdown.m3.Markdown
 import com.mikepenz.markdown.m3.markdownColor
 import com.mikepenz.markdown.m3.markdownTypography
-import com.nuvio.tv.R
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.updater.model.AppUpdate
+import us.xnetik.tv.R
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.updater.model.AppUpdate
 import kotlinx.coroutines.launch
 
 @Composable

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.cloud
+package us.xnetik.tv.core.cloud
 
 import android.content.Context
 import android.util.Base64

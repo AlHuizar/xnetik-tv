@@ -1,15 +1,15 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.text.format.Formatter
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nuvio.tv.R
-import com.nuvio.tv.core.torrent.TorrentCacheClearResult
-import com.nuvio.tv.core.torrent.TorrentCacheSize
-import com.nuvio.tv.core.torrent.TorrentCacheState
-import com.nuvio.tv.core.torrent.TorrentProfile
+import us.xnetik.tv.R
+import us.xnetik.tv.core.torrent.TorrentCacheClearResult
+import us.xnetik.tv.core.torrent.TorrentCacheSize
+import us.xnetik.tv.core.torrent.TorrentCacheState
+import us.xnetik.tv.core.torrent.TorrentProfile
 
 internal data class P2pSettingsUi(
     val enabled: Boolean = false,

@@ -3,7 +3,7 @@
     androidx.compose.ui.ExperimentalComposeUiApi::class
 )
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.view.KeyEvent
 import androidx.compose.animation.AnimatedVisibility
@@ -59,15 +59,15 @@ import androidx.tv.material3.Border
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Card
 import androidx.tv.material3.CardDefaults
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.components.FocusScrollingText
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.SourceChipStatus
-import com.nuvio.tv.ui.screens.detail.EpisodeOptionsOverlay
-import com.nuvio.tv.ui.screens.detail.adjacentEpisode
-import com.nuvio.tv.ui.screens.detail.formatReleaseDate
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.components.FocusScrollingText
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.SourceChipStatus
+import us.xnetik.tv.ui.screens.detail.EpisodeOptionsOverlay
+import us.xnetik.tv.ui.screens.detail.adjacentEpisode
+import us.xnetik.tv.ui.screens.detail.formatReleaseDate
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Visibility
@@ -76,14 +76,14 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.request.transformations
 import androidx.compose.ui.platform.LocalContext
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
 import kotlinx.coroutines.delay
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.withFrameNanos
 import kotlinx.coroutines.launch as coroutineLaunch
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable
@@ -861,7 +861,7 @@ private fun EpisodeItem(
                         .crossfade(true)
                         .apply {
                             if (shouldBlur) {
-                                transformations(com.nuvio.tv.ui.util.BlurTransformation())
+                                transformations(us.xnetik.tv.ui.util.BlurTransformation())
                             }
                         }
                         .build(),

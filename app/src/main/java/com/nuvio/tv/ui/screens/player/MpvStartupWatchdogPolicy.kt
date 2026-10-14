@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 internal object MpvStartupWatchdogPolicy {
     const val POLL_INTERVAL_MS = 500L

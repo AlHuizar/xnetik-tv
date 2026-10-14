@@ -1,6 +1,6 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
-import com.nuvio.tv.domain.model.CollectionFolder
+import us.xnetik.tv.domain.model.CollectionFolder
 
 fun collectionFolderCardImageUrl(
     folder: CollectionFolder,

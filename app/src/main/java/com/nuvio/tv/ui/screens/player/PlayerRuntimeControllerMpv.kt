@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.util.Log
 import androidx.media3.exoplayer.SeekParameters
-import com.nuvio.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.InternalPlayerEngine
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.update
@@ -60,7 +60,7 @@ internal fun PlayerRuntimeController.attachMpvView(view: NuvioMpvSurfaceView?) {
         emitScrobbleStart()
     }.onFailure {
         val technical = it.message?.trim()?.takeIf { message -> message.isNotEmpty() }
-        val explanation = context.getString(com.nuvio.tv.R.string.player_error_mpv_surface_failed)
+        val explanation = context.getString(us.xnetik.tv.R.string.player_error_mpv_surface_failed)
         val detailedError = if (technical == null || technical.equals(explanation, ignoreCase = true)) {
             explanation
         } else {
@@ -106,7 +106,7 @@ internal fun PlayerRuntimeController.initializeMpvPlayer(
     if (view == null) {
         setLoadingStatus(
             phase = "mpv_waiting_surface",
-            message = context.getString(com.nuvio.tv.R.string.player_loading_building),
+            message = context.getString(us.xnetik.tv.R.string.player_loading_building),
             showOverlay = true
         )
         _uiState.update {
@@ -123,7 +123,7 @@ internal fun PlayerRuntimeController.initializeMpvPlayer(
     runCatching {
         setLoadingStatus(
             phase = "mpv_starting",
-            message = context.getString(com.nuvio.tv.R.string.player_loading_starting),
+            message = context.getString(us.xnetik.tv.R.string.player_loading_starting),
             showOverlay = true
         )
         performPendingMpvHardRestartIfNeeded(view)
@@ -183,7 +183,7 @@ internal fun PlayerRuntimeController.initializeMpvPlayer(
     }.onFailure { error ->
         Log.e(PlayerRuntimeController.TAG, "libmpv initialize failed: ${error.message}", error)
         val technical = error.message?.trim()?.takeIf { it.isNotEmpty() }
-        val explanation = context.getString(com.nuvio.tv.R.string.player_error_mpv_playback_failed)
+        val explanation = context.getString(us.xnetik.tv.R.string.player_error_mpv_playback_failed)
         val detailedError = if (technical == null || technical.equals(explanation, ignoreCase = true)) {
             explanation
         } else {

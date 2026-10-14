@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.trailer
+package us.xnetik.tv.data.trailer
 
 /**
  * Stops YouTube extraction for a while once YouTube starts refusing requests (HTTP 429 or

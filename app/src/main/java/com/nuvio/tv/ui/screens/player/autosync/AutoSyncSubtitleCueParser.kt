@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.player.autosync
+package us.xnetik.tv.ui.screens.player.autosync
 
-import com.nuvio.tv.ui.screens.player.SubtitleSyncCue
+import us.xnetik.tv.ui.screens.player.SubtitleSyncCue
 import kotlin.math.max
 
 /**
  * AutoSync's subtitle cue parser (SRT, WebVTT, ASS/SSA and TTML), with cooperative cancellation
- * for long files. Nuvio TV's own [com.nuvio.tv.ui.screens.player.PlayerSubtitleCueParser] only
+ * for long files. Nuvio TV's own [us.xnetik.tv.ui.screens.player.PlayerSubtitleCueParser] only
  * reads SRT and WebVTT, so AutoSync keeps this one to itself and leaves Nuvio's untouched.
  */
 internal object AutoSyncSubtitleCueParser {

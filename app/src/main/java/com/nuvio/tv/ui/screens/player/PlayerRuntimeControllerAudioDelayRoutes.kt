@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.media.AudioDeviceCallback
 import android.media.AudioDeviceInfo
 import android.media.AudioManager
 import android.os.Build
 import android.util.Log
-import com.nuvio.tv.data.local.AudioOutputChannels
+import us.xnetik.tv.data.local.AudioOutputChannels
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton

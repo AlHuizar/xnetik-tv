@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.content.Context
 import io.mockk.every
@@ -209,6 +209,6 @@ class NuvioExoPlayerPerformanceHelperTest {
         targetBufferBytesField.isAccessible = true
         val targetBytes = targetBufferBytesField.getInt(loadControl)
 
-        assertEquals(com.nuvio.tv.ui.screens.settings.MemoryBudget.MIN_BUFFER_MB * 1024 * 1024, targetBytes)
+        assertEquals(us.xnetik.tv.ui.screens.settings.MemoryBudget.MIN_BUFFER_MB * 1024 * 1024, targetBytes)
     }
 }

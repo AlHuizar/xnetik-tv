@@ -1,6 +1,6 @@
-package com.nuvio.tv.launcher
+package us.xnetik.tv.launcher
 
-import com.nuvio.tv.MainActivity
+import us.xnetik.tv.MainActivity
 
 class AppIconDefault : MainActivity()
 

@@ -1,14 +1,14 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.domain.model.AppFont
-import com.nuvio.tv.domain.model.AppTheme
-import com.nuvio.tv.domain.model.CustomThemeColors
-import com.nuvio.tv.domain.model.SettingsUiStyle
-import com.nuvio.tv.domain.model.ThemeSelection
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.domain.model.AppFont
+import us.xnetik.tv.domain.model.AppTheme
+import us.xnetik.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.domain.model.SettingsUiStyle
+import us.xnetik.tv.domain.model.ThemeSelection
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapLatest

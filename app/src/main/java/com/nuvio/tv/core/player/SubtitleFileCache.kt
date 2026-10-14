@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.content.Context
 import android.net.Uri
@@ -80,7 +80,7 @@ class SubtitleFileCache @Inject constructor(
 
                 val bodyBytes = response.body?.bytes() ?: return@withContext null
                 val normalizedText = SubtitleCharsetDetector.decode(bodyBytes, languageHint = input.lang)
-                val sanitizedText = com.nuvio.tv.ui.screens.player.SubtitleMojibakeSanitizer.sanitize(normalizedText).toString()
+                val sanitizedText = us.xnetik.tv.ui.screens.player.SubtitleMojibakeSanitizer.sanitize(normalizedText).toString()
                 file.writeText(sanitizedText, Charsets.UTF_8)
             }
 

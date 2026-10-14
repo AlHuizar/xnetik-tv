@@ -1,22 +1,22 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.media3.common.C
 import androidx.media3.common.TrackGroup
 import androidx.media3.ui.AspectRatioFrameLayout
-import com.nuvio.tv.core.streams.StreamBadgePlacement
-import com.nuvio.tv.data.local.FrameRateMatchingMode
-import com.nuvio.tv.data.local.InternalPlayerEngine
-import com.nuvio.tv.data.local.LibassRenderType
-import com.nuvio.tv.data.local.StreamAutoPlayMode
-import com.nuvio.tv.data.local.SubtitleStyleSettings
-import com.nuvio.tv.data.repository.SkipInterval
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
-import com.nuvio.tv.domain.model.MetaCastMember
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.ui.components.SourceChipItem
+import us.xnetik.tv.core.streams.StreamBadgePlacement
+import us.xnetik.tv.data.local.FrameRateMatchingMode
+import us.xnetik.tv.data.local.InternalPlayerEngine
+import us.xnetik.tv.data.local.LibassRenderType
+import us.xnetik.tv.data.local.StreamAutoPlayMode
+import us.xnetik.tv.data.local.SubtitleStyleSettings
+import us.xnetik.tv.data.repository.SkipInterval
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.domain.model.MetaCastMember
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.ui.components.SourceChipItem
 
 enum class PlayerExitReason {
     StillWatchingPrompt

@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.text.SpannableStringBuilder
 import android.text.Spanned
 import androidx.media3.common.MimeTypes
 import androidx.media3.common.text.Cue
-import com.nuvio.tv.ui.util.LANGUAGE_OVERRIDES
-import com.nuvio.tv.ui.util.resolveLanguageNameAlias
+import us.xnetik.tv.ui.util.LANGUAGE_OVERRIDES
+import us.xnetik.tv.ui.util.resolveLanguageNameAlias
 
 internal object PlayerSubtitleUtils {
     fun normalizeLanguageCode(lang: String): String {

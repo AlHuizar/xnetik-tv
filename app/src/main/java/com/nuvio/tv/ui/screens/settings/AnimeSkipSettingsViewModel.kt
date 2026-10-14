@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.local.AnimeSkipSettingsDataStore
-import com.nuvio.tv.data.remote.api.AnimeSkipApi
-import com.nuvio.tv.data.remote.api.AnimeSkipRequest
+import us.xnetik.tv.data.local.AnimeSkipSettingsDataStore
+import us.xnetik.tv.data.remote.api.AnimeSkipApi
+import us.xnetik.tv.data.remote.api.AnimeSkipRequest
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow

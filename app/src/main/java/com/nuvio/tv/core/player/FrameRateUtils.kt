@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.player
+package us.xnetik.tv.core.player
 
 import android.app.Activity
 import android.content.Context
@@ -519,7 +519,7 @@ object FrameRateUtils {
     }
 
     private val probeHttpClient by lazy {
-        com.nuvio.tv.ui.screens.player.PlayerPlaybackNetworking.playbackHttpClient.newBuilder()
+        us.xnetik.tv.ui.screens.player.PlayerPlaybackNetworking.playbackHttpClient.newBuilder()
             .connectTimeout(8, java.util.concurrent.TimeUnit.SECONDS)
             .readTimeout(12, java.util.concurrent.TimeUnit.SECONDS)
             .writeTimeout(6, java.util.concurrent.TimeUnit.SECONDS)
@@ -558,7 +558,7 @@ object FrameRateUtils {
         if (headers.none { it.key.equals("User-Agent", ignoreCase = true) }) {
             requestBuilder.header(
                 "User-Agent",
-                com.nuvio.tv.ui.screens.player.PlayerMediaSourceFactory.DEFAULT_USER_AGENT
+                us.xnetik.tv.ui.screens.player.PlayerMediaSourceFactory.DEFAULT_USER_AGENT
             )
         }
         headers.forEach { (k, v) ->
@@ -1269,7 +1269,7 @@ object FrameRateUtils {
             .header("Range", rangeHeader)
 
         if (headers.none { it.key.equals("User-Agent", ignoreCase = true) }) {
-            requestBuilder.header("User-Agent", com.nuvio.tv.ui.screens.player.PlayerMediaSourceFactory.DEFAULT_USER_AGENT)
+            requestBuilder.header("User-Agent", us.xnetik.tv.ui.screens.player.PlayerMediaSourceFactory.DEFAULT_USER_AGENT)
         }
 
         headers.forEach { (k, v) ->
@@ -1333,7 +1333,7 @@ object FrameRateUtils {
             .head()
 
         if (headers.none { it.key.equals("User-Agent", ignoreCase = true) }) {
-            requestBuilder.header("User-Agent", com.nuvio.tv.ui.screens.player.PlayerMediaSourceFactory.DEFAULT_USER_AGENT)
+            requestBuilder.header("User-Agent", us.xnetik.tv.ui.screens.player.PlayerMediaSourceFactory.DEFAULT_USER_AGENT)
         }
 
         headers.forEach { (k, v) ->

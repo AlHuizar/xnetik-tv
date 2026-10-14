@@ -1,21 +1,21 @@
-package com.nuvio.tv.ui.screens.profile
+package us.xnetik.tv.ui.screens.profile
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.core.sync.ProfileSettingsSyncService
-import com.nuvio.tv.core.sync.ProfileSyncService
-import com.nuvio.tv.core.sync.SetProfilePinResult
-import com.nuvio.tv.data.local.ProfileLockStateDataStore
-import com.nuvio.tv.data.remote.supabase.AvatarCatalogItem
-import com.nuvio.tv.data.remote.supabase.AvatarRepository
-import com.nuvio.tv.data.remote.supabase.ProfileBackgroundCatalogItem
-import com.nuvio.tv.data.remote.supabase.ProfileBackgroundRepository
-import com.nuvio.tv.data.remote.supabase.SupabaseProfilePinVerifyResult
-import com.nuvio.tv.data.repository.MemberAccessRepository
-import com.nuvio.tv.domain.model.CosmeticEntitlement
-import com.nuvio.tv.domain.model.UserProfile
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.core.sync.ProfileSettingsSyncService
+import us.xnetik.tv.core.sync.ProfileSyncService
+import us.xnetik.tv.core.sync.SetProfilePinResult
+import us.xnetik.tv.data.local.ProfileLockStateDataStore
+import us.xnetik.tv.data.remote.supabase.AvatarCatalogItem
+import us.xnetik.tv.data.remote.supabase.AvatarRepository
+import us.xnetik.tv.data.remote.supabase.ProfileBackgroundCatalogItem
+import us.xnetik.tv.data.remote.supabase.ProfileBackgroundRepository
+import us.xnetik.tv.data.remote.supabase.SupabaseProfilePinVerifyResult
+import us.xnetik.tv.data.repository.MemberAccessRepository
+import us.xnetik.tv.domain.model.CosmeticEntitlement
+import us.xnetik.tv.domain.model.UserProfile
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
@@ -51,7 +51,7 @@ class ProfileSelectionViewModel @Inject constructor(
     private val profileBackgroundRepository: ProfileBackgroundRepository,
     memberAccessRepository: MemberAccessRepository,
     private val profileLockStateDataStore: ProfileLockStateDataStore,
-    private val themeDataStore: com.nuvio.tv.data.local.ThemeDataStore
+    private val themeDataStore: us.xnetik.tv.data.local.ThemeDataStore
 ) : ViewModel() {
     val activeProfileId: StateFlow<Int> = profileManager.activeProfileId
     val profiles: StateFlow<List<UserProfile>> = profileManager.profiles
@@ -117,7 +117,7 @@ class ProfileSelectionViewModel @Inject constructor(
                     combine(
                         profileList.map { profile ->
                             themeDataStore.observeThemeForProfile(profile.id)
-                                .map { theme -> profile.id to (theme ?: com.nuvio.tv.domain.model.AppTheme.WHITE) }
+                                .map { theme -> profile.id to (theme ?: us.xnetik.tv.domain.model.AppTheme.WHITE) }
                         }
                     ) { entries -> entries.toMap() }
                 }
@@ -127,8 +127,8 @@ class ProfileSelectionViewModel @Inject constructor(
         }
     }
 
-    private val _profileThemes = MutableStateFlow<Map<Int, com.nuvio.tv.domain.model.AppTheme>>(emptyMap())
-    val profileThemes: StateFlow<Map<Int, com.nuvio.tv.domain.model.AppTheme>> = _profileThemes.asStateFlow()
+    private val _profileThemes = MutableStateFlow<Map<Int, us.xnetik.tv.domain.model.AppTheme>>(emptyMap())
+    val profileThemes: StateFlow<Map<Int, us.xnetik.tv.domain.model.AppTheme>> = _profileThemes.asStateFlow()
 
     fun loadAvatarCatalog() {
         viewModelScope.launch {

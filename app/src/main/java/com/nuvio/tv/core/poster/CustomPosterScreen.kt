@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.poster
+package us.xnetik.tv.core.poster
 
 enum class CustomPosterScreen(val key: String) {
     /** Home catalog rows */

@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.lifecycle.ViewModelStore
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.data.local.PluginDataStore
-import com.nuvio.tv.data.mediaserver.ServerRepository
-import com.nuvio.tv.data.mediaserver.ServerStreams
-import com.nuvio.tv.data.mediaserver.ServersUiState
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.AddonResource
-import com.nuvio.tv.domain.model.ScraperInfo
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.MetaRepository
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.data.local.PluginDataStore
+import us.xnetik.tv.data.mediaserver.ServerRepository
+import us.xnetik.tv.data.mediaserver.ServerStreams
+import us.xnetik.tv.data.mediaserver.ServersUiState
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.AddonResource
+import us.xnetik.tv.domain.model.ScraperInfo
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.MetaRepository
 import io.mockk.coVerify
 import io.mockk.every
 import io.mockk.mockk

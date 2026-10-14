@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.TraktAuthDataStore
-import com.nuvio.tv.data.local.TraktAuthState
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.MoreLikeThisSourcePreference
-import com.nuvio.tv.data.repository.TraktAuthService
-import com.nuvio.tv.data.repository.TraktProgressService
-import com.nuvio.tv.data.repository.TraktTokenPollResult
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.TraktAuthDataStore
+import us.xnetik.tv.data.local.TraktAuthState
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.MoreLikeThisSourcePreference
+import us.xnetik.tv.data.repository.TraktAuthService
+import us.xnetik.tv.data.repository.TraktProgressService
+import us.xnetik.tv.data.repository.TraktTokenPollResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

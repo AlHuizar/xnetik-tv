@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.remote.supabase
+package us.xnetik.tv.data.remote.supabase
 
-import com.nuvio.tv.domain.model.MemberTier
-import com.nuvio.tv.domain.model.MembershipOverview
+import us.xnetik.tv.domain.model.MemberTier
+import us.xnetik.tv.domain.model.MembershipOverview
 import io.github.jan.supabase.postgrest.Postgrest
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL
-import com.nuvio.tv.ui.util.StableList
+import us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL
+import us.xnetik.tv.ui.util.StableList
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test

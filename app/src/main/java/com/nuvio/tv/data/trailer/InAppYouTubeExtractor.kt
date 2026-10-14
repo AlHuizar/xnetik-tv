@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.trailer
+package us.xnetik.tv.data.trailer
 
 import android.net.Uri
 import android.util.Log
 import com.google.gson.Gson
-import com.nuvio.tv.BuildConfig
+import us.xnetik.tv.BuildConfig
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -197,8 +197,8 @@ class InAppYouTubeExtractor internal constructor(
 
     private val httpClient by lazy {
         OkHttpClient.Builder()
-            .dns(com.nuvio.tv.core.network.IPv4FirstDns())
-            .socketFactory(com.nuvio.tv.core.network.NoDelaySocketFactory)
+            .dns(us.xnetik.tv.core.network.IPv4FirstDns())
+            .socketFactory(us.xnetik.tv.core.network.NoDelaySocketFactory)
             .connectTimeout(20, TimeUnit.SECONDS)
             .readTimeout(20, TimeUnit.SECONDS)
             .writeTimeout(20, TimeUnit.SECONDS)
@@ -976,8 +976,8 @@ class InAppYouTubeExtractor internal constructor(
 
     private val probeClient by lazy {
         OkHttpClient.Builder()
-            .dns(com.nuvio.tv.core.network.IPv4FirstDns())
-            .socketFactory(com.nuvio.tv.core.network.NoDelaySocketFactory)
+            .dns(us.xnetik.tv.core.network.IPv4FirstDns())
+            .socketFactory(us.xnetik.tv.core.network.NoDelaySocketFactory)
             .connectTimeout(2, TimeUnit.SECONDS)
             .readTimeout(2, TimeUnit.SECONDS)
             .followRedirects(true)

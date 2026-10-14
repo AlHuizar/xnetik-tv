@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.plugin
+package us.xnetik.tv.core.plugin
 
 /** Restore the declared episodic JS type after the TMDB bridge has mapped series to tv. */
 internal fun jsPluginMediaType(

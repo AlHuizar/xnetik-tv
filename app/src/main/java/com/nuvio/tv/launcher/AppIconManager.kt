@@ -1,10 +1,10 @@
-package com.nuvio.tv.launcher
+package us.xnetik.tv.launcher
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
-import com.nuvio.tv.domain.model.AppIconOption
+import us.xnetik.tv.domain.model.AppIconOption
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -23,12 +23,12 @@ class AppIconManager @Inject constructor(
     @param:ApplicationContext private val context: Context
 ) {
     private val launcherClasses = mapOf(
-        AppIconOption.ORIGINAL to "com.nuvio.tv.launcher.AppIconDefault",
-        AppIconOption.ARCTIC_BLUE to "com.nuvio.tv.launcher.AppIconArcticBlue",
-        AppIconOption.EMERALD to "com.nuvio.tv.launcher.AppIconEmerald",
-        AppIconOption.ROSE_GOLD to "com.nuvio.tv.launcher.AppIconRoseGold",
-        AppIconOption.COPPER to "com.nuvio.tv.launcher.AppIconCopper",
-        AppIconOption.GRAPHITE to "com.nuvio.tv.launcher.AppIconGraphite"
+        AppIconOption.ORIGINAL to "us.xnetik.tv.launcher.AppIconDefault",
+        AppIconOption.ARCTIC_BLUE to "us.xnetik.tv.launcher.AppIconArcticBlue",
+        AppIconOption.EMERALD to "us.xnetik.tv.launcher.AppIconEmerald",
+        AppIconOption.ROSE_GOLD to "us.xnetik.tv.launcher.AppIconRoseGold",
+        AppIconOption.COPPER to "us.xnetik.tv.launcher.AppIconCopper",
+        AppIconOption.GRAPHITE to "us.xnetik.tv.launcher.AppIconGraphite"
     )
 
     private val _state = MutableStateFlow(AppIconSettingsState())

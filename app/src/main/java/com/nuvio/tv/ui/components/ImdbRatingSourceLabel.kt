@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.components
+package us.xnetik.tv.ui.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -12,8 +12,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
 
 @Composable
 fun ImdbRatingSourceLabel(

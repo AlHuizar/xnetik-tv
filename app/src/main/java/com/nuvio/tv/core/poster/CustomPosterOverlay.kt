@@ -1,11 +1,11 @@
-package com.nuvio.tv.core.poster
+package us.xnetik.tv.core.poster
 
-import com.nuvio.tv.core.poster.CustomPosterUrlResolver.ContentIds
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.Meta
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.core.poster.CustomPosterUrlResolver.ContentIds
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.Meta
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.model.WatchProgress
 
 /**
  * Applies a custom poster URL pattern to a [MetaPreview], replacing the poster URL
@@ -159,9 +159,9 @@ fun List<LibraryEntry>.withCustomPosterUrls(
 /**
  * Applies custom poster URLs to all items in a [TmdbEntityBrowseData].
  */
-fun com.nuvio.tv.core.tmdb.TmdbEntityBrowseData.withCustomPosterUrls(
+fun us.xnetik.tv.core.tmdb.TmdbEntityBrowseData.withCustomPosterUrls(
     pattern: String
-): com.nuvio.tv.core.tmdb.TmdbEntityBrowseData {
+): us.xnetik.tv.core.tmdb.TmdbEntityBrowseData {
     if (pattern.isBlank()) return this
     return copy(
         rails = rails.map { rail ->
@@ -173,13 +173,13 @@ fun com.nuvio.tv.core.tmdb.TmdbEntityBrowseData.withCustomPosterUrls(
 /**
  * Applies a custom poster URL to a [ContinueWatchingItem].
  */
-fun com.nuvio.tv.ui.screens.home.ContinueWatchingItem.withCustomPosterUrl(
+fun us.xnetik.tv.ui.screens.home.ContinueWatchingItem.withCustomPosterUrl(
     pattern: String
-): com.nuvio.tv.ui.screens.home.ContinueWatchingItem {
+): us.xnetik.tv.ui.screens.home.ContinueWatchingItem {
     if (pattern.isBlank()) return this
     val supportsShape = "{shape}" in pattern
     return when (this) {
-        is com.nuvio.tv.ui.screens.home.ContinueWatchingItem.InProgress -> {
+        is us.xnetik.tv.ui.screens.home.ContinueWatchingItem.InProgress -> {
             val ids = CustomPosterUrlResolver.extractIds(progress.contentId)
             val type = if (progress.contentType.equals("movie", ignoreCase = true)) "movie" else "series"
             val resolvedPoster = CustomPosterUrlResolver.resolve(pattern, ids, type)
@@ -193,7 +193,7 @@ fun com.nuvio.tv.ui.screens.home.ContinueWatchingItem.withCustomPosterUrl(
                 customLandscapePoster = resolvedLandscape
             )
         }
-        is com.nuvio.tv.ui.screens.home.ContinueWatchingItem.NextUp -> {
+        is us.xnetik.tv.ui.screens.home.ContinueWatchingItem.NextUp -> {
             val ids = CustomPosterUrlResolver.extractIds(info.contentId)
             val type = if (info.contentType.equals("movie", ignoreCase = true)) "movie" else "series"
             val resolvedPoster = CustomPosterUrlResolver.resolve(pattern, ids, type)
@@ -214,9 +214,9 @@ fun com.nuvio.tv.ui.screens.home.ContinueWatchingItem.withCustomPosterUrl(
  * Applies [withCustomPosterUrl] to every item in a list of [ContinueWatchingItem].
  */
 @JvmName("withCustomPosterUrlsCw")
-fun List<com.nuvio.tv.ui.screens.home.ContinueWatchingItem>.withCustomPosterUrls(
+fun List<us.xnetik.tv.ui.screens.home.ContinueWatchingItem>.withCustomPosterUrls(
     pattern: String
-): List<com.nuvio.tv.ui.screens.home.ContinueWatchingItem> {
+): List<us.xnetik.tv.ui.screens.home.ContinueWatchingItem> {
     if (pattern.isBlank()) return this
     return map { it.withCustomPosterUrl(pattern) }
 }

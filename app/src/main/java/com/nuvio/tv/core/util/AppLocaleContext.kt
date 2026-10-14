@@ -1,8 +1,8 @@
-package com.nuvio.tv.core.util
+package us.xnetik.tv.core.util
 
 import android.content.Context
 import android.content.res.Configuration
-import com.nuvio.tv.LocaleCache
+import us.xnetik.tv.LocaleCache
 import java.util.Locale
 
 /**

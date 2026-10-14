@@ -1,13 +1,13 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.local.AmbientModeDataStore
-import com.nuvio.tv.domain.model.AmbientModeSettings
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.ui.screens.ambient.AmbientCatalog
-import com.nuvio.tv.ui.screens.ambient.ambientCatalogs
+import us.xnetik.tv.data.local.AmbientModeDataStore
+import us.xnetik.tv.domain.model.AmbientModeSettings
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.ui.screens.ambient.AmbientCatalog
+import us.xnetik.tv.ui.screens.ambient.ambientCatalogs
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

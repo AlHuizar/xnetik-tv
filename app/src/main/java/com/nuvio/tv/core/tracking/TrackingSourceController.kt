@@ -1,15 +1,15 @@
-package com.nuvio.tv.core.tracking
+package us.xnetik.tv.core.tracking
 
-import com.nuvio.tv.core.sync.StartupSyncService
-import com.nuvio.tv.core.sync.WatchedItemsSyncService
-import com.nuvio.tv.core.profile.ProfileManager
-import com.nuvio.tv.data.local.ContinueWatchingEnrichmentCache
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.WatchProgressPreferences
-import com.nuvio.tv.data.local.WatchProgressSource
-import com.nuvio.tv.data.local.WatchedItemsPreferences
-import com.nuvio.tv.data.local.WatchedSeriesStateHolder
-import com.nuvio.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.core.sync.StartupSyncService
+import us.xnetik.tv.core.sync.WatchedItemsSyncService
+import us.xnetik.tv.core.profile.ProfileManager
+import us.xnetik.tv.data.local.ContinueWatchingEnrichmentCache
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.WatchProgressPreferences
+import us.xnetik.tv.data.local.WatchProgressSource
+import us.xnetik.tv.data.local.WatchedItemsPreferences
+import us.xnetik.tv.data.local.WatchedSeriesStateHolder
+import us.xnetik.tv.domain.model.LibrarySourceMode
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlinx.coroutines.sync.Mutex

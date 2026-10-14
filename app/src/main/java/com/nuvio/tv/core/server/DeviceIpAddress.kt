@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.server
+package us.xnetik.tv.core.server
 
 import android.content.Context
 import android.net.wifi.WifiManager

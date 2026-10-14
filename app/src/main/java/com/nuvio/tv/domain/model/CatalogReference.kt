@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 fun catalogTypeKey(value: String): String {
     val rawType = value.trim()

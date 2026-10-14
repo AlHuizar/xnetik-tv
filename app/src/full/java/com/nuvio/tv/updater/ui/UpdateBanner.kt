@@ -1,6 +1,6 @@
 @file:OptIn(androidx.tv.material3.ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.updater.ui
+package us.xnetik.tv.updater.ui
 
 import android.text.format.Formatter
 import androidx.compose.animation.core.animateFloatAsState
@@ -43,13 +43,13 @@ import androidx.tv.material3.IconButton
 import androidx.tv.material3.IconButtonDefaults
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.AppTheme
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.ThemeColors
-import com.nuvio.tv.ui.theme.accentBrush
-import com.nuvio.tv.updater.UpdateUiState
-import com.nuvio.tv.updater.model.AppUpdate
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.AppTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.ThemeColors
+import us.xnetik.tv.ui.theme.accentBrush
+import us.xnetik.tv.updater.UpdateUiState
+import us.xnetik.tv.updater.model.AppUpdate
 
 @Composable
 internal fun UpdateBanner(

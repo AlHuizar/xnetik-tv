@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.mediaserver.mediabrowser
+package us.xnetik.tv.data.mediaserver.mediabrowser
 
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient

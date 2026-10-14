@@ -1,11 +1,11 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DataSource
 import androidx.media3.datasource.DefaultDataSource
 import androidx.media3.datasource.okhttp.OkHttpDataSource
-import com.nuvio.tv.core.network.IPv4FirstDns
-import com.nuvio.tv.core.network.PlaybackSocketFactory
+import us.xnetik.tv.core.network.IPv4FirstDns
+import us.xnetik.tv.core.network.PlaybackSocketFactory
 import okhttp3.OkHttpClient
 import java.net.HttpURLConnection
 import java.net.URL

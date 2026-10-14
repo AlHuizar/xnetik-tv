@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.mediaserver.mediabrowser
+package us.xnetik.tv.data.mediaserver.mediabrowser
 
-import com.nuvio.tv.data.mediaserver.emby.EmbyProvider
-import com.nuvio.tv.data.mediaserver.jellyfin.JellyfinProvider
+import us.xnetik.tv.data.mediaserver.emby.EmbyProvider
+import us.xnetik.tv.data.mediaserver.jellyfin.JellyfinProvider
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull

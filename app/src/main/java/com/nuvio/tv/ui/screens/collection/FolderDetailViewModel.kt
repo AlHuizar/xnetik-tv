@@ -1,48 +1,48 @@
-package com.nuvio.tv.ui.screens.collection
+package us.xnetik.tv.ui.screens.collection
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.build.AppFeaturePolicy
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.tmdb.TmdbCollectionSourceResolver
-import com.nuvio.tv.core.util.hasNoReleaseInfo
-import com.nuvio.tv.core.util.isUnreleased
-import com.nuvio.tv.core.trakt.TraktPublicListSourceResolver
-import com.nuvio.tv.data.trailer.TrailerService
-import com.nuvio.tv.data.local.CollectionsDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.domain.model.AddonCatalogCollectionSource
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.CollectionSource
-import com.nuvio.tv.domain.model.CollectionFolder
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.FolderViewMode
-import com.nuvio.tv.domain.model.HomeImdbRatingsVisibility
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.TmdbCollectionSource
-import com.nuvio.tv.domain.model.TraktCollectionSource
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.model.findCollectionCatalog
-import com.nuvio.tv.domain.model.mergeCatalogPage
-import com.nuvio.tv.domain.model.nextCatalogSkip
-import com.nuvio.tv.domain.model.skipStep
-import com.nuvio.tv.domain.model.supportsExtra
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
-import com.nuvio.tv.ui.screens.home.GridItem
-import com.nuvio.tv.ui.screens.home.HomeRow
-import com.nuvio.tv.ui.screens.home.HomeUiState
-import com.nuvio.tv.ui.screens.home.ModernCarouselRowBuildCache
-import com.nuvio.tv.ui.screens.home.ModernHomePresentationInput
-import com.nuvio.tv.domain.model.PLACEHOLDER_IMAGE_URL
-import com.nuvio.tv.ui.screens.home.buildModernHomePresentation
-import com.nuvio.tv.ui.screens.home.homeItemStatusKey
-import com.nuvio.tv.domain.repository.CatalogRepository
-import com.nuvio.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.R
+import us.xnetik.tv.core.build.AppFeaturePolicy
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.tmdb.TmdbCollectionSourceResolver
+import us.xnetik.tv.core.util.hasNoReleaseInfo
+import us.xnetik.tv.core.util.isUnreleased
+import us.xnetik.tv.core.trakt.TraktPublicListSourceResolver
+import us.xnetik.tv.data.trailer.TrailerService
+import us.xnetik.tv.data.local.CollectionsDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.domain.model.AddonCatalogCollectionSource
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.CollectionSource
+import us.xnetik.tv.domain.model.CollectionFolder
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.FolderViewMode
+import us.xnetik.tv.domain.model.HomeImdbRatingsVisibility
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.TmdbCollectionSource
+import us.xnetik.tv.domain.model.TraktCollectionSource
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.model.findCollectionCatalog
+import us.xnetik.tv.domain.model.mergeCatalogPage
+import us.xnetik.tv.domain.model.nextCatalogSkip
+import us.xnetik.tv.domain.model.skipStep
+import us.xnetik.tv.domain.model.supportsExtra
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.ui.screens.home.GridItem
+import us.xnetik.tv.ui.screens.home.HomeRow
+import us.xnetik.tv.ui.screens.home.HomeUiState
+import us.xnetik.tv.ui.screens.home.ModernCarouselRowBuildCache
+import us.xnetik.tv.ui.screens.home.ModernHomePresentationInput
+import us.xnetik.tv.domain.model.PLACEHOLDER_IMAGE_URL
+import us.xnetik.tv.ui.screens.home.buildModernHomePresentation
+import us.xnetik.tv.ui.screens.home.homeItemStatusKey
+import us.xnetik.tv.domain.repository.CatalogRepository
+import us.xnetik.tv.core.poster.withCustomPosterUrls
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
@@ -120,17 +120,17 @@ class FolderDetailViewModel @Inject constructor(
     private val catalogRepository: CatalogRepository,
     private val layoutPreferenceDataStore: LayoutPreferenceDataStore,
     private val watchProgressRepository: WatchProgressRepository,
-    private val watchedSeriesStateHolder: com.nuvio.tv.data.local.WatchedSeriesStateHolder,
-    private val tmdbService: com.nuvio.tv.core.tmdb.TmdbService,
-    private val tmdbMetadataService: com.nuvio.tv.core.tmdb.TmdbMetadataService,
-    private val tmdbSettingsDataStore: com.nuvio.tv.data.local.TmdbSettingsDataStore,
-    private val mdbListRepository: com.nuvio.tv.data.repository.MDBListRepository,
-    private val mdbListSettingsDataStore: com.nuvio.tv.data.local.MDBListSettingsDataStore,
-    private val metaRepository: com.nuvio.tv.domain.repository.MetaRepository,
+    private val watchedSeriesStateHolder: us.xnetik.tv.data.local.WatchedSeriesStateHolder,
+    private val tmdbService: us.xnetik.tv.core.tmdb.TmdbService,
+    private val tmdbMetadataService: us.xnetik.tv.core.tmdb.TmdbMetadataService,
+    private val tmdbSettingsDataStore: us.xnetik.tv.data.local.TmdbSettingsDataStore,
+    private val mdbListRepository: us.xnetik.tv.data.repository.MDBListRepository,
+    private val mdbListSettingsDataStore: us.xnetik.tv.data.local.MDBListSettingsDataStore,
+    private val metaRepository: us.xnetik.tv.domain.repository.MetaRepository,
     private val trailerService: TrailerService,
     private val tmdbCollectionSourceResolver: TmdbCollectionSourceResolver,
     private val traktPublicListSourceResolver: TraktPublicListSourceResolver,
-    val posterOptions: com.nuvio.tv.ui.components.posteroptions.PosterOptionsController
+    val posterOptions: us.xnetik.tv.ui.components.posteroptions.PosterOptionsController
 ) : ViewModel() {
 
     private val collectionId: String = savedStateHandle["collectionId"] ?: ""
@@ -175,13 +175,13 @@ class FolderDetailViewModel @Inject constructor(
     private var mdbBatchJob: Job? = null
     @Volatile private var mdbBatchHasFired = false
     @Volatile private var mdbLastFocusedRowKey: String? = null
-    @Volatile private var currentMdbListSettings: com.nuvio.tv.domain.model.MDBListSettings? = null
+    @Volatile private var currentMdbListSettings: us.xnetik.tv.domain.model.MDBListSettings? = null
 
-    private val _rowsFocusState = MutableStateFlow(com.nuvio.tv.ui.screens.home.HomeScreenFocusState())
-    val rowsFocusState: StateFlow<com.nuvio.tv.ui.screens.home.HomeScreenFocusState> = _rowsFocusState.asStateFlow()
+    private val _rowsFocusState = MutableStateFlow(us.xnetik.tv.ui.screens.home.HomeScreenFocusState())
+    val rowsFocusState: StateFlow<us.xnetik.tv.ui.screens.home.HomeScreenFocusState> = _rowsFocusState.asStateFlow()
 
-    private val _followLayoutFocusState = MutableStateFlow(com.nuvio.tv.ui.screens.home.HomeScreenFocusState())
-    val followLayoutFocusState: StateFlow<com.nuvio.tv.ui.screens.home.HomeScreenFocusState> = _followLayoutFocusState.asStateFlow()
+    private val _followLayoutFocusState = MutableStateFlow(us.xnetik.tv.ui.screens.home.HomeScreenFocusState())
+    val followLayoutFocusState: StateFlow<us.xnetik.tv.ui.screens.home.HomeScreenFocusState> = _followLayoutFocusState.asStateFlow()
 
     private val _tabFocusStates = MutableStateFlow<Map<Int, FolderDetailGridFocusState>>(emptyMap())
     val tabFocusStates: StateFlow<Map<Int, FolderDetailGridFocusState>> = _tabFocusStates.asStateFlow()
@@ -207,7 +207,7 @@ class FolderDetailViewModel @Inject constructor(
             }.collectLatest { (movieWatchedIds, seriesWatchedIds, allItems) ->
                 val newStatus = mutableMapOf<String, Boolean>()
                 allItems.forEach { item ->
-                    val key = com.nuvio.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)
+                    val key = us.xnetik.tv.ui.screens.home.homeItemStatusKey(item.id, item.apiType)
                     val isWatched = when (item.apiType) {
                         "movie" -> item.id in movieWatchedIds
                         "series", "tv" -> item.id in seriesWatchedIds
@@ -301,11 +301,11 @@ class FolderDetailViewModel @Inject constructor(
                     val fakeItems = (0 until 8).map { i ->
                         MetaPreview(
                             id = "__placeholder_${placeholderCatalogId}_$i",
-                            type = com.nuvio.tv.domain.model.ContentType.fromString(apiType),
+                            type = us.xnetik.tv.domain.model.ContentType.fromString(apiType),
                             rawType = apiType,
                             name = " ",
                             poster = PLACEHOLDER_IMAGE_URL,
-                            posterShape = com.nuvio.tv.domain.model.PosterShape.POSTER,
+                            posterShape = us.xnetik.tv.domain.model.PosterShape.POSTER,
                             background = null,
                             logo = null,
                             description = null,
@@ -320,7 +320,7 @@ class FolderDetailViewModel @Inject constructor(
                         addonBaseUrl = placeholderBaseUrl,
                         catalogId = placeholderCatalogId,
                         catalogName = name,
-                        type = com.nuvio.tv.domain.model.ContentType.fromString(apiType),
+                        type = us.xnetik.tv.domain.model.ContentType.fromString(apiType),
                         rawType = apiType,
                         items = fakeItems,
                         isLoading = true,
@@ -333,8 +333,8 @@ class FolderDetailViewModel @Inject constructor(
             val tabs = if (showAll) {
                 listOf(
                     FolderTab(
-                        label = appContext.getString(com.nuvio.tv.R.string.collections_tab_all),
-                        typeLabel = appContext.getString(com.nuvio.tv.R.string.collections_tab_combined),
+                        label = appContext.getString(us.xnetik.tv.R.string.collections_tab_all),
+                        typeLabel = appContext.getString(us.xnetik.tv.R.string.collections_tab_combined),
                         isLoading = true,
                         isAllTab = true
                     )
@@ -463,11 +463,11 @@ class FolderDetailViewModel @Inject constructor(
                     val fakeItems = (0 until 8).map { i ->
                         MetaPreview(
                             id = "__placeholder_${phCatalogId}_$i",
-                            type = com.nuvio.tv.domain.model.ContentType.fromString(apiType),
+                            type = us.xnetik.tv.domain.model.ContentType.fromString(apiType),
                             rawType = apiType,
                             name = " ",
                             poster = PLACEHOLDER_IMAGE_URL,
-                            posterShape = com.nuvio.tv.domain.model.PosterShape.POSTER,
+                            posterShape = us.xnetik.tv.domain.model.PosterShape.POSTER,
                             background = null,
                             logo = null,
                             description = null,
@@ -482,7 +482,7 @@ class FolderDetailViewModel @Inject constructor(
                         addonBaseUrl = phBaseUrl,
                         catalogId = phCatalogId,
                         catalogName = tab.label,
-                        type = com.nuvio.tv.domain.model.ContentType.fromString(apiType),
+                        type = us.xnetik.tv.domain.model.ContentType.fromString(apiType),
                         rawType = apiType,
                         items = fakeItems,
                         isLoading = true,
@@ -551,7 +551,7 @@ class FolderDetailViewModel @Inject constructor(
                         showCatalogTypeSuffix = state.catalogTypeSuffixEnabled,
                         showFullReleaseDate = state.showFullReleaseDate,
                         showImdbRatings = state.homeImdbRatingsVisibility.showRatings,
-                        localeTag = com.nuvio.tv.LocaleCache.localeTag
+                        localeTag = us.xnetik.tv.LocaleCache.localeTag
                     ),
                     cache = modernCarouselRowBuildCache,
                     context = appContext
@@ -585,7 +585,7 @@ class FolderDetailViewModel @Inject constructor(
                         heroEnrichmentEnabled = computedHeroEnrichmentEnabled,
                         classicFocusGradientEnabled = s.classicFocusGradientEnabled,
                         mdbListShowOnHero = currentMdbListSettings?.showOnHero ?: false,
-                        mdbListRatingOrder = currentMdbListSettings?.enabledRatingOrder() ?: com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+                        mdbListRatingOrder = currentMdbListSettings?.enabledRatingOrder() ?: us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
                     )
                     s.copy(followLayoutHomeState = homeState.copy(modernHomePresentation = modernPresentation))
                 }
@@ -621,7 +621,7 @@ class FolderDetailViewModel @Inject constructor(
                     heroEnrichmentEnabled = false,
                     classicFocusGradientEnabled = s.classicFocusGradientEnabled,
                     mdbListShowOnHero = currentMdbListSettings?.showOnHero ?: false,
-                    mdbListRatingOrder = currentMdbListSettings?.enabledRatingOrder() ?: com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+                    mdbListRatingOrder = currentMdbListSettings?.enabledRatingOrder() ?: us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
                 )
                 s.copy(followLayoutHomeState = homeState)
             }
@@ -670,7 +670,7 @@ class FolderDetailViewModel @Inject constructor(
                 itemsToFetch.map { item ->
                     async(kotlinx.coroutines.Dispatchers.IO) {
                         try {
-                            val meta = com.nuvio.tv.domain.model.Meta(
+                            val meta = us.xnetik.tv.domain.model.Meta(
                                 id = item.id, type = item.type, name = item.name,
                                 poster = item.poster, posterShape = item.posterShape,
                                 background = item.background, logo = item.logo,
@@ -767,7 +767,7 @@ class FolderDetailViewModel @Inject constructor(
             var catalog = addon.catalogs.findCollectionCatalog(source.type, source.catalogId)
                 ?: addon.catalogs.findCollectionCatalog(source.type, source.catalogId.substringBefore(","))
             // If the catalog wasn't found in the declared addon, search all installed addons.
-            var effectiveAddon: com.nuvio.tv.domain.model.Addon = addon
+            var effectiveAddon: us.xnetik.tv.domain.model.Addon = addon
             if (catalog == null) {
                 for (a in addons) {
                     val match = a.catalogs.findCollectionCatalog(source.type, source.catalogId)
@@ -798,7 +798,7 @@ class FolderDetailViewModel @Inject constructor(
                 skipStep = skipStep,
                 extraArgs = extraArgs,
                 supportsSkip = supportsSkip,
-                posterScreen = com.nuvio.tv.core.poster.CustomPosterScreen.COLLECTIONS
+                posterScreen = us.xnetik.tv.core.poster.CustomPosterScreen.COLLECTIONS
             ).collect { result ->
                 when (result) {
                     is NetworkResult.Success -> {
@@ -888,7 +888,7 @@ class FolderDetailViewModel @Inject constructor(
                 skipStep = row.skipStep,
                 extraArgs = row.extraArgs,
                 supportsSkip = row.supportsSkip,
-                posterScreen = com.nuvio.tv.core.poster.CustomPosterScreen.COLLECTIONS
+                posterScreen = us.xnetik.tv.core.poster.CustomPosterScreen.COLLECTIONS
             ).collect { result ->
                 when (result) {
                     is NetworkResult.Success -> {
@@ -968,7 +968,7 @@ class FolderDetailViewModel @Inject constructor(
         focusedRowIndex: Int = 0,
         focusedItemIndex: Int = 0
     ) {
-        val nextState = com.nuvio.tv.ui.screens.home.HomeScreenFocusState(
+        val nextState = us.xnetik.tv.ui.screens.home.HomeScreenFocusState(
             verticalScrollIndex = verticalScrollIndex,
             verticalScrollOffset = verticalScrollOffset,
             focusedRowKey = focusedRowKey,
@@ -994,7 +994,7 @@ class FolderDetailViewModel @Inject constructor(
         focusedRowIndex: Int = 0,
         focusedItemIndex: Int = 0
     ) {
-        val nextState = com.nuvio.tv.ui.screens.home.HomeScreenFocusState(
+        val nextState = us.xnetik.tv.ui.screens.home.HomeScreenFocusState(
             verticalScrollIndex = verticalScrollIndex,
             verticalScrollOffset = verticalScrollOffset,
             focusedRowKey = focusedRowKey,
@@ -1015,7 +1015,7 @@ class FolderDetailViewModel @Inject constructor(
         verticalScrollOffset: Int,
         focusedItemKey: String?
     ) {
-        val nextState = com.nuvio.tv.ui.screens.home.HomeScreenFocusState(
+        val nextState = us.xnetik.tv.ui.screens.home.HomeScreenFocusState(
             verticalScrollIndex = verticalScrollIndex,
             verticalScrollOffset = verticalScrollOffset,
             focusedItemKey = focusedItemKey,
@@ -1061,7 +1061,7 @@ class FolderDetailViewModel @Inject constructor(
                             } else {
                                 filteredData
                             }
-                            if (tabIndex < tabs.size) tabs[tabIndex] = tabs[tabIndex].copy(catalogRow = row.copy(items = row.items.withCustomPosterUrls(com.nuvio.tv.core.poster.patternForScreen(posterPattern, com.nuvio.tv.core.poster.CustomPosterScreen.COLLECTIONS, enabledScreens))), isLoading = false)
+                            if (tabIndex < tabs.size) tabs[tabIndex] = tabs[tabIndex].copy(catalogRow = row.copy(items = row.items.withCustomPosterUrls(us.xnetik.tv.core.poster.patternForScreen(posterPattern, us.xnetik.tv.core.poster.CustomPosterScreen.COLLECTIONS, enabledScreens))), isLoading = false)
                             s.copy(tabs = tabs)
                         }
                         rebuildAllTab()
@@ -1124,7 +1124,7 @@ class FolderDetailViewModel @Inject constructor(
                             } else {
                                 filteredData
                             }
-                            if (tabIndex < tabs.size) tabs[tabIndex] = tabs[tabIndex].copy(catalogRow = row.copy(items = row.items.withCustomPosterUrls(com.nuvio.tv.core.poster.patternForScreen(posterPattern, com.nuvio.tv.core.poster.CustomPosterScreen.COLLECTIONS, enabledScreens))), isLoading = false)
+                            if (tabIndex < tabs.size) tabs[tabIndex] = tabs[tabIndex].copy(catalogRow = row.copy(items = row.items.withCustomPosterUrls(us.xnetik.tv.core.poster.patternForScreen(posterPattern, us.xnetik.tv.core.poster.CustomPosterScreen.COLLECTIONS, enabledScreens))), isLoading = false)
                             s.copy(tabs = tabs)
                         }
                         rebuildAllTab()
@@ -1182,8 +1182,8 @@ class FolderDetailViewModel @Inject constructor(
 
     private fun buildTraktTypeLabel(source: TraktCollectionSource): String {
         return when (source.mediaType) {
-            com.nuvio.tv.domain.model.TmdbCollectionMediaType.MOVIE -> appContext.getString(R.string.collections_editor_trakt_movie_list)
-            com.nuvio.tv.domain.model.TmdbCollectionMediaType.TV -> appContext.getString(R.string.collections_editor_trakt_series_list)
+            us.xnetik.tv.domain.model.TmdbCollectionMediaType.MOVIE -> appContext.getString(R.string.collections_editor_trakt_movie_list)
+            us.xnetik.tv.domain.model.TmdbCollectionMediaType.TV -> appContext.getString(R.string.collections_editor_trakt_series_list)
         }
     }
 
@@ -1199,7 +1199,7 @@ class FolderDetailViewModel @Inject constructor(
             append(source.mediaType.value)
             append("_")
             append(source.sortBy.replace('.', '_'))
-            if (source.sourceType == com.nuvio.tv.domain.model.TmdbCollectionSourceType.DISCOVER) {
+            if (source.sourceType == us.xnetik.tv.domain.model.TmdbCollectionSourceType.DISCOVER) {
                 append("_")
                 append(source.filters.hashCode().toUInt().toString(16))
             }
@@ -1254,7 +1254,7 @@ class FolderDetailViewModel @Inject constructor(
                     metaRepository.getMetaFromAllAddons(
                         type = item.apiType,
                         id = item.id
-                    ).first { it !is com.nuvio.tv.core.network.NetworkResult.Loading }
+                    ).first { it !is us.xnetik.tv.core.network.NetworkResult.Loading }
                 }
             }
 
@@ -1281,7 +1281,7 @@ class FolderDetailViewModel @Inject constructor(
                 return@launch
             }
 
-            var enrichment: com.nuvio.tv.core.tmdb.TmdbEnrichment? = null
+            var enrichment: us.xnetik.tv.core.tmdb.TmdbEnrichment? = null
             if (tmdbEnabled) {
                 val tmdbId = runCatching { tmdbService.ensureTmdbId(item.id, item.apiType) }.getOrNull()
                 if (tmdbId != null) {
@@ -1527,7 +1527,7 @@ class FolderDetailViewModel @Inject constructor(
                         .firstNotNullOfOrNull { tab -> tab.catalogRow?.items?.firstOrNull { it.id == itemId } }
                         ?.mdbListRatingOrder
                     ?: currentMdbListSettings?.enabledRatingOrder()
-                    ?: com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
+                    ?: us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER
                 item.copy(
                     mdbListRatings = ratings,
                     mdbListRatingOrder = order,
@@ -1649,8 +1649,8 @@ class FolderDetailViewModel @Inject constructor(
                 if (!tmdbEnriched && externalMetaEnabled && item.id !in prefetchedExternalMetaIds) {
                     prefetchedExternalMetaIds.add(item.id)
                     val result = metaRepository.getMetaFromAllAddons(item.apiType, item.id, item.sourceAddonBaseUrl)
-                        .first { it is com.nuvio.tv.core.network.NetworkResult.Success || it is com.nuvio.tv.core.network.NetworkResult.Error }
-                    if (result is com.nuvio.tv.core.network.NetworkResult.Success) {
+                        .first { it is us.xnetik.tv.core.network.NetworkResult.Success || it is us.xnetik.tv.core.network.NetworkResult.Error }
+                    if (result is us.xnetik.tv.core.network.NetworkResult.Success) {
                         enrichedItemIds.add(item.id)
                         val meta = result.data
                         updateItemInTabs(item.id) { merged ->
@@ -1669,7 +1669,7 @@ class FolderDetailViewModel @Inject constructor(
                         if (enrichedItem != null) {
                             publishEnrichedPreview(item.id, enrichedItem)
                         }
-                    } else if (result is com.nuvio.tv.core.network.NetworkResult.Error && result.code == com.nuvio.tv.core.network.NetworkResult.SOURCE_SUFFICIENT_CODE) {
+                    } else if (result is us.xnetik.tv.core.network.NetworkResult.Error && result.code == us.xnetik.tv.core.network.NetworkResult.SOURCE_SUFFICIENT_CODE) {
                         enrichedItemIds.add(item.id)
                         val enrichedItem = _uiState.value.tabs
                             .firstNotNullOfOrNull { tab -> tab.catalogRow?.items?.firstOrNull { it.id == item.id } }
@@ -1684,8 +1684,8 @@ class FolderDetailViewModel @Inject constructor(
                 if (adjArtworkMissing && externalMetaEnabled) {
                     prefetchedExternalMetaIds.add(item.id)
                     val result = metaRepository.getMetaFromAllAddons(item.apiType, item.id, item.sourceAddonBaseUrl)
-                        .first { it is com.nuvio.tv.core.network.NetworkResult.Success || it is com.nuvio.tv.core.network.NetworkResult.Error }
-                    if (result is com.nuvio.tv.core.network.NetworkResult.Success) {
+                        .first { it is us.xnetik.tv.core.network.NetworkResult.Success || it is us.xnetik.tv.core.network.NetworkResult.Error }
+                    if (result is us.xnetik.tv.core.network.NetworkResult.Success) {
                         val meta = result.data
                         updateItemInTabs(item.id) { merged ->
                             merged.copy(
@@ -1702,7 +1702,7 @@ class FolderDetailViewModel @Inject constructor(
                         }
                         enrichedItemIds.add(item.id)
                         rebuildFollowLayoutState()
-                    } else if (result is com.nuvio.tv.core.network.NetworkResult.Error && result.code == com.nuvio.tv.core.network.NetworkResult.SOURCE_SUFFICIENT_CODE) {
+                    } else if (result is us.xnetik.tv.core.network.NetworkResult.Error && result.code == us.xnetik.tv.core.network.NetworkResult.SOURCE_SUFFICIENT_CODE) {
                         // Source addon matched — catalog data is sufficient, mark as enriched.
                         enrichedItemIds.add(item.id)
                     } else {

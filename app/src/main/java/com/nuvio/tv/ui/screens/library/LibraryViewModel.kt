@@ -1,37 +1,37 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.cloud.CloudLibraryFile
-import com.nuvio.tv.core.cloud.CloudLibraryItem
-import com.nuvio.tv.core.cloud.CloudLibraryItemType
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackInfo
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackContext
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackResult
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackSessionStore
-import com.nuvio.tv.core.cloud.CloudLibraryRepository
-import com.nuvio.tv.core.cloud.CloudLibraryUiState
-import com.nuvio.tv.core.player.ExternalPlaybackMetadata
-import com.nuvio.tv.core.player.ExternalPlaybackTracker
-import com.nuvio.tv.core.debrid.DebridProviderCapability
-import com.nuvio.tv.core.debrid.DebridProviders
-import com.nuvio.tv.core.debrid.supports
-import com.nuvio.tv.core.tracking.TrackingListManagementCapabilities
-import com.nuvio.tv.core.tracking.TrackingLibraryProviderRegistry
-import com.nuvio.tv.core.tracking.providerId
-import com.nuvio.tv.core.poster.withCustomPosterUrls
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.LibraryPreferences
-import com.nuvio.tv.data.local.PlayerPreference
-import com.nuvio.tv.data.local.PlayerSettingsDataStore
-import com.nuvio.tv.domain.model.AuthState
-import com.nuvio.tv.domain.model.LibraryEntry
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.LibraryListPrivacy
-import com.nuvio.tv.domain.repository.LibraryRepository
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.cloud.CloudLibraryFile
+import us.xnetik.tv.core.cloud.CloudLibraryItem
+import us.xnetik.tv.core.cloud.CloudLibraryItemType
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackInfo
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackContext
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackResult
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackSessionStore
+import us.xnetik.tv.core.cloud.CloudLibraryRepository
+import us.xnetik.tv.core.cloud.CloudLibraryUiState
+import us.xnetik.tv.core.player.ExternalPlaybackMetadata
+import us.xnetik.tv.core.player.ExternalPlaybackTracker
+import us.xnetik.tv.core.debrid.DebridProviderCapability
+import us.xnetik.tv.core.debrid.DebridProviders
+import us.xnetik.tv.core.debrid.supports
+import us.xnetik.tv.core.tracking.TrackingListManagementCapabilities
+import us.xnetik.tv.core.tracking.TrackingLibraryProviderRegistry
+import us.xnetik.tv.core.tracking.providerId
+import us.xnetik.tv.core.poster.withCustomPosterUrls
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.LibraryPreferences
+import us.xnetik.tv.data.local.PlayerPreference
+import us.xnetik.tv.data.local.PlayerSettingsDataStore
+import us.xnetik.tv.domain.model.AuthState
+import us.xnetik.tv.domain.model.LibraryEntry
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.LibraryListPrivacy
+import us.xnetik.tv.domain.repository.LibraryRepository
 import android.content.Context
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -50,7 +50,7 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import java.util.Locale
 import javax.inject.Inject
 
@@ -153,8 +153,8 @@ data class LibraryUiState(
     val listEditorState: LibraryListEditorState? = null,
     val pendingOperation: Boolean = false,
     val customPosterUrlPattern: String = "",
-    val customPosterEnabledScreens: Set<com.nuvio.tv.core.poster.CustomPosterScreen> =
-        com.nuvio.tv.core.poster.CustomPosterScreen.ALL
+    val customPosterEnabledScreens: Set<us.xnetik.tv.core.poster.CustomPosterScreen> =
+        us.xnetik.tv.core.poster.CustomPosterScreen.ALL
 )
 
 @HiltViewModel
@@ -164,16 +164,16 @@ class LibraryViewModel @Inject constructor(
     private val cloudPlaybackSessionStore: CloudLibraryPlaybackSessionStore,
     private val externalPlaybackTracker: ExternalPlaybackTracker,
     private val playerSettingsDataStore: PlayerSettingsDataStore,
-    private val metaRepository: com.nuvio.tv.domain.repository.MetaRepository,
+    private val metaRepository: us.xnetik.tv.domain.repository.MetaRepository,
     private val debridSettingsDataStore: DebridSettingsDataStore,
     private val layoutPreferenceDataStore: LayoutPreferenceDataStore,
     private val libraryPreferences: LibraryPreferences,
     private val authManager: AuthManager,
     private val trackingProviderRegistry: TrackingLibraryProviderRegistry,
-    private val watchProgressRepository: com.nuvio.tv.domain.repository.WatchProgressRepository,
-    private val watchedSeriesStateHolder: com.nuvio.tv.data.local.WatchedSeriesStateHolder,
-    private val profileManager: com.nuvio.tv.core.profile.ProfileManager,
-    val posterOptions: com.nuvio.tv.ui.components.posteroptions.PosterOptionsController,
+    private val watchProgressRepository: us.xnetik.tv.domain.repository.WatchProgressRepository,
+    private val watchedSeriesStateHolder: us.xnetik.tv.data.local.WatchedSeriesStateHolder,
+    private val profileManager: us.xnetik.tv.core.profile.ProfileManager,
+    val posterOptions: us.xnetik.tv.ui.components.posteroptions.PosterOptionsController,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
@@ -237,7 +237,7 @@ class LibraryViewModel @Inject constructor(
             if (id in metaPrefetchedIds) return@launch
             metaPrefetchedIds.add(id)
             metaRepository.getMetaFromAllAddons(type = type, id = id)
-                .first { it !is com.nuvio.tv.core.network.NetworkResult.Loading }
+                .first { it !is us.xnetik.tv.core.network.NetworkResult.Loading }
             watchProgressRepository.getAllEpisodeProgress(id.substringBefore(":")).first()
         }
     }
@@ -1050,7 +1050,7 @@ class LibraryViewModel @Inject constructor(
 
         return copy(
             visibleItems = sorted.withCustomPosterUrls(
-                com.nuvio.tv.core.poster.patternForScreen(customPosterUrlPattern, com.nuvio.tv.core.poster.CustomPosterScreen.LIBRARY, customPosterEnabledScreens)
+                us.xnetik.tv.core.poster.patternForScreen(customPosterUrlPattern, us.xnetik.tv.core.poster.CustomPosterScreen.LIBRARY, customPosterEnabledScreens)
             ),
             availableTypeTabs = typeTabsWithCounts,
             availableGenres = genreOptions,

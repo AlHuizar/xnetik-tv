@@ -1,10 +1,10 @@
-package com.nuvio.tv.data.mediaserver
+package us.xnetik.tv.data.mediaserver
 
 import android.content.Context
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.core.tracking.TrackingExternalIds
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.MetaRepository
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.core.tracking.TrackingExternalIds
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.MetaRepository
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

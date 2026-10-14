@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.os.Build
 import android.os.SystemClock
 import android.util.Log
-import com.nuvio.tv.core.player.FrameRateUtils
-import com.nuvio.tv.data.local.FrameRateMatchingMode
+import us.xnetik.tv.core.player.FrameRateUtils
+import us.xnetik.tv.data.local.FrameRateMatchingMode
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.NonCancellable

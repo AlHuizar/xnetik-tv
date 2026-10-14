@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind

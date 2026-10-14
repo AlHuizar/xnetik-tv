@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import android.content.Context
-import com.nuvio.tv.BuildConfig
-import com.nuvio.tv.domain.model.ServerCapabilities
-import com.nuvio.tv.domain.model.ServerConfiguration
+import us.xnetik.tv.BuildConfig
+import us.xnetik.tv.domain.model.ServerCapabilities
+import us.xnetik.tv.domain.model.ServerConfiguration
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 import javax.inject.Singleton

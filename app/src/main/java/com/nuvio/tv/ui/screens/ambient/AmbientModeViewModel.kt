@@ -1,10 +1,10 @@
-package com.nuvio.tv.ui.screens.ambient
+package us.xnetik.tv.ui.screens.ambient
 
 import android.os.SystemClock
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.data.local.AmbientModeDataStore
-import com.nuvio.tv.domain.model.AmbientModeSettings
+import us.xnetik.tv.data.local.AmbientModeDataStore
+import us.xnetik.tv.domain.model.AmbientModeSettings
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job

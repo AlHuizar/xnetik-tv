@@ -1,11 +1,11 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
 import android.content.Context
-import com.nuvio.tv.core.auth.AuthManager
-import com.nuvio.tv.core.sync.AddonSyncService
-import com.nuvio.tv.data.local.AddonPreferences
-import com.nuvio.tv.data.remote.api.AddonApi
-import com.nuvio.tv.data.remote.dto.AddonManifestDto
+import us.xnetik.tv.core.auth.AuthManager
+import us.xnetik.tv.core.sync.AddonSyncService
+import us.xnetik.tv.data.local.AddonPreferences
+import us.xnetik.tv.data.remote.api.AddonApi
+import us.xnetik.tv.data.remote.dto.AddonManifestDto
 import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.every

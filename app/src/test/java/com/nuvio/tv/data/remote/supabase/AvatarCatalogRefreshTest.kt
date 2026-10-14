@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.remote.supabase
+package us.xnetik.tv.data.remote.supabase
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

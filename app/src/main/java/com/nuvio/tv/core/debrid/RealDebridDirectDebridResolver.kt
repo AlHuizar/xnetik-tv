@@ -1,10 +1,10 @@
-package com.nuvio.tv.core.debrid
+package us.xnetik.tv.core.debrid
 
-import com.nuvio.tv.data.local.DebridSettingsDataStore
-import com.nuvio.tv.data.remote.api.RealDebridApi
-import com.nuvio.tv.data.remote.dto.RealDebridTorrentInfoDto
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.domain.model.StreamClientResolve
+import us.xnetik.tv.data.local.DebridSettingsDataStore
+import us.xnetik.tv.data.remote.api.RealDebridApi
+import us.xnetik.tv.data.remote.dto.RealDebridTorrentInfoDto
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.domain.model.StreamClientResolve
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject
@@ -79,7 +79,7 @@ class RealDebridDirectDebridResolver @Inject constructor(
         }
     }
 
-    private fun retrofit2.Response<com.nuvio.tv.data.remote.dto.RealDebridAddTorrentDto>.toFailureForAdd(): DirectDebridResolveResult {
+    private fun retrofit2.Response<us.xnetik.tv.data.remote.dto.RealDebridAddTorrentDto>.toFailureForAdd(): DirectDebridResolveResult {
         return when (code()) {
             401, 403 -> DirectDebridResolveResult.Error
             else -> DirectDebridResolveResult.Stale

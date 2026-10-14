@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 import android.util.Log
-import com.nuvio.tv.domain.model.MDBListRatings
+import us.xnetik.tv.domain.model.MDBListRatings
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
@@ -130,7 +130,7 @@ internal class MdbListRatingsLoader(
     }
 
     private fun resolveResponseId(
-        media: com.nuvio.tv.data.remote.dto.mdblist.MDBListMediaResponseDto,
+        media: us.xnetik.tv.data.remote.dto.mdblist.MDBListMediaResponseDto,
         provider: String
     ): String? {
         if (provider == "imdb") return media.resolvedImdbId()

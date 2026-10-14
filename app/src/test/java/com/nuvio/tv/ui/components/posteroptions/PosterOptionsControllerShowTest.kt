@@ -1,16 +1,16 @@
-package com.nuvio.tv.ui.components.posteroptions
+package us.xnetik.tv.ui.components.posteroptions
 
 import android.content.Context
 import android.util.Log
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.data.local.WatchedSeriesStateHolder
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.repository.LibraryRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.data.local.WatchedSeriesStateHolder
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.repository.LibraryRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk

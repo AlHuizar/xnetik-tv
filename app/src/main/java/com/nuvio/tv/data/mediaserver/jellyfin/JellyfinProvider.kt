@@ -1,9 +1,9 @@
-package com.nuvio.tv.data.mediaserver.jellyfin
+package us.xnetik.tv.data.mediaserver.jellyfin
 
-import com.nuvio.tv.data.mediaserver.mediabrowser.Endpoint
-import com.nuvio.tv.data.mediaserver.mediabrowser.MediaBrowserProvider
-import com.nuvio.tv.data.mediaserver.mediabrowser.ServerClientIdentity
-import com.nuvio.tv.data.mediaserver.mediabrowser.pathSegment
+import us.xnetik.tv.data.mediaserver.mediabrowser.Endpoint
+import us.xnetik.tv.data.mediaserver.mediabrowser.MediaBrowserProvider
+import us.xnetik.tv.data.mediaserver.mediabrowser.ServerClientIdentity
+import us.xnetik.tv.data.mediaserver.mediabrowser.pathSegment
 import okhttp3.OkHttpClient
 
 internal class JellyfinProvider(

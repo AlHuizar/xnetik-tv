@@ -1,4 +1,4 @@
-package com.nuvio.tv.data.mdblist
+package us.xnetik.tv.data.mdblist
 
 enum class MdbListSyncError { UNAVAILABLE, INVALID_RESPONSE, RATE_LIMIT, AUTHORIZATION_REVOKED }
 

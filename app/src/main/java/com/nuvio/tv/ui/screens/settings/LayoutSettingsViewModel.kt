@@ -1,33 +1,33 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.domain.model.catalogRowLegacyKey
+import us.xnetik.tv.domain.model.catalogRowLegacyKey
 import android.content.Context
 import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nuvio.tv.R
-import com.nuvio.tv.core.qr.QrCodeGenerator
-import com.nuvio.tv.core.server.DeviceIpAddress
-import com.nuvio.tv.core.server.StreamBadgeConfigServer
-import com.nuvio.tv.core.streams.StreamBadgePlacement
-import com.nuvio.tv.core.streams.StreamBadgeRules
-import com.nuvio.tv.core.streams.StreamBadgeSettings
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.StreamBadgeSettingsDataStore
-import com.nuvio.tv.data.local.TraktSettingsDataStore
-import com.nuvio.tv.data.local.TrailerSettingsDataStore
-import com.nuvio.tv.domain.model.CardDepthStyle
-import com.nuvio.tv.domain.model.CardDepthSurface
-import com.nuvio.tv.domain.model.ContinueWatchingCardStyle
-import com.nuvio.tv.domain.model.ContinueWatchingSortMode
-import com.nuvio.tv.domain.model.DiscoverLocation
-import com.nuvio.tv.domain.model.DetailImdbRatingsVisibility
-import com.nuvio.tv.domain.model.EpisodeOptionsOverlayStyle
-import com.nuvio.tv.domain.model.FocusedPosterTrailerPlaybackTarget
-import com.nuvio.tv.domain.model.HomeLayout
-import com.nuvio.tv.domain.model.HomeImdbRatingsVisibility
-import com.nuvio.tv.domain.model.enabledAddons
-import com.nuvio.tv.domain.repository.AddonRepository
+import us.xnetik.tv.R
+import us.xnetik.tv.core.qr.QrCodeGenerator
+import us.xnetik.tv.core.server.DeviceIpAddress
+import us.xnetik.tv.core.server.StreamBadgeConfigServer
+import us.xnetik.tv.core.streams.StreamBadgePlacement
+import us.xnetik.tv.core.streams.StreamBadgeRules
+import us.xnetik.tv.core.streams.StreamBadgeSettings
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.StreamBadgeSettingsDataStore
+import us.xnetik.tv.data.local.TraktSettingsDataStore
+import us.xnetik.tv.data.local.TrailerSettingsDataStore
+import us.xnetik.tv.domain.model.CardDepthStyle
+import us.xnetik.tv.domain.model.CardDepthSurface
+import us.xnetik.tv.domain.model.ContinueWatchingCardStyle
+import us.xnetik.tv.domain.model.ContinueWatchingSortMode
+import us.xnetik.tv.domain.model.DiscoverLocation
+import us.xnetik.tv.domain.model.DetailImdbRatingsVisibility
+import us.xnetik.tv.domain.model.EpisodeOptionsOverlayStyle
+import us.xnetik.tv.domain.model.FocusedPosterTrailerPlaybackTarget
+import us.xnetik.tv.domain.model.HomeLayout
+import us.xnetik.tv.domain.model.HomeImdbRatingsVisibility
+import us.xnetik.tv.domain.model.enabledAddons
+import us.xnetik.tv.domain.repository.AddonRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -88,8 +88,8 @@ data class LayoutSettingsUiState(
     val continueWatchingSortMode: ContinueWatchingSortMode = ContinueWatchingSortMode.DEFAULT,
     val continueWatchingCardStyle: ContinueWatchingCardStyle = ContinueWatchingCardStyle.CARD,
     val customPosterUrlPattern: String = "",
-    val customPosterEnabledScreens: Set<com.nuvio.tv.core.poster.CustomPosterScreen> =
-        com.nuvio.tv.core.poster.CustomPosterScreen.ALL,
+    val customPosterEnabledScreens: Set<us.xnetik.tv.core.poster.CustomPosterScreen> =
+        us.xnetik.tv.core.poster.CustomPosterScreen.ALL,
     val alwaysShowLandscapeClearlogo: Boolean = false,
 )
 
@@ -157,7 +157,7 @@ sealed class LayoutSettingsEvent {
     data class SetCustomPosterUrlPattern(val pattern: String) : LayoutSettingsEvent()
     data object ClearCustomPosterSettings : LayoutSettingsEvent()
     data class SetCustomPosterScreenEnabled(
-        val screen: com.nuvio.tv.core.poster.CustomPosterScreen,
+        val screen: us.xnetik.tv.core.poster.CustomPosterScreen,
         val enabled: Boolean
     ) : LayoutSettingsEvent()
 }
@@ -170,7 +170,7 @@ class LayoutSettingsViewModel @Inject constructor(
     private val traktSettingsDataStore: TraktSettingsDataStore,
     private val trailerSettingsDataStore: TrailerSettingsDataStore,
     private val addonRepository: AddonRepository,
-    private val metaRepository: com.nuvio.tv.domain.repository.MetaRepository
+    private val metaRepository: us.xnetik.tv.domain.repository.MetaRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(LayoutSettingsUiState())
@@ -937,7 +937,7 @@ class LayoutSettingsViewModel @Inject constructor(
         }
     }
 
-    private fun setCustomPosterScreenEnabled(screen: com.nuvio.tv.core.poster.CustomPosterScreen, enabled: Boolean) {
+    private fun setCustomPosterScreenEnabled(screen: us.xnetik.tv.core.poster.CustomPosterScreen, enabled: Boolean) {
         viewModelScope.launch {
             val current = _uiState.value.customPosterEnabledScreens
             val updated = if (enabled) current + screen else current - screen
@@ -947,7 +947,7 @@ class LayoutSettingsViewModel @Inject constructor(
 
     // -- Custom poster QR mode --
 
-    private var customPosterServer: com.nuvio.tv.core.server.CustomPosterConfigServer? = null
+    private var customPosterServer: us.xnetik.tv.core.server.CustomPosterConfigServer? = null
 
     private val _customPosterQrState = MutableStateFlow(CustomPosterQrState())
     val customPosterQrState: StateFlow<CustomPosterQrState> = _customPosterQrState.asStateFlow()
@@ -955,11 +955,11 @@ class LayoutSettingsViewModel @Inject constructor(
     fun startCustomPosterQrMode() {
         val ip = DeviceIpAddress.get(context)
         if (ip == null) {
-            _customPosterQrState.update { it.copy(serverError = context.getString(com.nuvio.tv.R.string.error_network_required)) }
+            _customPosterQrState.update { it.copy(serverError = context.getString(us.xnetik.tv.R.string.error_network_required)) }
             return
         }
         stopCustomPosterServer()
-        customPosterServer = com.nuvio.tv.core.server.CustomPosterConfigServer.startOnAvailablePort(
+        customPosterServer = us.xnetik.tv.core.server.CustomPosterConfigServer.startOnAvailablePort(
             currentPatternProvider = { _uiState.value.customPosterUrlPattern },
             onPatternChanged = { pattern ->
                 _uiState.update { it.copy(customPosterUrlPattern = pattern) }
@@ -969,14 +969,14 @@ class LayoutSettingsViewModel @Inject constructor(
         )
         val server = customPosterServer
         if (server == null) {
-            _customPosterQrState.update { it.copy(serverError = context.getString(com.nuvio.tv.R.string.error_server_ports_unavailable)) }
+            _customPosterQrState.update { it.copy(serverError = context.getString(us.xnetik.tv.R.string.error_server_ports_unavailable)) }
             return
         }
         val url = "http://$ip:${server.listeningPort}"
         _customPosterQrState.update {
             it.copy(
                 isActive = true,
-                qrCodeBitmap = com.nuvio.tv.core.qr.QrCodeGenerator.generate(url, 512),
+                qrCodeBitmap = us.xnetik.tv.core.qr.QrCodeGenerator.generate(url, 512),
                 serverUrl = url,
                 serverError = null
             )

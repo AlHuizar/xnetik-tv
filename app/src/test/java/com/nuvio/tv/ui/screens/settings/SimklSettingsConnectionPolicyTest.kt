@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
-import com.nuvio.tv.data.simkl.SimklAuthState
-import com.nuvio.tv.data.simkl.SimklConnectionMode
+import us.xnetik.tv.data.simkl.SimklAuthState
+import us.xnetik.tv.data.simkl.SimklConnectionMode
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test

@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.util
+package us.xnetik.tv.core.util
 
 fun parseRuntimeMinutes(runtime: String?): Int? {
     val normalized = runtime?.trim()?.lowercase()?.takeIf { it.isNotBlank() } ?: return null

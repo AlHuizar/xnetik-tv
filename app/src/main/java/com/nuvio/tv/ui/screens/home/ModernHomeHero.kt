@@ -1,8 +1,8 @@
-package com.nuvio.tv.ui.screens.home
+package us.xnetik.tv.ui.screens.home
 
-import com.nuvio.tv.ui.theme.NuvioMotion
+import us.xnetik.tv.ui.theme.NuvioMotion
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -54,14 +54,14 @@ import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.ui.util.LocalRecompositionHighlighterEnabled
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.recompositionHighlighter
+import us.xnetik.tv.ui.util.LocalRecompositionHighlighterEnabled
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.recompositionHighlighter
 import coil3.request.transitionFactory
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import kotlinx.coroutines.delay
-import com.nuvio.tv.ui.components.ImdbRatingSourceLabel
-import com.nuvio.tv.ui.components.TrailerPlayer
+import us.xnetik.tv.ui.components.ImdbRatingSourceLabel
+import us.xnetik.tv.ui.components.TrailerPlayer
 import androidx.compose.ui.res.stringResource
 
 private data class ModernHeroSecondaryMeta(
@@ -301,7 +301,7 @@ internal fun HeroTitleBlock(
     portraitMode: Boolean,
     showImdbRatings: Boolean,
     mdbListShowOnHero: Boolean = false,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     trailerPlaying: () -> Boolean = { false },
     modifier: Modifier = Modifier
 ) {
@@ -344,7 +344,7 @@ private fun HeroTitleContent(
     portraitMode: Boolean,
     showImdbRatings: Boolean,
     mdbListShowOnHero: Boolean = false,
-    mdbListRatingOrder: List<String> = com.nuvio.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
+    mdbListRatingOrder: List<String> = us.xnetik.tv.domain.model.MDBListSettings.DEFAULT_RATING_ORDER,
     trailerPlaying: () -> Boolean = { false }
 ) {
     val preview = previewProvider() ?: return
@@ -482,7 +482,7 @@ private fun HeroTitleContent(
                 buildList {
                     preview.contentTypeText?.takeIf { it.isNotBlank() }?.let(::add)
                     preview.genres.firstOrNull()?.takeIf { it.isNotBlank() }?.let { genre ->
-                        add(com.nuvio.tv.ui.util.localizedGenreLabel(context, genre))
+                        add(us.xnetik.tv.ui.util.localizedGenreLabel(context, genre))
                     }
                 }.joinToString(separator = " • ")
             }
@@ -639,7 +639,7 @@ private fun HeroTitleContent(
                     if (showImdbInSecondary || secondaryDetails.isNotEmpty()) {
                         HeroMetaDivider(metaScale)
                     }
-                    com.nuvio.tv.ui.components.MDBListRatingsRow(
+                    us.xnetik.tv.ui.components.MDBListRatingsRow(
                         ratings = preview.mdbListRatings!!,
                         maxItems = 3,
                         order = mdbListRatingOrder

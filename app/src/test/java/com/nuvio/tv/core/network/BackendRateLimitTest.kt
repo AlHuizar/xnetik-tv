@@ -1,4 +1,4 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals

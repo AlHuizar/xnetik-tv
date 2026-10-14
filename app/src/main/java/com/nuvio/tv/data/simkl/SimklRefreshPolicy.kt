@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.simkl
+package us.xnetik.tv.data.simkl
 
-import com.nuvio.tv.core.tracking.TrackingRefreshIntent
-import com.nuvio.tv.core.tracking.TrackingRefreshGate
+import us.xnetik.tv.core.tracking.TrackingRefreshIntent
+import us.xnetik.tv.core.tracking.TrackingRefreshGate
 
 const val SIMKL_AUTOMATIC_REFRESH_INTERVAL_MINUTES = 15
 const val SIMKL_AUTOMATIC_REFRESH_INTERVAL_MS =

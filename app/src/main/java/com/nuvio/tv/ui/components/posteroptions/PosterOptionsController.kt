@@ -1,22 +1,22 @@
-package com.nuvio.tv.ui.components.posteroptions
+package us.xnetik.tv.ui.components.posteroptions
 
 import android.util.Log
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.core.tmdb.TmdbService
-import com.nuvio.tv.core.tracking.TrackingMembershipRemovalConfirmation
-import com.nuvio.tv.core.tracking.mergeTrackingMembershipWithTabs
-import com.nuvio.tv.core.tracking.toggleTrackingMembershipSelection
-import com.nuvio.tv.data.local.WatchedSeriesStateHolder
-import com.nuvio.tv.data.repository.parseContentIds
-import com.nuvio.tv.domain.model.LibraryEntryInput
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.ListMembershipChanges
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.Video
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.repository.LibraryRepository
-import com.nuvio.tv.domain.repository.MetaRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.core.tmdb.TmdbService
+import us.xnetik.tv.core.tracking.TrackingMembershipRemovalConfirmation
+import us.xnetik.tv.core.tracking.mergeTrackingMembershipWithTabs
+import us.xnetik.tv.core.tracking.toggleTrackingMembershipSelection
+import us.xnetik.tv.data.local.WatchedSeriesStateHolder
+import us.xnetik.tv.data.repository.parseContentIds
+import us.xnetik.tv.domain.model.LibraryEntryInput
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.ListMembershipChanges
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.Video
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.repository.LibraryRepository
+import us.xnetik.tv.domain.repository.MetaRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -263,7 +263,7 @@ class PosterOptionsController @Inject constructor(
                 _state.update { current ->
                     current.copy(
                         listPickerPending = false,
-                        listPickerError = error.message ?: appContext.getString(com.nuvio.tv.R.string.poster_options_error_load_lists_failed)
+                        listPickerError = error.message ?: appContext.getString(us.xnetik.tv.R.string.poster_options_error_load_lists_failed)
                     )
                 }
             }
@@ -320,7 +320,7 @@ class PosterOptionsController @Inject constructor(
                 _state.update {
                     it.copy(
                         listPickerPending = false,
-                        listPickerError = error.message ?: appContext.getString(com.nuvio.tv.R.string.poster_options_error_update_lists_failed)
+                        listPickerError = error.message ?: appContext.getString(us.xnetik.tv.R.string.poster_options_error_update_lists_failed)
                     )
                 }
             }
@@ -372,7 +372,7 @@ class PosterOptionsController @Inject constructor(
                         listPickerPending = false,
                         removalConfirmations = emptyList(),
                         listPickerError = error.message
-                            ?: appContext.getString(com.nuvio.tv.R.string.poster_options_error_update_lists_failed)
+                            ?: appContext.getString(us.xnetik.tv.R.string.poster_options_error_update_lists_failed)
                     )
                 }
             }
@@ -561,10 +561,10 @@ private fun MetaPreview.toLibraryEntryInput(addonBaseUrl: String?): LibraryEntry
     // display (e.g. TMDB collection / more-like-this), its `poster` field holds the backdrop.
     // Prefer `rawPosterUrl` (the proper portrait) when available so the saved entry isn't a
     // stretched/cropped landscape inside a portrait card.
-    val isLandscapeSource = posterShape == com.nuvio.tv.domain.model.PosterShape.LANDSCAPE
+    val isLandscapeSource = posterShape == us.xnetik.tv.domain.model.PosterShape.LANDSCAPE
     val portraitPoster = rawPosterUrl?.takeIf { it.isNotBlank() }
     val savedPoster = if (isLandscapeSource && portraitPoster != null) portraitPoster else poster
-    val savedShape = if (isLandscapeSource) com.nuvio.tv.domain.model.PosterShape.POSTER else posterShape
+    val savedShape = if (isLandscapeSource) us.xnetik.tv.domain.model.PosterShape.POSTER else posterShape
     return LibraryEntryInput(
         itemId = id,
         itemType = apiType,

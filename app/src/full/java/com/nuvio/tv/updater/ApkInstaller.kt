@@ -1,4 +1,4 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.net.Uri
 import android.os.Build
 import android.provider.Settings
 import androidx.core.content.FileProvider
-import com.nuvio.tv.BuildConfig
+import us.xnetik.tv.BuildConfig
 import java.io.File
 
 object ApkInstaller {

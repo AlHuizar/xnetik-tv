@@ -1,7 +1,7 @@
-package com.nuvio.tv.ui.screens.addon
+package us.xnetik.tv.ui.screens.addon
 
 import android.graphics.Bitmap
-import com.nuvio.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.Addon
 
 data class AddonManagerUiState(
     val isLoading: Boolean = false,

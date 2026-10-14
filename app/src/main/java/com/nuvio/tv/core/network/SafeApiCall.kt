@@ -1,7 +1,7 @@
-package com.nuvio.tv.core.network
+package us.xnetik.tv.core.network
 
 import android.content.Context
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import kotlinx.coroutines.CancellationException
 import retrofit2.Response
 

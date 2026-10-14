@@ -1,8 +1,8 @@
-package com.nuvio.tv.data.local
+package us.xnetik.tv.data.local
 
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nuvio.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchProgress
 
 internal const val WATCH_PROGRESS_METADATA_FEATURE = "watch_progress_preferences"
 internal const val WATCH_PROGRESS_RECENT_FEATURE = "watch_progress_recent_preferences"

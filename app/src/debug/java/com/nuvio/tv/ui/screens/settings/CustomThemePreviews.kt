@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.content.res.Configuration
 import androidx.compose.foundation.background
@@ -27,13 +27,13 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.domain.model.AppTheme
-import com.nuvio.tv.domain.model.CustomThemeColors
-import com.nuvio.tv.ui.theme.LocalNuvioFocusRingStyle
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.theme.ThemeColors
-import com.nuvio.tv.ui.theme.createFocusRingStyle
+import us.xnetik.tv.R
+import us.xnetik.tv.domain.model.AppTheme
+import us.xnetik.tv.domain.model.CustomThemeColors
+import us.xnetik.tv.ui.theme.LocalNuvioFocusRingStyle
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.ThemeColors
+import us.xnetik.tv.ui.theme.createFocusRingStyle
 
 @Preview(widthDp = 960, heightDp = 540, uiMode = Configuration.UI_MODE_TYPE_TELEVISION)
 @Composable

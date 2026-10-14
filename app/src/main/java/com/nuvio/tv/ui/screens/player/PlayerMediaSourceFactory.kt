@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
 import android.content.Context
 import android.net.Uri
@@ -27,8 +27,8 @@ import androidx.media3.exoplayer.upstream.LoadErrorHandlingPolicy
 import androidx.media3.extractor.DefaultExtractorsFactory
 import androidx.media3.extractor.ExtractorsFactory
 import androidx.media3.extractor.text.SubtitleParser
-import com.nuvio.tv.NuvioApplication
-import com.nuvio.tv.R
+import us.xnetik.tv.NuvioApplication
+import us.xnetik.tv.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -36,10 +36,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.yield
-import com.nuvio.tv.core.network.IPv4FirstDns
-import com.nuvio.tv.core.network.NoDelaySocketFactory
-import com.nuvio.tv.data.local.PlayerSettings
-import com.nuvio.tv.data.local.VodCacheSizeMode
+import us.xnetik.tv.core.network.IPv4FirstDns
+import us.xnetik.tv.core.network.NoDelaySocketFactory
+import us.xnetik.tv.data.local.PlayerSettings
+import us.xnetik.tv.data.local.VodCacheSizeMode
 import okhttp3.ConnectionPool
 import okhttp3.Dispatcher
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
@@ -146,7 +146,7 @@ internal class PlayerMediaSourceFactory(private val context: Context) {
         val chunkMb = (chunkBytes / (1024L * 1024L)).toInt().coerceAtLeast(1)
         val safeNativeMb = NuvioExoPlayerPerformanceHelper.getSafeNativeMemoryLimitMb(context)
         val reserveMb = NuvioExoPlayerPerformanceHelper.targetBufferSizeMb.coerceAtLeast(0)
-        return com.nuvio.tv.ui.screens.settings.MemoryBudget.prefetchDepthChunks(
+        return us.xnetik.tv.ui.screens.settings.MemoryBudget.prefetchDepthChunks(
             connections, chunkMb, safeNativeMb, reserveMb
         )
     }
@@ -226,7 +226,7 @@ internal class PlayerMediaSourceFactory(private val context: Context) {
                 }
             }
             val sessionChunkBytes = parallelChunkSizeKb
-                .coerceAtMost(com.nuvio.tv.ui.screens.settings.MemoryBudget.tierMaxChunkMb * 1024)
+                .coerceAtMost(us.xnetik.tv.ui.screens.settings.MemoryBudget.tierMaxChunkMb * 1024)
                 .toLong() * 1024L
             val effectiveNative =
                 nuvioPerformanceModeEnabled || NuvioEngineConfig.get().isNativeAllocationEnabled()

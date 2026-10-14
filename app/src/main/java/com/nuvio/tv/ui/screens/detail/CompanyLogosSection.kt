@@ -3,7 +3,7 @@
     androidx.tv.material3.ExperimentalTvMaterial3Api::class
 )
 
-package com.nuvio.tv.ui.screens.detail
+package us.xnetik.tv.ui.screens.detail
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.focusGroup
@@ -61,8 +61,8 @@ import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nuvio.tv.domain.model.MetaCompany
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.domain.model.MetaCompany
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable

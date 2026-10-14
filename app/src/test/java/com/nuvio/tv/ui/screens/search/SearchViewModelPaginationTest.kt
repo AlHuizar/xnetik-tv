@@ -1,21 +1,21 @@
-package com.nuvio.tv.ui.screens.search
+package us.xnetik.tv.ui.screens.search
 
 import android.content.Context
-import com.nuvio.tv.core.network.NetworkResult
-import com.nuvio.tv.data.local.LayoutPreferenceDataStore
-import com.nuvio.tv.data.local.SearchHistoryDataStore
-import com.nuvio.tv.data.local.WatchedSeriesStateHolder
-import com.nuvio.tv.domain.model.Addon
-import com.nuvio.tv.domain.model.CatalogDescriptor
-import com.nuvio.tv.domain.model.CatalogExtra
-import com.nuvio.tv.domain.model.CatalogRow
-import com.nuvio.tv.domain.model.ContentType
-import com.nuvio.tv.domain.model.MetaPreview
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.domain.repository.AddonRepository
-import com.nuvio.tv.domain.repository.CatalogRepository
-import com.nuvio.tv.domain.repository.WatchProgressRepository
-import com.nuvio.tv.ui.components.posteroptions.PosterOptionsController
+import us.xnetik.tv.core.network.NetworkResult
+import us.xnetik.tv.data.local.LayoutPreferenceDataStore
+import us.xnetik.tv.data.local.SearchHistoryDataStore
+import us.xnetik.tv.data.local.WatchedSeriesStateHolder
+import us.xnetik.tv.domain.model.Addon
+import us.xnetik.tv.domain.model.CatalogDescriptor
+import us.xnetik.tv.domain.model.CatalogExtra
+import us.xnetik.tv.domain.model.CatalogRow
+import us.xnetik.tv.domain.model.ContentType
+import us.xnetik.tv.domain.model.MetaPreview
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.domain.repository.AddonRepository
+import us.xnetik.tv.domain.repository.CatalogRepository
+import us.xnetik.tv.domain.repository.WatchProgressRepository
+import us.xnetik.tv.ui.components.posteroptions.PosterOptionsController
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
@@ -130,7 +130,7 @@ class SearchViewModelPaginationTest {
             skipStep: Int,
             extraArgs: Map<String, String>,
             supportsSkip: Boolean,
-            posterScreen: com.nuvio.tv.core.poster.CustomPosterScreen
+            posterScreen: us.xnetik.tv.core.poster.CustomPosterScreen
         ): Flow<NetworkResult<CatalogRow>> = flow {
             val query = extraArgs["search"].orEmpty()
             emit(NetworkResult.Loading)
@@ -199,7 +199,7 @@ class SearchViewModelPaginationTest {
         )
 
         val layoutPreferences = mockk<LayoutPreferenceDataStore>()
-        every { layoutPreferences.discoverLocation } returns flowOf(com.nuvio.tv.domain.model.DiscoverLocation.OFF)
+        every { layoutPreferences.discoverLocation } returns flowOf(us.xnetik.tv.domain.model.DiscoverLocation.OFF)
         every { layoutPreferences.posterCardWidthDp } returns flowOf(126)
         every { layoutPreferences.posterLabelsEnabled } returns flowOf(true)
         every { layoutPreferences.catalogAddonNameEnabled } returns flowOf(true)

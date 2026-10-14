@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.settings
+package us.xnetik.tv.ui.screens.settings
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -34,12 +34,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.data.mediaserver.ServerCapability
-import com.nuvio.tv.data.mediaserver.messageRes
-import com.nuvio.tv.data.mediaserver.supports
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.R
+import us.xnetik.tv.data.mediaserver.ServerCapability
+import us.xnetik.tv.data.mediaserver.messageRes
+import us.xnetik.tv.data.mediaserver.supports
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 @Composable
 internal fun MediaServerSettingsContent(

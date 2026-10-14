@@ -1,8 +1,8 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.player
+package us.xnetik.tv.ui.screens.player
 
-import com.nuvio.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.theme.NuvioTheme
 
 import android.util.Log
 import androidx.compose.animation.core.Animatable
@@ -65,13 +65,13 @@ import androidx.tv.material3.IconButton
 import androidx.tv.material3.IconButtonDefaults
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.nuvio.tv.R
-import com.nuvio.tv.data.local.SUBTITLE_LANGUAGE_FORCED
-import com.nuvio.tv.data.local.SubtitleStyleSettings
-import com.nuvio.tv.domain.model.Subtitle
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.screens.player.autosync.AutoSyncedChip
+import us.xnetik.tv.R
+import us.xnetik.tv.data.local.SUBTITLE_LANGUAGE_FORCED
+import us.xnetik.tv.data.local.SubtitleStyleSettings
+import us.xnetik.tv.domain.model.Subtitle
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.screens.player.autosync.AutoSyncedChip
 
 private const val SubtitleOffLanguageKey = "__off__"
 private const val SubtitleUnknownLanguageKey = "__unknown__"

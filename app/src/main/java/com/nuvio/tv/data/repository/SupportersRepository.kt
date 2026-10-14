@@ -1,7 +1,7 @@
-package com.nuvio.tv.data.repository
+package us.xnetik.tv.data.repository
 
-import com.nuvio.tv.data.remote.api.SupportersApi
-import com.nuvio.tv.domain.model.MemberTier
+import us.xnetik.tv.data.remote.api.SupportersApi
+import us.xnetik.tv.domain.model.MemberTier
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -22,7 +22,7 @@ class SupportersRepository @Inject constructor(
     suspend fun getSupporters(): Result<List<SupporterMember>> = runCatching {
         val response = supportersApi.getSupportersWall()
         if (!response.isSuccessful) {
-            error(appContext.getString(com.nuvio.tv.R.string.supporters_error_api_http, response.code()))
+            error(appContext.getString(us.xnetik.tv.R.string.supporters_error_api_http, response.code()))
         }
 
         response.body()

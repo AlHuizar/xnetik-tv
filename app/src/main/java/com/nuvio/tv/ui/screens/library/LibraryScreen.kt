@@ -1,4 +1,4 @@
-package com.nuvio.tv.ui.screens.library
+package us.xnetik.tv.ui.screens.library
 
 import android.view.KeyEvent as AndroidKeyEvent
 import androidx.compose.foundation.BorderStroke
@@ -82,33 +82,33 @@ import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Surface
 import androidx.tv.material3.Text
-import com.nuvio.tv.core.cloud.CloudLibraryFile
-import com.nuvio.tv.core.cloud.CloudLibraryItem
-import com.nuvio.tv.core.cloud.CloudLibraryItemType
-import com.nuvio.tv.core.cloud.CloudLibraryPlaybackInfo
-import com.nuvio.tv.domain.model.LibraryListTab
-import com.nuvio.tv.domain.model.LibrarySourceMode
-import com.nuvio.tv.domain.model.PosterShape
-import com.nuvio.tv.data.local.PlayerPreference
-import com.nuvio.tv.ui.components.EmptyScreenState
-import com.nuvio.tv.ui.components.GridContentCard
-import com.nuvio.tv.ui.screens.detail.requestFocusAfterFrames
-import com.nuvio.tv.ui.screens.home.HeroBackdropState
-import com.nuvio.tv.ui.screens.stream.PlayerChoiceDialog
+import us.xnetik.tv.core.cloud.CloudLibraryFile
+import us.xnetik.tv.core.cloud.CloudLibraryItem
+import us.xnetik.tv.core.cloud.CloudLibraryItemType
+import us.xnetik.tv.core.cloud.CloudLibraryPlaybackInfo
+import us.xnetik.tv.domain.model.LibraryListTab
+import us.xnetik.tv.domain.model.LibrarySourceMode
+import us.xnetik.tv.domain.model.PosterShape
+import us.xnetik.tv.data.local.PlayerPreference
+import us.xnetik.tv.ui.components.EmptyScreenState
+import us.xnetik.tv.ui.components.GridContentCard
+import us.xnetik.tv.ui.screens.detail.requestFocusAfterFrames
+import us.xnetik.tv.ui.screens.home.HeroBackdropState
+import us.xnetik.tv.ui.screens.stream.PlayerChoiceDialog
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import com.nuvio.tv.ui.components.PosterCardDefaults
-import com.nuvio.tv.domain.model.localizedTitle
-import com.nuvio.tv.ui.components.LoadingIndicator
-import com.nuvio.tv.ui.components.NuvioDialog
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.util.localizedContentType
-import com.nuvio.tv.ui.util.localizedGenreLabel
+import us.xnetik.tv.ui.components.PosterCardDefaults
+import us.xnetik.tv.domain.model.localizedTitle
+import us.xnetik.tv.ui.components.LoadingIndicator
+import us.xnetik.tv.ui.components.NuvioDialog
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.util.localizedContentType
+import us.xnetik.tv.ui.util.localizedGenreLabel
 import kotlinx.coroutines.delay
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDirection
 import androidx.compose.ui.text.TextStyle
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 
 private const val KEY_REPEAT_THROTTLE_MS = 80L
 
@@ -293,7 +293,7 @@ fun LibraryScreen(
 
     val lastKeyRepeatTime = remember { longArrayOf(0L) }
 
-    val globalLandscape = com.nuvio.tv.ui.components.LocalLandscapePosterMode.current
+    val globalLandscape = us.xnetik.tv.ui.components.LocalLandscapePosterMode.current
 
     LazyVerticalGrid(
         columns = GridCells.Adaptive(
@@ -711,7 +711,7 @@ fun LibraryScreen(
     }
 
     val posterOptionsState by viewModel.posterOptions.state.collectAsState()
-    com.nuvio.tv.ui.components.posteroptions.PosterOptionsHost(
+    us.xnetik.tv.ui.components.posteroptions.PosterOptionsHost(
         state = posterOptionsState,
         controller = viewModel.posterOptions,
         onNavigateToDetail = { id, type, addonBaseUrl ->

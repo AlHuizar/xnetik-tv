@@ -1,4 +1,4 @@
-package com.nuvio.tv.domain.model
+package us.xnetik.tv.domain.model
 
 import kotlin.random.Random
 import org.junit.Assert.assertEquals

@@ -1,14 +1,14 @@
-package com.nuvio.tv.core.sync
+package us.xnetik.tv.core.sync
 
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import com.google.gson.Gson
-import com.nuvio.tv.data.local.ProfileDataStoreFactory
-import com.nuvio.tv.data.mediaserver.ServerItemRef
-import com.nuvio.tv.domain.model.WatchProgress
-import com.nuvio.tv.domain.model.WatchedItem
-import com.nuvio.tv.domain.model.WatchedMutationKey
-import com.nuvio.tv.domain.model.mutationKey
+import us.xnetik.tv.data.local.ProfileDataStoreFactory
+import us.xnetik.tv.data.mediaserver.ServerItemRef
+import us.xnetik.tv.domain.model.WatchProgress
+import us.xnetik.tv.domain.model.WatchedItem
+import us.xnetik.tv.domain.model.WatchedMutationKey
+import us.xnetik.tv.domain.model.mutationKey
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject
 import javax.inject.Singleton

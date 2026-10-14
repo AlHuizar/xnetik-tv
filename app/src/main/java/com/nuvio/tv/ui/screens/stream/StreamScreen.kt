@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalTvMaterial3Api::class)
 
-package com.nuvio.tv.ui.screens.stream
+package us.xnetik.tv.ui.screens.stream
 
 import android.content.Intent
 import android.net.Uri
@@ -75,9 +75,9 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
-import com.nuvio.tv.ui.util.contentTextDirection
-import com.nuvio.tv.ui.util.toAbsoluteAlignment
-import com.nuvio.tv.ui.util.localizeEpisodeTitle
+import us.xnetik.tv.ui.util.contentTextDirection
+import us.xnetik.tv.ui.util.toAbsoluteAlignment
+import us.xnetik.tv.ui.util.localizeEpisodeTitle
 import androidx.tv.material3.Border
 import androidx.tv.material3.Card
 import androidx.tv.material3.CardDefaults
@@ -86,20 +86,20 @@ import androidx.tv.material3.Icon
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
 import coil3.compose.AsyncImage
-import com.nuvio.tv.core.player.ExternalPlayerLauncher
-import com.nuvio.tv.core.streams.StreamBadgePlacement
-import com.nuvio.tv.core.streams.StreamBadgeSettings
-import com.nuvio.tv.data.local.PlayerPreference
-import com.nuvio.tv.domain.model.Stream
-import com.nuvio.tv.ui.components.SourceChipItem
-import com.nuvio.tv.ui.components.SourceChipStatus
-import com.nuvio.tv.ui.components.P2pConsentDialog
-import com.nuvio.tv.ui.components.StreamBadgeChips
-import com.nuvio.tv.ui.components.StreamsSkeletonList
-import com.nuvio.tv.ui.screens.player.LoadingOverlay
-import com.nuvio.tv.ui.screens.player.AddonFilterChips
-import com.nuvio.tv.ui.theme.NuvioTheme
-import com.nuvio.tv.ui.navigation.sourceSelectionRestoreTarget
+import us.xnetik.tv.core.player.ExternalPlayerLauncher
+import us.xnetik.tv.core.streams.StreamBadgePlacement
+import us.xnetik.tv.core.streams.StreamBadgeSettings
+import us.xnetik.tv.data.local.PlayerPreference
+import us.xnetik.tv.domain.model.Stream
+import us.xnetik.tv.ui.components.SourceChipItem
+import us.xnetik.tv.ui.components.SourceChipStatus
+import us.xnetik.tv.ui.components.P2pConsentDialog
+import us.xnetik.tv.ui.components.StreamBadgeChips
+import us.xnetik.tv.ui.components.StreamsSkeletonList
+import us.xnetik.tv.ui.screens.player.LoadingOverlay
+import us.xnetik.tv.ui.screens.player.AddonFilterChips
+import us.xnetik.tv.ui.theme.NuvioTheme
+import us.xnetik.tv.ui.navigation.sourceSelectionRestoreTarget
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.delay as coroutineDelay
@@ -108,7 +108,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.compose.ui.res.stringResource
-import com.nuvio.tv.R
+import us.xnetik.tv.R
 import android.util.Log
 import dev.chrisbanes.haze.HazeInputScale
 import dev.chrisbanes.haze.HazeState

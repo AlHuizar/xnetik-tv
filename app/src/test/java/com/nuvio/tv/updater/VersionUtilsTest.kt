@@ -1,4 +1,4 @@
-package com.nuvio.tv.updater
+package us.xnetik.tv.updater
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
